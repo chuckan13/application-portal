@@ -19,6 +19,11 @@ class App extends Component {
     return (
     <Router>
       <div>
+      <ul>
+        <li><a>Home</a></li>
+        <li><a>Teams</a></li>
+        <li id="login"><a>Login</a></li>
+    </ul>
       <Route path="/apply" component={Apply} />
        <Route path="/admin" component={Admin} />
       </div> 
