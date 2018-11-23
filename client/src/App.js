@@ -1,33 +1,30 @@
 import React, { Component } from 'react';
 import './App.css';
+import Apply from './Apply.js';
+import Admin from './Admin.js';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
 
   state = {
-    test: "Hello ...",
+    home: 'Apply today!',
   }
 
   constructor(props) {
     super(props);
-    var that = this;
-    fetch('api/users')
-      .then(function(res) {
-         return res.text();
-      })
-      .then(function(text) {
-         that.setState({test: "Hello " + text});
-      })
-      .catch(function (err) {
-        console.err(err);
-      });
+    this.state = "Apply to e-club!"
   }
 
   render() {
     return (
-      <div className="App">
-        <p>{ this.state.test }</p>
-      </div>
-    );
+    <Router>
+      <div>
+      <Route path="/apply" component={Apply} />
+       <Route path="/admin" component={Admin} />
+      </div> 
+    </Router>
+  );
+  
   }
 }
 
