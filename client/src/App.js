@@ -3,7 +3,7 @@ import './App.css';
 import Apply from './Apply.js';
 import Admin from './Admin.js';
 import Home from './Home.js';
-import { BrowserRouter as Router, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { NavItem } from 'react-bootstrap';
@@ -11,10 +11,6 @@ import { NavDropdown } from 'react-bootstrap';
 import { MenuItem } from 'react-bootstrap';
 
 class App extends Component {
-
-  state = {
-    home: 'Apply today!',
-  }
 
   constructor(props) {
     super(props);
