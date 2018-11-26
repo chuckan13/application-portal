@@ -1,8 +1,10 @@
 import React from 'react';
-import './App.css';
+import './Form.css';
 import { FormGroup } from 'react-bootstrap';
 import { ControlLabel } from 'react-bootstrap';
 import { FormControl } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 
 class Form extends React.Component {
 
@@ -45,45 +47,52 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form >
-        <FormGroup controlId="formBasicText">
-          <ControlLabel>Name</ControlLabel>
-          <FormControl
-            type="text"
-            placeholder="John Smith"
-            value={this.state.name}
-            onChange={this.updateName}
-          />
-          <ControlLabel>Email</ControlLabel>
-          <FormControl
-            type="text"
-            placeholder="netid@princeton.edu"
-            value={this.state.email}
-            onChange={this.updateEmail}
-          />
-          <ControlLabel>Class Year</ControlLabel>
-          <FormControl
-            type="text"
-            placeholder="ex: 2019"
-            value={this.state.class}
-            onChange={this.updateClass}
-          />
-          <ControlLabel>Concentration</ControlLabel>
-          <FormControl
-            type="text"
-            placeholder="ex: computer science"
-            value={this.state.concentration}
-            onChange={this.updateConcentration}
-          />
-          <ControlLabel>Gender</ControlLabel>
-          <FormControl
-            type="text"
-            placeholder="ex: female"
-            value={this.state.gender}
-            onChange={this.updateGender}
-          />
-        </FormGroup>
-      </form>
+      <Row>
+        <Col>
+          <form>
+            <FormGroup controlId="formBasicText">
+              <FormControl
+                type="text"
+                placeholder="Name"
+                value={this.state.name}
+                onChange={this.updateName}
+              />
+            </FormGroup>
+            <FormGroup controlId="formBasicText">
+              <FormControl
+                type="text"
+                placeholder="Email"
+                value={this.state.email}
+                onChange={this.updateEmail}
+              />
+            </FormGroup>
+            <FormGroup controlId="formBasicText">
+              <FormControl
+                type="text"
+                placeholder="Class Year"
+                value={this.state.class}
+                onChange={this.updateClass}
+              />
+            </FormGroup>
+            <FormGroup controlId="formBasicText">
+              <FormControl
+                type="text"
+                placeholder="Concentration"
+                value={this.state.concentration}
+                onChange={this.updateConcentration}
+              />
+            </FormGroup>
+            <FormGroup controlId="formBasicText">
+              <FormControl
+                type="text"
+                placeholder="Gender"
+                value={this.state.gender}
+                onChange={this.updateGender}
+              />
+            </FormGroup>
+          </form>
+        </Col>
+      </Row>
     );
   }
 }
