@@ -17,7 +17,7 @@ Install your dependences with yarn (including client dependencies).
 yarn install
 cd client && yarn install
 ```
-*Do Not* use `npm install`, as this will create a package-json.lock
+*Do not* use `npm install`, as this will create a package-json.lock
 file which is not compatible with yarn.lock.
 
 ## Development
