@@ -18,7 +18,6 @@ class Home extends Component {
 
   handleLoginClick() {
     this.setState({isLoggedIn: true});
-    console.log(this.state.isLoggedIn);
   }
 
   handleApplyClick() {
