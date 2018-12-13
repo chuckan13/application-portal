@@ -5,6 +5,7 @@ import { FormControl } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+import axios from 'axios';
 
 class Form extends React.Component {
 
@@ -48,11 +49,19 @@ class Form extends React.Component {
   }
 
   handleSubmitClick() {
-    console.log("Name: " + this.state.name);
-    console.log("Email: " + this.state.email);
-    console.log("Class: " + this.state.class);
-    console.log("Concentration: " + this.state.concentration);
-    console.log("Gender: " + this.state.gender);
+    axios.post('/api/users', {
+      firstName: this.state.name,
+      email: this.state.email,
+      class: this.state.class,
+      concentration: this.state.concentration,
+      gender: this.state.gender
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
 
   render() {

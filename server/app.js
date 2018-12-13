@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var Users = require('./routes/users');
+var Users = require('./server/routes/index');
 
 var app = express();
 
@@ -21,16 +21,23 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, '../client/build')));
+// // Serve static files from the React app
+// app.use(express.static(path.join(__dirname, '../client/public')));
 
 // Register API endpoints
-app.use('/api/users', Users);
+//app.use('/api/users', Users);
 
-// render react app for anything else
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
+require('./server/routes')(app);
+
+// Setup a default catch-all route that sends back a welcome message in JSON format.
+app.get('*', (req, res) => res.status(200).send({
+  message: 'Welcome to the beginning of nothingness.',
+}));
+
+// // render react app for anything else
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../client/public/index.html'));
+// });
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
