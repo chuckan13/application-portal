@@ -10,6 +10,7 @@ module.exports = {
         class: req.body.class,
         concentration: req.body.concentration,
         gender: req.body.gender,
+        token: req.body.token
         //teamPicks: req.body.teamPicks,
 
         
@@ -31,7 +32,7 @@ module.exports = {
   retrieve(req,res){
     //const nam = req.params.token;
     return User
-      .findOne({ where: {token: req.params.token} })
+      .findOne({ where: {id: req.params.id} })
       .then(user => {
         if(!user){
           return res.status(404).send({
@@ -48,7 +49,7 @@ module.exports = {
 
   update(req, res){
     return User
-      .findOne({ where: {token: req.params.token} })
+      .findOne({ where: {id: req.params.id} })
       .then(user => {
         return user
           .update({
@@ -64,7 +65,7 @@ module.exports = {
 
   destroy(req, res){
     return User
-      .findOne({ where: {token: req.params.token} })
+      .findOne({ where: {id: req.params.id} })
       .then(user => {
         return user
           .destroy()

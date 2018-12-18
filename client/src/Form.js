@@ -10,7 +10,8 @@ import axios from 'axios';
 class Form extends React.Component {
 
   state = {
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     class: '',
     concentration: '',
@@ -20,7 +21,8 @@ class Form extends React.Component {
 
   constructor(props, context) {
     super(props, context);
-    this.updateName = this.updateName.bind(this);
+    this.updateFirstName = this.updateFirstName.bind(this);
+    this.updateLastName = this.updateLastName.bind(this);
     this.updateEmail = this.updateEmail.bind(this);
     this.updateClass = this.updateClass.bind(this);
     this.updateConcentration = this.updateConcentration.bind(this);
@@ -28,8 +30,12 @@ class Form extends React.Component {
     this.handleSubmitClick = this.handleSubmitClick.bind(this);
   }
 
-  updateName(e) {
-    this.setState({name: e.target.value });
+  updateFirstName(e) {
+    this.setState({firstName: e.target.value });
+  }
+
+  updateLastName(e) {
+    this.setState({lastName: e.target.value });
   }
 
   updateEmail(e) {
@@ -50,7 +56,8 @@ class Form extends React.Component {
 
   handleSubmitClick() {
     axios.post('/api/users', {
-      firstName: this.state.name,
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
       email: this.state.email,
       class: this.state.class,
       concentration: this.state.concentration,
@@ -70,12 +77,20 @@ class Form extends React.Component {
       <Row>
         <Col>
           <form onSubmit={this.handleSubmit}>
+          <FormGroup controlId="formBasicText">
+              <FormControl
+                type="text"
+                placeholder="First Name"
+                value={this.state.firstName}
+                onChange={this.updateFirstName}
+              />
+            </FormGroup>
             <FormGroup controlId="formBasicText">
               <FormControl
                 type="text"
-                placeholder="Name"
-                value={this.state.name}
-                onChange={this.updateName}
+                placeholder="Last Name"
+                value={this.state.lastName}
+                onChange={this.updateLastName}
               />
             </FormGroup>
             <FormGroup controlId="formBasicText">
