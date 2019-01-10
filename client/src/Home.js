@@ -7,12 +7,10 @@ import { Button } from 'react-bootstrap';
 class Home extends Component {
 
   state = {
-    isLoggedIn: false,
   }
 
   constructor(props) {
     super(props);
-    this.handleLoginClick = this.handleLoginClick.bind(this);
     this.handleApplyClick = this.handleApplyClick.bind(this);
   }
 
@@ -25,28 +23,11 @@ class Home extends Component {
   }
 
   render() {
-    const isLoggedIn = this.state.isLoggedIn;
-    let button;
-    if (isLoggedIn) {
-      button = <ApplyButton onClick={this.handleApplyClick} />;
-    } else {
-      button = <LoginButton onClick={this.handleLoginClick} />;
-    }
-
+    let button = <ApplyButton onClick={this.handleApplyClick} />;
     return (
       <div> {button} </div>
     );
   }
-}
-
-function LoginButton(props) {
-  return (
-   <Row className="center-block text-center">
-      <Col>
-        <Button bsStyle="primary" bsSize="large" onClick={props.onClick}>Log In</Button>
-      </Col>
-   </Row>
-  );
 }
 
 function ApplyButton(props) {

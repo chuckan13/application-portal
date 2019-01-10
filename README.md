@@ -42,3 +42,11 @@ To run a production build locally, run
 yarn run prod
 ```
 The built react app will be served by the server on http://localhost:3001/.
+
+## CAS
+This app is authenticated with CAS.  The CAS details are located in
+/server/config/cas.js, and this is where development mode can be turned on
+or off.  In development mode, a mock user called "tester" is used and all
+endpoints will be authenticated with this mock user.  To test production,
+set `is_dev_mode` to false, then use `yarn run prod` to run in production.
+This will use real CAS and allow real users to log in.
