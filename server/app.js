@@ -4,8 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
-var Users = require('./server/routes/index');
+var session = require('express-session');
+var cors = require('cors');
+var cas = require('./config/cas');
 
 var app = express();
 
@@ -21,23 +22,31 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// // Serve static files from the React app
-// app.use(express.static(path.join(__dirname, '../client/public')));
-
-// Register API endpoints
-//app.use('/api/users', Users);
-
-require('./server/routes')(app);
-
-// Setup a default catch-all route that sends back a welcome message in JSON format.
-app.get('*', (req, res) => res.status(200).send({
-  message: 'Welcome to the beginning of nothingness.',
+// Set up an Express session, which is required for CASAuthentication.
+app.use( session({
+    secret            : 'super secret key',
+    resave            : false,
+    saveUninitialized : true
 }));
 
-// // render react app for anything else
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, '../client/public/index.html'));
-// });
+// allow cors
+app.use(cors());
+
+// Register API endpoints
+require('./routes')(app);
+
+app.get('/session', cas.bounce, (req, res) => {
+  console.log(JSON.stringify(req.session));
+  res.send(req.session[cas.session_name]);
+});
+
+// Serve static files from the React app
+app.use(cas.bounce, express.static(path.join(__dirname, '../client/build')));
+
+// render react app for anything else
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

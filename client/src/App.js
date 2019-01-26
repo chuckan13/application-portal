@@ -29,9 +29,6 @@ class App extends Component {
                 <a>Princeton E-Club</a>
               </Navbar.Brand>
             </Navbar.Header>
-            <Nav pullRight>
-              <NavItem eventKey={2} pullRight>Login</NavItem>
-            </Nav>
             <Nav>
               <NavDropdown eventKey={3} title="Teams" id="basic-nav-dropdown">
                 <MenuItem eventKey={3.1}>Team 1</MenuItem>
