@@ -5,6 +5,7 @@ import { FormControl } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+import { ControlLabel } from 'react-bootstrap';
 import axios from 'axios';
 
 class Form extends React.Component {
@@ -74,18 +75,24 @@ class Form extends React.Component {
   render() {
     return (
       <div>
+      <div id="basic-info">
+        <p> Part 1: Basic Information </p>
+      </div>
       <Row>
         <Col>
           <form onSubmit={this.handleSubmit}>
           <FormGroup controlId="formBasicText">
+              <ControlLabel>First Name:</ControlLabel>
               <FormControl
                 type="text"
                 placeholder="First Name"
+                label="First Name"
                 value={this.state.firstName}
                 onChange={this.updateFirstName}
               />
             </FormGroup>
             <FormGroup controlId="formBasicText">
+              <ControlLabel>Last Name:</ControlLabel>
               <FormControl
                 type="text"
                 placeholder="Last Name"
@@ -94,6 +101,7 @@ class Form extends React.Component {
               />
             </FormGroup>
             <FormGroup controlId="formBasicText">
+              <ControlLabel>Email:</ControlLabel>
               <FormControl
                 type="text"
                 placeholder="Email"
@@ -102,6 +110,7 @@ class Form extends React.Component {
               />
             </FormGroup>
             <FormGroup controlId="formBasicText">
+              <ControlLabel>Class Year:</ControlLabel>
               <FormControl
                 type="text"
                 placeholder="Class Year"
@@ -110,6 +119,7 @@ class Form extends React.Component {
               />
             </FormGroup>
             <FormGroup controlId="formBasicText">
+              <ControlLabel>Concentration:</ControlLabel>
               <FormControl
                 type="text"
                 placeholder="Concentration"
@@ -118,6 +128,7 @@ class Form extends React.Component {
               />
             </FormGroup>
             <FormGroup controlId="formBasicText">
+              <ControlLabel>Gender:</ControlLabel>
               <FormControl
                 type="text"
                 placeholder="Gender"
@@ -139,7 +150,7 @@ function SubmitButton(props) {
   return (
    <Row className="center-block text-center">
       <Col>
-        <Button bsStyle="primary" bsSize="large" onClick={props.onClick}>Submit</Button>
+        <Button bsStyle="next" bsSize="large" onClick={props.onClick}>next</Button>
       </Col>
    </Row>
   );

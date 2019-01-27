@@ -3,8 +3,8 @@ import '../css/Home.css';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-import {addStyle} from 'react-bootstrap/lib/utils/bootstrapUtils';
-addStyle(Button, 'test');
+import { addStyle } from 'react-bootstrap/lib/utils/bootstrapUtils';
+addStyle(Button, 'apply');
 
 class Home extends Component {
 
@@ -41,7 +41,7 @@ function ApplyButton(props) {
       </div>
       <Col>
         <div id="begin-button">
-        <Button bsStyle="test" bsSize="large" onClick={props.onClick}>Begin Application</Button>
+        <Button bsStyle="apply" bsSize="large" onClick={props.onClick}>Begin Application</Button>
         </div>
       </Col>
     </Row>

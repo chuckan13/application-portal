@@ -1,28 +1,28 @@
 @font-face{
-    font-family: "Avenir";
+    font-family: "Avenir-Book";
     src: url('../fonts/Avenir-Book.ttf'),
 } 
 
 p {
   color: white;
   font-size: 30px;
-  font-family: Avenir;
+  font-family: Avenir-Book;
 }
 
 #welcome-text {
 	margin-top: 100px;
 }
 
-.btn-test {
+.btn-apply {
 	color: #fff;
 	background-color: #3891b8;
 	border-radius: 15px;
 	padding: 20px 30px;
 	font-size: 20px;
-	font-family: Avenir;
+	font-family: Avenir-Book;
 }
 
-.btn-test:hover {
+.btn-apply:hover {
   background-color: #2686af;
   color: #fff;
  }
