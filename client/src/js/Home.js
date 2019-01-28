@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import '../css/Home.css';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
@@ -6,11 +7,8 @@ import { Button } from 'react-bootstrap';
 import { addStyle } from 'react-bootstrap/lib/utils/bootstrapUtils';
 addStyle(Button, 'apply');
 
-class Home extends Component {
 
-  state = {
-    
-  }
+class Home extends Component {
 
   constructor(props) {
     super(props);
