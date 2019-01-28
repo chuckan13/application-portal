@@ -49,9 +49,6 @@ class TeamSelection extends React.Component {
       console.log(error);
     });
     this.props.handlePartTwoClick();
-    console.log(this.state.teamOne);
-    console.log(this.state.teamTwo);
-    console.log(this.state.teamThree);
   }
 
   render() {

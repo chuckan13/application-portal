@@ -15,7 +15,8 @@ class Apply extends Component {
     partOne: true,
     partTwo: false,
     partThree: false,
-    partFour: false
+    partFour: false,
+    created: false
   }
 
   constructor(props) {
@@ -34,16 +35,6 @@ class Apply extends Component {
     this.setState({
       partOne: false,
       partTwo: true
-    });
-    /* create a new user */
-    axios.post('/api/users' , {
-      token: this.state.user
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
     });
   }
 
@@ -70,6 +61,19 @@ class Apply extends Component {
 
   render() {
     console.log("Logged in as: " + this.state.user)
+     /* create a new user */
+    if (this.state.user !== "" && !this.state.created) {
+      axios.post('/api/users' , {
+        token: this.state.user
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+      this.setState({created: true});
+    } 
     const partOne = this.state.partOne;
     const partTwo = this.state.partTwo;
     const partThree = this.state.partThree;
@@ -87,7 +91,9 @@ class Apply extends Component {
     } else if (partThree) {
       display = <ShortResponse handlePartThreeClick = {this.handlePartThreeClick} />;
     } else if (partFour) {
-      display = <Review handlePartFourClick = {this.handlePartFourClick} />;
+      display = <Review 
+        handlePartFourClick = {this.handlePartFourClick} 
+        user = {this.state.user} />;
     }
 
     return (
