@@ -4,18 +4,24 @@ module.exports = {
   create(req, res) {
     return User
       .create({
+        token: req.body.token,
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         email: req.body.email,
         class: req.body.class,
         concentration: req.body.concentration,
         gender: req.body.gender,
-        token: req.body.token
+        teamOne: req.body.teamOne,
+        teamTwo: req.body.teamTwo,
+        teamThree: req.body.teamThree,
+        responseOne: req.body.responseOne,
+        responseTwo: req.body.responseTwo,
+        responseThree: req.body.responseThree,
+        responseFour: req.body.responseFour,
+        responseFive: req.body.responseFive,
+        responseSix: req.body.responseSix
         //teamPicks: req.body.teamPicks,
-
-        
       })
-  
       .then(User => res.status(201).send(User))
       .catch(error => res.status(400).send(error));
   },
@@ -32,7 +38,7 @@ module.exports = {
   retrieve(req,res){
     //const nam = req.params.token;
     return User
-      .findOne({ where: {id: req.params.id} })
+      .findOne({ where: {token: req.params.token} })
       .then(user => {
         if(!user){
           return res.status(404).send({
@@ -49,12 +55,26 @@ module.exports = {
 
   update(req, res){
     return User
-      .findOne({ where: {id: req.params.id} })
+      .findOne({ where: {token: req.params.token} })
       .then(user => {
         return user
           .update({
             // update status
-            status: req.body.status || user.status,
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            class: req.body.class,
+            concentration: req.body.concentration,
+            gender: req.body.gender,
+            teamOne: req.body.teamOne,
+            teamTwo: req.body.teamTwo,
+            teamThree: req.body.teamThree,
+            responseOne: req.body.responseOne,
+            responseTwo: req.body.responseTwo,
+            responseThree: req.body.responseThree,
+            responseFour: req.body.responseFour,
+            responseFive: req.body.responseFive,
+            responseSix: req.body.responseSix
           })
           .then(() => res.status(200).send(user));
       });

@@ -21,6 +21,7 @@ class TeamSelection extends React.Component {
     this.updateTeamOne = this.updateTeamOne.bind(this);
     this.updateTeamTwo = this.updateTeamTwo.bind(this);
     this.updateTeamThree = this.updateTeamThree.bind(this);
+    this.handleSubmitClick = this.handleSubmitClick.bind(this);
   }
 
   updateTeamOne(e) {
@@ -32,11 +33,11 @@ class TeamSelection extends React.Component {
   }
 
   updateTeamThree(e) {
-    this.setState({teamTwo: e.target.value });
+    this.setState({teamThree: e.target.value });
   }
 
   handleSubmitClick() {
-    axios.post('/api/users', {
+    axios.put('/api/users/'  + this.props.user, {
       teamOne: this.state.teamOne,
       teamTwo: this.state.teamTwo,
       teamThree: this.state.teamThree
@@ -47,6 +48,10 @@ class TeamSelection extends React.Component {
     .catch(function (error) {
       console.log(error);
     });
+    this.props.handlePartTwoClick();
+    console.log(this.state.teamOne);
+    console.log(this.state.teamTwo);
+    console.log(this.state.teamThree);
   }
 
   render() {
@@ -57,64 +62,64 @@ class TeamSelection extends React.Component {
       </div>
       <Row>
         <Col>
-          <form onSubmit={this.handleSubmit}>
+          <form>
            <FormGroup>
               <ControlLabel>Team 1:</ControlLabel>
-              <FormControl componentClass="select" placeholder="select">
-                <option value="select"></option>
-                <option value="select">Alumni Outreach</option>
-                <option value="other">COFF</option>
-                <option value="other">Design</option>
-                <option value="other">Development</option>
-                <option value="other">MVP</option>
-                <option value="other">HackPrinceton</option>
-                <option value="other">ICE Network</option>
-                <option value="other">IgniteStem</option>
-                <option value="other">Rehack</option>
-                <option value="other">NYTT</option>
-                <option value="other">SVTT</option>
-                <option value="other">TigerLaunch</option>
-                <option value="other">TigerTables</option>
+              <FormControl componentClass="select" placeholder="first choice" onChange={this.updateTeamOne}>
+                <option value="blank"></option>
+                <option value="alumni-outreach">Alumni Outreach</option>
+                <option value="coff">COFF</option>
+                <option value="design">Design</option>
+                <option value="development">Development</option>
+                <option value="mvp">MVP</option>
+                <option value="hack-princeton">HackPrinceton</option>
+                <option value="ice-network">ICE Network</option>
+                <option value="ignitestem">IgniteStem</option>
+                <option value="rehack">Rehack</option>
+                <option value="nytt">NYTT</option>
+                <option value="svtt">SVTT</option>
+                <option value="tigerlaunch">TigerLaunch</option>
+                <option value="tigertables">TigerTables</option>
               </FormControl>
            </FormGroup>
 
            <FormGroup controlId="formControlsSelect">
               <ControlLabel>Team 2:</ControlLabel>
-              <FormControl componentClass="select" placeholder="first choice">
-                <option value="select" id="testing"></option>
-                <option value="select">Alumni Outreach</option>
-                <option value="other">COFF</option>
-                <option value="other">Design</option>
-                <option value="other">Development</option>
-                <option value="other">MVP</option>
-                <option value="other">HackPrinceton</option>
-                <option value="other">ICE Network</option>
-                <option value="other">IgniteStem</option>
-                <option value="other">Rehack</option>
-                <option value="other">NYTT</option>
-                <option value="other">SVTT</option>
-                <option value="other">TigerLaunch</option>
-                <option value="other">TigerTables</option>
+              <FormControl componentClass="select" placeholder="second choice" onChange={this.updateTeamTwo}>
+                <option value="blank"></option>
+                <option value="alumni-outreach">Alumni Outreach</option>
+                <option value="coff">COFF</option>
+                <option value="design">Design</option>
+                <option value="development">Development</option>
+                <option value="mvp">MVP</option>
+                <option value="hack-princeton">HackPrinceton</option>
+                <option value="ice-network">ICE Network</option>
+                <option value="ignitestem">IgniteStem</option>
+                <option value="rehack">Rehack</option>
+                <option value="nytt">NYTT</option>
+                <option value="svtt">SVTT</option>
+                <option value="tigerlaunch">TigerLaunch</option>
+                <option value="tigertables">TigerTables</option>
               </FormControl>
            </FormGroup>
 
            <FormGroup controlId="formControlsSelect">
               <ControlLabel>Team 3:</ControlLabel>
-              <FormControl componentClass="select" placeholder="first choice">
-                <option value="select"></option>
-                <option value="select">Alumni Outreach</option>
-                <option value="other">COFF</option>
-                <option value="other">Design</option>
-                <option value="other">Development</option>
-                <option value="other">MVP</option>
-                <option value="other">HackPrinceton</option>
-                <option value="other">ICE Network</option>
-                <option value="other">IgniteStem</option>
-                <option value="other">Rehack</option>
-                <option value="other">NYTT</option>
-                <option value="other">SVTT</option>
-                <option value="other">TigerLaunch</option>
-                <option value="other">TigerTables</option>
+              <FormControl componentClass="select" placeholder="third choice" onChange={this.updateTeamThree}>
+                <option value="blank"></option>
+                <option value="alumni-outreach">Alumni Outreach</option>
+                <option value="coff">COFF</option>
+                <option value="design">Design</option>
+                <option value="development">Development</option>
+                <option value="mvp">MVP</option>
+                <option value="hack-princeton">HackPrinceton</option>
+                <option value="ice-network">ICE Network</option>
+                <option value="ignitestem">IgniteStem</option>
+                <option value="rehack">Rehack</option>
+                <option value="nytt">NYTT</option>
+                <option value="svtt">SVTT</option>
+                <option value="tigerlaunch">TigerLaunch</option>
+                <option value="tigertables">TigerTables</option>
               </FormControl>
            </FormGroup>
           

@@ -11,59 +11,57 @@ import axios from 'axios';
 class BasicInformation extends React.Component {
 
   state = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    class: '',
-    concentration: '',
-    gender: ''
+    questionOne: '',
+    questionTwo: '',
+    questionThree: '',
+    questionFour: '',
+    questionFive: '',
+    questionSix: ''
   }
 
   constructor(props, context) {
     super(props, context);
-    this.updateFirstName = this.updateFirstName.bind(this);
-    this.updateLastName = this.updateLastName.bind(this);
-    this.updateEmail = this.updateEmail.bind(this);
-    this.updateClass = this.updateClass.bind(this);
-    this.updateConcentration = this.updateConcentration.bind(this);
-    this.updateGender = this.updateGender.bind(this);
+    this.updateQuestionOne = this.updateQuestionOne.bind(this);
+    this.updateQuestionTwo = this.updateQuestionTwo.bind(this);
+    this.updateQuestionThree = this.updateQuestionThree.bind(this);
+    this.updateQuestionFour = this.updateQuestionFour.bind(this);
+    this.updateQuestionFive = this.updateQuestionFive.bind(this);
+    this.updateQuestionSix = this.updateQuestionSix.bind(this);
     this.handleSubmitClick = this.handleSubmitClick.bind(this);
   }
 
-  updateFirstName(e) {
-    this.setState({firstName: e.target.value });
+  updateQuestionOne(e) {
+    this.setState({questionOne: e.target.value });
   }
 
-  updateLastName(e) {
-    this.setState({lastName: e.target.value });
+  updateQuestionTwo(e) {
+    this.setState({questionTwo: e.target.value });
   }
 
-  updateEmail(e) {
-    this.setState({email: e.target.value });
+  updateQuestionThree(e) {
+    this.setState({questionThree: e.target.value });
   }
 
-  updateClass(e) {
-    this.setState({class: e.target.value });
+  updateQuestionFour(e) {
+    this.setState({questionFour: e.target.value });
   }
 
-  updateConcentration(e) {
-    this.setState({concentration: e.target.value });
+  updateQuestionFive(e) {
+    this.setState({questionFive: e.target.value });
   }
 
-  updateGender(e) {
-    this.setState({gender: e.target.value });
+  updateQuestionSix(e) {
+    this.setState({questionSix: e.target.value });
   }
 
   handleSubmitClick() {
-    this.props.handlePartOneClick();
-    console.log('user: ' + this.props.user);
-    axios.put('/api/users/' + this.props.user, {
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
-      email: this.state.email,
-      class: this.state.class,
-      concentration: this.state.concentration,
-      gender: this.state.gender
+    axios.post('/api/users', {
+      questionOne: this.state.questionOne,
+      questionTwo: this.state.questionTwo,
+      questionThree: this.state.questionThree,
+      questionFour: this.state.questionFour,
+      questionFive: this.state.questionFive,
+      questionSix: this.state.questionSix
     })
     .then(function (response) {
       console.log(response);
@@ -71,13 +69,14 @@ class BasicInformation extends React.Component {
     .catch(function (error) {
       console.log(error);
     });
+    this.props.handlePartThreeClick();
   }
 
   render() {
     return (
       <div>
       <div id="basic-info">
-        <p> Part 1: Basic Information </p>
+        <p> Part 3: Short Response </p>
       </div>
       <Row>
         <Col>
@@ -149,7 +148,7 @@ function SubmitButton(props) {
   return (
    <Row className="center-block text-center">
       <Col>
-        <Button bsStyle="next" bsSize="large" onClick={props.onClick}>next</Button>
+        <Button bsStyle="next" bsSize="large" onClick={props.onClick}>review for submission</Button>
       </Col>
    </Row>
   );

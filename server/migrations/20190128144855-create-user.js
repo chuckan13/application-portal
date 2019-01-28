@@ -29,6 +29,15 @@ module.exports = {
       token: {
         type: Sequelize.STRING
       },
+      teamOne: {
+        type: Sequelize.STRING
+      },
+      teamTwo: {
+        type: Sequelize.STRING
+      },
+      teamThree: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

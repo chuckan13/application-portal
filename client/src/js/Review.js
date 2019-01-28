@@ -8,7 +8,7 @@ import { Button } from 'react-bootstrap';
 import { ControlLabel } from 'react-bootstrap';
 import axios from 'axios';
 
-class BasicInformation extends React.Component {
+class Review extends React.Component {
 
   state = {
     firstName: '',
@@ -21,43 +21,11 @@ class BasicInformation extends React.Component {
 
   constructor(props, context) {
     super(props, context);
-    this.updateFirstName = this.updateFirstName.bind(this);
-    this.updateLastName = this.updateLastName.bind(this);
-    this.updateEmail = this.updateEmail.bind(this);
-    this.updateClass = this.updateClass.bind(this);
-    this.updateConcentration = this.updateConcentration.bind(this);
-    this.updateGender = this.updateGender.bind(this);
     this.handleSubmitClick = this.handleSubmitClick.bind(this);
   }
 
-  updateFirstName(e) {
-    this.setState({firstName: e.target.value });
-  }
-
-  updateLastName(e) {
-    this.setState({lastName: e.target.value });
-  }
-
-  updateEmail(e) {
-    this.setState({email: e.target.value });
-  }
-
-  updateClass(e) {
-    this.setState({class: e.target.value });
-  }
-
-  updateConcentration(e) {
-    this.setState({concentration: e.target.value });
-  }
-
-  updateGender(e) {
-    this.setState({gender: e.target.value });
-  }
-
   handleSubmitClick() {
-    this.props.handlePartOneClick();
-    console.log('user: ' + this.props.user);
-    axios.put('/api/users/' + this.props.user, {
+    axios.post('/api/users', {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
       email: this.state.email,
@@ -71,13 +39,14 @@ class BasicInformation extends React.Component {
     .catch(function (error) {
       console.log(error);
     });
+    this.props.handlePartOneClick();
   }
 
   render() {
     return (
       <div>
       <div id="basic-info">
-        <p> Part 1: Basic Information </p>
+        <p> Basic Information: </p>
       </div>
       <Row>
         <Col>
@@ -149,10 +118,10 @@ function SubmitButton(props) {
   return (
    <Row className="center-block text-center">
       <Col>
-        <Button bsStyle="next" bsSize="large" onClick={props.onClick}>next</Button>
+        <Button bsStyle="next" bsSize="large" onClick={props.onClick}>submit</Button>
       </Col>
    </Row>
   );
 }
 
-export default BasicInformation;
+export default Review;
