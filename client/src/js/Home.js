@@ -9,6 +9,7 @@ addStyle(Button, 'apply');
 class Home extends Component {
 
   state = {
+    
   }
 
   constructor(props) {
@@ -34,17 +35,19 @@ class Home extends Component {
 
 function ApplyButton(props) {
   return (
-    <Row className="center-block text-center">
-      <div id="welcome-text">
-        <p>Excited to join the e-club family? </p>
-        <p>Apply today!</p>
-      </div>
-      <Col>
-        <div id="begin-button">
-        <Button bsStyle="apply" bsSize="large" onClick={props.onClick}>Begin Application</Button>
+    <div id="welcome-content">
+      <Row className="center-block text-center">
+        <div id="welcome-text">
+          <p>Excited to join the e-club family? </p>
+          <p>Apply today!</p>
         </div>
-      </Col>
-    </Row>
+        <Col>
+          <div id="begin-button">
+          <Button bsStyle="apply" bsSize="large" onClick={props.onClick}>Begin Application</Button>
+          </div>
+        </Col>
+      </Row>
+    </div>
   );
 }
 

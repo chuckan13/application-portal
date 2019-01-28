@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Form.css';
+import '../css/BasicInformation.css';
 import { FormGroup } from 'react-bootstrap';
 import { FormControl } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
@@ -8,7 +8,7 @@ import { Button } from 'react-bootstrap';
 import { ControlLabel } from 'react-bootstrap';
 import axios from 'axios';
 
-class Form extends React.Component {
+class BasicInformation extends React.Component {
 
   state = {
     firstName: '',
@@ -70,6 +70,7 @@ class Form extends React.Component {
     .catch(function (error) {
       console.log(error);
     });
+    this.props.handlePartOneClick();
   }
 
   render() {
@@ -80,13 +81,12 @@ class Form extends React.Component {
       </div>
       <Row>
         <Col>
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.props.handlePartOneClick}>
           <FormGroup controlId="formBasicText">
               <ControlLabel>First Name:</ControlLabel>
               <FormControl
                 type="text"
                 placeholder="First Name"
-                label="First Name"
                 value={this.state.firstName}
                 onChange={this.updateFirstName}
               />
@@ -139,8 +139,7 @@ class Form extends React.Component {
           </form>
         </Col>
       </Row>
-
-      <SubmitButton onClick={this.handleSubmitClick} />
+      <SubmitButton onClick = {this.handleSubmitClick} />
       </div>
     );
   }
@@ -156,4 +155,4 @@ function SubmitButton(props) {
   );
 }
 
-export default Form;
+export default BasicInformation;

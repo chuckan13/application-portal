@@ -37,7 +37,6 @@ class App extends Component {
             </Navbar.Collapse>
           </Navbar>
         </div>
-      
         <Route exact path="/" component={Home} />
         <Route path="/apply" component={Apply} />
         <Route path="/admin" component={Admin} />

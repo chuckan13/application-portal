@@ -13,6 +13,10 @@ p {
 	margin-top: 100px;
 }
 
+#welcome-content {
+  margin: auto;
+}
+
 .btn-apply {
 	color: #fff;
 	background-color: #3891b8;
@@ -26,6 +30,24 @@ p {
   background-color: #2686af;
   color: #fff;
  }
+
+.btn-apply:focus,
+.btn-apply:active:focus,
+.btn-apply.active:focus,
+.btn-apply.focus,
+.btn-apply:active.focus,
+.btn-apply.active.focus {
+  outline: none;
+  color:#fff;
+}
+
+.btn:active,
+.btn.active {
+  outline: none;
+  background-image: none;
+  box-shadow: none;
+  color:#fff;
+}
 
 #begin-button {
 	margin-top: 50px;
