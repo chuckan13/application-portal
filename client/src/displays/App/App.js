@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import '../css/App.css';
-import Apply from '../js/Apply.js';
-import Admin from '../js/Admin.js';
-import Home from '../js/Home.js';
+import '../App/App.css';
+import Apply from '../Apply.js';
+import Admin from '../Admin.js';
+import Home from '../Home/Home.js';
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';

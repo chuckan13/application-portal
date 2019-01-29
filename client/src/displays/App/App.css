@@ -4,7 +4,7 @@
 
 @font-face{
     font-family: "Avenir";
-    src: url('../fonts/Avenir-Book.ttf'),
+    src: url('../../fonts/Avenir-Book.ttf'),
 } 
 
 /* navbar properties */
@@ -35,7 +35,7 @@
 /* navbar components */
 
 #logo {
-  background-image: url("../img/logo.png");
+  background-image: url("../../img/logo.png");
   background-size: 40px;
   background-repeat: no-repeat;
   height: 40px;

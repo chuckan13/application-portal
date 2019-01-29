@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import "../css/App.css";
+import "./App/App.css";
 import axios from "axios";
-import BasicInformation from "../js/BasicInformation.js";
-import TeamSelection from "../js/TeamSelection.js";
-import ShortResponse from "../js/ShortResponse.js";
-import Review from "../js/Review.js";
-import Submitted from "../js/Submitted.js";
+import BasicInformation from "./BasicInformation/BasicInformation.js";
+import TeamSelection from "./TeamSelection/TeamSelection.js";
+import ShortResponse from "./ShortResponse/ShortResponse.js";
+import Review from "./Review/Review.js";
+import Submitted from "./Submitted.js";
 import { addStyle } from "react-bootstrap/lib/utils/bootstrapUtils";
 import { Button } from "react-bootstrap";
 addStyle(Button, "next");

@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
-import '../css/Home.css';
+import './Home.css';
 import { Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { addStyle } from 'react-bootstrap/lib/utils/bootstrapUtils';
 addStyle(Button, 'apply');
 
 
-class Submitted extends Component {
+class Home extends Component {
 
   constructor(props) {
     super(props);
     this.handleApplyClick = this.handleApplyClick.bind(this);
-  }
-
-  handleLoginClick() {
-    this.setState({isLoggedIn: true});
   }
 
   handleApplyClick() {
@@ -34,11 +31,17 @@ function ApplyButton(props) {
     <div id="welcome-content">
       <Row className="center-block text-center">
         <div id="welcome-text">
-          <p>Thank you for submitting!</p>
+          <p>Excited to join the e-club family? </p>
+          <p>Apply today!</p>
         </div>
+        <Col>
+          <div id="begin-button">
+          <Button bsStyle="apply" bsSize="large" onClick={props.onClick}>Begin Application</Button>
+          </div>
+        </Col>
       </Row>
     </div>
   );
 }
 
-export default Submitted;
+export default Home;

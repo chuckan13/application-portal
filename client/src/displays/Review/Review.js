@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Review.css';
+import './Review.css';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';

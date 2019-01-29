@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/ShortResponse.css';
+import './ShortResponse.css';
 import { FormGroup } from 'react-bootstrap';
 import { FormControl } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';

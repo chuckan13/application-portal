@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/BasicInformation.css';
+import './BasicInformation.css';
 import { FormGroup } from 'react-bootstrap';
 import { FormControl } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
