@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App/App.css';
 
 class Admin extends Component {
 
   state = {
     home: 'Admin Page',
   }
-
-  constructor(props) {
-    super(props);
-  }
-
 
   render() {
     return (

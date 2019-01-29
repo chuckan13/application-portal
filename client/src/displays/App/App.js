@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import './App.css';
-import Apply from './Apply.js';
-import Admin from './Admin.js';
-import Home from './Home.js';
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { NavItem } from 'react-bootstrap';
-import { NavDropdown } from 'react-bootstrap';
-import { MenuItem } from 'react-bootstrap';
+import '../App/App.css';
+import Apply from '../Apply.js';
+import Admin from '../Admin.js';
+import Home from '../Home/Home.js';
+
 
 class App extends Component {
 
@@ -21,24 +20,24 @@ class App extends Component {
     return (
     <Router>
       <div>
-
         <div>
-          <Navbar>
+          <Navbar id="nav">
             <Navbar.Header>
               <Navbar.Brand>
-                <a>Princeton E-Club</a>
+                <div id="logo"> </div>
+                <a href="/" id="application-portal">application portal</a>
               </Navbar.Brand>
+              <Navbar.Toggle />
             </Navbar.Header>
-            <Nav>
-              <NavDropdown eventKey={3} title="Teams" id="basic-nav-dropdown">
-                <MenuItem eventKey={3.1}>Team 1</MenuItem>
-                <MenuItem eventKey={3.2}>Team 2</MenuItem>
-                <MenuItem eventKey={3.3}>Team 3</MenuItem>
-              </NavDropdown>
-            </Nav>
+            <Navbar.Collapse>
+              <Nav pullRight>
+                <NavItem eventKey={1} href="#">
+                  <a href="/" id="about">about</a>
+                </NavItem>
+              </Nav>
+            </Navbar.Collapse>
           </Navbar>
         </div>
-      
         <Route exact path="/" component={Home} />
         <Route path="/apply" component={Apply} />
         <Route path="/admin" component={Admin} />

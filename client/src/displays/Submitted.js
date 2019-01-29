@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
+import './Home/Home.css';
 import { Row } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+import { addStyle } from 'react-bootstrap/lib/utils/bootstrapUtils';
+addStyle(Button, 'apply');
 
-class Home extends Component {
-
-  state = {
-  }
+class Submitted extends Component {
 
   constructor(props) {
     super(props);
@@ -32,12 +30,14 @@ class Home extends Component {
 
 function ApplyButton(props) {
   return (
-    <Row className="center-block text-center">
-      <Col>
-        <Button bsStyle="primary" bsSize="large" onClick={props.onClick}>Apply</Button>
-      </Col>
-    </Row>
+    <div id="welcome-content">
+      <Row className="center-block text-center">
+        <div id="welcome-text">
+          <p>Thank you for submitting!</p>
+        </div>
+      </Row>
+    </div>
   );
 }
 
-export default Home;
+export default Submitted;
