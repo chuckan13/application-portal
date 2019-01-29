@@ -35,7 +35,6 @@ module.exports = {
 
 
   retrieve(req,res){
-    //const nam = req.params.token;
     return User
       .findOne({ where: {token: req.params.token} })
       .then(user => {

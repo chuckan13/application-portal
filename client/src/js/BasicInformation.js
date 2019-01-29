@@ -55,22 +55,13 @@ class BasicInformation extends React.Component {
   }
 
   handleSubmitClick() {
-    this.props.handlePartOneClick();
-    console.log('user: ' + this.props.user);
-    axios.put('/api/users/' + this.props.user, {
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
-      email: this.state.email,
-      class: this.state.class,
-      concentration: this.state.concentration,
-      gender: this.state.gender
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+    var fn = this.state.firstName;
+    var ln = this.state.lastName;
+    var e = this.state.email;
+    var cl = this.state.class;
+    var con = this.state.concentration;
+    var g = this.state.gender;
+    this.props.handlePartOneClick(fn, ln, e, cl, con, g);
   }
 
   render() {

@@ -13,7 +13,7 @@ class TeamSelection extends React.Component {
   state = {
     teamOne: '',
     teamTwo: '',
-    teamThree: '',
+    teamThree: ''
   }
 
   constructor(props, context) {
@@ -37,18 +37,10 @@ class TeamSelection extends React.Component {
   }
 
   handleSubmitClick() {
-    axios.put('/api/users/'  + this.props.user, {
-      teamOne: this.state.teamOne,
-      teamTwo: this.state.teamTwo,
-      teamThree: this.state.teamThree
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-    this.props.handlePartTwoClick();
+    var t1 = this.state.teamOne;
+    var t2 = this.state.teamTwo;
+    var t3 = this.state.teamThree;
+    this.props.handlePartTwoClick(t1, t2, t3);
   }
 
   render() {

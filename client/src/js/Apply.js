@@ -5,18 +5,36 @@ import BasicInformation from "../js/BasicInformation.js";
 import TeamSelection from "../js/TeamSelection.js";
 import ShortResponse from "../js/ShortResponse.js";
 import Review from "../js/Review.js";
+import Submitted from "../js/Submitted.js";
 import { addStyle } from "react-bootstrap/lib/utils/bootstrapUtils";
 import { Button } from "react-bootstrap";
 addStyle(Button, "next");
 
 class Apply extends Component {
   state = {
-    user: "",
+    /* User attributes */
+    user: '',
+    firstName: '',
+    lastName: '',
+    email: '',
+    class: '',
+    concentration: '',
+    gender: '',
+    teamOne: '',
+    teamTwo: '',
+    teamThree: '',
+    responseOne: '',
+    responseTwo: '',
+    responseThree: '',
+    responseFour: '',
+    responseFive: '',
+    responseSix: '',
+    /* display booleans */
     partOne: true,
     partTwo: false,
     partThree: false,
     partFour: false,
-    created: false
+    submitted: false
   };
 
   constructor(props) {
@@ -24,21 +42,18 @@ class Apply extends Component {
     this.handlePartOneClick = this.handlePartOneClick.bind(this);
     this.handlePartTwoClick = this.handlePartTwoClick.bind(this);
     this.handlePartThreeClick = this.handlePartThreeClick.bind(this);
+    this.handlePartFourClick = this.handlePartFourClick.bind(this);
   }
 
+  /* actions performed before mounting */
   componentDidMount() {
     fetch("/session")
       .then(res => res.text())
       .then(text => {
         this.setState({ user: text });
-
-        return axios.post("/api/users", {
-          token: text
-        });
       })
       .then(response => {
         console.log(response);
-        this.setState({ created: true });
       })
       .catch(error => {
         console.log(error);
@@ -46,63 +61,107 @@ class Apply extends Component {
       .catch(err => console.error(err));
   }
 
-  handlePartOneClick() {
+  handlePartOneClick(fn, ln, e, cl, con, g) {
     this.setState({
+      firstName: fn,
+      lastName: ln,
+      email: e,
+      class: cl,
+      concentration: con,
+      gender: g,
       partOne: false,
       partTwo: true
     });
   }
 
-  handlePartTwoClick() {
+  handlePartTwoClick(t1, t2, t3) {
     this.setState({
+      teamOne: t1,
+      teamTwo: t2,
+      teamThree: t3,
       partTwo: false,
       partThree: true
     });
   }
 
-  handlePartThreeClick() {
+  handlePartThreeClick(r1, r2, r3, r4, r5, r6) {
     this.setState({
+      responseOne: r1,
+      responseTwo: r2,
+      responseThree: r3,
+      responseFour: r4,
+      responseFive: r5,
+      responseSix: r6,
       partThree: false,
       partFour: true
     });
   }
 
   handlePartFourClick() {
+    return axios.post('/api/users', {
+      token: this.state.user,
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      email: this.state.email,
+      class: this.state.class,
+      concentration: this.state.concentration,
+      gender: this.state.gender,
+      teamOne: this.state.teamOne,
+      teamTwo: this.state.teamTwo,
+      teamThree: this.state.teamThree,
+      responseOne: this.state.responseOne,
+      responseTwo: this.state.responseTwo,
+      responseThree: this.state.responseThree,
+      responseFour: this.state.responseFour,
+      responseFive: this.state.responseFive,
+      responseSix: this.state.responseSix
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
     this.setState({
-      partThree: false,
-      partFour: true
+      partFour: false,
+      submitted: true
     });
   }
 
   render() {
-    /* create a new user */
-    const { partOne, partTwo, partThree, partFour } = this.state;
+    const { partOne, partTwo, partThree, partFour, submitted } = this.state;
     let display;
 
     if (partOne) {
       display = (
         <BasicInformation
           handlePartOneClick={this.handlePartOneClick}
-          user={this.state.user}
-        />
+          state={this.state} />
       );
     } else if (partTwo) {
       display = (
         <TeamSelection
           handlePartTwoClick={this.handlePartTwoClick}
-          user={this.state.user}
-        />
+          state={this.state} />
       );
     } else if (partThree) {
+      console.log('state: ' + this.state.teamOne);
       display = (
-        <ShortResponse handlePartThreeClick={this.handlePartThreeClick} />
+        <ShortResponse 
+          handlePartThreeClick={this.handlePartThreeClick}
+          state={this.state} />
       );
     } else if (partFour) {
       display = (
         <Review
           handlePartFourClick={this.handlePartFourClick}
-          user={this.state.user}
-        />
+          state={this.state} />
+      );
+    } else if (submitted) {
+      display = (
+        <Submitted
+          handlePartFourClick={this.handlePartFourClick}
+          state={this.state} />
       );
     }
 

@@ -11,65 +11,57 @@ import axios from 'axios';
 class BasicInformation extends React.Component {
 
   state = {
-    questionOne: '',
-    questionTwo: '',
-    questionThree: '',
-    questionFour: '',
-    questionFive: '',
-    questionSix: ''
+    responseOne: '',
+    responseTwo: '',
+    responseThree: '',
+    responseFour: '',
+    responseFive: '',
+    responseSix: ''
   }
 
   constructor(props, context) {
     super(props, context);
-    this.updateQuestionOne = this.updateQuestionOne.bind(this);
-    this.updateQuestionTwo = this.updateQuestionTwo.bind(this);
-    this.updateQuestionThree = this.updateQuestionThree.bind(this);
-    this.updateQuestionFour = this.updateQuestionFour.bind(this);
-    this.updateQuestionFive = this.updateQuestionFive.bind(this);
-    this.updateQuestionSix = this.updateQuestionSix.bind(this);
+    this.updateResponseOne = this.updateResponseOne.bind(this);
+    this.updateResponseTwo = this.updateResponseTwo.bind(this);
+    this.updateResponseThree = this.updateResponseThree.bind(this);
+    this.updateResponseFour = this.updateResponseFour.bind(this);
+    this.updateResponseFive = this.updateResponseFive.bind(this);
+    this.updateResponseSix = this.updateResponseSix.bind(this);
     this.handleSubmitClick = this.handleSubmitClick.bind(this);
   }
 
-  updateQuestionOne(e) {
-    this.setState({questionOne: e.target.value });
+  updateResponseOne(e) {
+    this.setState({responseOne: e.target.value });
   }
 
-  updateQuestionTwo(e) {
-    this.setState({questionTwo: e.target.value });
+  updateResponseTwo(e) {
+    this.setState({responseTwo: e.target.value });
   }
 
-  updateQuestionThree(e) {
-    this.setState({questionThree: e.target.value });
+  updateResponseThree(e) {
+    this.setState({responseThree: e.target.value });
   }
 
-  updateQuestionFour(e) {
-    this.setState({questionFour: e.target.value });
+  updateResponseFour(e) {
+    this.setState({responseFour: e.target.value });
   }
 
-  updateQuestionFive(e) {
-    this.setState({questionFive: e.target.value });
+  updateResponseFive(e) {
+    this.setState({responseFive: e.target.value });
   }
 
-  updateQuestionSix(e) {
-    this.setState({questionSix: e.target.value });
+  updateResponseSix(e) {
+    this.setState({responseSix: e.target.value });
   }
 
   handleSubmitClick() {
-    axios.post('/api/users', {
-      questionOne: this.state.questionOne,
-      questionTwo: this.state.questionTwo,
-      questionThree: this.state.questionThree,
-      questionFour: this.state.questionFour,
-      questionFive: this.state.questionFive,
-      questionSix: this.state.questionSix
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-    this.props.handlePartThreeClick();
+    var r1 = this.state.responseOne;
+    var r2 = this.state.responseTwo;
+    var r3 = this.state.responseThree;
+    var r4 = this.state.responseFour;
+    var r5 = this.state.responseFive;
+    var r6 = this.state.responseSix;
+    this.props.handlePartThreeClick(r1, r2, r3, r4, r5, r6);
   }
 
   render() {
@@ -78,66 +70,63 @@ class BasicInformation extends React.Component {
       <div id="basic-info">
         <p> Part 3: Short Response </p>
       </div>
-      <Row>
-        <Col>
-          <form>
-          <FormGroup controlId="formBasicText">
-              <ControlLabel>First Name:</ControlLabel>
-              <FormControl
-                type="text"
-                placeholder="First Name"
-                value={this.state.firstName}
-                onChange={this.updateFirstName}
-              />
-            </FormGroup>
-            <FormGroup controlId="formBasicText">
-              <ControlLabel>Last Name:</ControlLabel>
-              <FormControl
-                type="text"
-                placeholder="Last Name"
-                value={this.state.lastName}
-                onChange={this.updateLastName}
-              />
-            </FormGroup>
-            <FormGroup controlId="formBasicText">
-              <ControlLabel>Email:</ControlLabel>
-              <FormControl
-                type="text"
-                placeholder="Email"
-                value={this.state.email}
-                onChange={this.updateEmail}
-              />
-            </FormGroup>
-            <FormGroup controlId="formBasicText">
-              <ControlLabel>Class Year:</ControlLabel>
-              <FormControl
-                type="text"
-                placeholder="Class Year"
-                value={this.state.class}
-                onChange={this.updateClass}
-              />
-            </FormGroup>
-            <FormGroup controlId="formBasicText">
-              <ControlLabel>Concentration:</ControlLabel>
-              <FormControl
-                type="text"
-                placeholder="Concentration"
-                value={this.state.concentration}
-                onChange={this.updateConcentration}
-              />
-            </FormGroup>
-            <FormGroup controlId="formBasicText">
-              <ControlLabel>Gender:</ControlLabel>
-              <FormControl
-                type="text"
-                placeholder="Gender"
-                value={this.state.gender}
-                onChange={this.updateGender}
-              />
-            </FormGroup>
-          </form>
-        </Col>
-      </Row>
+      <div id="questions">
+        <p> Choice 1: {this.props.state.teamOne} </p>
+        <FormGroup controlId="formControlsTextarea">
+            <ControlLabel>Why do you want to join this team?</ControlLabel>
+            <FormControl
+              componentClass="textarea"
+              value={this.state.responseOne}
+              onChange={this.updateResponseOne}
+            />
+          </FormGroup>
+          <FormGroup controlId="formControlsTextarea">
+            <ControlLabel>Describe your relevant experience.</ControlLabel>
+            <FormControl
+              componentClass="textarea"
+              value={this.state.responseTwo}
+              onChange={this.updateResponseTwo}
+            />
+        </FormGroup>
+      </div>
+      <div id="questions">
+        <p> Choice 2: {this.props.state.teamTwo} </p>
+        <FormGroup controlId="formControlsTextarea">
+            <ControlLabel>Why do you want to join this team?</ControlLabel>
+            <FormControl
+              componentClass="textarea"
+              value={this.state.responseThree}
+              onChange={this.updateResponseThree}
+            />
+          </FormGroup>
+          <FormGroup controlId="formControlsTextarea">
+            <ControlLabel>Describe your relevant experience.</ControlLabel>
+            <FormControl
+              componentClass="textarea"
+              value={this.state.responseFour}
+              onChange={this.updateResponseFour}
+            />
+        </FormGroup>
+      </div>
+      <div id="questions">
+        <p> Choice 3: {this.props.state.teamThree} </p>
+        <FormGroup controlId="formControlsTextarea">
+            <ControlLabel>Why do you want to join this team?</ControlLabel>
+            <FormControl
+              componentClass="textarea"
+              value={this.state.responseFive}
+              onChange={this.updateResponseFive}
+            />
+          </FormGroup>
+          <FormGroup controlId="formControlsTextarea">
+            <ControlLabel>Describe your relevant experience.</ControlLabel>
+            <FormControl
+              componentClass="textarea"
+              value={this.state.responseSix}
+              onChange={this.updateResponseSix}
+            />
+        </FormGroup>
+      </div>
       <SubmitButton onClick = {this.handleSubmitClick} />
       </div>
     );
