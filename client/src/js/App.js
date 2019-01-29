@@ -24,14 +24,14 @@ class App extends Component {
             <Navbar.Header>
               <Navbar.Brand>
                 <div id="logo"> </div>
-                <a id="title">application portal</a>
+                <a href="/" id="title">application portal</a>
               </Navbar.Brand>
               <Navbar.Toggle />
             </Navbar.Header>
             <Navbar.Collapse>
               <Nav pullRight>
                 <NavItem eventKey={1} href="#">
-                  <a id="about">about</a>
+                  <a href="/" id="about">about</a>
                 </NavItem>
               </Nav>
             </Navbar.Collapse>

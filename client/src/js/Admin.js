@@ -7,10 +7,6 @@ class Admin extends Component {
     home: 'Admin Page',
   }
 
-  constructor(props) {
-    super(props);
-  }
-
 
   render() {
     return (

@@ -6,7 +6,6 @@ import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { ControlLabel } from 'react-bootstrap';
-import axios from 'axios';
 
 class BasicInformation extends React.Component {
 

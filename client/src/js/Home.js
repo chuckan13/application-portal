@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import '../css/Home.css';
-import Submitted from "../js/Submitted.js";
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
