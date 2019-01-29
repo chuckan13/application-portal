@@ -11,12 +11,12 @@ module.exports = (sequelize, DataTypes) => {
     teamOne: DataTypes.STRING,
     teamTwo: DataTypes.STRING,
     teamThree: DataTypes.STRING,
-    responseOne: DataTypes.STRING,
-    responseTwo: DataTypes.STRING,
-    responseThree: DataTypes.STRING,
-    responseFour: DataTypes.STRING,
-    responseFive: DataTypes.STRING,
-    responseSix: DataTypes.STRING
+    responseOne: DataTypes.TEXT,
+    responseTwo: DataTypes.TEXT,
+    responseThree: DataTypes.TEXT,
+    responseFour: DataTypes.TEXT,
+    responseFive: DataTypes.TEXT,
+    responseSix: DataTypes.TEXT
   }, {});
   User.associate = function(models) {
     // associations can be defined here
