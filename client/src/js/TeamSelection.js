@@ -56,7 +56,7 @@ class TeamSelection extends React.Component {
               <FormControl componentClass="select" placeholder="first choice" onChange={this.updateTeamOne}>
                 <option value=""></option>
                 <option value="Alumni Outreach">Alumni Outreach</option>
-                <option value="Coff">COFF</option>
+                <option value="COFF">COFF</option>
                 <option value="Design">Design</option>
                 <option value="Development">Development</option>
                 <option value="MVP">MVP</option>
@@ -76,7 +76,7 @@ class TeamSelection extends React.Component {
               <FormControl componentClass="select" placeholder="second choice" onChange={this.updateTeamTwo}>
                 <option value=""></option>
                 <option value="Alumni Outreach">Alumni Outreach</option>
-                <option value="Coff">COFF</option>
+                <option value="COFF">COFF</option>
                 <option value="Design">Design</option>
                 <option value="Development">Development</option>
                 <option value="MVP">MVP</option>
@@ -96,7 +96,7 @@ class TeamSelection extends React.Component {
               <FormControl componentClass="select" placeholder="third choice" onChange={this.updateTeamThree}>
                 <option value=""></option>
                 <option value="Alumni Outreach">Alumni Outreach</option>
-                <option value="Coff">COFF</option>
+                <option value="COFF">COFF</option>
                 <option value="Design">Design</option>
                 <option value="Development">Development</option>
                 <option value="MVP">MVP</option>
