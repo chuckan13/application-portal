@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import '../App/App.css';
-import Apply from '../Apply.js';
-import Admin from '../Admin.js';
-import Home from '../Home/Home.js';
 import { BrowserRouter as Router, Route} from "react-router-dom";
 import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { NavItem } from 'react-bootstrap';
+import '../App/App.css';
+import Apply from '../Apply.js';
+import Admin from '../Admin.js';
+import Home from '../Home/Home.js';
+
 
 class App extends Component {
 

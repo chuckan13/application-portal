@@ -5,7 +5,6 @@ import { Button } from 'react-bootstrap';
 import { addStyle } from 'react-bootstrap/lib/utils/bootstrapUtils';
 addStyle(Button, 'apply');
 
-
 class Submitted extends Component {
 
   constructor(props) {

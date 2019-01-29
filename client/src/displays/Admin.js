@@ -7,7 +7,6 @@ class Admin extends Component {
     home: 'Admin Page',
   }
 
-
   render() {
     return (
       <div className="App">

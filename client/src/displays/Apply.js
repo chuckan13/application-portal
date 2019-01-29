@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./App/App.css";
 import axios from "axios";
+import "./App/App.css";
 import BasicInformation from "./BasicInformation/BasicInformation.js";
 import TeamSelection from "./TeamSelection/TeamSelection.js";
 import ShortResponse from "./ShortResponse/ShortResponse.js";
@@ -11,6 +11,7 @@ import { Button } from "react-bootstrap";
 addStyle(Button, "next");
 
 class Apply extends Component {
+
   state = {
     /* User attributes */
     user: '',
@@ -45,15 +46,13 @@ class Apply extends Component {
     this.handlePartFourClick = this.handlePartFourClick.bind(this);
   }
 
- componentDidMount() {
+  componentDidMount() {
     fetch("/session")
       .then(res => res.text())
       .then(text => {
         this.setState({ user: text });
         /* add something to check if user exists in table */ 
-        /* if (entry.token === text) {
-            this.setState({submitted: true});
-        } */
+        /* this.setState({submitted: true}); */
       })
       .then(response => {
         console.log(response);
@@ -166,7 +165,7 @@ class Apply extends Component {
           state={this.state} />
       );
     }
-
+    
     return <div>{display}</div>;
   }
 }

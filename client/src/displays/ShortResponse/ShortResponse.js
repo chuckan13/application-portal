@@ -7,7 +7,7 @@ import { Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { ControlLabel } from 'react-bootstrap';
 
-class BasicInformation extends React.Component {
+class ShortResponse extends React.Component {
 
   state = {
     responseOne: '',
@@ -66,17 +66,17 @@ class BasicInformation extends React.Component {
   render() {
     return (
       <div>
-      <div id="basic-info">
-        <p> Part 3: Short Response </p>
-      </div>
-      <div id="questions">
-        <p id="choice"> Choice 1: {this.props.state.teamOne} </p>
-        <FormGroup controlId="formControlsTextarea">
+        <div id="title">
+          <p> Part 3: Short Response </p>
+        </div>
+        <div id="questions">
+          <p id="choice"> Choice 1: {this.props.state.teamOne} </p>
+          <FormGroup controlId="formControlsTextarea">
             <ControlLabel>Why do you want to join this team?</ControlLabel>
             <FormControl
-              componentClass="textarea"
-              value={this.state.responseOne}
-              onChange={this.updateResponseOne}
+                componentClass="textarea"
+                value={this.state.responseOne}
+                onChange={this.updateResponseOne}
             />
           </FormGroup>
           <FormGroup controlId="formControlsTextarea">
@@ -86,11 +86,11 @@ class BasicInformation extends React.Component {
               value={this.state.responseTwo}
               onChange={this.updateResponseTwo}
             />
-        </FormGroup>
-      </div>
-      <div id="questions">
-        <p id="choice"> Choice 2: {this.props.state.teamTwo} </p>
-        <FormGroup controlId="formControlsTextarea">
+          </FormGroup>
+        </div>
+        <div id="questions">
+          <p id="choice"> Choice 2: {this.props.state.teamTwo} </p>
+          <FormGroup controlId="formControlsTextarea">
             <ControlLabel>Why do you want to join this team?</ControlLabel>
             <FormControl
               componentClass="textarea"
@@ -105,11 +105,11 @@ class BasicInformation extends React.Component {
               value={this.state.responseFour}
               onChange={this.updateResponseFour}
             />
-        </FormGroup>
-      </div>
-      <div id="questions">
-        <p id="choice"> Choice 3: {this.props.state.teamThree} </p>
-        <FormGroup controlId="formControlsTextarea">
+         </FormGroup>
+        </div>
+        <div id="questions">
+          <p id="choice"> Choice 3: {this.props.state.teamThree} </p>
+          <FormGroup controlId="formControlsTextarea">
             <ControlLabel>Why do you want to join this team?</ControlLabel>
             <FormControl
               componentClass="textarea"
@@ -124,9 +124,9 @@ class BasicInformation extends React.Component {
               value={this.state.responseSix}
               onChange={this.updateResponseSix}
             />
-        </FormGroup>
-      </div>
-      <SubmitButton onClick = {this.handleSubmitClick} />
+          </FormGroup>
+        </div>
+        <SubmitButton onClick = {this.handleSubmitClick} />
       </div>
     );
   }
@@ -142,4 +142,4 @@ function SubmitButton(props) {
   );
 }
 
-export default BasicInformation;
+export default ShortResponse;

@@ -3,28 +3,27 @@
 }
 
 @font-face{
-    font-family: "Avenir";
-    src: url('../../fonts/Avenir-Book.ttf'),
+  font-family: "Avenir";
+  src: url('../../fonts/Avenir-Book.ttf'),
 } 
 
 /* navbar properties */
-
 #nav {
-	background-color: #272727 !important;
-	border-color: #272727 !important;
+  background-color: #272727 !important;
+  border-color: #272727 !important;
 }
 
 .navbar-brand {
-	display: flex;
-    align-items: center;
-	vertical-align: middle;
-	display: flex;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  display: flex;
 }
 
 .navbar .container {
-	margin-top: 10px;
-  	margin-bottom: 10px;
-  	margin-left: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 40px;
 }
 
 .container {
@@ -33,7 +32,6 @@
 }
 
 /* navbar components */
-
 #logo {
   background-image: url("../../img/logo.png");
   background-size: 40px;
@@ -43,28 +41,27 @@
   vertical-align: middle;
 }
 
-
 #about {
-	margin-right: 0;
-	font-size: 20px;
-	vertical-align: middle;
+  margin-right: 0;
+  font-size: 20px;
+  vertical-align: middle;
 
 }
 
 #title {
-	padding-left: 20px;
-	font-size: 22px;
+  padding-left: 20px;
+  font-size: 22px;
+  padding-bottom: 25px;
 }
 
 /* general text */
-
 a {
-	color: white !important;
-	font-family: Avenir;
+  color: white !important;
+  font-family: Avenir;
 }
 
 a:hover {
-	text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 

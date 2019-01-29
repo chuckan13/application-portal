@@ -6,7 +6,6 @@ import { Button } from 'react-bootstrap';
 import { addStyle } from 'react-bootstrap/lib/utils/bootstrapUtils';
 addStyle(Button, 'apply');
 
-
 class Home extends Component {
 
   constructor(props) {
@@ -36,7 +35,7 @@ function ApplyButton(props) {
         </div>
         <Col>
           <div id="begin-button">
-          <Button bsStyle="apply" bsSize="large" onClick={props.onClick}>Begin Application</Button>
+            <Button bsStyle="apply" bsSize="large" onClick={props.onClick}>Begin Application</Button>
           </div>
         </Col>
       </Row>

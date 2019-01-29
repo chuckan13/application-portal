@@ -1,16 +1,17 @@
 p {
+  font-family: Avenir;
   color: white;
   font-size: 30px;
-  font-family: Avenir-Book;
   text-align: center;
+}
+
+#welcome-content {
+  font-family: Avenir;
+  margin: auto;
 }
 
 #welcome-text {
 	margin-top: 100px;
-}
-
-#welcome-content {
-  margin: auto;
 }
 
 .btn-apply {
@@ -19,20 +20,23 @@ p {
 	border-radius: 15px;
 	padding: 20px 30px;
 	font-size: 20px;
-	font-family: Avenir-Book;
 }
 
-.btn-apply:hover {
+.btn:hover {
   background-color: #2686af;
   color: #fff;
  }
 
-.btn-apply:focus,
-.btn-apply:active:focus,
-.btn-apply.active:focus,
-.btn-apply.focus,
-.btn-apply:active.focus,
-.btn-apply.active.focus {
+.btn {
+   font-family: Avenir;
+ }
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
   outline: none;
   color:#fff;
 }
