@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import '../css/Home.css';
+import Submitted from "../js/Submitted.js";
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
@@ -13,10 +14,6 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.handleApplyClick = this.handleApplyClick.bind(this);
-  }
-
-  handleLoginClick() {
-    this.setState({isLoggedIn: true});
   }
 
   handleApplyClick() {

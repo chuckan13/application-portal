@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/BasicInformation.css';
+import '../css/ShortResponse.css';
 import { FormGroup } from 'react-bootstrap';
 import { FormControl } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
@@ -71,7 +71,7 @@ class BasicInformation extends React.Component {
         <p> Part 3: Short Response </p>
       </div>
       <div id="questions">
-        <p> Choice 1: {this.props.state.teamOne} </p>
+        <p id="choice"> Choice 1: {this.props.state.teamOne} </p>
         <FormGroup controlId="formControlsTextarea">
             <ControlLabel>Why do you want to join this team?</ControlLabel>
             <FormControl
@@ -90,7 +90,7 @@ class BasicInformation extends React.Component {
         </FormGroup>
       </div>
       <div id="questions">
-        <p> Choice 2: {this.props.state.teamTwo} </p>
+        <p id="choice"> Choice 2: {this.props.state.teamTwo} </p>
         <FormGroup controlId="formControlsTextarea">
             <ControlLabel>Why do you want to join this team?</ControlLabel>
             <FormControl
@@ -109,7 +109,7 @@ class BasicInformation extends React.Component {
         </FormGroup>
       </div>
       <div id="questions">
-        <p> Choice 3: {this.props.state.teamThree} </p>
+        <p id="choice"> Choice 3: {this.props.state.teamThree} </p>
         <FormGroup controlId="formControlsTextarea">
             <ControlLabel>Why do you want to join this team?</ControlLabel>
             <FormControl

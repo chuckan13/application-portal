@@ -45,12 +45,15 @@ class Apply extends Component {
     this.handlePartFourClick = this.handlePartFourClick.bind(this);
   }
 
-  /* actions performed before mounting */
-  componentDidMount() {
+ componentDidMount() {
     fetch("/session")
       .then(res => res.text())
       .then(text => {
         this.setState({ user: text });
+        /* add something to check if user exists in table */ 
+        /* if (entry.token === text) {
+            this.setState({submitted: true});
+        } */
       })
       .then(response => {
         console.log(response);
@@ -98,7 +101,7 @@ class Apply extends Component {
   }
 
   handlePartFourClick() {
-    return axios.post('/api/users', {
+    axios.post('/api/users', {
       token: this.state.user,
       firstName: this.state.firstName,
       lastName: this.state.lastName,
@@ -132,7 +135,7 @@ class Apply extends Component {
     const { partOne, partTwo, partThree, partFour, submitted } = this.state;
     let display;
 
-    if (partOne) {
+    if (!submitted && partOne) {
       display = (
         <BasicInformation
           handlePartOneClick={this.handlePartOneClick}
@@ -145,7 +148,6 @@ class Apply extends Component {
           state={this.state} />
       );
     } else if (partThree) {
-      console.log('state: ' + this.state.teamOne);
       display = (
         <ShortResponse 
           handlePartThreeClick={this.handlePartThreeClick}
