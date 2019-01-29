@@ -2,6 +2,11 @@
   margin: 10px;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 @font-face{
   font-family: "Avenir";
   src: url('../../fonts/Avenir-Book.ttf'),
@@ -26,6 +31,10 @@
   margin-left: 40px;
 }
 
+.navbar-deafault {
+  width: 100%;
+}
+
 .container {
   width: 100%;
   padding-right: 100px;
@@ -48,10 +57,10 @@
 
 }
 
-#title {
+#application-portal {
   padding-left: 20px;
   font-size: 22px;
-  padding-bottom: 25px;
+  padding-bottom: 3px;
 }
 
 /* general text */
