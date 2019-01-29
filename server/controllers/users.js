@@ -20,7 +20,6 @@ module.exports = {
         responseFour: req.body.responseFour,
         responseFive: req.body.responseFive,
         responseSix: req.body.responseSix
-        //teamPicks: req.body.teamPicks,
       })
       .then(User => res.status(201).send(User))
       .catch(error => res.status(400).send(error));
@@ -50,7 +49,6 @@ module.exports = {
       .catch(error => res.status(400).send({
         message: "wtf are you doing",
       }));
-
   },
 
   update(req, res){
@@ -59,7 +57,6 @@ module.exports = {
       .then(user => {
         return user
           .update({
-            // update status
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             email: req.body.email,

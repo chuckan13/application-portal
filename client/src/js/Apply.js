@@ -1,14 +1,13 @@
-
-import React, { Component } from 'react';
-import '../css/App.css';
-import axios from 'axios';
-import BasicInformation from '../js/BasicInformation.js';
-import TeamSelection from '../js/TeamSelection.js';
-import ShortResponse from '../js/ShortResponse.js';
-import Review from '../js/Review.js';
-import { addStyle } from 'react-bootstrap/lib/utils/bootstrapUtils';
-import { Button } from 'react-bootstrap';
-addStyle(Button, 'next');
+import React, { Component } from "react";
+import "../css/App.css";
+import axios from "axios";
+import BasicInformation from "../js/BasicInformation.js";
+import TeamSelection from "../js/TeamSelection.js";
+import ShortResponse from "../js/ShortResponse.js";
+import Review from "../js/Review.js";
+import { addStyle } from "react-bootstrap/lib/utils/bootstrapUtils";
+import { Button } from "react-bootstrap";
+addStyle(Button, "next");
 
 class Apply extends Component {
   state = {
@@ -18,18 +17,33 @@ class Apply extends Component {
     partThree: false,
     partFour: false,
     created: false
-  }
+  };
 
   constructor(props) {
     super(props);
-    let that = this;
-    fetch('/session')
-      .then(res => res.text())
-      .then(text => that.setState({user: text}))
-      .catch(err => console.error(err));
     this.handlePartOneClick = this.handlePartOneClick.bind(this);
     this.handlePartTwoClick = this.handlePartTwoClick.bind(this);
     this.handlePartThreeClick = this.handlePartThreeClick.bind(this);
+  }
+
+  componentDidMount() {
+    fetch("/session")
+      .then(res => res.text())
+      .then(text => {
+        this.setState({ user: text });
+
+        return axios.post("/api/users", {
+          token: text
+        });
+      })
+      .then(response => {
+        console.log(response);
+        this.setState({ created: true });
+      })
+      .catch(error => {
+        console.log(error);
+      })
+      .catch(err => console.error(err));
   }
 
   handlePartOneClick() {
@@ -61,47 +75,38 @@ class Apply extends Component {
   }
 
   render() {
-    console.log("Logged in as: " + this.state.user)
-     /* create a new user */
-    if (this.state.user !== "" && !this.state.created) {
-      axios.post('/api/users' , {
-        token: this.state.user
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-      this.setState({created: true});
-    } 
-    const partOne = this.state.partOne;
-    const partTwo = this.state.partTwo;
-    const partThree = this.state.partThree;
-    const partFour = this.state.partFour;
-    let display;  
+    /* create a new user */
+    const { partOne, partTwo, partThree, partFour } = this.state;
+    let display;
 
     if (partOne) {
-      display = <BasicInformation 
-        handlePartOneClick = {this.handlePartOneClick}
-        user = {this.state.user} />;
+      display = (
+        <BasicInformation
+          handlePartOneClick={this.handlePartOneClick}
+          user={this.state.user}
+        />
+      );
     } else if (partTwo) {
-      display = <TeamSelection 
-        handlePartTwoClick = {this.handlePartTwoClick} 
-        user = {this.state.user} />;
+      display = (
+        <TeamSelection
+          handlePartTwoClick={this.handlePartTwoClick}
+          user={this.state.user}
+        />
+      );
     } else if (partThree) {
-      display = <ShortResponse handlePartThreeClick = {this.handlePartThreeClick} />;
+      display = (
+        <ShortResponse handlePartThreeClick={this.handlePartThreeClick} />
+      );
     } else if (partFour) {
-      display = <Review 
-        handlePartFourClick = {this.handlePartFourClick} 
-        user = {this.state.user} />;
+      display = (
+        <Review
+          handlePartFourClick={this.handlePartFourClick}
+          user={this.state.user}
+        />
+      );
     }
 
-    return (
-      <div>
-        {display}
-      </div>
-    );
+    return <div>{display}</div>;
   }
 }
 
