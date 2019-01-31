@@ -17,9 +17,6 @@ class TeamSelection extends React.Component {
 
   constructor(props, context) {
     super(props, context);
-    this.updateTeamOne = this.updateTeamOne.bind(this);
-    this.updateTeamTwo = this.updateTeamTwo.bind(this);
-    this.updateTeamThree = this.updateTeamThree.bind(this);
     this.handleSubmitClick = this.handleSubmitClick.bind(this);
     this.updateState = this.updateState.bind(this);
   }
