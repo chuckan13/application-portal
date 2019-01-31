@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     teamOne: DataTypes.STRING,
     teamTwo: DataTypes.STRING,
     teamThree: DataTypes.STRING,
+    teamsID: DataTypes.ARRAY(DataTypes.UUID),
     responseOne: DataTypes.TEXT,
     responseTwo: DataTypes.TEXT,
     responseThree: DataTypes.TEXT,
@@ -20,6 +21,10 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   User.associate = function(models) {
     // associations can be defined here
+    User.hasMany(models.Team, {
+      foreignKey: 'userID',
+      as: 'teams',
+    });
   };
   return User;
 };
