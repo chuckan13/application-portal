@@ -44,38 +44,36 @@ class BasicInformation extends React.Component {
   render() {
     return (
       <div>
-
         <div id="title">
-          <p> Part 1: Basic Information </p>
+          <p>Part 1: Basic Information</p>
         </div>
-
-        <FormEntry 
-          name='firstName' label='First Name:' ph='First Name' 
-          v={this.state.firstName} onChange={this.updateState}
-        />
-        <FormEntry 
-          label='Last Name:' ph='Last Name' name='lastName'
-          v={this.state.lastName} onChange={this.updateState}
-        />
-        <FormEntry 
-          label='Email:' ph='Email' name='email'
-          v={this.state.email} onChange={this.updateState}
-        />
-        <FormEntry 
-          label='Class Year:' ph='Class Year' name='class'
-          v={this.state.class} onChange={this.updateState}
-        />
-        <FormEntry 
-          label='Concentration:' ph='Concentration' name='concentration'
-          v={this.state.concentration} onChange={this.updateState}
-        />
-        <FormEntry 
-          label='Gender:' ph='Gender' name='gender'
-          v={this.state.gender} onChange={this.updateState}
-        />
-
+        <form>
+          <FormEntry 
+            label='First Name:' ph='First Name' name='firstName' 
+            v={this.state.firstName} onChange={this.updateState}
+          />
+          <FormEntry 
+            label='Last Name:' ph='Last Name' name='lastName'
+            v={this.state.lastName} onChange={this.updateState}
+          />
+          <FormEntry 
+            label='Email:' ph='Email' name='email'
+            v={this.state.email} onChange={this.updateState}
+          />
+          <FormEntry 
+            label='Class Year:' ph='Class Year' name='class'
+            v={this.state.class} onChange={this.updateState}
+          />
+          <FormEntry 
+            label='Concentration:' ph='Concentration' name='concentration'
+            v={this.state.concentration} onChange={this.updateState}
+          />
+          <FormEntry 
+            label='Gender:' ph='Gender' name='gender'
+            v={this.state.gender} onChange={this.updateState}
+          />
+        </form>
         <SubmitButton onClick = {this.handleSubmitClick} />
-        
       </div>
     );
   }
