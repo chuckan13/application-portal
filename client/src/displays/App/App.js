@@ -5,7 +5,7 @@ import { Nav } from 'react-bootstrap';
 import { NavItem } from 'react-bootstrap';
 import '../App/App.css';
 import Apply from '../Apply.js';
-import Admin from '../Admin.js';
+import Admin from '../Admin/Admin.js';
 import Home from '../Home/Home.js';
 
 
