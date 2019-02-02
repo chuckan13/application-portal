@@ -1,10 +1,7 @@
+'use strict';
+
 module.exports = (sequelize, DataTypes) => {
   const Team = sequelize.define('Team', {
-    teamID: {
-      type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV1,
-      primaryKey: true
-    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -19,10 +16,10 @@ module.exports = (sequelize, DataTypes) => {
     },
   });
   Team.associate = (models) => {
-    // associations can be defined here
-    Team.hasMany(models.User, {
-      foreignKey: 'userID',
-      as: 'users',
+    Team.belongsToMany(models.User, {
+      through: 'UserTeams',
+      foreignKey: 'teamId',
+      as: 'applicants',
     });
   };
   return Team;
