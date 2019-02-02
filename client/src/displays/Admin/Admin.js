@@ -8,6 +8,13 @@ addStyle(Button, 'admin');
 
 class Admin extends Component {
 
+  state = {
+    /* display booleans */
+    homePage: true,
+    viewApplicants: false,
+    editApplication: false
+  };
+
   constructor(props) {
     super(props);
     this.handleApplyClick = this.handleApplyClick.bind(this);
