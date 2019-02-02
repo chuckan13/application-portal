@@ -29,14 +29,23 @@ module.exports = {
       token: {
         type: Sequelize.STRING
       },
-      teamOne: {
-        type: Sequelize.STRING
+      responseOne: {
+        type: Sequelize.TEXT
       },
-      teamTwo: {
-        type: Sequelize.STRING
+      responseTwo: {
+        type: Sequelize.TEXT
       },
-      teamThree: {
-        type: Sequelize.STRING
+      responseThree: {
+        type: Sequelize.TEXT
+      },
+      responseFour: {
+        type: Sequelize.TEXT
+      },
+      responseFive: {
+        type: Sequelize.TEXT
+      },
+      responseSix: {
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
@@ -49,6 +58,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Users');
+    return queryInterface.dropTable('Users', { cascade: true });
   }
 };

@@ -35,7 +35,9 @@ class Apply extends Component {
     partTwo: false,
     partThree: false,
     partFour: false,
-    submitted: false
+    submitted: false,
+    // list of teams
+    teams: [],
   };
 
   constructor(props) {
@@ -61,6 +63,13 @@ class Apply extends Component {
         console.log(error);
       })
       .catch(err => console.error(err));
+
+    // request the list of teams
+    axios.get('/api/teams')
+      .then(res => {
+        this.setState({ teams: res.data })
+      })
+      .catch(err => console.log(err));
   }
 
   handlePartOneClick(fn, ln, e, cl, con, g) {

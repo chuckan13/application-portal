@@ -64,15 +64,24 @@ class ShortResponse extends React.Component {
   }
 
   render() {
+    // initially they come in as ids.  we need to get the team out of them
+    let { teamOne, teamTwo, teamThree } = this.props.state;
+    console.log('teamone: ' + teamOne)
+    console.log(this.props.state.teams)
+    teamOne = this.props.state.teams.filter(team => team.id === Number(teamOne))[0]
+    teamTwo = this.props.state.teams.filter(team => team.id === Number(teamTwo))[0]
+    teamThree = this.props.state.teams.filter(team => team.id === Number(teamThree))[0]
+    console.log(teamOne)
+
     return (
       <div>
         <div id="title">
           <p> Part 3: Short Response </p>
         </div>
         <div id="questions">
-          <p id="choice"> Choice 1: {this.props.state.teamOne} </p>
+          <p id="choice"> Choice 1: {teamOne.name} </p>
           <FormGroup controlId="formControlsTextarea">
-            <ControlLabel>Why do you want to join this team?</ControlLabel>
+            <ControlLabel>{teamOne.questionOne}</ControlLabel>
             <FormControl
                 componentClass="textarea"
                 value={this.state.responseOne}
@@ -80,7 +89,7 @@ class ShortResponse extends React.Component {
             />
           </FormGroup>
           <FormGroup controlId="formControlsTextarea">
-            <ControlLabel>Describe your relevant experience.</ControlLabel>
+            <ControlLabel>{teamOne.questionTwo}</ControlLabel>
             <FormControl
               componentClass="textarea"
               value={this.state.responseTwo}
@@ -89,9 +98,9 @@ class ShortResponse extends React.Component {
           </FormGroup>
         </div>
         <div id="questions">
-          <p id="choice"> Choice 2: {this.props.state.teamTwo} </p>
+          <p id="choice"> Choice 2: {teamTwo.name} </p>
           <FormGroup controlId="formControlsTextarea">
-            <ControlLabel>Why do you want to join this team?</ControlLabel>
+            <ControlLabel>{teamTwo.questionOne}</ControlLabel>
             <FormControl
               componentClass="textarea"
               value={this.state.responseThree}
@@ -99,7 +108,7 @@ class ShortResponse extends React.Component {
             />
           </FormGroup>
           <FormGroup controlId="formControlsTextarea">
-            <ControlLabel>Describe your relevant experience.</ControlLabel>
+            <ControlLabel>{teamTwo.questionTwo}</ControlLabel>
             <FormControl
               componentClass="textarea"
               value={this.state.responseFour}
@@ -108,9 +117,9 @@ class ShortResponse extends React.Component {
          </FormGroup>
         </div>
         <div id="questions">
-          <p id="choice"> Choice 3: {this.props.state.teamThree} </p>
+          <p id="choice"> Choice 3: {teamThree.name} </p>
           <FormGroup controlId="formControlsTextarea">
-            <ControlLabel>Why do you want to join this team?</ControlLabel>
+            <ControlLabel>{teamThree.questionOne}</ControlLabel>
             <FormControl
               componentClass="textarea"
               value={this.state.responseFive}
@@ -118,7 +127,7 @@ class ShortResponse extends React.Component {
             />
           </FormGroup>
           <FormGroup controlId="formControlsTextarea">
-            <ControlLabel>Describe your relevant experience.</ControlLabel>
+            <ControlLabel>{teamThree.questionTwo}</ControlLabel>
             <FormControl
               componentClass="textarea"
               value={this.state.responseSix}

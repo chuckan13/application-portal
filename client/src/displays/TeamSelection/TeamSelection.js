@@ -12,7 +12,8 @@ class TeamSelection extends React.Component {
   state = {
     teamOne: '',
     teamTwo: '',
-    teamThree: ''
+    teamThree: '',
+    teams: [],
   }
 
   constructor(props, context) {
@@ -42,7 +43,12 @@ class TeamSelection extends React.Component {
     this.props.handlePartTwoClick(t1, t2, t3);
   }
 
+  renderTeamOption(team) {
+    return <option key={team.id} value={team.id}>{team.name}</option>
+  }
+
   render() {
+    const { teams } = this.props.state;
     return (
       <div>
         <div id="title">
@@ -55,57 +61,21 @@ class TeamSelection extends React.Component {
                  <ControlLabel>Team 1:</ControlLabel>
                  <FormControl componentClass="select" placeholder="first choice" onChange={this.updateTeamOne}>
                    <option value=""></option>
-                   <option value="Alumni Outreach">Alumni Outreach</option>
-                   <option value="COFF">COFF</option>
-                   <option value="Design">Design</option>
-                   <option value="Development">Development</option>
-                   <option value="MVP">MVP</option>
-                   <option value="HackPrinceton">HackPrinceton</option>
-                   <option value="ICE Network">ICE Network</option>
-                   <option value="IgniteStem">IgniteStem</option>
-                   <option value="Rehack">Rehack</option>
-                   <option value="NYTT">NYTT</option>
-                   <option value="SVTT">SVTT</option>
-                   <option value="TigerLaunch">TigerLaunch</option>
-                   <option value="TigerTables">TigerTables</option>
+                   { teams.map(this.renderTeamOption) }
                  </FormControl>
               </FormGroup>
               <FormGroup controlId="formControlsSelect">
                  <ControlLabel>Team 2:</ControlLabel>
                  <FormControl componentClass="select" placeholder="second choice" onChange={this.updateTeamTwo}>
                    <option value=""></option>
-                   <option value="Alumni Outreach">Alumni Outreach</option>
-                   <option value="COFF">COFF</option>
-                   <option value="Design">Design</option>
-                   <option value="Development">Development</option>
-                   <option value="MVP">MVP</option>
-                   <option value="HackPrinceton">HackPrinceton</option>
-                   <option value="ICE Network">ICE Network</option>
-                   <option value="IgniteStem">IgniteStem</option>
-                   <option value="Rehack">Rehack</option>
-                   <option value="NYTT">NYTT</option>
-                   <option value="SVTT">SVTT</option>
-                   <option value="TigerLaunch">TigerLaunch</option>
-                   <option value="TigerTables">TigerTables</option>
+                   { teams.map(this.renderTeamOption) }
                  </FormControl>
               </FormGroup>
               <FormGroup controlId="formControlsSelect">
                  <ControlLabel>Team 3:</ControlLabel>
                  <FormControl componentClass="select" placeholder="third choice" onChange={this.updateTeamThree}>
                    <option value=""></option>
-                   <option value="Alumni Outreach">Alumni Outreach</option>
-                   <option value="COFF">COFF</option>
-                   <option value="Design">Design</option>
-                   <option value="Development">Development</option>
-                   <option value="MVP">MVP</option>
-                   <option value="HackPrinceton">HackPrinceton</option>
-                   <option value="ICE Network">ICE Network</option>
-                   <option value="IgniteStem">IgniteStem</option>
-                   <option value="Rehack">Rehack</option>
-                   <option value="NYTT">NYTT</option>
-                   <option value="SVTT">SVTT</option>
-                   <option value="TigerLaunch">TigerLaunch</option>
-                   <option value="TigerTables">TigerTables</option>
+                   { teams.map(this.renderTeamOption) }
                  </FormControl>
               </FormGroup>
             </form>
