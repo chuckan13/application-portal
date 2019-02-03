@@ -1,4 +1,5 @@
 'use strict';
+
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
     token: DataTypes.STRING,
@@ -8,9 +9,6 @@ module.exports = (sequelize, DataTypes) => {
     class: DataTypes.STRING,
     concentration: DataTypes.STRING,
     gender: DataTypes.STRING,
-    teamOne: DataTypes.STRING,
-    teamTwo: DataTypes.STRING,
-    teamThree: DataTypes.STRING,
     responseOne: DataTypes.TEXT,
     responseTwo: DataTypes.TEXT,
     responseThree: DataTypes.TEXT,
@@ -18,8 +16,12 @@ module.exports = (sequelize, DataTypes) => {
     responseFive: DataTypes.TEXT,
     responseSix: DataTypes.TEXT
   }, {});
-  User.associate = function(models) {
-    // associations can be defined here
+  User.associate = (models) => {
+    User.belongsToMany(models.Team, {
+      through: 'UserTeams',
+      foreignKey: 'userId',
+      as: 'teams',
+    });
   };
   return User;
 };

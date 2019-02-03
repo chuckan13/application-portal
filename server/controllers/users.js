@@ -1,4 +1,17 @@
 const User = require('../models').User;
+const Team = require('../models').Team;
+const UserTeams = require('../models').UserTeams;
+
+// Extracts the preference for each team and makes it a top level value for team
+const transformUser = user => {
+  user = user.get({ plain: true })
+  user.teams = user.teams.map(team => {
+    team.preference = team.UserTeams.preference;
+    delete team.UserTeams;
+    return team;
+  })
+  return user;
+}
 
 module.exports = {
   create(req, res) {
@@ -11,9 +24,6 @@ module.exports = {
         class: req.body.class,
         concentration: req.body.concentration,
         gender: req.body.gender,
-        teamOne: req.body.teamOne,
-        teamTwo: req.body.teamTwo,
-        teamThree: req.body.teamThree,
         responseOne: req.body.responseOne,
         responseTwo: req.body.responseTwo,
         responseThree: req.body.responseThree,
@@ -21,29 +31,71 @@ module.exports = {
         responseFive: req.body.responseFive,
         responseSix: req.body.responseSix
       })
-      .then(User => res.status(201).send(User))
+      .then(user => {
+        return Promise.all([
+          UserTeams.create({
+            userId: user.id,
+            teamId: req.body.teamOne,
+            preference: 1,
+          }),
+          UserTeams.create({
+            userId: user.id,
+            teamId: req.body.teamTwo,
+            preference: 2,
+          }),
+          UserTeams.create({
+            userId: user.id,
+            teamId: req.body.teamThree,
+            preference: 3,
+          })
+        ]).then(() => {
+          res.status(201).send(user)
+        }).catch(err => res.status(500).send(error))
+      })
       .catch(error => res.status(400).send(error));
   },
 
   
   list(req, res) {
     return User
-      .all()
-      .then(users => res.status(200).send(users))
-      .catch(error => res.status(400).send(error));
+      .findAll({
+        include: [
+          { 
+            model: Team, 
+            attributes: ['id', 'name'], 
+            as: 'teams', 
+            through: {attributes: [ "preference" ]} ,
+          },
+        ],
+      })
+      .then(users => res.status(200).send(users.map(transformUser)))
+      .catch(error => {
+        console.log(error);
+        res.status(400).send(error);
+      });
   },
 
 
   retrieve(req,res){
     return User
-      .findOne({ where: {token: req.params.token} })
+      .findOne({ 
+        where: {token: req.params.token},
+        include: [
+          { 
+            model: Team, 
+            attributes: ['id', 'name'], 
+            as: 'teams', 
+            through: {attributes: [ "preference" ]} 
+          },
+        ]
+       })
       .then(user => {
         if(!user){
           return res.status(404).send({
             message: "err",
           });
         }
-        return res.status(200).send(user);
+        return res.status(200).send(transformUser(user));
       })
       .catch(error => res.status(400).send({
         message: "wtf are you doing",
@@ -54,6 +106,9 @@ module.exports = {
     return User
       .findOne({ where: {token: req.params.token} })
       .then(user => {
+        // TODO this will overwrite values if some fields are null, change
+        // so that only values that are present are written in
+        // e.g. req.body.email || user.email
         return user
           .update({
             firstName: req.body.firstName,
@@ -62,17 +117,14 @@ module.exports = {
             class: req.body.class,
             concentration: req.body.concentration,
             gender: req.body.gender,
-            teamOne: req.body.teamOne,
-            teamTwo: req.body.teamTwo,
-            teamThree: req.body.teamThree,
             responseOne: req.body.responseOne,
             responseTwo: req.body.responseTwo,
             responseThree: req.body.responseThree,
             responseFour: req.body.responseFour,
             responseFive: req.body.responseFive,
             responseSix: req.body.responseSix
-          })
-          .then(() => res.status(200).send(user));
+          }) // TODO if team prefs change, update UserTeam tables accordingly
+          .then(() => res.status(200).send(transformUser(user)));
       });
 
 

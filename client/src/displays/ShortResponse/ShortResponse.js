@@ -42,29 +42,38 @@ class ShortResponse extends React.Component {
   }
 
   render() {
+    // initially they come in as ids.  we need to get the team out of them
+    let { teamOne, teamTwo, teamThree } = this.props.state;
+    console.log('teamone: ' + teamOne)
+    console.log(this.props.state.teams)
+    teamOne = this.props.state.teams.filter(team => team.id === Number(teamOne))[0]
+    teamTwo = this.props.state.teams.filter(team => team.id === Number(teamTwo))[0]
+    teamThree = this.props.state.teams.filter(team => team.id === Number(teamThree))[0]
+    console.log(teamOne)
+
     return (
       <div>
         <div id="title">
           <p> Part 3: Short Response </p>
         </div>
         <TeamQuestions 
-          team={this.props.state.teamOne} num="1"
+          team={teamOne.name} num="1"
           n1="responseOne" n2="responseTwo"
-          q1="insert question here" q2="insert question here"
+          q1={teamOne.questionOne} q2={teamOne.questionTwo}
           v1={this.state.responseOne} v2={this.state.responseTwo}
           onChange={this.updateState}
         />
         <TeamQuestions 
-          team={this.props.state.teamTwo} num="2"
+          team={teamTwo.name} num="2"
           n1="responseThree" n2="responseFour"
-          q1="insert question here" q2="insert question here"
+          q1={teamTwo.questionOne} q2={teamTwo.questionTwo}
           v1={this.state.responseThree} v2={this.state.responseFour}
           onChange={this.updateState}
         />
         <TeamQuestions 
-          team={this.props.state.teamThree} num="3"
+          team={teamThree.name} num="3"
           n1="responseFive" n2="responseSix"
-          q1="insert question here" q2="insert question here"
+          q1={teamThree.questionOne} q2={teamThree.questionTwo}
           v1={this.state.responseFive} v2={this.state.responseSix}
           onChange={this.updateState}
         />

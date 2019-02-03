@@ -2,3 +2,4 @@
 **/*.swp
 .vscode/settings.json
 yarn-error.log
+db_data/

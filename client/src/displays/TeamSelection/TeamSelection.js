@@ -12,7 +12,8 @@ class TeamSelection extends React.Component {
   state = {
     teamOne: '',
     teamTwo: '',
-    teamThree: ''
+    teamThree: '',
+    teams: [],
   }
 
   constructor(props, context) {
@@ -35,16 +36,30 @@ class TeamSelection extends React.Component {
     this.props.handlePartTwoClick(t1, t2, t3);
   }
 
+  renderTeamOption(team) {
+    return <option key={team.id} value={team.id}>{team.name}</option>
+  }
+
   render() {
+    const { teams } = this.props.state;
     return (
       <div>
         <div id="title">
           <p> Part 2: Team Selection </p>
         </div>
         <form>
-          <TeamChoice label="Team 1:" name="teamOne" onChange={this.updateState}/>
-          <TeamChoice label="Team 2:" name="teamTwo" onChange={this.updateState}/>
-          <TeamChoice label="Team 3:" name="teamThree" onChange={this.updateState}/>
+          <TeamChoice 
+            label="Team 1:" name="teamOne" 
+            onChange={this.updateState} render={teams.map(this.renderTeamOption)}
+          />
+          <TeamChoice 
+            label="Team 2:" name="teamTwo" 
+            onChange={this.updateState} render={teams.map(this.renderTeamOption)}
+          />
+          <TeamChoice 
+            label="Team 3:" name="teamThree" 
+            onChange={this.updateState} render={teams.map(this.renderTeamOption)}
+          />
         </form>
         <SubmitButton onClick={this.handleSubmitClick} />
       </div>
@@ -56,21 +71,11 @@ function TeamChoice(props) {
   return (
     <FormGroup controlId="formControlsSelect">
        <ControlLabel>{props.label}</ControlLabel>
-       <FormControl name={props.name} componentClass="select" onChange={props.onChange}>
-         <option value=""></option>
-         <option value="Alumni Outreach">Alumni Outreach</option>
-         <option value="COFF">COFF</option>
-         <option value="Design">Design</option>
-         <option value="Development">Development</option>
-         <option value="MVP">MVP</option>
-         <option value="HackPrinceton">HackPrinceton</option>
-         <option value="ICE Network">ICE Network</option>
-         <option value="IgniteStem">IgniteStem</option>
-         <option value="Rehack">Rehack</option>
-         <option value="NYTT">NYTT</option>
-         <option value="SVTT">SVTT</option>
-         <option value="TigerLaunch">TigerLaunch</option>
-         <option value="TigerTables">TigerTables</option>
+       <FormControl 
+        name={props.name} componentClass="select" 
+        onChange={props.onChange} render={props.render}>
+               <option value=""></option>
+               {props.render}
        </FormControl>
     </FormGroup>
   );
