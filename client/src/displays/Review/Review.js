@@ -16,6 +16,12 @@ class Review extends React.Component {
   }
 
   render() {
+    // getting team names from ids
+    let { teamOne, teamTwo, teamThree } = this.props.state;
+    teamOne = this.props.state.teams.filter(team => team.id === Number(teamOne))[0]
+    teamTwo = this.props.state.teams.filter(team => team.id === Number(teamTwo))[0]
+    teamThree = this.props.state.teams.filter(team => team.id === Number(teamThree))[0]
+
     return (
       <div>
         <div id="chunk">
@@ -30,21 +36,21 @@ class Review extends React.Component {
         <div>
           <p id="header2"> Short Response Questions: </p>
           <div id="choice-section">
-            <p id="choice"> Choice 1: {this.props.state.teamOne}</p>
+            <p id="choice"> Choice 1: {teamOne.name}</p>
             <p id="question">Why do you want to join this team?</p>
             <p id="response"> {this.props.state.responseOne}</p>
             <p id="question">Describe your relevant experience.</p>
             <p id="response"> {this.props.state.responseTwo}</p>
           </div>
           <div id="choice-section">
-            <p id="choice"> Choice 2: {this.props.state.teamTwo}</p>
+            <p id="choice"> Choice 2: {teamTwo.name}</p>
             <p id="question">Why do you want to join this team?</p>
             <p id="response"> {this.props.state.responseThree}</p>
             <p id="question">Describe your relevant experience.</p>
             <p id="response"> {this.props.state.responseFour}</p>
           </div>
           <div id="choice-section">
-            <p id="choice"> Choice 3: {this.props.state.teamThree}</p>
+            <p id="choice"> Choice 3: {teamThree.name}</p>
             <p id="question">Why do you want to join this team?</p>
             <p id="response"> {this.props.state.responseFive}</p>
             <p id="question">Describe your relevant experience.</p>

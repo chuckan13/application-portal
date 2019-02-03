@@ -44,12 +44,9 @@ class ShortResponse extends React.Component {
   render() {
     // initially they come in as ids.  we need to get the team out of them
     let { teamOne, teamTwo, teamThree } = this.props.state;
-    console.log('teamone: ' + teamOne)
-    console.log(this.props.state.teams)
     teamOne = this.props.state.teams.filter(team => team.id === Number(teamOne))[0]
     teamTwo = this.props.state.teams.filter(team => team.id === Number(teamTwo))[0]
     teamThree = this.props.state.teams.filter(team => team.id === Number(teamThree))[0]
-    console.log(teamOne)
 
     return (
       <div>
