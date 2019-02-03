@@ -83,7 +83,7 @@ module.exports = {
         include: [
           { 
             model: Team, 
-            attributes: ['id', 'name'], 
+            attributes: ['id', 'name', 'questionOne', 'questionTwo'], 
             as: 'teams', 
             through: {attributes: [ "preference" ]} 
           },
@@ -109,7 +109,7 @@ module.exports = {
         include: [
           { 
             model: Team, 
-            attributes: ['id', 'name'], 
+            attributes: ['id', 'name', 'questionOne', 'questionTwo'], 
             as: 'teams', 
             through: {attributes: [ "preference" ]} 
           },
