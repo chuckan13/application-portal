@@ -82,14 +82,14 @@ class viewApplicants extends Component {
       display = (
         <div>
           <Row className="center-block text-center">
-            <Table>
+            <Table id="user-table">
               <thead>
                 <tr id="head">
                   <th>First Name</th>
                   <th>Last Name</th>
-                  <th>Choice 1</th>
-                  <th>Choice 2</th>
-                  <th>Choice 3</th>
+                  <th>First Choice</th>
+                  <th>Second Choice</th>
+                  <th>Third Choice</th>
                   <th>More Details</th>
                 </tr>
               </thead>
@@ -122,32 +122,34 @@ class viewApplicants extends Component {
 function UserProfile(props) {
   return (
       <div>
-        <div id="chunk">
-          <p id="header"> Basic Information: </p>
-          <p id="information"> First name: {props.user.firstName}</p>
-          <p id="information"> Last name: {props.user.lastName}</p>
-          <p id="information"> Email: {props.user.email}</p>
-          <p id="information"> Class: {props.user.class}</p>
-          <p id="information"> Concentration: {props.user.concentration}</p>
-          <p id="information"> Gender: {props.user.gender}</p>
-        </div>
-        <div>
-          <p id="header2"> Short Response Questions: </p>
-          <ShortResponseSection
-            name={props.teamOne.name} num="1"
-            q1={props.teamOne.questionOne} r1={props.user.responseOne}
-            q2={props.teamOne.questionTwo} r2={props.user.responseTwo}
-          />
-          <ShortResponseSection
-            name={props.teamTwo.name} num="2"
-            q1={props.teamTwo.questionOne} r1={props.user.responseThree}
-            q2={props.teamTwo.questionTwo} r2={props.user.responseFour}
-          />
-          <ShortResponseSection
-            name={props.teamThree.name} num="3"
-            q1={props.teamThree.questionOne} r1={props.user.responseFive}
-            q2={props.teamThree.questionTwo} r2={props.user.responseSix}
-          />
+        <div id="user-profile">
+          <div id="chunk">
+            <p id="header">Basic Information</p>
+            <p id="information"> First Name: {props.user.firstName}</p>
+            <p id="information"> Last Name: {props.user.lastName}</p>
+            <p id="information"> Email: {props.user.email}</p>
+            <p id="information"> Class: {props.user.class}</p>
+            <p id="information"> Concentration: {props.user.concentration}</p>
+            <p id="information"> Gender: {props.user.gender}</p>
+          </div>
+          <div>
+            <p id="header">Short Response Questions</p>
+            <ShortResponseSection
+              name={props.teamOne.name} num="1"
+              q1={props.teamOne.questionOne} r1={props.user.responseOne}
+              q2={props.teamOne.questionTwo} r2={props.user.responseTwo}
+            />
+            <ShortResponseSection
+              name={props.teamTwo.name} num="2"
+              q1={props.teamTwo.questionOne} r1={props.user.responseThree}
+              q2={props.teamTwo.questionTwo} r2={props.user.responseFour}
+            />
+            <ShortResponseSection
+              name={props.teamThree.name} num="3"
+              q1={props.teamThree.questionOne} r1={props.user.responseFive}
+              q2={props.teamThree.questionTwo} r2={props.user.responseSix}
+            />
+          </div>
         </div>
         <BackButton onClick={props.onClick} />
       </div>
@@ -157,7 +159,7 @@ function UserProfile(props) {
 function ShortResponseSection(props) {
   return (
     <div id="choice-section">
-      <p id="choice"> Choice {props.num}: {props.name}</p>
+      <p id="choice"> Team {props.num}: {props.name}</p>
       <p id="question">{props.q1}</p>
       <p id="response">{props.r1}</p>
       <p id="question">{props.q2}</p>

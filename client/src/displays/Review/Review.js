@@ -34,7 +34,7 @@ class Review extends React.Component {
           <p id="information"> Gender: {this.props.state.gender}</p>
         </div>
         <div>
-          <p id="header2"> Short Response Questions: </p>
+          <p id="header"> Short Response Questions: </p>
           <ShortResponseSection
             name ={teamOne.name} num="1"
             q1 ={teamOne.questionOne} r1={this.props.state.responseOne}
