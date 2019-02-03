@@ -35,32 +35,38 @@ class Review extends React.Component {
         </div>
         <div>
           <p id="header2"> Short Response Questions: </p>
-          <div id="choice-section">
-            <p id="choice"> Choice 1: {teamOne.name}</p>
-            <p id="question">Why do you want to join this team?</p>
-            <p id="response"> {this.props.state.responseOne}</p>
-            <p id="question">Describe your relevant experience.</p>
-            <p id="response"> {this.props.state.responseTwo}</p>
-          </div>
-          <div id="choice-section">
-            <p id="choice"> Choice 2: {teamTwo.name}</p>
-            <p id="question">Why do you want to join this team?</p>
-            <p id="response"> {this.props.state.responseThree}</p>
-            <p id="question">Describe your relevant experience.</p>
-            <p id="response"> {this.props.state.responseFour}</p>
-          </div>
-          <div id="choice-section">
-            <p id="choice"> Choice 3: {teamThree.name}</p>
-            <p id="question">Why do you want to join this team?</p>
-            <p id="response"> {this.props.state.responseFive}</p>
-            <p id="question">Describe your relevant experience.</p>
-            <p id="response"> {this.props.state.responseSix}</p>
-          </div>
+          <ShortResponseSection
+            name ={teamOne.name}
+            q1 ={teamOne.questionOne} r1={this.props.state.responseOne}
+            q2= {teamOne.questionTwo} r2={this.props.state.responseTwo}
+          />
+          <ShortResponseSection
+            name ={teamTwo.name}
+            q1 ={teamTwo.questionOne} r1={this.props.state.responseThree}
+            q2= {teamTwo.questionTwo} r2={this.props.state.responseFour}
+          />
+          <ShortResponseSection
+            name ={teamThree.name}
+            q1 ={teamThree.questionOne} r1={this.props.state.responseFive}
+            q2= {teamThree.questionTwo} r2={this.props.state.responseSix}
+          />
         </div>
         <SubmitButton onClick = {this.handleSubmitClick} />
       </div>
     );
   }
+}
+
+function ShortResponseSection(props) {
+  return (
+    <div id="choice-section">
+      <p id="choice"> Choice 1: {props.name}</p>
+      <p id="question">{props.q1}</p>
+      <p id="response">{props.r1}</p>
+      <p id="question">{props.q2}</p>
+      <p id="response">{props.r2}</p>
+    </div>
+  );
 }
 
 function SubmitButton(props) {
