@@ -43,10 +43,23 @@ class ShortResponse extends React.Component {
 
   render() {
     // initially they come in as ids.  we need to get the team out of them
+    // added code so it doesn't break if no teams are chosen (?)
     let { teamOne, teamTwo, teamThree } = this.props.state;
-    teamOne = this.props.state.teams.filter(team => team.id === Number(teamOne))[0]
-    teamTwo = this.props.state.teams.filter(team => team.id === Number(teamTwo))[0]
-    teamThree = this.props.state.teams.filter(team => team.id === Number(teamThree))[0]
+    if (teamOne) {
+      teamOne = this.props.state.teams.filter(team => team.id === Number(teamOne))[0]
+    } else {
+      teamOne = "";
+    }
+    if (teamTwo) {
+      teamTwo = this.props.state.teams.filter(team => team.id === Number(teamTwo))[0]
+    } else {
+      teamTwo = "";
+    }
+    if (teamThree) {
+      teamThree = this.props.state.teams.filter(team => team.id === Number(teamThree))[0]
+    } else {
+      teamThree = "";
+    }
 
     return (
       <div>

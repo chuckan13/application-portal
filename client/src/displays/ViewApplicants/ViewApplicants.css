@@ -1,0 +1,45 @@
+th {
+	background-color: white;
+	width: 100px;
+	text-align: center;
+}
+
+tr {
+	background-color: white;
+	width: 100%;
+}
+
+td {
+	text-align: center;
+	width: 200px !important;
+}
+
+tr:hover {
+	background-color: #272727;
+	color: white;
+}
+
+.table, .table-bordered {
+	border-radius: 30px !important;
+	display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 800px;
+}
+
+#head:hover {
+	color:black;
+}
+
+#applicants {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-view-more {
+	color: #fff;
+	background-color: #3891b8;
+	border-radius: 15px;
+	font-size: 14px;
+	padding: 5px 10px 5px 10px;
+}
