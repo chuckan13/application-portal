@@ -12,7 +12,7 @@ class viewApplicants extends Component {
   state = {
     applicants: [],
     viewUser: false,
-    user: null
+    user: ''
   };
 
   constructor(props) {
@@ -30,15 +30,16 @@ class viewApplicants extends Component {
   }
 
   displayInfo(token) {
-    const user = axios.get('/api/users/' + token)
+    axios.get('/api/users/' + token)
       .then(res => {
-        this.setState({ user: res.data })
+        this.setState({user: res.data, viewUser: true}, function() {
+            console.log(this.state.user);
+    });
       })
       .catch(err => console.log(err));
   }
 
   render() {
-    console.log(this.state.applicants);
 
     let renderTable = this.state.applicants.map((user) => {
       // catch if user doesn't have 3 teams ranked
@@ -53,23 +54,6 @@ class viewApplicants extends Component {
           firstName={user.firstName} lastName={user.lastName}
           c1={c1} c2={c2} c3={c3}
           onClick={() => this.displayInfo(user.token)}
-        />
-      ]);
-    });
-
-    const renderUser = this.state.applicants.map((user) => {
-      // catch if user doesn't have 3 teams ranked
-      let c1, c2, c3="";
-      if (user.teams[0]) { c1 = user.teams[0].name; }
-      if (user.teams[1]) { c2 = user.teams[1].name; }
-      if (user.teams[2]) { c3 = user.teams[2].name; }
-
-      return ([
-        <UserProfile 
-          key={user.id}
-          firstName={user.firstName} lastName={user.lastName}
-          c1={c1} c2={c2} c3={c3}
-          //onClick={this.displayInfo(user.id)}
         />
       ]);
     });
@@ -99,7 +83,9 @@ class viewApplicants extends Component {
         </div>
       );
     } else {
-
+      display = (
+        <UserProfile user={this.state.user}/>
+      );
     }
 
     return (
@@ -113,29 +99,29 @@ function UserProfile(props) {
       <div>
         <div id="chunk">
           <p id="header"> Basic Information: </p>
-          <p id="information"> First name: {props.firstName}</p>
-          <p id="information"> Last name: {props.lastName}</p>
-          <p id="information"> Email: {props.email}</p>
-          <p id="information"> Class: {props.class}</p>
-          <p id="information"> Concentration: {props.concentration}</p>
-          <p id="information"> Gender: {props.gender}</p>
+          <p id="information"> First name: {props.user.firstName}</p>
+          <p id="information"> Last name: {props.user.lastName}</p>
+          <p id="information"> Email: {props.user.email}</p>
+          <p id="information"> Class: {props.user.class}</p>
+          <p id="information"> Concentration: {props.user.concentration}</p>
+          <p id="information"> Gender: {props.user.gender}</p>
         </div>
         <div>
           <p id="header2"> Short Response Questions: </p>
           <ShortResponseSection
-            name ={props.teamOne.name}
-            q1 ={props.teamOne.questionOne} r1={props.responseOne}
-            q2= {props.teamOne.questionTwo} r2={props.responseTwo}
+            name ='{props.teamOne.name}'
+            q1 ='{props.teamOne.questionOne}' r1={props.user.responseOne}
+            q2= '{props.teamOne.questionTwo}' r2={props.user.responseTwo}
           />
           <ShortResponseSection
-            name ={props.teamTwo.name}
-            q1 ={props.teamTwo.questionOne} r1={props.responseThree}
-            q2= {props.teamTwo.questionTwo} r2={props.responseFour}
+            name ='{props.teamTwo.name}'
+            q1 ='{props.teamTwo.questionOne}' r1={props.user.responseThree}
+            q2= '{props.teamTwo.questionTwo}' r2={props.user.responseFour}
           />
           <ShortResponseSection
-            name ={props.teamThree.name}
-            q1 ={props.teamThree.questionOne} r1={props.responseFive}
-            q2= {props.teamThree.questionTwo} r2={props.responseSix}
+            name ='{props.teamThree.name}'
+            q1 ='{props.teamThree.questionOne}' r1={props.user.responseFive}
+            q2= '{props.teamThree.questionTwo}' r2={props.user.responseSix}
           />
         </div>
       </div>
