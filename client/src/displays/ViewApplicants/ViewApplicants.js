@@ -12,12 +12,16 @@ class viewApplicants extends Component {
   state = {
     applicants: [],
     viewUser: false,
-    user: ''
+    user: '',
+    teamOne: '',
+    teamTwo: '',
+    teamThree: ''
   };
 
   constructor(props) {
     super(props);
     this.displayInfo = this.displayInfo.bind(this);
+    this.displayTable = this.displayTable.bind(this);
   }
 
   componentDidMount() {
@@ -32,11 +36,24 @@ class viewApplicants extends Component {
   displayInfo(token) {
     axios.get('/api/users/' + token)
       .then(res => {
-        this.setState({user: res.data, viewUser: true}, function() {
+        this.setState({
+          user: res.data, 
+          viewUser: true,
+          teamOne: res.data.teams[0],
+          teamTwo: res.data.teams[1],
+          teamThree: res.data.teams[2]
+        }, function() {
             console.log(this.state.user);
-    });
+            console.log(this.state.teamOne);
+        });
       })
       .catch(err => console.log(err));
+  }
+
+  displayTable() {
+    this.setState({
+      viewUser: false
+    });
   }
 
   render() {
@@ -84,7 +101,13 @@ class viewApplicants extends Component {
       );
     } else {
       display = (
-        <UserProfile user={this.state.user}/>
+        <UserProfile 
+          user={this.state.user}
+          teamOne={this.state.teamOne}
+          teamTwo={this.state.teamTwo}
+          teamThree={this.state.teamThree}
+          onClick={this.displayTable}
+        />
       );
     }
 
@@ -109,21 +132,22 @@ function UserProfile(props) {
         <div>
           <p id="header2"> Short Response Questions: </p>
           <ShortResponseSection
-            name ='{props.teamOne.name}'
-            q1 ='{props.teamOne.questionOne}' r1={props.user.responseOne}
-            q2= '{props.teamOne.questionTwo}' r2={props.user.responseTwo}
+            name={props.teamOne.name}
+            q1={props.teamOne.questionOne} r1={props.user.responseOne}
+            q2={props.teamOne.questionTwo} r2={props.user.responseTwo}
           />
           <ShortResponseSection
-            name ='{props.teamTwo.name}'
-            q1 ='{props.teamTwo.questionOne}' r1={props.user.responseThree}
-            q2= '{props.teamTwo.questionTwo}' r2={props.user.responseFour}
+            name={props.teamTwo.name}
+            q1={props.teamTwo.questionOne} r1={props.user.responseThree}
+            q2={props.teamTwo.questionTwo} r2={props.user.responseFour}
           />
           <ShortResponseSection
-            name ='{props.teamThree.name}'
-            q1 ='{props.teamThree.questionOne}' r1={props.user.responseFive}
-            q2= '{props.teamThree.questionTwo}' r2={props.user.responseSix}
+            name={props.teamThree.name}
+            q1={props.teamThree.questionOne} r1={props.user.responseFive}
+            q2={props.teamThree.questionTwo} r2={props.user.responseSix}
           />
         </div>
+        <BackButton onClick={props.onClick} />
       </div>
     );
 }
