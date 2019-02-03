@@ -5,7 +5,7 @@ const User = require('../models').User;
 const transformTeam = team => {
   team = team.get({ plain: true })
   console.log("applicants: " + team.applicants);
-  if (team.applicants !== undefined) {
+  if (team.applicants) {
       team.applicants = team.applicants.map(user => {
       user.preference = user.UserTeams.preference;
       delete user.UserTeams;
@@ -63,7 +63,12 @@ module.exports = {
 
   update(req, res){
     return Team
-      .findOne({ where: {id: req.params.id} })
+      .findOne({ 
+        where: {id: req.params.id},
+        include: [
+          { model: User, attributes: ['id', 'firstName', 'lastName'], as: 'applicants', through: {attributes: ["preference"]} },
+        ]
+      })
       .then(team => {
         return team
           .update({

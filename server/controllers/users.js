@@ -104,7 +104,17 @@ module.exports = {
 
   update(req, res){
     return User
-      .findOne({ where: {token: req.params.token} })
+      .findOne({ 
+        where: {token: req.params.token},
+        include: [
+          { 
+            model: Team, 
+            attributes: ['id', 'name'], 
+            as: 'teams', 
+            through: {attributes: [ "preference" ]} 
+          },
+        ]
+      })
       .then(user => {
         // TODO this will overwrite values if some fields are null, change
         // so that only values that are present are written in
