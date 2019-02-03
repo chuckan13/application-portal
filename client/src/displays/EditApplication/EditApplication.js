@@ -7,6 +7,7 @@ import { ControlLabel } from 'react-bootstrap';
 
 class editApplication extends Component {
 
+
   state = {
     questionOne: "",
     questionTwo: ""
@@ -34,8 +35,13 @@ class editApplication extends Component {
   render() {
     return (
       <div>
+       <div id="title">
+        <p> Current Questions: </p>
+       </div>
+       <p id="information"> (first question should appear here)</p>
+       <p id="information"> (second question should appear here)</p>
         <div id="title">
-          <p>Edit Application</p>
+          <p>Edit Questions</p>
         </div>
         <Question 
           name="questionOne" num="First"
@@ -50,8 +56,8 @@ class editApplication extends Component {
             bsStyle="admin" 
             bsSize="large" 
             onClick={this.handleUpdateClick}>update</Button>
-          <BackButton onClick = {this.props.backButton} />
         </Row>
+        <BackButton onClick = {this.props.backButton} />
       </div>
     );
   }
