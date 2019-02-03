@@ -6,10 +6,8 @@ import { Col } from 'react-bootstrap';
 class viewApplicants extends Component {
 
   state = {
-    /* display booleans */
-    homePage: true,
-    viewApplicants: false,
-    editApplication: false
+    questionOne: "",
+    questionTwo: ""
   };
 
   constructor(props) {

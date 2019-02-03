@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { Component } from 'react';
 import '../Admin/Admin.css';
 import ViewApplicants from "../ViewApplicants/ViewApplicants.js";
@@ -11,10 +12,6 @@ addStyle(Button, 'admin');
 class Admin extends Component {
 
   state = {
-    /* team attributes */
-    questionOne: "",
-    questionTwo: "",
-
     /* display booleans */
     homePage: true,
     viewApplicants: false,
@@ -23,23 +20,36 @@ class Admin extends Component {
 
   constructor(props) {
     super(props);
-    this.displayApplicants = this.displayApplicants.bind(this);
-    this.editApplication = this.editApplication.bind(this);
+    this.displayApplicantPage = this.displayApplicantPage.bind(this);
+    this.displayEditPage = this.displayEditPage.bind(this);
     this.backButton = this.backButton.bind(this);
+    this.updateQuestions = this.updateQuestions.bind(this);
   }
 
-
-  displayApplicants() {
+  displayApplicantPage() {
     this.setState({
       homePage: false,
       viewApplicants: true
     });
   }
 
-  editApplication() {
+  displayEditPage() {
     this.setState({
       homePage: false,
       editApplication: true
+    });
+  }
+
+  updateQuestions(q1, q2) {
+    axios.put('/api/teams/2', {
+      questionOne: q1,
+      questionTwo: q2
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
     });
   }
 
@@ -59,8 +69,8 @@ class Admin extends Component {
     if (homePage) {
       display = (
         <HomePage 
-          displayApplicants={this.displayApplicants}
-          editApplication={this.editApplication}
+          displayApplicantPage={this.displayApplicantPage}
+          displayEditPage={this.displayEditPage}
         />
       );
     } else if (viewApplicants) {
@@ -69,7 +79,10 @@ class Admin extends Component {
       );
     } else if (editApplication) {
       display = (
-        <EditApplication backButton={this.backButton}/>
+        <EditApplication 
+          backButton={this.backButton}
+          updateQuestions={this.updateQuestions}
+        />
       );
     }
     return (
@@ -84,10 +97,10 @@ function HomePage(props) {
       <Row className="center-block text-center">
         <Col>
           <div>
-            <Button bsStyle="admin" bsSize="large" onClick={props.displayApplicants}>View Applicants</Button>
+            <Button bsStyle="admin" bsSize="large" onClick={props.displayApplicantPage}>View Applicants</Button>
           </div>
           <div>
-            <Button bsStyle="admin" bsSize="large" onClick={props.editApplication}>Edit Application</Button>
+            <Button bsStyle="admin" bsSize="large" onClick={props.displayEditPage}>Edit Application</Button>
           </div>
         </Col>
       </Row>
