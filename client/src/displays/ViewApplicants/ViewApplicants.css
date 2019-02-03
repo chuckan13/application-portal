@@ -15,16 +15,30 @@ td {
 }
 
 tr:hover {
-	background-color: #272727;
-	color: white;
+	background-color: #f2f4f7;
 }
 
-.table, .table-bordered {
-	border-radius: 30px !important;
+.table {
 	display: block !important;
     margin-left: auto !important;
     margin-right: auto !important;
     width: 800px;
+}
+
+/* rounding corners */
+thead th:first-child {
+	border-radius: 10px 0 0 0;
+}
+
+thead th:last-child {
+	border-radius: 0 10px 0 0;
+}
+
+tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+tbody tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
 }
 
 #head:hover {

@@ -81,22 +81,24 @@ class viewApplicants extends Component {
     if (!viewUser) {
       display = (
         <div>
-          <Table bordered>
-            <thead>
-              <tr id="head">
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Choice 1</th>
-                <th>Choice 2</th>
-                <th>Choice 3</th>
-                <th>More Details</th>
-              </tr>
-            </thead>
-            <tbody>
-              {renderTable}
-            </tbody>
-          </Table>
-          <BackButton onClick={this.props.backButton} />
+          <Row className="center-block text-center">
+            <Table>
+              <thead>
+                <tr id="head">
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Choice 1</th>
+                  <th>Choice 2</th>
+                  <th>Choice 3</th>
+                  <th>More Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                {renderTable}
+              </tbody>
+            </Table>
+            <BackButton onClick={this.props.backButton} />
+          </Row>
         </div>
       );
     } else {
@@ -172,7 +174,7 @@ function TableEntry(props) {
       <td>{props.c1}</td>
       <td>{props.c2}</td>
       <td>{props.c3}</td>
-      <td><Button bsStyle="view-more" onClick={props.onClick}>view more</Button></td>
+      <td><Button bsStyle="view-more" onClick={props.onClick}>view</Button></td>
     </tr>
   );
 }
