@@ -4,7 +4,6 @@ const User = require('../models').User;
 // Extracts the preference for each user and makes it a top level value for user
 const transformTeam = team => {
   team = team.get({ plain: true })
-  console.log("applicants: " + team.applicants);
   if (team.applicants) {
       team.applicants = team.applicants.map(user => {
       user.preference = user.UserTeams.preference;

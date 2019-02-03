@@ -12,17 +12,43 @@ class viewApplicants extends Component {
 
   constructor(props) {
     super(props);
-    this.getApplicants = this.getApplicants.bind(this);
   }
 
-  getApplicants() {
-    this.setState({
-      applicants: axios.get("/api/teams/2")
-    });
+  componentDidMount() {
+    // request the list of teams
+    axios.get('/api/users')
+      .then(res => {
+        this.setState({ applicants: res.data })
+      })
+      .catch(err => console.log(err));
   }
 
   render() {
-    let button = <BackButton onClick={this.props.backButton} />;
+    console.log(this.state.applicants);
+    const renderTable = this.state.applicants.map(function(user) {
+
+      // catch if user doesn't have 3 teams ranked
+      let c1, c2, c3 ="";
+      if (user.teams[0]) {
+        c1 = user.teams[0].name;
+      }
+      if (user.teams[1]) {
+        c2 = user.teams[1].name;
+      }
+      if (user.teams[2]) {
+        c3 = user.teams[2].name;
+      }
+
+      return ([
+        <TableEntry key={user.id}
+          firstName={user.firstName} lastName={user.lastName}
+          c1={c1}
+          c2={c2}
+          c3={c3}
+        />
+      ]);
+    });
+
     return (
       <div>
         <Table striped bordered hover>
@@ -36,18 +62,7 @@ class viewApplicants extends Component {
             </tr>
           </thead>
           <tbody>
-            <TableEntry 
-              firstName="Christine" lastName="Hu"
-              c1="HackPrinceton"
-              c2="Development"
-              c3="Design"
-            />
-            <TableEntry 
-              firstName="Christine" lastName="Hu"
-              c1="HackPrinceton"
-              c2="Development"
-              c3="Design"
-            />
+            {renderTable}
           </tbody>
         </Table>
         <BackButton onClick={this.props.backButton} />
