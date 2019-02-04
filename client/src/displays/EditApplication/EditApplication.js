@@ -66,8 +66,9 @@ class editApplication extends Component {
 function Question(props) {
   return (
     <FormGroup controlId="formControlsTextarea">
-      <ControlLabel>{props.num} Question:</ControlLabel>
-      <FormControl
+      <ControlLabel id="long-form-label">{props.num} Question:</ControlLabel>
+      <FormControl 
+        id="long-form-answer"
         name={props.name}
         componentClass="textarea"
         value={props.v}

@@ -63,7 +63,7 @@ class ShortResponse extends React.Component {
 
     return (
       <div>
-        <div id="title">
+        <div id="short-response-title">
           <p> Part 3: Short Response </p>
         </div>
         <TeamQuestions 
@@ -96,8 +96,9 @@ class ShortResponse extends React.Component {
 function Question(props) {
   return (
     <FormGroup controlId="formControlsTextarea">
-      <ControlLabel>{props.question}</ControlLabel>
+      <ControlLabel id="long-form-label">{props.question}</ControlLabel>
       <FormControl
+        id="long-form-answer"
         name={props.name}
         componentClass="textarea"
         value={props.v}
@@ -110,7 +111,7 @@ function Question(props) {
 function TeamQuestions(props) {
   return (
     <div id="questions">
-      <p id="choice"> Choice {props.num}: {props.team} </p>
+      <p id="short-response-choice"> Choice {props.num}: {props.team} </p>
       <Question 
         name={props.n1} question={props.q1}
         v={props.v1} onChange={props.onChange} 

@@ -82,8 +82,9 @@ class BasicInformation extends React.Component {
 function FormEntry(props) {
   return (
     <FormGroup controlId="formBasicText">
-      <ControlLabel>{props.label}</ControlLabel>
+      <ControlLabel id="short-form-label">{props.label}</ControlLabel>
       <FormControl
+        id="short-form-answer"
         name={props.name}
         type="text"
         placeholder={props.ph}

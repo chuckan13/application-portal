@@ -31,7 +31,7 @@ class Review extends React.Component {
           <p id="information"> Email: {this.props.state.email}</p>
           <p id="information"> Class: {this.props.state.class}</p>
           <p id="information"> Concentration: {this.props.state.concentration}</p>
-          <p id="information"> Gender: {this.props.state.gender}</p>
+          <p id="information-last"> Gender: {this.props.state.gender}</p>
         </div>
         <div>
           <p id="header"> Short Response Questions: </p>
@@ -60,7 +60,7 @@ class Review extends React.Component {
 function ShortResponseSection(props) {
   return (
     <div id="choice-section">
-      <p id="choice"> Choice {props.num}: {props.name}</p>
+      <p id="review-choice"> Choice {props.num}: {props.name}</p>
       <p id="question">{props.q1}</p>
       <p id="response">{props.r1}</p>
       <p id="question">{props.q2}</p>

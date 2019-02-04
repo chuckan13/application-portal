@@ -70,8 +70,8 @@ class TeamSelection extends React.Component {
 function TeamChoice(props) {
   return (
     <FormGroup controlId="formControlsSelect">
-       <ControlLabel>{props.label}</ControlLabel>
-       <FormControl 
+       <ControlLabel id="short-form-label">{props.label}</ControlLabel>
+       <FormControl id="short-form-answer" 
         name={props.name} componentClass="select" 
         onChange={props.onChange} render={props.render}>
                <option value=""></option>

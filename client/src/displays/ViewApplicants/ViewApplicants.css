@@ -56,19 +56,7 @@ tbody tr:last-child td:last-child {
 	font-size: 24px;
 }
 
-#information {
-	background-color: white;
-	color: #272727;
-	padding: 10px 10px 10px 20px;
-	border-bottom: 1px solid #d5d5d5;
-	font-size: 18px;
-}
-
-#information:hover {
-	background-color: #f2f4f7;
-}
-
-#choice, #question, #response {
+#review-choice, #question, #response {
 	padding-left: 20px;
 }
 
@@ -81,7 +69,7 @@ tbody tr:last-child td:last-child {
 	font-size: 18px;
 }
 
-#choice {
+#review-choice {
 	background-color: #e0f5ff;
 	color: #272727;
 	font-size: 18px;
@@ -101,7 +89,7 @@ tbody tr:last-child td:last-child {
 .btn-view-more {
 	color: #fff;
 	background-color: #808080;
-	border-radius: 15px;
+	border-radius: 10px;
 	font-size: 14px;
 	padding: 5px 10px 5px 10px;
 }

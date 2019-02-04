@@ -130,7 +130,7 @@ function UserProfile(props) {
             <p id="information"> Email: {props.user.email}</p>
             <p id="information"> Class: {props.user.class}</p>
             <p id="information"> Concentration: {props.user.concentration}</p>
-            <p id="information"> Gender: {props.user.gender}</p>
+            <p id="information-last"> Gender: {props.user.gender}</p>
           </div>
           <div>
             <p id="header">Short Response Questions</p>
@@ -159,7 +159,7 @@ function UserProfile(props) {
 function ShortResponseSection(props) {
   return (
     <div id="choice-section">
-      <p id="choice"> Team {props.num}: {props.name}</p>
+      <p id="review-choice"> Team {props.num}: {props.name}</p>
       <p id="question">{props.q1}</p>
       <p id="response">{props.r1}</p>
       <p id="question">{props.q2}</p>
