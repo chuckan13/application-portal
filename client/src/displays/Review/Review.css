@@ -39,10 +39,6 @@
   font-size: 18px;
 }
 
-#information:hover, #information-last:hover {
-  background-color: #f2f4f7;
-}
-
 #information-last {
   border-bottom: none;
   border-radius: 0px 0px 10px 10px;

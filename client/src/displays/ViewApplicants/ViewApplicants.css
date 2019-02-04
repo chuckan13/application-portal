@@ -19,6 +19,7 @@ td {
 	text-align: center;
 	width: 200px !important;
 	vertical-align: middle !important;
+	font-weight: lighter;
 }
 
 tr:hover {
@@ -74,8 +75,8 @@ tbody tr:last-child td:last-child {
 }
 
 .btn-view-more {
-	color: #fff;
-	background-color: #808080;
+	color: #272727;
+	background-color: #e0f5ff;
 	border-radius: 10px;
 	font-size: 14px;
 	padding: 5px 10px 5px 10px;

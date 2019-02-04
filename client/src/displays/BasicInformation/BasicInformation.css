@@ -31,7 +31,7 @@
 }
 
 #long-form-answer {
-  max-width: 500px;
+  max-width: 470px;
   height: 160px;
   padding-top: 12px;
 }
@@ -57,7 +57,9 @@
 }
 
 #long-form-label {
-  max-width: 500px;
+  max-width: 470px;
+  color: #272727;
+  padding-left: 10px;
 }
 
 .btn-next {

@@ -110,16 +110,18 @@ function Question(props) {
 
 function TeamQuestions(props) {
   return (
-    <div id="questions">
+    <div>
       <p id="short-response-choice"> Choice {props.num}: {props.team} </p>
-      <Question 
-        name={props.n1} question={props.q1}
-        v={props.v1} onChange={props.onChange} 
-      />
-      <Question 
-        name={props.n2} question={props.q2}
-        v={props.v2} onChange={props.onChange} 
-      />
+      <div id="questions">
+        <Question 
+          name={props.n1} question={props.q1}
+          v={props.v1} onChange={props.onChange} 
+        />
+        <Question 
+          name={props.n2} question={props.q2}
+          v={props.v2} onChange={props.onChange} 
+        />
+      </div>
     </div>
   );
 }

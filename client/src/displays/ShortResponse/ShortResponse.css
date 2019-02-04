@@ -19,7 +19,7 @@ p {
 
 #short-response-choice {
   background-color: #3891b8;
-  border-radius: 10px;
+  border-radius: 10px 10px 0px 0px;
 }
 
 #review-choice {
@@ -31,6 +31,14 @@ p {
 
 #questions {
   padding-bottom: 30px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  min-width: 200px;
+  max-width: 500px;
+  border-radius: 0px 0px 10px 10px;
+  margin-bottom: 20px;
 }
 
 #short-response-title {

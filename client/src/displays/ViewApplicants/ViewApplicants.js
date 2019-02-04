@@ -124,9 +124,7 @@ function UserProfile(props) {
       <div>
         <div id="user-profile">
           <div id="chunk">
-            <p id="header">Basic Information</p>
-            <p id="information"> First Name: {props.user.firstName}</p>
-            <p id="information"> Last Name: {props.user.lastName}</p>
+            <p id="header">{props.user.firstName} {props.user.lastName}</p>
             <p id="information"> Email: {props.user.email}</p>
             <p id="information"> Class: {props.user.class}</p>
             <p id="information"> Concentration: {props.user.concentration}</p>
