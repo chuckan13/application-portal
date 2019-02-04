@@ -36,16 +36,19 @@ class Review extends React.Component {
         <div>
           <p id="header"> Short Response Questions: </p>
           <ShortResponseSection
+            id="response"
             name ={teamOne.name} num="1"
             q1 ={teamOne.questionOne} r1={this.props.state.responseOne}
             q2= {teamOne.questionTwo} r2={this.props.state.responseTwo}
           />
           <ShortResponseSection
+            id="response"
             name ={teamTwo.name} num="2"
             q1 ={teamTwo.questionOne} r1={this.props.state.responseThree}
             q2= {teamTwo.questionTwo} r2={this.props.state.responseFour}
           />
           <ShortResponseSection
+            id="response-last"
             name ={teamThree.name} num="3"
             q1 ={teamThree.questionOne} r1={this.props.state.responseFive}
             q2= {teamThree.questionTwo} r2={this.props.state.responseSix}
@@ -64,7 +67,7 @@ function ShortResponseSection(props) {
       <p id="question">{props.q1}</p>
       <p id="response">{props.r1}</p>
       <p id="question">{props.q2}</p>
-      <p id="response">{props.r2}</p>
+      <p id={props.id}>{props.r2}</p>
     </div>
   );
 }

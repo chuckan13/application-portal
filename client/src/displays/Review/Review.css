@@ -11,7 +11,9 @@
   max-width: 500px;
 }
 
-#information, #information-last, #response, #question {
+#information, #information-last, 
+#response, #response-last,
+#question {
   font-family: Avenir-Light;
   color: #fff;
   text-align: left;
@@ -22,7 +24,7 @@
   min-width: 200px;
   max-width: 500px;
   padding-top: 10px;
-  padding-left: 3px;
+  padding-left: 20px;
   padding-bottom: 0px;
   font-size: 18px;
   line-height: 1.42857143;
@@ -50,8 +52,19 @@
   font-weight: normal;
 }
 
-#response {
+#response, #response-last {
   font-size: 14px;
-  padding-bottom: 15px;
+  padding-bottom: 25px;
+  background-color: white;
+  color: #272727;
+}
+
+#response {
+  border-bottom: 1px solid #d5d5d5;
+}
+
+#response-last {
+  border-radius: 0px 0px 10px 10px;
+  background-color: white;
 }
 

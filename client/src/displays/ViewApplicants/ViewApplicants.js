@@ -135,16 +135,19 @@ function UserProfile(props) {
           <div>
             <p id="header">Short Response Questions</p>
             <ShortResponseSection
+              id="response"
               name={props.teamOne.name} num="1"
               q1={props.teamOne.questionOne} r1={props.user.responseOne}
               q2={props.teamOne.questionTwo} r2={props.user.responseTwo}
             />
             <ShortResponseSection
+              id="response"
               name={props.teamTwo.name} num="2"
               q1={props.teamTwo.questionOne} r1={props.user.responseThree}
               q2={props.teamTwo.questionTwo} r2={props.user.responseFour}
             />
             <ShortResponseSection
+              id="response-last"
               name={props.teamThree.name} num="3"
               q1={props.teamThree.questionOne} r1={props.user.responseFive}
               q2={props.teamThree.questionTwo} r2={props.user.responseSix}
@@ -163,7 +166,7 @@ function ShortResponseSection(props) {
       <p id="question">{props.q1}</p>
       <p id="response">{props.r1}</p>
       <p id="question">{props.q2}</p>
-      <p id="response">{props.r2}</p>
+      <p id={props.id}>{props.r2}</p>
     </div>
   );
 }

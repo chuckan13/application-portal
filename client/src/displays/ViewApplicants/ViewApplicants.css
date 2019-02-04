@@ -56,30 +56,17 @@ tbody tr:last-child td:last-child {
 	font-size: 24px;
 }
 
-#review-choice, #question, #response {
+#question {
 	padding-left: 20px;
 }
 
-#question, #response {
+#question {
 	background-color: white;
 	color: #272727;
 }
 
 #question {
 	font-size: 18px;
-}
-
-#review-choice {
-	background-color: #e0f5ff;
-	color: #272727;
-	font-size: 18px;
-	padding-bottom: 37px;
-}
-
-#response {
-	border-bottom: 1px solid #d5d5d5;
-	font-size: 15px;
-	padding-bottom: 25px;
 }
 
 #user-profile {
