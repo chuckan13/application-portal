@@ -8,6 +8,7 @@ import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { addStyle } from 'react-bootstrap/lib/utils/bootstrapUtils';
 addStyle(Button, 'admin');
+addStyle(Button, 'back');
 
 class Admin extends Component {
 
