@@ -64,3 +64,8 @@
   background-color: white;
 }
 
+pre {
+  border: none;
+  border-radius: 0px;
+}
+

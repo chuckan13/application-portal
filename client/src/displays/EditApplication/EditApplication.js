@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from "axios";
 import { Button } from 'react-bootstrap';
 import './EditApplication.css'
 import { Row } from 'react-bootstrap';
@@ -12,13 +13,27 @@ class editApplication extends Component {
 
   state = {
     questionOne: "",
-    questionTwo: ""
+    questionTwo: "",
+    curr1: "",
+    curr2: ""
   };
 
   constructor(props) {
     super(props);
     this.updateState = this.updateState.bind(this);
     this.handleUpdateClick = this.handleUpdateClick.bind(this);
+  }
+
+  componentDidMount() {
+    // request the list of teams
+    axios.get('/api/teams/2')
+      .then(res => {
+        this.setState({ 
+          curr1: res.data.questionOne,
+          curr2: res.data.questionTwo
+        })
+      })
+      .catch(err => console.log(err));
   }
 
   updateState(e) {
@@ -29,8 +44,23 @@ class editApplication extends Component {
   }
 
   handleUpdateClick() {
-    let q1 = this.state.questionOne;
-    let q2 = this.state.questionTwo;
+    let q1, q2; 
+    if (this.state.questionOne === "") {
+      q1 = this.state.curr1;
+    } else {
+      q1 = this.state.questionOne;
+    }
+
+    if (this.state.questionTwo === "") {
+      q2 = this.state.curr2;
+    } else {
+      q2 = this.state.questionTwo;
+    }
+
+    this.setState({
+      curr1: q1,
+      curr2: q2
+    })
     this.props.updateQuestions(q1, q2);
   }
 
@@ -40,8 +70,8 @@ class editApplication extends Component {
         <div>
           <p id="header"> Current Questions: </p>
         </div>
-        <p id="information"> (first question should appear here)</p>
-        <p id="information-last"> (second question should appear here)</p>
+        <p id="information">{this.state.curr1}</p>
+        <p id="information-last">{this.state.curr2}</p>
         <div>
           <p id="header">New Questions</p>
         </div>

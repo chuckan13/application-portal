@@ -32,6 +32,7 @@ class Admin extends Component {
       homePage: false,
       viewApplicants: true
     });
+    window.scrollTo(0, 0);
   }
 
   displayEditPage() {
