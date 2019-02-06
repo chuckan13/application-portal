@@ -73,20 +73,20 @@ class ShortResponse extends React.Component {
           v1={this.state.responseOne} v2={this.state.responseTwo}
           onChange={this.updateState}
         />
-        <TeamQuestions 
+        { teamTwo ? <TeamQuestions 
           team={teamTwo.name} num="2"
           n1="responseThree" n2="responseFour"
           q1={teamTwo.questionOne} q2={teamTwo.questionTwo}
           v1={this.state.responseThree} v2={this.state.responseFour}
           onChange={this.updateState}
-        />
-        <TeamQuestions 
+        />: ''}
+        { teamThree ? <TeamQuestions 
           team={teamThree.name} num="3"
           n1="responseFive" n2="responseSix"
           q1={teamThree.questionOne} q2={teamThree.questionTwo}
           v1={this.state.responseFive} v2={this.state.responseSix}
           onChange={this.updateState}
-        />
+        />: ''}
         <SubmitButton onClick = {this.handleSubmitClick} />
       </div>
     );

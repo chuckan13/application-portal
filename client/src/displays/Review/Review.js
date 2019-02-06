@@ -35,24 +35,43 @@ class Review extends React.Component {
         </div>
         <div>
           <p id="header"> Short Response Questions: </p>
-          <ShortResponseSection
+          {/* response-last creates the rounded bottom */}
+          { teamTwo ? <ShortResponseSection
             id="response"
             name ={teamOne.name} num="1"
             q1 ={teamOne.questionOne} r1={this.props.state.responseOne}
             q2= {teamOne.questionTwo} r2={this.props.state.responseTwo}
-          />
-          <ShortResponseSection
+          />: <ShortResponseSection
+            id="response-last"
+            name ={teamOne.name} num="1"
+            q1 ={teamOne.questionOne} r1={this.props.state.responseOne}
+            q2= {teamOne.questionTwo} r2={this.props.state.responseTwo}
+          /> }
+
+        {/* nested if-else statements*/}
+          { teamTwo ? 
+            teamThree ? 
+            <ShortResponseSection
             id="response"
-            name ={teamTwo.name} num="2"
-            q1 ={teamTwo.questionOne} r1={this.props.state.responseThree}
-            q2= {teamTwo.questionTwo} r2={this.props.state.responseFour}
-          />
-          <ShortResponseSection
+            name ={teamOne.name} num="1"
+            q1 ={teamOne.questionOne} r1={this.props.state.responseOne}
+            q2= {teamOne.questionTwo} r2={this.props.state.responseTwo}
+            />: 
+            <ShortResponseSection
+              id="response-last"
+              name ={teamTwo.name} num="2"
+              q1 ={teamTwo.questionOne} r1={this.props.state.responseThree}
+              q2= {teamTwo.questionTwo} r2={this.props.state.responseFour}
+            />:
+            ""
+          }
+
+          { teamThree ? <ShortResponseSection
             id="response-last"
             name ={teamThree.name} num="3"
             q1 ={teamThree.questionOne} r1={this.props.state.responseFive}
             q2= {teamThree.questionTwo} r2={this.props.state.responseSix}
-          />
+          />: '' }
         </div>
         <SubmitButton onClick = {this.handleSubmitClick} />
       </div>
