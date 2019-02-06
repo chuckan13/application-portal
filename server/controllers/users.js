@@ -83,7 +83,7 @@ module.exports = {
         include: [
           { 
             model: Team, 
-            attributes: ['id', 'name'], 
+            attributes: ['id', 'name', 'questionOne', 'questionTwo'], 
             as: 'teams', 
             through: {attributes: [ "preference" ]} 
           },
@@ -104,25 +104,35 @@ module.exports = {
 
   update(req, res){
     return User
-      .findOne({ where: {token: req.params.token} })
+      .findOne({ 
+        where: {token: req.params.token},
+        include: [
+          { 
+            model: Team, 
+            attributes: ['id', 'name', 'questionOne', 'questionTwo'], 
+            as: 'teams', 
+            through: {attributes: [ "preference" ]} 
+          },
+        ]
+      })
       .then(user => {
         // TODO this will overwrite values if some fields are null, change
         // so that only values that are present are written in
         // e.g. req.body.email || user.email
         return user
           .update({
-            firstName: req.body.firstName,
-            lastName: req.body.lastName,
-            email: req.body.email,
-            class: req.body.class,
-            concentration: req.body.concentration,
-            gender: req.body.gender,
-            responseOne: req.body.responseOne,
-            responseTwo: req.body.responseTwo,
-            responseThree: req.body.responseThree,
-            responseFour: req.body.responseFour,
-            responseFive: req.body.responseFive,
-            responseSix: req.body.responseSix
+            firstName: req.body.firstName || user.firstName,
+            lastName: req.body.lastName || user.lastName,
+            email: req.body.email || user.email,
+            class: req.body.class || user.class,
+            concentration: req.body.concentration || user.concentration,
+            gender: req.body.gender || user.gender,
+            responseOne: req.body.responseOne || user.responseOne,
+            responseTwo: req.body.responseTwo || user.responseTwo,
+            responseThree: req.body.responseThree || user.responseThree,
+            responseFour: req.body.responseFour || user.responseFour,
+            responseFive: req.body.responseFive || user.responseFive,
+            responseSix: req.body.responseSix || user.responseSix
           }) // TODO if team prefs change, update UserTeam tables accordingly
           .then(() => res.status(200).send(transformUser(user)));
       });

@@ -106,6 +106,7 @@ class Apply extends Component {
       partThree: false,
       partFour: true
     });
+    window.scrollTo(0, 0);
   }
 
   handlePartFourClick() {

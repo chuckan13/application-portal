@@ -1,16 +1,15 @@
-#title {
+#title, #short-response-title {
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
   margin-bottom: 0px;
 }
 
-.form-control {
+/* form styles */
+#short-form-answer, #long-form-answer {
   display: block;
   margin: auto;
-  width: 40%;
   min-width: 200px;
-  max-width: 400px;
   height: 40px;
   padding: 20px 12px 20px 15px;
   font-size: 14px;
@@ -27,23 +26,40 @@
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
-.control-label {
+#short-form-answer {
+  max-width: 400px;
+}
+
+#long-form-answer {
+  max-width: 470px;
+  height: 160px;
+  padding-top: 12px;
+}
+
+#short-form-label, #long-form-label {
   color: #fff;
   text-align: left;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0px;
-  width: 40%;
   min-width: 200px;
-  max-width: 400px;
   height: 40px;
-  padding-top: 12px;
-  padding-left: 3px;
+  padding: 20px 12px 30px 5px;
   font-family: Avenir;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.42857143;
   font-weight: lighter;
+}
+
+#short-form-label {
+  max-width: 400px;
+}
+
+#long-form-label {
+  max-width: 470px;
+  color: #272727;
+  padding-left: 10px;
 }
 
 .btn-next {

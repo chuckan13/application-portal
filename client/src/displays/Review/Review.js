@@ -16,6 +16,12 @@ class Review extends React.Component {
   }
 
   render() {
+    // getting team names from ids
+    let { teamOne, teamTwo, teamThree } = this.props.state;
+    teamOne = this.props.state.teams.filter(team => team.id === Number(teamOne))[0]
+    teamTwo = this.props.state.teams.filter(team => team.id === Number(teamTwo))[0]
+    teamThree = this.props.state.teams.filter(team => team.id === Number(teamThree))[0]
+
     return (
       <div>
         <div id="chunk">
@@ -25,36 +31,64 @@ class Review extends React.Component {
           <p id="information"> Email: {this.props.state.email}</p>
           <p id="information"> Class: {this.props.state.class}</p>
           <p id="information"> Concentration: {this.props.state.concentration}</p>
-          <p id="information"> Gender: {this.props.state.gender}</p>
+          <p id="information-last"> Gender: {this.props.state.gender}</p>
         </div>
         <div>
-          <p id="header2"> Short Response Questions: </p>
-          <div id="choice-section">
-            <p id="choice"> Choice 1: {this.props.state.teamOne}</p>
-            <p id="question">Why do you want to join this team?</p>
-            <p id="response"> {this.props.state.responseOne}</p>
-            <p id="question">Describe your relevant experience.</p>
-            <p id="response"> {this.props.state.responseTwo}</p>
-          </div>
-          <div id="choice-section">
-            <p id="choice"> Choice 2: {this.props.state.teamTwo}</p>
-            <p id="question">Why do you want to join this team?</p>
-            <p id="response"> {this.props.state.responseThree}</p>
-            <p id="question">Describe your relevant experience.</p>
-            <p id="response"> {this.props.state.responseFour}</p>
-          </div>
-          <div id="choice-section">
-            <p id="choice"> Choice 3: {this.props.state.teamThree}</p>
-            <p id="question">Why do you want to join this team?</p>
-            <p id="response"> {this.props.state.responseFive}</p>
-            <p id="question">Describe your relevant experience.</p>
-            <p id="response"> {this.props.state.responseSix}</p>
-          </div>
+          <p id="header"> Short Response Questions: </p>
+          {/* response-last creates the rounded bottom */}
+          { teamTwo ? <ShortResponseSection
+            id="response"
+            name ={teamOne.name} num="1"
+            q1 ={teamOne.questionOne} r1={this.props.state.responseOne}
+            q2= {teamOne.questionTwo} r2={this.props.state.responseTwo}
+          />: <ShortResponseSection
+            id="response-last"
+            name ={teamOne.name} num="1"
+            q1 ={teamOne.questionOne} r1={this.props.state.responseOne}
+            q2= {teamOne.questionTwo} r2={this.props.state.responseTwo}
+          /> }
+
+        {/* nested if-else statements*/}
+          { teamTwo ? 
+            teamThree ? 
+            <ShortResponseSection
+            id="response"
+            name ={teamOne.name} num="1"
+            q1 ={teamOne.questionOne} r1={this.props.state.responseOne}
+            q2= {teamOne.questionTwo} r2={this.props.state.responseTwo}
+            />: 
+            <ShortResponseSection
+              id="response-last"
+              name ={teamTwo.name} num="2"
+              q1 ={teamTwo.questionOne} r1={this.props.state.responseThree}
+              q2= {teamTwo.questionTwo} r2={this.props.state.responseFour}
+            />:
+            ""
+          }
+
+          { teamThree ? <ShortResponseSection
+            id="response-last"
+            name ={teamThree.name} num="3"
+            q1 ={teamThree.questionOne} r1={this.props.state.responseFive}
+            q2= {teamThree.questionTwo} r2={this.props.state.responseSix}
+          />: '' }
         </div>
         <SubmitButton onClick = {this.handleSubmitClick} />
       </div>
     );
   }
+}
+
+function ShortResponseSection(props) {
+  return (
+    <div id="choice-section">
+      <p id="review-choice"> Choice {props.num}: {props.name}</p>
+      <p id="question">{props.q1}</p>
+      <pre id="response">{props.r1}</pre>
+      <p id="question">{props.q2}</p>
+      <pre id={props.id}>{props.r2}</pre>
+    </div>
+  );
 }
 
 function SubmitButton(props) {

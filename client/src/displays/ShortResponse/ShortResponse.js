@@ -20,37 +20,15 @@ class ShortResponse extends React.Component {
 
   constructor(props, context) {
     super(props, context);
-    this.updateResponseOne = this.updateResponseOne.bind(this);
-    this.updateResponseTwo = this.updateResponseTwo.bind(this);
-    this.updateResponseThree = this.updateResponseThree.bind(this);
-    this.updateResponseFour = this.updateResponseFour.bind(this);
-    this.updateResponseFive = this.updateResponseFive.bind(this);
-    this.updateResponseSix = this.updateResponseSix.bind(this);
     this.handleSubmitClick = this.handleSubmitClick.bind(this);
+    this.updateState = this.updateState.bind(this);
   }
 
-  updateResponseOne(e) {
-    this.setState({responseOne: e.target.value });
-  }
-
-  updateResponseTwo(e) {
-    this.setState({responseTwo: e.target.value });
-  }
-
-  updateResponseThree(e) {
-    this.setState({responseThree: e.target.value });
-  }
-
-  updateResponseFour(e) {
-    this.setState({responseFour: e.target.value });
-  }
-
-  updateResponseFive(e) {
-    this.setState({responseFive: e.target.value });
-  }
-
-  updateResponseSix(e) {
-    this.setState({responseSix: e.target.value });
+  updateState(e) {
+    const name = e.target.name;
+    this.setState({ 
+      [name]: e.target.value 
+    });
   }
 
   handleSubmitClick() {
@@ -65,80 +43,87 @@ class ShortResponse extends React.Component {
 
   render() {
     // initially they come in as ids.  we need to get the team out of them
+    // added code so it doesn't break if no teams are chosen (?)
     let { teamOne, teamTwo, teamThree } = this.props.state;
-    console.log('teamone: ' + teamOne)
-    console.log(this.props.state.teams)
-    teamOne = this.props.state.teams.filter(team => team.id === Number(teamOne))[0]
-    teamTwo = this.props.state.teams.filter(team => team.id === Number(teamTwo))[0]
-    teamThree = this.props.state.teams.filter(team => team.id === Number(teamThree))[0]
-    console.log(teamOne)
+    if (teamOne) {
+      teamOne = this.props.state.teams.filter(team => team.id === Number(teamOne))[0]
+    } else {
+      teamOne = "";
+    }
+    if (teamTwo) {
+      teamTwo = this.props.state.teams.filter(team => team.id === Number(teamTwo))[0]
+    } else {
+      teamTwo = "";
+    }
+    if (teamThree) {
+      teamThree = this.props.state.teams.filter(team => team.id === Number(teamThree))[0]
+    } else {
+      teamThree = "";
+    }
 
     return (
       <div>
-        <div id="title">
+        <div id="short-response-title">
           <p> Part 3: Short Response </p>
         </div>
-        <div id="questions">
-          <p id="choice"> Choice 1: {teamOne.name} </p>
-          <FormGroup controlId="formControlsTextarea">
-            <ControlLabel>{teamOne.questionOne}</ControlLabel>
-            <FormControl
-                componentClass="textarea"
-                value={this.state.responseOne}
-                onChange={this.updateResponseOne}
-            />
-          </FormGroup>
-          <FormGroup controlId="formControlsTextarea">
-            <ControlLabel>{teamOne.questionTwo}</ControlLabel>
-            <FormControl
-              componentClass="textarea"
-              value={this.state.responseTwo}
-              onChange={this.updateResponseTwo}
-            />
-          </FormGroup>
-        </div>
-        <div id="questions">
-          <p id="choice"> Choice 2: {teamTwo.name} </p>
-          <FormGroup controlId="formControlsTextarea">
-            <ControlLabel>{teamTwo.questionOne}</ControlLabel>
-            <FormControl
-              componentClass="textarea"
-              value={this.state.responseThree}
-              onChange={this.updateResponseThree}
-            />
-          </FormGroup>
-          <FormGroup controlId="formControlsTextarea">
-            <ControlLabel>{teamTwo.questionTwo}</ControlLabel>
-            <FormControl
-              componentClass="textarea"
-              value={this.state.responseFour}
-              onChange={this.updateResponseFour}
-            />
-         </FormGroup>
-        </div>
-        <div id="questions">
-          <p id="choice"> Choice 3: {teamThree.name} </p>
-          <FormGroup controlId="formControlsTextarea">
-            <ControlLabel>{teamThree.questionOne}</ControlLabel>
-            <FormControl
-              componentClass="textarea"
-              value={this.state.responseFive}
-              onChange={this.updateResponseFive}
-            />
-          </FormGroup>
-          <FormGroup controlId="formControlsTextarea">
-            <ControlLabel>{teamThree.questionTwo}</ControlLabel>
-            <FormControl
-              componentClass="textarea"
-              value={this.state.responseSix}
-              onChange={this.updateResponseSix}
-            />
-          </FormGroup>
-        </div>
+        <TeamQuestions 
+          team={teamOne.name} num="1"
+          n1="responseOne" n2="responseTwo"
+          q1={teamOne.questionOne} q2={teamOne.questionTwo}
+          v1={this.state.responseOne} v2={this.state.responseTwo}
+          onChange={this.updateState}
+        />
+        { teamTwo ? <TeamQuestions 
+          team={teamTwo.name} num="2"
+          n1="responseThree" n2="responseFour"
+          q1={teamTwo.questionOne} q2={teamTwo.questionTwo}
+          v1={this.state.responseThree} v2={this.state.responseFour}
+          onChange={this.updateState}
+        />: ''}
+        { teamThree ? <TeamQuestions 
+          team={teamThree.name} num="3"
+          n1="responseFive" n2="responseSix"
+          q1={teamThree.questionOne} q2={teamThree.questionTwo}
+          v1={this.state.responseFive} v2={this.state.responseSix}
+          onChange={this.updateState}
+        />: ''}
         <SubmitButton onClick = {this.handleSubmitClick} />
       </div>
     );
   }
+}
+
+function Question(props) {
+  return (
+    <FormGroup controlId="formControlsTextarea">
+      <ControlLabel id="long-form-label">{props.question}</ControlLabel>
+      <FormControl
+        id="long-form-answer"
+        name={props.name}
+        componentClass="textarea"
+        value={props.v}
+        onChange={props.onChange}
+      />
+    </FormGroup>
+  );
+}
+
+function TeamQuestions(props) {
+  return (
+    <div>
+      <p id="short-response-choice"> Choice {props.num}: {props.team} </p>
+      <div id="questions">
+        <Question 
+          name={props.n1} question={props.q1}
+          v={props.v1} onChange={props.onChange} 
+        />
+        <Question 
+          name={props.n2} question={props.q2}
+          v={props.v2} onChange={props.onChange} 
+        />
+      </div>
+    </div>
+  );
 }
 
 function SubmitButton(props) {

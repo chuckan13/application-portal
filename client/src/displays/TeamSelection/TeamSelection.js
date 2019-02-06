@@ -18,22 +18,15 @@ class TeamSelection extends React.Component {
 
   constructor(props, context) {
     super(props, context);
-    this.updateTeamOne = this.updateTeamOne.bind(this);
-    this.updateTeamTwo = this.updateTeamTwo.bind(this);
-    this.updateTeamThree = this.updateTeamThree.bind(this);
     this.handleSubmitClick = this.handleSubmitClick.bind(this);
+    this.updateState = this.updateState.bind(this);
   }
 
-  updateTeamOne(e) {
-    this.setState({teamOne: e.target.value });
-  }
-
-  updateTeamTwo(e) {
-    this.setState({teamTwo: e.target.value });
-  }
-
-  updateTeamThree(e) {
-    this.setState({teamThree: e.target.value });
+  updateState(e) {
+    const name = e.target.name;
+    this.setState({ 
+      [name]: e.target.value 
+    });
   }
 
   handleSubmitClick() {
@@ -54,37 +47,38 @@ class TeamSelection extends React.Component {
         <div id="title">
           <p> Part 2: Team Selection </p>
         </div>
-        <Row>
-          <Col>
-            <form>
-              <FormGroup>
-                 <ControlLabel>Team 1:</ControlLabel>
-                 <FormControl componentClass="select" placeholder="first choice" onChange={this.updateTeamOne}>
-                   <option value=""></option>
-                   { teams.map(this.renderTeamOption) }
-                 </FormControl>
-              </FormGroup>
-              <FormGroup controlId="formControlsSelect">
-                 <ControlLabel>Team 2:</ControlLabel>
-                 <FormControl componentClass="select" placeholder="second choice" onChange={this.updateTeamTwo}>
-                   <option value=""></option>
-                   { teams.map(this.renderTeamOption) }
-                 </FormControl>
-              </FormGroup>
-              <FormGroup controlId="formControlsSelect">
-                 <ControlLabel>Team 3:</ControlLabel>
-                 <FormControl componentClass="select" placeholder="third choice" onChange={this.updateTeamThree}>
-                   <option value=""></option>
-                   { teams.map(this.renderTeamOption) }
-                 </FormControl>
-              </FormGroup>
-            </form>
-          </Col>
-        </Row>
+        <form>
+          <TeamChoice 
+            label="Team 1:" name="teamOne" 
+            onChange={this.updateState} render={teams.map(this.renderTeamOption)}
+          />
+          <TeamChoice 
+            label="Team 2:" name="teamTwo" 
+            onChange={this.updateState} render={teams.map(this.renderTeamOption)}
+          />
+          <TeamChoice 
+            label="Team 3:" name="teamThree" 
+            onChange={this.updateState} render={teams.map(this.renderTeamOption)}
+          />
+        </form>
         <SubmitButton onClick={this.handleSubmitClick} />
       </div>
     );
   }
+}
+
+function TeamChoice(props) {
+  return (
+    <FormGroup controlId="formControlsSelect">
+       <ControlLabel id="short-form-label">{props.label}</ControlLabel>
+       <FormControl id="short-form-answer" 
+        name={props.name} componentClass="select" 
+        onChange={props.onChange} render={props.render}>
+               <option value=""></option>
+               {props.render}
+       </FormControl>
+    </FormGroup>
+  );
 }
 
 function SubmitButton(props) {

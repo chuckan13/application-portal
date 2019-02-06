@@ -20,37 +20,15 @@ class BasicInformation extends React.Component {
 
   constructor(props, context) {
     super(props, context);
-    this.updateFirstName = this.updateFirstName.bind(this);
-    this.updateLastName = this.updateLastName.bind(this);
-    this.updateEmail = this.updateEmail.bind(this);
-    this.updateClass = this.updateClass.bind(this);
-    this.updateConcentration = this.updateConcentration.bind(this);
-    this.updateGender = this.updateGender.bind(this);
     this.handleSubmitClick = this.handleSubmitClick.bind(this);
+    this.updateState = this.updateState.bind(this);
   }
 
-  updateFirstName(e) {
-    this.setState({firstName: e.target.value });
-  }
-
-  updateLastName(e) {
-    this.setState({lastName: e.target.value });
-  }
-
-  updateEmail(e) {
-    this.setState({email: e.target.value });
-  }
-
-  updateClass(e) {
-    this.setState({class: e.target.value });
-  }
-
-  updateConcentration(e) {
-    this.setState({concentration: e.target.value });
-  }
-
-  updateGender(e) {
-    this.setState({gender: e.target.value });
+  updateState(e) {
+    const name = e.target.name;
+    this.setState({ 
+      [name]: e.target.value 
+    });
   }
 
   handleSubmitClick() {
@@ -67,81 +45,63 @@ class BasicInformation extends React.Component {
     return (
       <div>
         <div id="title">
-          <p> Part 1: Basic Information </p>
+          <p>Part 1: Basic Information</p>
         </div>
-        <Row>
-          <Col>
-            <form>
-              <FormGroup controlId="formBasicText">
-                <ControlLabel>First Name:</ControlLabel>
-                <FormControl
-                  type="text"
-                  placeholder="First Name"
-                  value={this.state.firstName}
-                  onChange={this.updateFirstName}
-                />
-              </FormGroup>
-              <FormGroup controlId="formBasicText">
-                <ControlLabel>Last Name:</ControlLabel>
-                <FormControl
-                  type="text"
-                  placeholder="Last Name"
-                  value={this.state.lastName}
-                  onChange={this.updateLastName}
-                />
-              </FormGroup>
-              <FormGroup controlId="formBasicText">
-                <ControlLabel>Email:</ControlLabel>
-                <FormControl
-                  type="text"
-                  placeholder="Email"
-                  value={this.state.email}
-                  onChange={this.updateEmail}
-                />
-              </FormGroup>
-              <FormGroup controlId="formBasicText">
-                <ControlLabel>Class Year:</ControlLabel>
-                <FormControl
-                  type="text"
-                  placeholder="Class Year"
-                  value={this.state.class}
-                  onChange={this.updateClass}
-                />
-              </FormGroup>
-              <FormGroup controlId="formBasicText">
-                <ControlLabel>Concentration:</ControlLabel>
-                <FormControl
-                  type="text"
-                  placeholder="Concentration"
-                  value={this.state.concentration}
-                  onChange={this.updateConcentration}
-                />
-              </FormGroup>
-              <FormGroup controlId="formBasicText">
-                <ControlLabel>Gender:</ControlLabel>
-                <FormControl
-                  type="text"
-                  placeholder="Gender"
-                  value={this.state.gender}
-                  onChange={this.updateGender}
-                />
-              </FormGroup>
-            </form>
-          </Col>
-        </Row>
+        <form>
+          <FormEntry 
+            label='First Name:' ph='First Name' name='firstName' 
+            v={this.state.firstName} onChange={this.updateState}
+          />
+          <FormEntry 
+            label='Last Name:' ph='Last Name' name='lastName'
+            v={this.state.lastName} onChange={this.updateState}
+          />
+          <FormEntry 
+            label='Email:' ph='Email' name='email'
+            v={this.state.email} onChange={this.updateState}
+          />
+          <FormEntry 
+            label='Class Year:' ph='Class Year' name='class'
+            v={this.state.class} onChange={this.updateState}
+          />
+          <FormEntry 
+            label='Concentration:' ph='Concentration' name='concentration'
+            v={this.state.concentration} onChange={this.updateState}
+          />
+          <FormEntry 
+            label='Gender:' ph='Gender' name='gender'
+            v={this.state.gender} onChange={this.updateState}
+          />
+        </form>
         <SubmitButton onClick = {this.handleSubmitClick} />
       </div>
     );
   }
 }
 
+function FormEntry(props) {
+  return (
+    <FormGroup controlId="formBasicText">
+      <ControlLabel id="short-form-label">{props.label}</ControlLabel>
+      <FormControl
+        id="short-form-answer"
+        name={props.name}
+        type="text"
+        placeholder={props.ph}
+        value={props.v}
+        onChange = {props.onChange}
+      />
+    </FormGroup>
+  );
+}
+
 function SubmitButton(props) {
   return (
-   <Row className="center-block text-center">
+    <Row className="center-block text-center">
       <Col>
         <Button bsStyle="next" bsSize="large" onClick={props.onClick}>next</Button>
       </Col>
-   </Row>
+    </Row>
   );
 }
 
