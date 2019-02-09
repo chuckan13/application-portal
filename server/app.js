@@ -1,14 +1,16 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var session = require('express-session');
-var cors = require('cors');
-var cas = require('./config/cas');
+import express from 'express';
+import path from 'path';
+import favicon from 'serve-favicon';
+import logger from 'morgan';
+import cookieParser from 'cookie-parser';
+import bodyParser from 'body-parser';
+import session from 'express-session';
+import cors from 'cors';
+import cas from './config/cas';
+import registerRoutes from './routes';
+import registerAssociations from './database/associations';
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -33,7 +35,10 @@ app.use( session({
 app.use(cors());
 
 // Register API endpoints
-require('./routes')(app);
+registerRoutes(app);
+
+// Register schema associations
+registerAssociations();
 
 app.get('/session', cas.bounce, (req, res) => {
   console.log(JSON.stringify(req.session));

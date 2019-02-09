@@ -1,92 +1,76 @@
-const Team = require('../models').Team;
-const User = require('../models').User;
+import Team from '../models/teams';
+import User from '../models/user';
 
-// Extracts the preference for each user and makes it a top level value for user
-const transformTeam = team => {
-  team = team.get({ plain: true })
-  if (team.applicants) {
-      team.applicants = team.applicants.map(user => {
-      user.preference = user.UserTeams.preference;
-      delete user.UserTeams;
-      return user;
+export default {
+  create: (req, res) => Team
+    .create({
+      name: req.body.name,
+      questionOne: req.body.questionOne,
+      questionTwo: req.body.questionTwo,
     })
-  }
-  return team;
-}
+    .then(team => res.status(201).send(team))
+    .catch(err => res.status(500).send(err)),
 
-module.exports = {
-  create(req, res) {
-    return Team
-      .create({
-        name: req.body.name,
-        questionOne: req.body.questionOne,
-        questionTwo: req.body.questionTwo,
-      })	
-      .then(Team => res.status(201).send(Team))
-      .catch(error => res.status(400).send(error));  
-  },
-  
-  
-  list(req, res) {
-    return Team
-      .findAll({
-        include: [
-          { model: User, attributes: ['id', 'firstName', 'lastName'], as: 'applicants', through: {attributes: ["preference"]} },
-        ]
+  list: (req, res) => Team
+    .findAll({
+      include: [
+        { 
+          model: User, 
+          attributes: ['id', 'firstName', 'lastName'], 
+          as: 'applicants', 
+          through: { attributes: ["preference"] },
+        },
+      ]
+    })
+    .then(teams => res.status(200).send(teams.map(Team.transform)))
+    .catch(err => res.status(500).send(err)),
+
+  retrieve: (req, res) => Team
+    .findOne({
+      where: { id: req.params.id },
+      include: [
+        { 
+          model: User, 
+          attributes: ['id', 'firstName', 'lastName'], 
+          as: 'applicants', 
+          through: { attributes: ["preference"] },
+        },
+      ]
+    })
+    .then(team => {
+      if (!team) {
+        return res.status(404).send({
+          message: "Not found",
+        });
+      }
+      return res.status(200).send(Team.transform(team));
+    })
+    .catch(err => res.status(500).send(err)),
+
+  update: (req, res) => Team
+    .findOne({
+      where: { id: req.params.id },
+      include: [
+        { 
+          model: User, 
+          attributes: ['id', 'firstName', 'lastName'], 
+          as: 'applicants', 
+          through: { attributes: ["preference"] },
+        },
+      ]
+    })
+    .then(team => team
+      .update({
+        name: req.body.name || team.name,
+        questionOne: req.body.questionOne || team.questionOne,
+        questionTwo: req.body.questionTwo || team.questionTwo,
       })
-      .then(teams => res.status(200).send(teams.map(transformTeam)))
-      .catch(error => res.status(400).send(error));
-  },
+    )
+    .then(team => res.status(200).send(Team.transform(team)))
+    .catch(err => res.status(500).send(err)),
 
-  retrieve(req, res) {
-    return Team
-      .findOne({ 
-        where: {id: req.params.id},
-        include: [
-          { model: User, attributes: ['id', 'firstName', 'lastName'], as: 'applicants', through: {attributes: ["preference"]} },
-        ]
-      })
-      .then(team => {
-        if (!team) {
-          return res.status(404).send({
-            message: "err",
-          });
-        }
-        return res.status(200).send(transformTeam(team));
-      })
-      .catch(error => res.status(400).send({
-        message: "400 err",
-      }));  
-  },
-
-
-  update(req, res){
-    return Team
-      .findOne({ 
-        where: {id: req.params.id},
-        include: [
-          { model: User, attributes: ['id', 'firstName', 'lastName'], as: 'applicants', through: {attributes: ["preference"]} },
-        ]
-      })
-      .then(team => {
-        return team
-          .update({
-            name: req.body.name || team.name,
-            questionOne: req.body.questionOne || team.questionOne,
-            questionTwo: req.body.questionTwo || team.questionTwo,          
-          })
-          .then(() => res.status(200).send(transformTeam(team)));
-      });
-  },
-
-
-  destroy(req, res){
-    return Team
-      .findOne({ where: {id: req.params.id} })
-      .then(team => {
-        return team
-          .destroy()
-          .then(() => res.status(204).send());
-      });
-  },
+  destroy: (req, res) => Team
+    .findOne({ where: { id: req.params.id } })
+    .then(team => team.destroy())
+    .then(n => res.status(204).send(n)),
 }

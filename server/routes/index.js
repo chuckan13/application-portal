@@ -1,8 +1,8 @@
-const cas = require('../config/cas');
-const usersController = require('../controllers').users;
-const teamsController = require('../controllers').teams;
+import cas from '../config/cas';
+import usersController from '../controllers/users';
+import teamsController from '../controllers/teams';
 
-module.exports = (app) => {
+export default function(app) {
   app.post('/api/users', cas.block, usersController.create);
   app.get('/api/users', cas.block, usersController.list);
   app.get('/api/users/:token', cas.block, usersController.retrieve);

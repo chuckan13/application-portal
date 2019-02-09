@@ -1,7 +1,7 @@
-var CASAuthentication = require('cas-authentication');
+import CASAuthentication from 'cas-authentication';
 
 // Create a new instance of CASAuthentication.
-var cas = new CASAuthentication({
+const cas = new CASAuthentication({
   cas_url       : 'https://fed.princeton.edu/cas/',
   service_url   : 'http://localhost:3001',
   cas_version   : 'saml1.1',
@@ -9,4 +9,4 @@ var cas = new CASAuthentication({
   dev_mode_user : 'tester',
 });
 
-module.exports = cas;
+export default cas;
