@@ -33,7 +33,7 @@ function ApplyButton(props) {
     <div id="welcome-content">
       <Row className="center-block text-center">
         <div id="welcome-text">
-          <p>Thank you for submitting!</p>
+          <p>Thank you.  Your application has been submitted.</p>
         </div>
       </Row>
     </div>

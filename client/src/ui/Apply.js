@@ -51,16 +51,17 @@ class Apply extends Component {
   componentDidMount() {
     fetch("/session")
       .then(res => res.text())
-      .then(text => {
-        this.setState({ user: text });
-        /* add something to check if user exists in table */ 
-        /* this.setState({submitted: true}); */
+      .then(token => {
+        console.log(`current user: ${token}`)
+        this.setState({ user: token });
+        return token;
       })
-      .then(response => {
-        console.log(response);
-      })
-      .catch(error => {
-        console.log(error);
+      .then(token => axios.get(`/api/users/${token}`))
+      .then(user => {
+        // if there is a user with the specified token, they must've submitted
+        if (user) {
+          this.setState({ submitted: true });
+        }
       })
       .catch(err => console.error(err));
 
