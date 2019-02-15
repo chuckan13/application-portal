@@ -24,6 +24,11 @@ User.associate = () => {
     foreignKey: 'userId',
     as: 'teams',
   });
+
+  User.hasMany(Response, {
+    foreignKey: 'userId',
+    as: 'responses',
+  });
 }
 
 // Transforms to plain javascript object

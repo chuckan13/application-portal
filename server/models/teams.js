@@ -1,6 +1,7 @@
 import DataTypes from 'sequelize';
 import { sequelize } from '../database/db';
 import User from '../models/user';
+import Question from '../models/question';
 
 const Team = sequelize.define('Team', {
   name: {
@@ -22,6 +23,11 @@ Team.associate = () => {
     through: 'UserTeams',
     foreignKey: 'teamId',
     as: 'applicants',
+  });
+
+  Team.hasMany(Question, {
+    foreignKey: 'teamId',
+    as: 'questions',
   });
 }
 
