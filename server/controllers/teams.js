@@ -1,5 +1,6 @@
 import Team from '../models/teams';
 import User from '../models/user';
+import Question from '../models/question'
 
 export default {
   create: (req, res) => Team
@@ -34,6 +35,12 @@ export default {
           attributes: ['id', 'firstName', 'lastName'], 
           as: 'applicants', 
           through: { attributes: ["preference"] },
+        },
+        
+        {
+          model: Question,
+          attributes: ['id', 'text'],
+          as: 'questions',
         },
       ]
     })

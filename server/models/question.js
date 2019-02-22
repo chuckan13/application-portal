@@ -1,16 +1,15 @@
 import DataTypes from 'sequelize';
 import { sequelize } from '../database/db';
 import Team from '../models/teams';
+import Response from '../models/response';
 
 const Question = sequelize.define('Question', {
-    associatedTeamID: DataTypes.INTEGER,
-    teamQuestion: DataTypes.TEXT,
+    text: DataTypes.TEXT,
 }, {});
 
 Question.associate = () => {
     Question.belongsTo(Team, {
-        foreignKey: 'questionId',
-        as: 'teams',
+        foreignKey: 'teamId',
     });
 
     Question.hasMany(Response, {

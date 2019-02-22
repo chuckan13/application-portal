@@ -4,18 +4,15 @@ import User from '../models/user';
 import Question from '../models/question';
 
 const Response = sequelize.define('Response', {
-    associatedUserID: DataTypes.INTEGER,
-    userResponse: DataTypes.TEXT,
+    text: DataTypes.TEXT,
 }, {});
 
 Response.associate = () => {
     Response.belongsTo(User, {
-        foreignKey: 'responseId',
-        as: 'applicants',
+        foreignKey: 'userId',
     });
     Response.belongsTo(Question, {
         foreignKey: 'questionId',
-        as: 'questions',
     });
 }
 

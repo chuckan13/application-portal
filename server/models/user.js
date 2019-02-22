@@ -1,6 +1,7 @@
 import DataTypes from 'sequelize';
 import { sequelize } from '../database/db';
 import Team from '../models/teams';
+import Response from '../models/response';
 
 const User = sequelize.define('User', {
   token: DataTypes.STRING,

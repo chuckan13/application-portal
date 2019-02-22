@@ -1,6 +1,8 @@
 import Team from '../models/teams';
 import User from '../models/user';
 import UserTeams from '../models/userteams';
+import Question from '../models/question';
+import Response from '../models/response';
 
 export default {
   create: (req, res) => User
@@ -76,6 +78,12 @@ export default {
           attributes: ['id', 'name', 'questionOne', 'questionTwo'],
           as: 'teams',
           through: { attributes: ["preference"] },
+        },
+        
+        {
+          model: Response,
+          attributes: ['id', 'text'],
+          as: 'responses',
         },
       ]
     })
