@@ -21,6 +21,11 @@ export default {
           as: 'applicants', 
           through: { attributes: ["preference"] },
         },
+        {
+          model: Question,
+          attributes: ['id', 'text'],
+          as: 'questions',
+        },
       ]
     })
     .then(teams => res.status(200).send(teams.map(Team.transform)))

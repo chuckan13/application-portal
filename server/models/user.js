@@ -16,7 +16,8 @@ const User = sequelize.define('User', {
   responseThree: DataTypes.TEXT,
   responseFour: DataTypes.TEXT,
   responseFive: DataTypes.TEXT,
-  responseSix: DataTypes.TEXT
+  responseSix: DataTypes.TEXT,
+  //role: DataTypes.STRING,
 }, {});
 
 User.associate = () => {

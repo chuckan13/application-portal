@@ -20,6 +20,7 @@ export default {
       responseFour: req.body.responseFour,
       responseFive: req.body.responseFive,
       responseSix: req.body.responseSix,
+      //role: req.body.role,
     })
     .then(user => 
       Promise.all([
@@ -63,6 +64,12 @@ export default {
           attributes: ['id', 'name'],
           as: 'teams',
           through: { attributes: ["preference"] },
+        },
+        {
+          model: Response,
+          attributes: ['id', 'text'],
+          as: 'responses',
+          include: [{model: Question, attributes: ['id', 'text'], as: 'question'}],
         },
       ],
     })
@@ -121,6 +128,7 @@ export default {
         responseFour: req.body.responseFour || user.responseFour,
         responseFive: req.body.responseFive || user.responseFive,
         responseSix: req.body.responseSix || user.responseSix,
+        //role: req.body.role || user.role,
       }) // TODO if team prefs change, update UserTeam tables accordingly
     )
     .then(user => res.status(200).send(User.transform(user)))
