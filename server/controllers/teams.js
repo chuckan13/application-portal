@@ -1,12 +1,12 @@
 import Team from '../models/teams';
 import User from '../models/user';
+import Question from '../models/question';
+import Response from '../models/response';
 
 export default {
   create: (req, res) => Team
     .create({
       name: req.body.name,
-      questionOne: req.body.questionOne,
-      questionTwo: req.body.questionTwo,
     })
     .then(team => res.status(201).send(team))
     .catch(err => res.status(500).send(err)),
@@ -19,6 +19,16 @@ export default {
           attributes: ['id', 'firstName', 'lastName'], 
           as: 'applicants', 
           through: { attributes: ["preference"] },
+        },
+        {
+          model: Question,
+          attributes: ['id', 'text'],
+          as: 'questions',
+          include: [{
+            model: Response, 
+            as: 'responses',
+            attributes: ['id', 'userId', 'text'],
+          }],
         },
       ]
     })
@@ -34,6 +44,17 @@ export default {
           attributes: ['id', 'firstName', 'lastName'], 
           as: 'applicants', 
           through: { attributes: ["preference"] },
+        },
+        
+        {
+          model: Question,
+          attributes: ['id', 'text'],
+          as: 'questions',
+          include: [{
+            model: Response, 
+            as: 'responses',
+            attributes: ['id', 'userId', 'text'],
+          }],
         },
       ]
     })
@@ -56,14 +77,17 @@ export default {
           attributes: ['id', 'firstName', 'lastName'], 
           as: 'applicants', 
           through: { attributes: ["preference"] },
+          include: [{
+            model: Response, 
+            as: 'responses',
+            attributes: ['id', 'userId', 'text'],
+          }],
         },
       ]
     })
     .then(team => team
       .update({
         name: req.body.name || team.name,
-        questionOne: req.body.questionOne || team.questionOne,
-        questionTwo: req.body.questionTwo || team.questionTwo,
       })
     )
     .then(team => res.status(200).send(Team.transform(team)))

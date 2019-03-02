@@ -1,6 +1,7 @@
 import DataTypes from 'sequelize';
 import { sequelize } from '../database/db';
 import Team from '../models/teams';
+import Response from '../models/response';
 
 const User = sequelize.define('User', {
   token: DataTypes.STRING,
@@ -10,12 +11,7 @@ const User = sequelize.define('User', {
   class: DataTypes.STRING,
   concentration: DataTypes.STRING,
   gender: DataTypes.STRING,
-  responseOne: DataTypes.TEXT,
-  responseTwo: DataTypes.TEXT,
-  responseThree: DataTypes.TEXT,
-  responseFour: DataTypes.TEXT,
-  responseFive: DataTypes.TEXT,
-  responseSix: DataTypes.TEXT
+  role: DataTypes.STRING,
 }, {});
 
 User.associate = () => {
@@ -23,6 +19,11 @@ User.associate = () => {
     through: 'UserTeams',
     foreignKey: 'userId',
     as: 'teams',
+  });
+
+  User.hasMany(Response, {
+    foreignKey: 'userId',
+    as: 'responses',
   });
 }
 
