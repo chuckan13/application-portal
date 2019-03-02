@@ -11,12 +11,6 @@ const User = sequelize.define('User', {
   class: DataTypes.STRING,
   concentration: DataTypes.STRING,
   gender: DataTypes.STRING,
-  // responseOne: DataTypes.TEXT,
-  // responseTwo: DataTypes.TEXT,
-  // responseThree: DataTypes.TEXT,
-  // responseFour: DataTypes.TEXT,
-  // responseFive: DataTypes.TEXT,
-  // responseSix: DataTypes.TEXT,
   role: DataTypes.STRING,
 }, {});
 

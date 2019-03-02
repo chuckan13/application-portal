@@ -8,14 +8,6 @@ const Team = sequelize.define('Team', {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  // questionOne: {
-  //   type: DataTypes.TEXT,
-  //   allowNull: false,
-  // },
-  // questionTwo: {
-  //   type: DataTypes.TEXT,
-  //   allowNull: false,
-  // },
 });
 
 Team.associate = () => {

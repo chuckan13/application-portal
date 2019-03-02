@@ -14,6 +14,7 @@ Question.associate = () => {
 
     Question.hasMany(Response, {
         foreignKey: 'questionId',
+        as: 'responses',
     })
 }
 

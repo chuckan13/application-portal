@@ -14,12 +14,6 @@ export default {
       class: req.body.class,
       concentration: req.body.concentration,
       gender: req.body.gender,
-      // responseOne: req.body.responseOne,
-      // responseTwo: req.body.responseTwo,
-      // responseThree: req.body.responseThree,
-      // responseFour: req.body.responseFour,
-      // responseFive: req.body.responseFive,
-      // responseSix: req.body.responseSix,
       role: req.body.role,
     })
     .then(user => 
@@ -69,7 +63,11 @@ export default {
           model: Response,
           attributes: ['id', 'text'],
           as: 'responses',
-          include: [{model: Question, attributes: ['id', 'text'], as: 'question'}],
+          include: [{
+            model: Question, 
+            as: 'question',
+            attributes: ['id', 'text'],
+          }],
         },
       ],
     })
@@ -91,6 +89,11 @@ export default {
           model: Response,
           attributes: ['id', 'text'],
           as: 'responses',
+          include: [{
+            model: Question, 
+            as: 'question',
+            attributes: ['id', 'text'],
+          }],
         },
       ]
     })
@@ -111,6 +114,11 @@ export default {
           attributes: ['id', 'name'],
           as: 'teams',
           through: { attributes: ["preference"] },
+          include: [{
+            model: Question, 
+            as: 'question',
+            attributes: ['id', 'text'],
+          }],
         },
       ]
     })
@@ -122,12 +130,6 @@ export default {
         class: req.body.class || user.class,
         concentration: req.body.concentration || user.concentration,
         gender: req.body.gender || user.gender,
-        // responseOne: req.body.responseOne || user.responseOne,
-        // responseTwo: req.body.responseTwo || user.responseTwo,
-        // responseThree: req.body.responseThree || user.responseThree,
-        // responseFour: req.body.responseFour || user.responseFour,
-        // responseFive: req.body.responseFive || user.responseFive,
-        // responseSix: req.body.responseSix || user.responseSix,
         role: req.body.role || user.role,
       }) // TODO if team prefs change, update UserTeam tables accordingly
     )

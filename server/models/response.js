@@ -13,6 +13,7 @@ Response.associate = () => {
     });
     Response.belongsTo(Question, {
         foreignKey: 'questionId',
+        as: 'question',
     });
 }
 
