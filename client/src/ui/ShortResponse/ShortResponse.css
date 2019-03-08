@@ -1,6 +1,7 @@
 
 #review-choice, #short-response-choice {
-  font-family: Avenir-Light;
+  font-family: Avenir;
+  font-weight: lighter;
   color: #fff;
   text-align: left;
   display: block;

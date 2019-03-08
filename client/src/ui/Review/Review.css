@@ -1,5 +1,5 @@
 #header, #header2 {
-  font-family: Avenir-Book;
+  font-family: Avenir;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
@@ -14,7 +14,7 @@
 #information, #information-last, 
 #response, #response-last,
 #question {
-  font-family: Avenir-Light;
+  font-family: Avenir;
   color: #fff;
   text-align: left;
   display: block;
