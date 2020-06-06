@@ -2,7 +2,7 @@
   "development": {
     "username": "postgres",
     "password": "pass",
-    "database": "app-portal-dev",
+    "database": "app_portal_dev",
     "host": "127.0.0.1",
     "port": 5432,
     "dialect": "postgres"
