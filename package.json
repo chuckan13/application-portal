@@ -28,7 +28,8 @@
     "react-dom": "^16.6.3",
     "sequelize": "^4.42.0",
     "sequelize-cli": "^5.4.0",
-    "serve-favicon": "~2.4.5"
+    "serve-favicon": "~2.4.5",
+    "websocket-extensions": "^0.1.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
