@@ -1,6 +1,6 @@
 import Team from '../models/team';
 import User from '../models/user';
-import UserTeams from '../models/userteam';
+import UserTeam from '../models/userteam';
 import Question from '../models/question';
 import Response from '../models/response';
 
@@ -17,17 +17,17 @@ export default {
 		})
 			.then(user =>
 				Promise.all([
-					UserTeams.create({
+					UserTeam.create({
 						user_id: user.id,
 						team_id: req.body.teamOne,
 						preference: 1
 					}),
-					UserTeams.create({
+					UserTeam.create({
 						user_id: user.id,
 						team_id: req.body.teamTwo,
 						preference: 2
 					}),
-					UserTeams.create({
+					UserTeam.create({
 						user_id: user.id,
 						team_id: req.body.teamThree,
 						preference: 3
@@ -108,6 +108,7 @@ export default {
 			.then(
 				user =>
 					user.update({
+						token: req.body.token || user.token,
 						first_name: req.body.first_name || user.first_name,
 						last_name: req.body.last_name || user.last_name,
 						email: req.body.email || user.email,

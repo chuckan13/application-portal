@@ -39,7 +39,27 @@ export default {
 
 	retrieve: (req, res) =>
 		Team.findOne({
-			where: { id: req.params.id }
+			where: { id: req.params.id },
+			include: [
+				{
+					model: User,
+					attributes: [ 'id', 'first_name', 'last_name' ],
+					as: 'users',
+					through: { attributes: [ 'preference' ] }
+				},
+				{
+					model: Question,
+					attributes: [ 'id', 'text' ],
+					as: 'question',
+					include: [
+						{
+							model: Response,
+							as: 'response',
+							attributes: [ 'id', 'text', 'user_id' ]
+						}
+					]
+				}
+			]
 		})
 			.then(team => {
 				if (!team) {
