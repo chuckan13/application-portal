@@ -1,6 +1,7 @@
 import cas from '../config/cas';
 import usersController from '../controllers/users';
 import teamsController from '../controllers/teams';
+import responsesController from '../controllers/responses';
 
 export default function(app) {
 	app.post('/api/users', cas.block, usersController.create);
@@ -15,4 +16,7 @@ export default function(app) {
 	app.get('/api/teams/:id', cas.block, teamsController.retrieve);
 	app.put('/api/teams/:id', cas.block, teamsController.update);
 	app.delete('/api/users/:id', cas.block, teamsController.destroy);
+
+	app.post('/api/responses', cas.block, responsesController.create);
+	app.get('/api/responses', cas.block, responsesController.list);
 }

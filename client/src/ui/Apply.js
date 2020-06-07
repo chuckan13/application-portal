@@ -13,15 +13,16 @@ addStyle(Button, 'next');
 class Apply extends Component {
 	state = {
 		/* User attributes */
+		userId: '',
 		user: '',
 		firstName: '',
 		lastName: '',
 		email: '',
 		class: '',
 		concentration: '',
-		teamOne: '',
-		teamTwo: '',
-		teamThree: '',
+		teamOne: 0,
+		teamTwo: 0,
+		teamThree: 0,
 		responseOne: '',
 		responseTwo: '',
 		responseThree: '',
@@ -84,8 +85,29 @@ class Apply extends Component {
 		});
 	}
 
-	handlePartTwoClick(t1, t2, t3) {
+	async handlePartTwoClick(t1, t2, t3) {
+		var tempId = '';
+		await axios
+			.post('/api/users', {
+				token: this.state.user,
+				first_name: this.state.firstName,
+				last_name: this.state.lastName,
+				email: this.state.email,
+				class: this.state.class,
+				concentration: this.state.concentration,
+				teamOne: t1,
+				teamTwo: t2,
+				teamThree: t3,
+				role: 'USER'
+			})
+			.then(function(response) {
+				tempId = response.data.id;
+			})
+			.catch(function(error) {
+				console.log(error);
+			});
 		this.setState({
+			userId: tempId,
 			teamOne: t1,
 			teamTwo: t2,
 			teamThree: t3,
@@ -94,14 +116,10 @@ class Apply extends Component {
 		});
 	}
 
-	handlePartThreeClick(r1, r2, r3, r4, r5, r6) {
+	handlePartThreeClick(qNums, allResp) {
 		this.setState({
-			responseOne: r1,
-			responseTwo: r2,
-			responseThree: r3,
-			responseFour: r4,
-			responseFive: r5,
-			responseSix: r6,
+			questionNumbers: qNums,
+			allResponses: allResp,
 			partThree: false,
 			partFour: true
 		});
@@ -109,31 +127,6 @@ class Apply extends Component {
 	}
 
 	handlePartFourClick() {
-		axios
-			.post('/api/users', {
-				token: this.state.user,
-				firstName: this.state.firstName,
-				lastName: this.state.lastName,
-				email: this.state.email,
-				class: this.state.class,
-				concentration: this.state.concentration,
-				gender: this.state.gender,
-				teamOne: this.state.teamOne,
-				teamTwo: this.state.teamTwo,
-				teamThree: this.state.teamThree,
-				responseOne: this.state.responseOne,
-				responseTwo: this.state.responseTwo,
-				responseThree: this.state.responseThree,
-				responseFour: this.state.responseFour,
-				responseFive: this.state.responseFive,
-				responseSix: this.state.responseSix
-			})
-			.then(function(response) {
-				console.log(response);
-			})
-			.catch(function(error) {
-				console.log(error);
-			});
 		this.setState({
 			partFour: false,
 			submitted: true

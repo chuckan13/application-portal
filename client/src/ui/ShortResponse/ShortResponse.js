@@ -6,21 +6,19 @@ import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { ControlLabel } from 'react-bootstrap';
+import axios from 'axios';
 
 class ShortResponse extends React.Component {
 	state = {
-		responseOne: '',
-		responseTwo: '',
-		responseThree: '',
-		responseFour: '',
-		responseFive: '',
-		responseSix: ''
+		questionNumbers: [],
+		userId: 0
 	};
 
 	constructor(props, context) {
 		super(props, context);
 		this.handleSubmitClick = this.handleSubmitClick.bind(this);
 		this.updateState = this.updateState.bind(this);
+		let { teamOne, teamTwo, teamThree, userId } = this.props.state;
 	}
 
 	updateState(e) {
@@ -30,32 +28,90 @@ class ShortResponse extends React.Component {
 		});
 	}
 
-	handleSubmitClick() {
-		var r1 = this.state.responseOne;
-		var r2 = this.state.responseTwo;
-		var r3 = this.state.responseThree;
-		var r4 = this.state.responseFour;
-		var r5 = this.state.responseFive;
-		var r6 = this.state.responseSix;
-		this.props.handlePartThreeClick(r1, r2, r3, r4, r5, r6);
+	async handleSubmitClick() {
+		var allResponseObjects = [];
+		for (var i = 0; i < this.state.questionNumbers.length; i++) {
+			var currResponseObject = {
+				text: this.state['question' + this.state.questionNumbers[i] + 'response'],
+				qId: this.state.questionNumbers[i]
+			};
+			allResponseObjects.push(currResponseObject);
+		}
+		let responses = [];
+		await Promise.all(
+			allResponseObjects.map(obj =>
+				axios
+					.post('/api/responses', {
+						text: obj.text,
+						question_id: parseInt(obj.qId),
+						user_id: parseInt(this.state.userId)
+					})
+					.then(response => {
+						responses.push(response);
+					})
+			)
+		);
+		this.setState({
+			allResp: allResponseObjects
+		});
+		this.props.handlePartThreeClick(this.state.questionNumbers, this.state.allResp);
+	}
+
+	alreadyInArray(idNum) {
+		if (this.state.questionNumbers.includes(idNum)) {
+			return true;
+		}
+		return false;
+	}
+
+	clearArrayOfUndefined(arrayVars) {
+		var newArray = [];
+		for (var i = 0; i < arrayVars.length; i++) {
+			if (arrayVars[i]) {
+				newArray.push(arrayVars[i]);
+			}
+		}
+		return newArray;
 	}
 
 	render() {
 		// initially they come in as ids.  we need to get the team out of them
 		// added code so it doesn't break if no teams are chosen (?)
-		let { teamOne, teamTwo, teamThree } = this.props.state;
+		let { teamOne, teamTwo, teamThree, userId } = this.props.state;
+		this.state.userId = userId;
 		if (teamOne) {
 			teamOne = this.props.state.teams.filter(team => team.id === Number(teamOne))[0];
+			var questionNum = [];
+			questionNum = teamOne.question.map(question => {
+				if (!this.alreadyInArray(question.id)) {
+					return question.id;
+				}
+			});
+			this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
 		} else {
 			teamOne = '';
 		}
 		if (teamTwo) {
 			teamTwo = this.props.state.teams.filter(team => team.id === Number(teamTwo))[0];
+			var questionNum = [];
+			questionNum = teamTwo.question.map(question => {
+				if (!this.alreadyInArray(question.id)) {
+					return question.id;
+				}
+			});
+			this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
 		} else {
 			teamTwo = '';
 		}
 		if (teamThree) {
 			teamThree = this.props.state.teams.filter(team => team.id === Number(teamThree))[0];
+			var questionNum = [];
+			questionNum = teamThree.question.map(question => {
+				if (!this.alreadyInArray(question.id)) {
+					return question.id;
+				}
+			});
+			this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
 		} else {
 			teamThree = '';
 		}
@@ -67,26 +123,18 @@ class ShortResponse extends React.Component {
 				</div>
 				<TeamQuestions
 					team={teamOne.name}
-					num="1"
-					n1="responseOne"
-					n2="responseTwo"
-					q1={teamOne.questionOne}
-					q2={teamOne.questionTwo}
-					v1={this.state.responseOne}
-					v2={this.state.responseTwo}
+					num="One"
+					questions={teamOne.question}
 					onChange={this.updateState}
+					v={this.state}
 				/>
 				{teamTwo ? (
 					<TeamQuestions
 						team={teamTwo.name}
-						num="2"
-						n1="responseThree"
-						n2="responseFour"
-						q1={teamTwo.questionOne}
-						q2={teamTwo.questionTwo}
-						v1={this.state.responseThree}
-						v2={this.state.responseFour}
+						num="Two"
+						questions={teamTwo.question}
 						onChange={this.updateState}
+						v={this.state}
 					/>
 				) : (
 					''
@@ -94,14 +142,10 @@ class ShortResponse extends React.Component {
 				{teamThree ? (
 					<TeamQuestions
 						team={teamThree.name}
-						num="3"
-						n1="responseFive"
-						n2="responseSix"
-						q1={teamThree.questionOne}
-						q2={teamThree.questionTwo}
-						v1={this.state.responseFive}
-						v2={this.state.responseSix}
+						num="Three"
+						questions={teamThree.question}
 						onChange={this.updateState}
+						v={this.state}
 					/>
 				) : (
 					''
@@ -114,13 +158,13 @@ class ShortResponse extends React.Component {
 
 function Question(props) {
 	return (
-		<FormGroup controlId="formControlsTextarea">
+		<FormGroup>
 			<ControlLabel id="long-form-label">{props.question}</ControlLabel>
 			<FormControl
 				id="long-form-answer"
-				name={props.name}
+				name={props.name + 'response'}
 				componentClass="textarea"
-				value={props.v}
+				value={props.v[props.name + 'response']}
 				onChange={props.onChange}
 			/>
 		</FormGroup>
@@ -128,16 +172,23 @@ function Question(props) {
 }
 
 function TeamQuestions(props) {
+	const questions = props.questions.map(question => (
+		<Question
+			name={'question' + question.id}
+			question={question.text}
+			onChange={props.onChange}
+			questionId={question.id}
+			v={props.v}
+		/>
+	));
+
 	return (
 		<div>
 			<p id="short-response-choice">
 				{' '}
 				Choice {props.num}: {props.team}{' '}
 			</p>
-			<div id="questions">
-				<Question name={props.n1} question={props.q1} v={props.v1} onChange={props.onChange} />
-				<Question name={props.n2} question={props.q2} v={props.v2} onChange={props.onChange} />
-			</div>
+			<div id="questions">{questions}</div>
 		</div>
 	);
 }

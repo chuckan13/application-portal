@@ -5,100 +5,119 @@ import { Col } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 
 class Review extends React.Component {
+	constructor(props, context) {
+		super(props, context);
+		this.handleSubmitClick = this.handleSubmitClick.bind(this);
+	}
 
-  constructor(props, context) {
-    super(props, context);
-    this.handleSubmitClick = this.handleSubmitClick.bind(this);
-  }
+	handleSubmitClick() {
+		this.props.handlePartFourClick();
+	}
 
-  handleSubmitClick() {
-    this.props.handlePartFourClick();
-  }
+	render() {
+		let { teamOne, teamTwo, teamThree, questionNumbers, allResponses } = this.props.state;
 
-  render() {
-    // getting team names from ids
-    let { teamOne, teamTwo, teamThree } = this.props.state;
-    teamOne = this.props.state.teams.filter(team => team.id === Number(teamOne))[0]
-    teamTwo = this.props.state.teams.filter(team => team.id === Number(teamTwo))[0]
-    teamThree = this.props.state.teams.filter(team => team.id === Number(teamThree))[0]
+		if (teamOne) {
+			teamOne = this.props.state.teams.filter(team => team.id === Number(teamOne))[0];
+		} else {
+			teamOne = '';
+		}
+		if (teamTwo) {
+			teamTwo = this.props.state.teams.filter(team => team.id === Number(teamTwo))[0];
+		} else {
+			teamTwo = '';
+		}
+		if (teamThree) {
+			teamThree = this.props.state.teams.filter(team => team.id === Number(teamThree))[0];
+		} else {
+			teamThree = '';
+		}
 
-    return (
-      <div>
-        <div id="chunk">
-          <p id="header"> Basic Information: </p>
-          <p id="information"> First name: {this.props.state.firstName}</p>
-          <p id="information"> Last name: {this.props.state.lastName}</p>
-          <p id="information"> Email: {this.props.state.email}</p>
-          <p id="information"> Class: {this.props.state.class}</p>
-          <p id="information"> Concentration: {this.props.state.concentration}</p>
-          <p id="information-last"> Gender: {this.props.state.gender}</p>
-        </div>
-        <div>
-          <p id="header"> Short Response Questions: </p>
-          {/* response-last creates the rounded bottom */}
-          { teamTwo ? <ShortResponseSection
-            id="response"
-            name ={teamOne.name} num="1"
-            q1 ={teamOne.questionOne} r1={this.props.state.responseOne}
-            q2= {teamOne.questionTwo} r2={this.props.state.responseTwo}
-          />: <ShortResponseSection
-            id="response-last"
-            name ={teamOne.name} num="1"
-            q1 ={teamOne.questionOne} r1={this.props.state.responseOne}
-            q2= {teamOne.questionTwo} r2={this.props.state.responseTwo}
-          /> }
+		return (
+			<div>
+				<div id="chunk">
+					<p id="header"> Basic Information: </p>
+					<p id="information"> First name: {this.props.state.firstName}</p>
+					<p id="information"> Last name: {this.props.state.lastName}</p>
+					<p id="information"> Email: {this.props.state.email}</p>
+					<p id="information"> Class: {this.props.state.class}</p>
+					<p id="information"> Concentration: {this.props.state.concentration}</p>
+				</div>
+				<div>
+					<p id="header"> Short Response Questions: </p>
+					<TeamResponses team={teamOne.name} num="One" questions={teamOne.question} resp={allResponses} />
+					{teamTwo ? (
+						<TeamResponses team={teamTwo.name} num="Two" questions={teamTwo.question} resp={allResponses} />
+					) : (
+						''
+					)}
+					{teamThree ? (
+						<TeamResponses
+							team={teamThree.name}
+							num="Three"
+							questions={teamThree.question}
+							resp={allResponses}
+						/>
+					) : (
+						''
+					)}
+				</div>
+				<SubmitButton onClick={this.handleSubmitClick} />
+			</div>
+		);
+	}
+}
 
-        {/* nested if-else statements*/}
-          { teamTwo ? 
-            teamThree ? 
-            <ShortResponseSection
-            id="response"
-            name ={teamOne.name} num="1"
-            q1 ={teamOne.questionOne} r1={this.props.state.responseOne}
-            q2= {teamOne.questionTwo} r2={this.props.state.responseTwo}
-            />: 
-            <ShortResponseSection
-              id="response-last"
-              name ={teamTwo.name} num="2"
-              q1 ={teamTwo.questionOne} r1={this.props.state.responseThree}
-              q2= {teamTwo.questionTwo} r2={this.props.state.responseFour}
-            />:
-            ""
-          }
+function TeamResponses(props) {
+	const responses = props.questions.map(question => {
+		var currResponse = '';
+		for (var i = 0; i < props.resp.length; i++) {
+			if (props.resp[i].qId == question.id) {
+				currResponse = props.resp[i].text;
+			}
+		}
+		return (
+			<ShortResponseSection
+				id="response-last"
+				name={props.team}
+				num={props.num}
+				question={question.text}
+				qId={question.id}
+				resp={currResponse}
+			/>
+		);
+	});
 
-          { teamThree ? <ShortResponseSection
-            id="response-last"
-            name ={teamThree.name} num="3"
-            q1 ={teamThree.questionOne} r1={this.props.state.responseFive}
-            q2= {teamThree.questionTwo} r2={this.props.state.responseSix}
-          />: '' }
-        </div>
-        <SubmitButton onClick = {this.handleSubmitClick} />
-      </div>
-    );
-  }
+	return (
+		<div id="choice-section">
+			<p id="review-choice">
+				{' '}
+				Choice {props.num}: {props.team}{' '}
+			</p>
+			<div id="responses">{responses}</div>
+		</div>
+	);
 }
 
 function ShortResponseSection(props) {
-  return (
-    <div id="choice-section">
-      <p id="review-choice"> Choice {props.num}: {props.name}</p>
-      <p id="question">{props.q1}</p>
-      <pre id="response">{props.r1}</pre>
-      <p id="question">{props.q2}</p>
-      <pre id={props.id}>{props.r2}</pre>
-    </div>
-  );
+	return (
+		<div id="choice-section">
+			<p id="question">{props.question}</p>
+			<pre id="response">{props.resp}</pre>
+		</div>
+	);
 }
 
 function SubmitButton(props) {
-  return (
-   <Row className="center-block text-center">
-      <Col>
-        <Button bsStyle="next" bsSize="large" onClick={props.onClick}>submit</Button>
-      </Col>
-   </Row>
-  );
+	return (
+		<Row className="center-block text-center">
+			<Col>
+				<Button bsStyle="next" bsSize="large" onClick={props.onClick}>
+					submit
+				</Button>
+			</Col>
+		</Row>
+	);
 }
 
 export default Review;
