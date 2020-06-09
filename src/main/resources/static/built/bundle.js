@@ -3759,9 +3759,9 @@ $export($export.S, 'Object', {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/main/js/App.css":
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/main/js/app.css":
 /*!*******************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/main/js/App.css ***!
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/main/js/app.css ***!
   \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -3775,7 +3775,7 @@ exports = ___CSS_LOADER_API_IMPORT___(false);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_1___);
 // Module
-exports.push([module.i, ".App {\r\n  margin: 10px;\r\n}\r\n\r\nhtml, body {\r\n    max-width: 100%;\r\n    overflow-x: hidden;\r\n}\r\n\r\n@font-face{\r\n  font-family: \"Avenir\";\r\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "),\r\n} \r\n\r\n/* navbar properties */\r\n#nav {\r\n  background-color: #272727 !important;\r\n  border-color: #272727 !important;\r\n}\r\n\r\n.navbar-brand {\r\n  display: flex;\r\n  align-items: center;\r\n  vertical-align: middle;\r\n  display: flex;\r\n}\r\n\r\n.navbar .container {\r\n  margin-top: 10px;\r\n  margin-bottom: 10px;\r\n  margin-left: 40px;\r\n}\r\n\r\n.navbar-deafault {\r\n  width: 100%;\r\n}\r\n\r\n.container {\r\n  width: 100%;\r\n  padding-right: 100px;\r\n}\r\n\r\n/* navbar components */\r\n#logo {\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\r\n  background-size: 40px;\r\n  background-repeat: no-repeat;\r\n  height: 40px;\r\n  width: 40px;\r\n  vertical-align: middle;\r\n}\r\n\r\n#about {\r\n  margin-right: 0;\r\n  font-size: 20px;\r\n  vertical-align: middle;\r\n\r\n}\r\n\r\n#application-portal {\r\n  padding-left: 20px;\r\n  font-size: 22px;\r\n  padding-bottom: 3px;\r\n}\r\n\r\n/* general text */\r\na {\r\n  color: white !important;\r\n  font-family: Avenir;\r\n}\r\n\r\na:hover {\r\n  text-decoration: none !important;\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n", ""]);
+exports.push([module.i, ".app {\r\n  margin: 10px;\r\n}\r\n\r\nhtml, body {\r\n    max-width: 100%;\r\n    overflow-x: hidden;\r\n}\r\n\r\n@font-face{\r\n  font-family: \"Avenir\";\r\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "),\r\n} \r\n\r\n/* navbar properties */\r\n#nav {\r\n  background-color: #272727 !important;\r\n  border-color: #272727 !important;\r\n}\r\n\r\n.navbar-brand {\r\n  display: flex;\r\n  align-items: center;\r\n  vertical-align: middle;\r\n  display: flex;\r\n}\r\n\r\n.navbar .container {\r\n  margin-top: 10px;\r\n  margin-bottom: 10px;\r\n  margin-left: 40px;\r\n}\r\n\r\n.navbar-deafault {\r\n  width: 100%;\r\n}\r\n\r\n.container {\r\n  width: 100%;\r\n  padding-right: 100px;\r\n}\r\n\r\n/* navbar components */\r\n#logo {\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\r\n  background-size: 40px;\r\n  background-repeat: no-repeat;\r\n  height: 40px;\r\n  width: 40px;\r\n  vertical-align: middle;\r\n}\r\n\r\n#about {\r\n  margin-right: 0;\r\n  font-size: 20px;\r\n  vertical-align: middle;\r\n\r\n}\r\n\r\n#application-portal {\r\n  padding-left: 20px;\r\n  font-size: 22px;\r\n  padding-bottom: 3px;\r\n}\r\n\r\n/* general text */\r\na {\r\n  color: white !important;\r\n  font-family: Avenir;\r\n}\r\n\r\na:hover {\r\n  text-decoration: none !important;\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -54951,35 +54951,6 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./src/main/js/App.css":
-/*!*****************************!*\
-  !*** ./src/main/js/App.css ***!
-  \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!./App.css */ "./node_modules/css-loader/dist/cjs.js!./src/main/js/App.css");
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(content, options);
-
-
-
-module.exports = content.locals || {};
-
-/***/ }),
-
 /***/ "./src/main/js/App.js":
 /*!****************************!*\
   !*** ./src/main/js/App.js ***!
@@ -54993,8 +54964,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/es/index.js");
-/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App.css */ "./src/main/js/App.css");
-/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_App_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _app_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.css */ "./src/main/js/app.css");
+/* harmony import */ var _app_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_app_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _views_Apply_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views/Apply.js */ "./src/main/js/views/Apply.js");
 /* harmony import */ var _views_Admin_Admin_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/Admin/Admin.js */ "./src/main/js/views/Admin/Admin.js");
 /* harmony import */ var _views_Home_Home_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/Home/Home.js */ "./src/main/js/views/Home/Home.js");
@@ -55081,6 +55052,35 @@ var App = /*#__PURE__*/function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 ReactDOM.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById('root'));
+
+/***/ }),
+
+/***/ "./src/main/js/app.css":
+/*!*****************************!*\
+  !*** ./src/main/js/app.css ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!./app.css */ "./node_modules/css-loader/dist/cjs.js!./src/main/js/app.css");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+
+
+module.exports = content.locals || {};
 
 /***/ }),
 
@@ -55299,8 +55299,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../App.css */ "./src/main/js/App.css");
-/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_App_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _app_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../app.css */ "./src/main/js/app.css");
+/* harmony import */ var _app_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_app_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _BasicInformation_BasicInformation_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./BasicInformation/BasicInformation.js */ "./src/main/js/views/BasicInformation/BasicInformation.js");
 /* harmony import */ var _TeamSelection_TeamSelection_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./TeamSelection/TeamSelection.js */ "./src/main/js/views/TeamSelection/TeamSelection.js");
 /* harmony import */ var _ShortResponse_ShortResponse_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ShortResponse/ShortResponse.js */ "./src/main/js/views/ShortResponse/ShortResponse.js");

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { NavItem } from 'react-bootstrap';
-import './App.css';
+import './app.css';
 import Apply from './views/Apply.js';
 import Admin from './views/Admin/Admin.js';
 import Home from './views/Home/Home.js';

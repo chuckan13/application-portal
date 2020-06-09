@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import '../App.css';
+import '../app.css';
 import BasicInformation from './BasicInformation/BasicInformation.js';
 import TeamSelection from './TeamSelection/TeamSelection.js';
 import ShortResponse from './ShortResponse/ShortResponse.js';
