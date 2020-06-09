@@ -57558,9 +57558,9 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
           return console.log(err);
         });
         console.log('Team one');
-        console.log(teamOneQuestions);
+        console.log(this.state.teamOneQuestions);
         var questionNum = [];
-        questionNum = teamOneQuestions.map(function (question) {
+        questionNum = this.state.teamOneQuestions.map(function (question) {
           if (!_this3.alreadyInArray(question.id)) {
             return question.id;
           }
