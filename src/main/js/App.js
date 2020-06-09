@@ -15,6 +15,7 @@ class App extends Component {
 	}
 
 	render() {
+		console.log('IN RENDER');
 		return (
 			<Router>
 				<div>
@@ -40,9 +41,11 @@ class App extends Component {
 							</Navbar.Collapse>
 						</Navbar>
 					</div>
-					<Route exact path="/" component={Home} />
-					<Route path="/apply" component={Apply} />
-					<Route path="/admin" component={Admin} />
+					<Switch>
+						<Route exact path="/" component={Home} exact />
+						<Route path="/apply" component={Apply} />
+						<Route path="/admin" component={Admin} />
+					</Switch>
 				</div>
 			</Router>
 		);
