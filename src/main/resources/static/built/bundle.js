@@ -56488,6 +56488,7 @@ var Apply = /*#__PURE__*/function (_Component) {
                   concentration: this.state.concentration,
                   role: 'USER'
                 }).then(function (response) {
+                  console.log(tempId);
                   tempId = response.data.id;
                 })["catch"](function (error) {
                   console.log(error);
@@ -56535,8 +56536,9 @@ var Apply = /*#__PURE__*/function (_Component) {
                   partTwo: false,
                   partThree: true
                 });
+                console.log(this.state.userId);
 
-              case 17:
+              case 18:
               case "end":
                 return _context.stop();
             }
