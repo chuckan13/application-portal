@@ -97,6 +97,7 @@ class ShortResponse extends React.Component {
 			console.log('Team one');
 			console.log(this.state.teamOneQuestions);
 			var questionNum = [];
+			debugger;
 			questionNum = this.state.teamOneQuestions.map(question => {
 				if (!this.alreadyInArray(question.id)) {
 					return question.id;
