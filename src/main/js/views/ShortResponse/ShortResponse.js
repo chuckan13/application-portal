@@ -10,9 +10,6 @@ import axios from 'axios';
 
 class ShortResponse extends React.Component {
 	state = {
-		teamOneQuestions: [],
-		teamTwoQuestions: [],
-		teamThreeQuestions: [],
 		questionNumbers: [],
 		userId: 0
 	};
@@ -23,6 +20,10 @@ class ShortResponse extends React.Component {
 		this.updateState = this.updateState.bind(this);
 		let { teamOne, teamTwo, teamThree, userId } = this.props.state;
 	}
+
+	// componentDidMount() {
+	// 	this.render();
+	// }
 
 	updateState(e) {
 		const name = e.target.name;
@@ -77,27 +78,26 @@ class ShortResponse extends React.Component {
 		return newArray;
 	}
 
-	async render() {
+	render() {
 		// initially they come in as ids.  we need to get the team out of them
 		// added code so it doesn't break if no teams are chosen (?)
-		let { teamOne, teamTwo, teamThree, userId } = this.props.state;
+		let {
+			teamOne,
+			teamTwo,
+			teamThree,
+			userId,
+			teamOneQuestions,
+			teamTwoQuestions,
+			teamThreeQuestions
+		} = this.props.state;
 		this.state.userId = userId;
 		if (teamOne) {
 			var teamOneObj = this.props.state.teams.filter(team => team.id === Number(teamOne))[0];
 			console.log('teamonobj', teamOneObj);
-			await axios
-				.get('/api/questions/' + teamOne)
-				.then(res => {
-					console.log('get request to /api/questions/{teamid} 1');
-					console.log(res.data);
-					this.state.teamOneQuestions = res.data;
-					// this.setState({ teamOneQuestions: res.data });
-				})
-				.catch(err => console.log(err));
 			console.log('Team one');
-			console.log(this.state.teamOneQuestions);
+			console.log(teamOneQuestions);
 			var questionNum = [];
-			questionNum = this.state.teamOneQuestions.map(question => {
+			questionNum = teamOneQuestions.map(question => {
 				if (!this.alreadyInArray(question.id)) {
 					return question.id;
 				}
@@ -110,19 +110,10 @@ class ShortResponse extends React.Component {
 		}
 		if (teamTwo) {
 			var teamTwoObj = this.props.state.teams.filter(team => team.id === Number(teamTwo))[0];
-			await axios
-				.get('/api/questions/' + teamTwo)
-				.then(res => {
-					console.log('get request to /api/questions/{teamid} 2');
-					console.log(res.data);
-					this.state.teamTwoQuestions = res.data;
-					// this.setState({ teamOneQuestions: res.data });
-				})
-				.catch(err => console.log(err));
 			console.log('Team Two');
-			console.log(this.state.teamTwoQuestions);
+			console.log(teamTwoQuestions);
 			var questionNum = [];
-			questionNum = this.state.teamTwoQuestions.map(question => {
+			questionNum = teamTwoQuestions.map(question => {
 				if (!this.alreadyInArray(question.id)) {
 					return question.id;
 				}
@@ -135,19 +126,10 @@ class ShortResponse extends React.Component {
 		}
 		if (teamThree) {
 			var teamThreeObj = this.props.state.teams.filter(team => team.id === Number(teamThree))[0];
-			await axios
-				.get('/api/questions/' + teamThree)
-				.then(res => {
-					console.log('get request to /api/questions/{teamid} 3');
-					console.log(res.data);
-					this.state.teamThreeQuestions = res.data;
-					// this.setState({ teamOneQuestions: res.data });
-				})
-				.catch(err => console.log(err));
 			console.log('Team Three');
-			console.log(this.state.teamThreeQuestions);
+			console.log(teamThreeQuestions);
 			var questionNum = [];
-			questionNum = this.state.teamThreeQuestions.map(question => {
+			questionNum = teamThreeQuestions.map(question => {
 				if (!this.alreadyInArray(question.id)) {
 					return question.id;
 				}
@@ -167,7 +149,7 @@ class ShortResponse extends React.Component {
 				<TeamQuestions
 					team={teamOneObj.name}
 					num="One"
-					questions={[ this.state.teamOneQuestions ]}
+					questions={teamOneQuestions}
 					onChange={this.updateState}
 					v={this.state}
 				/>
@@ -175,7 +157,7 @@ class ShortResponse extends React.Component {
 					<TeamQuestions
 						team={teamTwoObj.name}
 						num="Two"
-						questions={[ this.state.teamTwoQuestions ]}
+						questions={teamTwoQuestions}
 						onChange={this.updateState}
 						v={this.state}
 					/>
@@ -186,7 +168,7 @@ class ShortResponse extends React.Component {
 					<TeamQuestions
 						team={teamThreeObj.name}
 						num="Three"
-						questions={[ this.state.teamThreeQuestions ]}
+						questions={teamThreeQuestions}
 						onChange={this.updateState}
 						v={this.state}
 					/>

@@ -23,6 +23,9 @@ class Apply extends Component {
 		teamOne: 0,
 		teamTwo: 0,
 		teamThree: 0,
+		teamOneQuestions: [],
+		teamTwoQuestions: [],
+		teamThreeQuestions: [],
 		responseOne: '',
 		responseTwo: '',
 		responseThree: '',
@@ -95,6 +98,9 @@ class Apply extends Component {
 		console.log(t2);
 		console.log(t3);
 		var tempId = '';
+		var teamOneQ = [];
+		var teamTwoQ = [];
+		var teamThreeQ = [];
 		await axios
 			.post('/api/users/new', {
 				//json stringify?
@@ -112,11 +118,41 @@ class Apply extends Component {
 			.catch(function(error) {
 				console.log(error);
 			});
+		await axios
+			.get('/api/questions/' + t1)
+			.then(res => {
+				console.log('get request to /api/questions/{teamid} 1');
+				console.log(res.data);
+				teamOneQ = res.data;
+				// this.setState({ teamOneQuestions: res.data });
+			})
+			.catch(err => console.log(err));
+		await axios
+			.get('/api/questions/' + t2)
+			.then(res => {
+				console.log('get request to /api/questions/{teamid} 2');
+				console.log(res.data);
+				teamTwoQ = res.data;
+				// this.setState({ teamOneQuestions: res.data });
+			})
+			.catch(err => console.log(err));
+		await axios
+			.get('/api/questions/' + t3)
+			.then(res => {
+				console.log('get request to /api/questions/{teamid} 3');
+				console.log(res.data);
+				teamThreeQ = res.data;
+				// this.setState({ teamOneQuestions: res.data });
+			})
+			.catch(err => console.log(err));
 		this.setState({
 			userId: tempId,
 			teamOne: t1,
 			teamTwo: t2,
 			teamThree: t3,
+			teamOneQuestions: teamOneQ,
+			teamTwoQuestions: teamTwoQ,
+			teamThreeQuestions: teamThreeQ,
 			partTwo: false,
 			partThree: true
 		});
