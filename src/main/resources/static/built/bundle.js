@@ -57538,96 +57538,123 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
     }
   }, {
     key: "render",
-    value: function render() {
-      var _this3 = this;
+    value: function () {
+      var _render = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+        var _this3 = this;
 
-      // initially they come in as ids.  we need to get the team out of them
-      // added code so it doesn't break if no teams are chosen (?)
-      var _this$props$state2 = this.props.state,
-          teamOne = _this$props$state2.teamOne,
-          teamTwo = _this$props$state2.teamTwo,
-          teamThree = _this$props$state2.teamThree,
-          userId = _this$props$state2.userId;
-      this.state.userId = userId;
+        var _this$props$state2, teamOne, teamTwo, teamThree, userId, teamOneObj, questionNum;
 
-      if (teamOne) {
-        var teamOneObj = this.props.state.teams.filter(function (team) {
-          return team.id === Number(teamOne);
-        })[0];
-        axios__WEBPACK_IMPORTED_MODULE_12___default.a.get('/api/questions/' + teamOne).then(function (res) {
-          console.log(res.data);
-          _this3.state.teamOneQuestions = res.data; // this.setState({ teamOneQuestions: res.data });
-        })["catch"](function (err) {
-          return console.log(err);
-        });
-        console.log('Team one');
-        console.log(this.state.teamOneQuestions);
-        var questionNum = [];
-        questionNum = this.state.teamOneQuestions.map(function (question) {
-          if (!_this3.alreadyInArray(question.id)) {
-            return question.id;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                // initially they come in as ids.  we need to get the team out of them
+                // added code so it doesn't break if no teams are chosen (?)
+                _this$props$state2 = this.props.state, teamOne = _this$props$state2.teamOne, teamTwo = _this$props$state2.teamTwo, teamThree = _this$props$state2.teamThree, userId = _this$props$state2.userId;
+                this.state.userId = userId;
+
+                if (!teamOne) {
+                  _context2.next = 14;
+                  break;
+                }
+
+                teamOneObj = this.props.state.teams.filter(function (team) {
+                  return team.id === Number(teamOne);
+                })[0];
+                _context2.next = 6;
+                return axios__WEBPACK_IMPORTED_MODULE_12___default.a.get('/api/questions/' + teamOne).then(function (res) {
+                  console.log(res.data);
+                  _this3.state.teamOneQuestions = res.data; // this.setState({ teamOneQuestions: res.data });
+                })["catch"](function (err) {
+                  return console.log(err);
+                });
+
+              case 6:
+                console.log('Team one');
+                console.log(this.state.teamOneQuestions);
+                questionNum = [];
+                questionNum = this.state.teamOneQuestions.map(function (question) {
+                  if (!_this3.alreadyInArray(question.id)) {
+                    return question.id;
+                  }
+                });
+                console.log(questionNum);
+                this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
+                _context2.next = 15;
+                break;
+
+              case 14:
+                teamOne = '';
+
+              case 15:
+                if (teamTwo) {
+                  teamTwo = this.props.state.teams.filter(function (team) {
+                    return team.id === Number(teamTwo);
+                  })[0];
+                  questionNum = [];
+                  questionNum = teamTwo.question.map(function (question) {
+                    if (!_this3.alreadyInArray(question.id)) {
+                      return question.id;
+                    }
+                  });
+                  this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
+                } else {
+                  teamTwo = '';
+                }
+
+                if (teamThree) {
+                  teamThree = this.props.state.teams.filter(function (team) {
+                    return team.id === Number(teamThree);
+                  })[0];
+                  questionNum = [];
+                  questionNum = teamThree.question.map(function (question) {
+                    if (!_this3.alreadyInArray(question.id)) {
+                      return question.id;
+                    }
+                  });
+                  this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
+                } else {
+                  teamThree = '';
+                }
+
+                return _context2.abrupt("return", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+                  id: "short-response-title"
+                }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, " Part 3: Short Response ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(TeamQuestions, {
+                  team: teamOneObj.name,
+                  num: "One",
+                  questions: this.state.teamOneQuestions,
+                  onChange: this.updateState,
+                  v: this.state
+                }), teamTwo ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(TeamQuestions, {
+                  team: teamTwo.name,
+                  num: "Two",
+                  questions: teamTwo.question,
+                  onChange: this.updateState,
+                  v: this.state
+                }) : '', teamThree ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(TeamQuestions, {
+                  team: teamThree.name,
+                  num: "Three",
+                  questions: teamThree.question,
+                  onChange: this.updateState,
+                  v: this.state
+                }) : '', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(SubmitButton, {
+                  onClick: this.handleSubmitClick
+                })));
+
+              case 18:
+              case "end":
+                return _context2.stop();
+            }
           }
-        });
-        console.log(questionNum);
-        this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
-      } else {
-        teamOne = '';
-      }
-
-      if (teamTwo) {
-        teamTwo = this.props.state.teams.filter(function (team) {
-          return team.id === Number(teamTwo);
-        })[0];
-        var questionNum = [];
-        questionNum = teamTwo.question.map(function (question) {
-          if (!_this3.alreadyInArray(question.id)) {
-            return question.id;
-          }
-        });
-        this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
-      } else {
-        teamTwo = '';
-      }
-
-      if (teamThree) {
-        teamThree = this.props.state.teams.filter(function (team) {
-          return team.id === Number(teamThree);
-        })[0];
-        var questionNum = [];
-        questionNum = teamThree.question.map(function (question) {
-          if (!_this3.alreadyInArray(question.id)) {
-            return question.id;
-          }
-        });
-        this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
-      } else {
-        teamThree = '';
-      }
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
-        id: "short-response-title"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, " Part 3: Short Response ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(TeamQuestions, {
-        team: teamOneObj.name,
-        num: "One",
-        questions: this.state.teamOneQuestions,
-        onChange: this.updateState,
-        v: this.state
-      }), teamTwo ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(TeamQuestions, {
-        team: teamTwo.name,
-        num: "Two",
-        questions: teamTwo.question,
-        onChange: this.updateState,
-        v: this.state
-      }) : '', teamThree ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(TeamQuestions, {
-        team: teamThree.name,
-        num: "Three",
-        questions: teamThree.question,
-        onChange: this.updateState,
-        v: this.state
-      }) : '', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(SubmitButton, {
-        onClick: this.handleSubmitClick
+        }, _callee2, this);
       }));
-    }
+
+      function render() {
+        return _render.apply(this, arguments);
+      }
+
+      return render;
+    }()
   }]);
 
   return ShortResponse;
@@ -57646,7 +57673,7 @@ function Question(props) {
 }
 
 function TeamQuestions(props) {
-  var questions = props.map(function (question) {
+  var questions = props.questions.map(function (question) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Question, {
       name: 'question' + question.id,
       question: question.text,

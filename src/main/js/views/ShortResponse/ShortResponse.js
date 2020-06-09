@@ -77,7 +77,7 @@ class ShortResponse extends React.Component {
 		return newArray;
 	}
 
-	render() {
+	async render() {
 		// initially they come in as ids.  we need to get the team out of them
 		// added code so it doesn't break if no teams are chosen (?)
 		let { teamOne, teamTwo, teamThree, userId } = this.props.state;
@@ -85,7 +85,7 @@ class ShortResponse extends React.Component {
 		if (teamOne) {
 			var teamOneObj = this.props.state.teams.filter(team => team.id === Number(teamOne))[0];
 
-			axios
+			await axios
 				.get('/api/questions/' + teamOne)
 				.then(res => {
 					console.log(res.data);
@@ -187,7 +187,7 @@ function Question(props) {
 }
 
 function TeamQuestions(props) {
-	const questions = props.map(question => (
+	const questions = props.questions.map(question => (
 		<Question
 			name={'question' + question.id}
 			question={question.text}
