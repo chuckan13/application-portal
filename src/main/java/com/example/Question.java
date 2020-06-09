@@ -13,7 +13,9 @@ public class Question {
     @Column(name = "id")
     private long id;
 
+    @Column(name = "text")
     private String text;
+    @Column(name = "team_id")
     private long teamId;
 
     public String getText() {
