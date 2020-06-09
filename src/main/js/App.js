@@ -1,6 +1,6 @@
 const ReactDOM = require('react-dom');
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Navbar } from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 import { NavItem } from 'react-bootstrap';
