@@ -96,16 +96,14 @@ class Apply extends Component {
 		console.log(t3);
 		var tempId = '';
 		await axios
-			.post('/api/users', {
+			.post('/api/users/new', {
+				//json stringify?
 				token: this.state.user,
-				first_name: this.state.firstName,
-				last_name: this.state.lastName,
+				firstName: this.state.firstName,
+				lastName: this.state.lastName,
 				email: this.state.email,
 				classYear: this.state.classYear,
 				concentration: this.state.concentration,
-				teamOne: t1,
-				teamTwo: t2,
-				teamThree: t3,
 				role: 'USER'
 			})
 			.then(function(response) {

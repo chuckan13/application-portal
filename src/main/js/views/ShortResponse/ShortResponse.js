@@ -10,9 +10,9 @@ import axios from 'axios';
 
 class ShortResponse extends React.Component {
 	state = {
-		teamOneQuestions,
-		teamTwoQuestions,
-		teamThreeQuestions,
+		teamOneQuestions: [],
+		teamTwoQuestions: [],
+		teamThreeQuestions: [],
 		questionNumbers: [],
 		userId: 0
 	};

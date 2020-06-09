@@ -16,13 +16,13 @@ public class UsersController {
         this.repository = repository;
     }
 
-    // @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    // public ResponseEntity<LoanOption> get(@PathVariable("id") Long id) {
-    // LoanOption loan = repository.findOne(id);
-    // if (null == loan)
-    // return new ResponseEntity<LoanOption>(HttpStatus.NOT_FOUND);
-    // return new ResponseEntity<LoanOption>(loan, HttpStatus.OK);
-    // }
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public ResponseEntity<Users> get(@PathVariable("id") Long id) {
+        Users loan = repository.findOne(id);
+        if (null == loan)
+            return new ResponseEntity<Users>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<Users>(loan, HttpStatus.OK);
+    }
 
     // @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     // public ResponseEntity<LoanOption> delete(@PathVariable("id") Long id) {
@@ -33,11 +33,12 @@ public class UsersController {
     // return new ResponseEntity<LoanOption>(loan, HttpStatus.OK);
     // }
 
-    // @RequestMapping(value = "/new", method = RequestMethod.POST)
-    // public ResponseEntity<LoanOption> update(@RequestBody LoanOption loan) {
-    // repository.save(loan);
-    // return get(loan.getId());
-    // }
+    @RequestMapping(value = "/new", method = RequestMethod.POST)
+    public ResponseEntity<Users> update(@RequestBody Users loan) {
+        repository.save(loan);
+        return get(loan.getId());
+        // add save to userteams too
+    }
 
     @RequestMapping
     public List<Users> all() {

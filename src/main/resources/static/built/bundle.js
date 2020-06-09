@@ -56472,16 +56472,14 @@ var Apply = /*#__PURE__*/function (_Component) {
                 console.log(t3);
                 tempId = '';
                 _context.next = 7;
-                return axios__WEBPACK_IMPORTED_MODULE_10___default.a.post('/api/users', {
+                return axios__WEBPACK_IMPORTED_MODULE_10___default.a.post('/api/users/new', {
+                  //json stringify?
                   token: this.state.user,
-                  first_name: this.state.firstName,
-                  last_name: this.state.lastName,
+                  firstName: this.state.firstName,
+                  lastName: this.state.lastName,
                   email: this.state.email,
                   classYear: this.state.classYear,
                   concentration: this.state.concentration,
-                  teamOne: t1,
-                  teamTwo: t2,
-                  teamThree: t3,
                   role: 'USER'
                 }).then(function (response) {
                   tempId = response.data.id;
@@ -57440,9 +57438,9 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
     _this = _super.call(this, props, context);
 
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), "state", {
-      teamOneQuestions: teamOneQuestions,
-      teamTwoQuestions: teamTwoQuestions,
-      teamThreeQuestions: teamThreeQuestions,
+      teamOneQuestions: [],
+      teamTwoQuestions: [],
+      teamThreeQuestions: [],
       questionNumbers: [],
       userId: 0
     });
