@@ -26,15 +26,15 @@ public class Question {
         this.text = text;
     }
 
-    public long getTeamId() {
+    public Long getTeamId() {
         return this.teamId;
     }
 
-    public void setTeamId(long teamId) {
+    public void setTeamId(Long teamId) {
         this.teamId = teamId;
     }
 
-    public long getId() {
+    public Long getId() {
         return this.id;
     }
 
