@@ -117,7 +117,7 @@ function ShortResponseSection(props) {
 	return (
 		<div id="choice-section">
 			<p id="question">{props.question}</p>
-			<pre id="response">{props.resp}</pre>
+			<p id="response">{props.resp}</p>
 		</div>
 	);
 }
