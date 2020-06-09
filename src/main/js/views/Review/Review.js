@@ -15,20 +15,29 @@ class Review extends React.Component {
 	}
 
 	render() {
-		let { teamOne, teamTwo, teamThree, questionNumbers, allResponses } = this.props.state;
+		let {
+			teamOne,
+			teamTwo,
+			teamThree,
+			questionNumbers,
+			allResponses,
+			teamOneQuestions,
+			teamTwoQuestions,
+			teamThreeQuestions
+		} = this.props.state;
 
 		if (teamOne) {
-			teamOne = this.props.state.teams.filter(team => team.id === Number(teamOne))[0];
+			var teamOneObj = this.props.state.teams.filter(team => team.id === Number(teamOne))[0];
 		} else {
 			teamOne = '';
 		}
 		if (teamTwo) {
-			teamTwo = this.props.state.teams.filter(team => team.id === Number(teamTwo))[0];
+			var teamTwoObj = this.props.state.teams.filter(team => team.id === Number(teamTwo))[0];
 		} else {
 			teamTwo = '';
 		}
 		if (teamThree) {
-			teamThree = this.props.state.teams.filter(team => team.id === Number(teamThree))[0];
+			var teamThreeObj = this.props.state.teams.filter(team => team.id === Number(teamThree))[0];
 		} else {
 			teamThree = '';
 		}
@@ -40,22 +49,27 @@ class Review extends React.Component {
 					<p id="information"> First name: {this.props.state.firstName}</p>
 					<p id="information"> Last name: {this.props.state.lastName}</p>
 					<p id="information"> Email: {this.props.state.email}</p>
-					<p id="information"> Class: {this.props.state.class}</p>
+					<p id="information"> Class: {this.props.state.classYear}</p>
 					<p id="information"> Concentration: {this.props.state.concentration}</p>
 				</div>
 				<div>
 					<p id="header"> Short Response Questions: </p>
-					<TeamResponses team={teamOne.name} num="One" questions={teamOne.question} resp={allResponses} />
+					<TeamResponses team={teamOneObj.name} num="One" questions={teamOneQuestions} resp={allResponses} />
 					{teamTwo ? (
-						<TeamResponses team={teamTwo.name} num="Two" questions={teamTwo.question} resp={allResponses} />
+						<TeamResponses
+							team={teamTwoObj.name}
+							num="Two"
+							questions={teamTwoQuestions}
+							resp={allResponses}
+						/>
 					) : (
 						''
 					)}
 					{teamThree ? (
 						<TeamResponses
-							team={teamThree.name}
+							team={teamThreeObj.name}
 							num="Three"
-							questions={teamThree.question}
+							questions={teamThreeQuestions}
 							resp={allResponses}
 						/>
 					) : (

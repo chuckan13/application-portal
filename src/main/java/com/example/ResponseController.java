@@ -16,13 +16,13 @@ public class ResponseController {
         this.repository = repository;
     }
 
-    // @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    // public ResponseEntity<LoanOption> get(@PathVariable("id") Long id) {
-    // LoanOption loan = repository.findOne(id);
-    // if (null == loan)
-    // return new ResponseEntity<LoanOption>(HttpStatus.NOT_FOUND);
-    // return new ResponseEntity<LoanOption>(loan, HttpStatus.OK);
-    // }
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public ResponseEntity<Response> get(@PathVariable("id") Long id) {
+        Response loan = repository.findOne(id);
+        if (null == loan)
+            return new ResponseEntity<Response>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<Response>(loan, HttpStatus.OK);
+    }
 
     // @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     // public ResponseEntity<LoanOption> delete(@PathVariable("id") Long id) {
@@ -33,11 +33,11 @@ public class ResponseController {
     // return new ResponseEntity<LoanOption>(loan, HttpStatus.OK);
     // }
 
-    // @RequestMapping(value = "/new", method = RequestMethod.POST)
-    // public ResponseEntity<LoanOption> update(@RequestBody LoanOption loan) {
-    // repository.save(loan);
-    // return get(loan.getId());
-    // }
+    @RequestMapping(value = "/new", method = RequestMethod.POST)
+    public ResponseEntity<Response> update(@RequestBody Response response) {
+        repository.save(response);
+        return get(response.getId());
+    }
 
     @RequestMapping
     public List<Response> all() {

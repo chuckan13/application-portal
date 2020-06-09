@@ -57259,10 +57259,13 @@ var Review = /*#__PURE__*/function (_React$Component) {
           teamTwo = _this$props$state.teamTwo,
           teamThree = _this$props$state.teamThree,
           questionNumbers = _this$props$state.questionNumbers,
-          allResponses = _this$props$state.allResponses;
+          allResponses = _this$props$state.allResponses,
+          teamOneQuestions = _this$props$state.teamOneQuestions,
+          teamTwoQuestions = _this$props$state.teamTwoQuestions,
+          teamThreeQuestions = _this$props$state.teamThreeQuestions;
 
       if (teamOne) {
-        teamOne = this.props.state.teams.filter(function (team) {
+        var teamOneObj = this.props.state.teams.filter(function (team) {
           return team.id === Number(teamOne);
         })[0];
       } else {
@@ -57270,7 +57273,7 @@ var Review = /*#__PURE__*/function (_React$Component) {
       }
 
       if (teamTwo) {
-        teamTwo = this.props.state.teams.filter(function (team) {
+        var teamTwoObj = this.props.state.teams.filter(function (team) {
           return team.id === Number(teamTwo);
         })[0];
       } else {
@@ -57278,7 +57281,7 @@ var Review = /*#__PURE__*/function (_React$Component) {
       }
 
       if (teamThree) {
-        teamThree = this.props.state.teams.filter(function (team) {
+        var teamThreeObj = this.props.state.teams.filter(function (team) {
           return team.id === Number(teamThree);
         })[0];
       } else {
@@ -57297,24 +57300,24 @@ var Review = /*#__PURE__*/function (_React$Component) {
         id: "information"
       }, " Email: ", this.props.state.email), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         id: "information"
-      }, " Class: ", this.props.state["class"]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+      }, " Class: ", this.props.state.classYear), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         id: "information"
       }, " Concentration: ", this.props.state.concentration)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         id: "header"
       }, " Short Response Questions: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(TeamResponses, {
-        team: teamOne.name,
+        team: teamOneObj.name,
         num: "One",
-        questions: teamOne.question,
+        questions: teamOneQuestions,
         resp: allResponses
       }), teamTwo ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(TeamResponses, {
-        team: teamTwo.name,
+        team: teamTwoObj.name,
         num: "Two",
-        questions: teamTwo.question,
+        questions: teamTwoQuestions,
         resp: allResponses
       }) : '', teamThree ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(TeamResponses, {
-        team: teamThree.name,
+        team: teamThreeObj.name,
         num: "Three",
-        questions: teamThree.question,
+        questions: teamThreeQuestions,
         resp: allResponses
       }) : ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(SubmitButton, {
         onClick: this.handleSubmitClick
@@ -57521,8 +57524,9 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                   allResponseObjects.push(currResponseObject);
                 }
 
+                console.log('all response objects: ', allResponseObjects);
                 responses = [];
-                _context.next = 5;
+                _context.next = 6;
                 return Promise.all(allResponseObjects.map(function (obj) {
                   return axios__WEBPACK_IMPORTED_MODULE_12___default.a.post('/api/responses', {
                     text: obj.text,
@@ -57533,13 +57537,14 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                   });
                 }));
 
-              case 5:
+              case 6:
+                console.log('responses: ', responses);
                 this.setState({
                   allResp: allResponseObjects
                 });
                 this.props.handlePartThreeClick(this.state.questionNumbers, this.state.allResp);
 
-              case 7:
+              case 9:
               case "end":
                 return _context.stop();
             }
@@ -57595,18 +57600,18 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
       if (teamOne) {
         var teamOneObj = this.props.state.teams.filter(function (team) {
           return team.id === Number(teamOne);
-        })[0];
-        console.log('teamonobj', teamOneObj);
-        console.log('Team one');
-        console.log(teamOneQuestions);
+        })[0]; // console.log('teamonobj', teamOneObj);
+        // console.log('Team one');
+        // console.log(teamOneQuestions);
+
         var questionNum = [];
         questionNum = teamOneQuestions.map(function (question) {
           if (!_this3.alreadyInArray(question.id)) {
             return question.id;
           }
-        });
-        console.log('team one question nums');
-        console.log(questionNum);
+        }); // console.log('team one question nums');
+        // console.log(questionNum);
+
         this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
       } else {
         teamOne = '';
@@ -57615,17 +57620,17 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
       if (teamTwo) {
         var teamTwoObj = this.props.state.teams.filter(function (team) {
           return team.id === Number(teamTwo);
-        })[0];
-        console.log('Team Two');
-        console.log(teamTwoQuestions);
+        })[0]; // console.log('Team Two');
+        // console.log(teamTwoQuestions);
+
         var questionNum = [];
         questionNum = teamTwoQuestions.map(function (question) {
           if (!_this3.alreadyInArray(question.id)) {
             return question.id;
           }
-        });
-        console.log('team two question nums');
-        console.log(questionNum);
+        }); // console.log('team two question nums');
+        // console.log(questionNum);
+
         this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
       } else {
         teamTwo = '';
@@ -57634,22 +57639,23 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
       if (teamThree) {
         var teamThreeObj = this.props.state.teams.filter(function (team) {
           return team.id === Number(teamThree);
-        })[0];
-        console.log('Team Three');
-        console.log(teamThreeQuestions);
+        })[0]; // console.log('Team Three');
+        // console.log(teamThreeQuestions);
+
         var questionNum = [];
         questionNum = teamThreeQuestions.map(function (question) {
           if (!_this3.alreadyInArray(question.id)) {
             return question.id;
           }
-        });
-        console.log('team three question nums');
-        console.log(questionNum);
+        }); // console.log('team three question nums');
+        // console.log(questionNum);
+
         this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
       } else {
         teamThree = '';
       }
 
+      console.log(this.state);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         id: "short-response-title"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, " Part 3: Short Response ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(TeamQuestions, {
