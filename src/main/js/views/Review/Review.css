@@ -30,7 +30,9 @@
   line-height: 1.42857143;
   font-weight: lighter;
 }
-
+#review-choice {
+  max-width: 60vw;
+}
 
 #information, #information-last {
   background-color: white;
