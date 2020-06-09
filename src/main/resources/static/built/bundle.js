@@ -57554,14 +57554,15 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                 this.state.userId = userId;
 
                 if (!teamOne) {
-                  _context2.next = 15;
+                  _context2.next = 16;
                   break;
                 }
 
                 teamOneObj = this.props.state.teams.filter(function (team) {
                   return team.id === Number(teamOne);
                 })[0];
-                _context2.next = 6;
+                console.log('teamonobj', teamOneObj);
+                _context2.next = 7;
                 return axios__WEBPACK_IMPORTED_MODULE_12___default.a.get('/api/questions/' + teamOne).then(function (res) {
                   console.log('get request to /api/questions/{teamid} 1');
                   console.log(res.data);
@@ -57570,7 +57571,7 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                   return console.log(err);
                 });
 
-              case 6:
+              case 7:
                 console.log('Team one');
                 console.log(this.state.teamOneQuestions);
                 questionNum = [];
@@ -57582,22 +57583,22 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                 console.log('team one question nums');
                 console.log(questionNum);
                 this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
-                _context2.next = 16;
+                _context2.next = 17;
                 break;
 
-              case 15:
+              case 16:
                 teamOne = '';
 
-              case 16:
+              case 17:
                 if (!teamTwo) {
-                  _context2.next = 29;
+                  _context2.next = 30;
                   break;
                 }
 
                 teamTwoObj = this.props.state.teams.filter(function (team) {
                   return team.id === Number(teamTwo);
                 })[0];
-                _context2.next = 20;
+                _context2.next = 21;
                 return axios__WEBPACK_IMPORTED_MODULE_12___default.a.get('/api/questions/' + teamTwo).then(function (res) {
                   console.log('get request to /api/questions/{teamid} 2');
                   console.log(res.data);
@@ -57606,7 +57607,7 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                   return console.log(err);
                 });
 
-              case 20:
+              case 21:
                 console.log('Team Two');
                 console.log(this.state.teamTwoQuestions);
                 questionNum = [];
@@ -57618,22 +57619,22 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                 console.log('team two question nums');
                 console.log(questionNum);
                 this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
-                _context2.next = 30;
+                _context2.next = 31;
                 break;
 
-              case 29:
+              case 30:
                 teamTwo = '';
 
-              case 30:
+              case 31:
                 if (!teamThree) {
-                  _context2.next = 43;
+                  _context2.next = 44;
                   break;
                 }
 
                 teamThreeObj = this.props.state.teams.filter(function (team) {
                   return team.id === Number(teamThree);
                 })[0];
-                _context2.next = 34;
+                _context2.next = 35;
                 return axios__WEBPACK_IMPORTED_MODULE_12___default.a.get('/api/questions/' + teamThree).then(function (res) {
                   console.log('get request to /api/questions/{teamid} 3');
                   console.log(res.data);
@@ -57642,7 +57643,7 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                   return console.log(err);
                 });
 
-              case 34:
+              case 35:
                 console.log('Team Three');
                 console.log(this.state.teamThreeQuestions);
                 questionNum = [];
@@ -57654,13 +57655,13 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                 console.log('team three question nums');
                 console.log(questionNum);
                 this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
-                _context2.next = 44;
+                _context2.next = 45;
                 break;
 
-              case 43:
+              case 44:
                 teamThree = '';
 
-              case 44:
+              case 45:
                 return _context2.abrupt("return", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
                   id: "short-response-title"
                 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, " Part 3: Short Response ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(TeamQuestions, {
@@ -57685,7 +57686,7 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                   onClick: this.handleSubmitClick
                 })));
 
-              case 45:
+              case 46:
               case "end":
                 return _context2.stop();
             }

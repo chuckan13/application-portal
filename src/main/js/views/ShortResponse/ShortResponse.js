@@ -84,7 +84,7 @@ class ShortResponse extends React.Component {
 		this.state.userId = userId;
 		if (teamOne) {
 			var teamOneObj = this.props.state.teams.filter(team => team.id === Number(teamOne))[0];
-
+			console.log('teamonobj', teamOneObj);
 			await axios
 				.get('/api/questions/' + teamOne)
 				.then(res => {
