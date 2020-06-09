@@ -57554,7 +57554,7 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                 this.state.userId = userId;
 
                 if (!teamOne) {
-                  _context2.next = 17;
+                  _context2.next = 16;
                   break;
                 }
 
@@ -57575,7 +57575,6 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                 console.log('Team one');
                 console.log(this.state.teamOneQuestions);
                 questionNum = [];
-                debugger;
                 questionNum = this.state.teamOneQuestions.map(function (question) {
                   if (!_this3.alreadyInArray(question.id)) {
                     return question.id;
@@ -57584,22 +57583,22 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                 console.log('team one question nums');
                 console.log(questionNum);
                 this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
-                _context2.next = 18;
+                _context2.next = 17;
                 break;
 
-              case 17:
+              case 16:
                 teamOne = '';
 
-              case 18:
+              case 17:
                 if (!teamTwo) {
-                  _context2.next = 31;
+                  _context2.next = 30;
                   break;
                 }
 
                 teamTwoObj = this.props.state.teams.filter(function (team) {
                   return team.id === Number(teamTwo);
                 })[0];
-                _context2.next = 22;
+                _context2.next = 21;
                 return axios__WEBPACK_IMPORTED_MODULE_12___default.a.get('/api/questions/' + teamTwo).then(function (res) {
                   console.log('get request to /api/questions/{teamid} 2');
                   console.log(res.data);
@@ -57608,7 +57607,7 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                   return console.log(err);
                 });
 
-              case 22:
+              case 21:
                 console.log('Team Two');
                 console.log(this.state.teamTwoQuestions);
                 questionNum = [];
@@ -57620,22 +57619,22 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                 console.log('team two question nums');
                 console.log(questionNum);
                 this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
-                _context2.next = 32;
+                _context2.next = 31;
                 break;
 
-              case 31:
+              case 30:
                 teamTwo = '';
 
-              case 32:
+              case 31:
                 if (!teamThree) {
-                  _context2.next = 45;
+                  _context2.next = 44;
                   break;
                 }
 
                 teamThreeObj = this.props.state.teams.filter(function (team) {
                   return team.id === Number(teamThree);
                 })[0];
-                _context2.next = 36;
+                _context2.next = 35;
                 return axios__WEBPACK_IMPORTED_MODULE_12___default.a.get('/api/questions/' + teamThree).then(function (res) {
                   console.log('get request to /api/questions/{teamid} 3');
                   console.log(res.data);
@@ -57644,7 +57643,7 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                   return console.log(err);
                 });
 
-              case 36:
+              case 35:
                 console.log('Team Three');
                 console.log(this.state.teamThreeQuestions);
                 questionNum = [];
@@ -57656,38 +57655,38 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                 console.log('team three question nums');
                 console.log(questionNum);
                 this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
-                _context2.next = 46;
+                _context2.next = 45;
                 break;
 
-              case 45:
+              case 44:
                 teamThree = '';
 
-              case 46:
+              case 45:
                 return _context2.abrupt("return", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
                   id: "short-response-title"
                 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, " Part 3: Short Response ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(TeamQuestions, {
                   team: teamOneObj.name,
                   num: "One",
-                  questions: this.state.teamOneQuestions,
+                  questions: [this.state.teamOneQuestions],
                   onChange: this.updateState,
                   v: this.state
                 }), teamTwo ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(TeamQuestions, {
                   team: teamTwoObj.name,
                   num: "Two",
-                  questions: this.state.teamTwoQuestions,
+                  questions: [this.state.teamTwoQuestions],
                   onChange: this.updateState,
                   v: this.state
                 }) : '', teamThree ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(TeamQuestions, {
                   team: teamThreeObj.name,
                   num: "Three",
-                  questions: this.state.teamThreeQuestions,
+                  questions: [this.state.teamThreeQuestions],
                   onChange: this.updateState,
                   v: this.state
                 }) : '', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(SubmitButton, {
                   onClick: this.handleSubmitClick
                 })));
 
-              case 47:
+              case 46:
               case "end":
                 return _context2.stop();
             }

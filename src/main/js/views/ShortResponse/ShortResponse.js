@@ -97,7 +97,6 @@ class ShortResponse extends React.Component {
 			console.log('Team one');
 			console.log(this.state.teamOneQuestions);
 			var questionNum = [];
-			debugger;
 			questionNum = this.state.teamOneQuestions.map(question => {
 				if (!this.alreadyInArray(question.id)) {
 					return question.id;
@@ -168,7 +167,7 @@ class ShortResponse extends React.Component {
 				<TeamQuestions
 					team={teamOneObj.name}
 					num="One"
-					questions={this.state.teamOneQuestions}
+					questions={[ this.state.teamOneQuestions ]}
 					onChange={this.updateState}
 					v={this.state}
 				/>
@@ -176,7 +175,7 @@ class ShortResponse extends React.Component {
 					<TeamQuestions
 						team={teamTwoObj.name}
 						num="Two"
-						questions={this.state.teamTwoQuestions}
+						questions={[ this.state.teamTwoQuestions ]}
 						onChange={this.updateState}
 						v={this.state}
 					/>
@@ -187,7 +186,7 @@ class ShortResponse extends React.Component {
 					<TeamQuestions
 						team={teamThreeObj.name}
 						num="Three"
-						questions={this.state.teamThreeQuestions}
+						questions={[ this.state.teamThreeQuestions ]}
 						onChange={this.updateState}
 						v={this.state}
 					/>
