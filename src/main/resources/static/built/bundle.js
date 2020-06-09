@@ -56056,7 +56056,7 @@ var Home = /*#__PURE__*/function (_Component) {
   _createClass(Home, [{
     key: "handleApplyClick",
     value: function handleApplyClick() {
-      this.props.history.push("/apply");
+      this.props.history.push('/apply');
     }
   }, {
     key: "render",
