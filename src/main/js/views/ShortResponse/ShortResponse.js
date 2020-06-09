@@ -48,8 +48,8 @@ class ShortResponse extends React.Component {
 				axios
 					.post('/api/responses/new', {
 						text: obj.text,
-						question_id: parseInt(obj.qId),
-						user_id: parseInt(this.state.userId)
+						questionId: parseInt(obj.qId),
+						userId: parseInt(this.state.userId)
 					})
 					.then(response => {
 						responses.push(response);
