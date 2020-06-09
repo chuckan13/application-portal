@@ -57542,7 +57542,7 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
       var _render = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
         var _this3 = this;
 
-        var _this$props$state2, teamOne, teamTwo, teamThree, userId, teamOneObj, questionNum;
+        var _this$props$state2, teamOne, teamTwo, teamThree, userId, teamOneObj, questionNum, teamTwoObj, teamThreeObj;
 
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
@@ -57554,7 +57554,7 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                 this.state.userId = userId;
 
                 if (!teamOne) {
-                  _context2.next = 14;
+                  _context2.next = 15;
                   break;
                 }
 
@@ -57563,6 +57563,7 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                 })[0];
                 _context2.next = 6;
                 return axios__WEBPACK_IMPORTED_MODULE_12___default.a.get('/api/questions/' + teamOne).then(function (res) {
+                  console.log('get request to /api/questions/{teamid} 1');
                   console.log(res.data);
                   _this3.state.teamOneQuestions = res.data; // this.setState({ teamOneQuestions: res.data });
                 })["catch"](function (err) {
@@ -57578,45 +57579,88 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                     return question.id;
                   }
                 });
+                console.log('team one question nums');
                 console.log(questionNum);
                 this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
-                _context2.next = 15;
+                _context2.next = 16;
                 break;
 
-              case 14:
+              case 15:
                 teamOne = '';
 
-              case 15:
-                if (teamTwo) {
-                  teamTwo = this.props.state.teams.filter(function (team) {
-                    return team.id === Number(teamTwo);
-                  })[0];
-                  questionNum = [];
-                  questionNum = teamTwo.question.map(function (question) {
-                    if (!_this3.alreadyInArray(question.id)) {
-                      return question.id;
-                    }
-                  });
-                  this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
-                } else {
-                  teamTwo = '';
+              case 16:
+                if (!teamTwo) {
+                  _context2.next = 29;
+                  break;
                 }
 
-                if (teamThree) {
-                  teamThree = this.props.state.teams.filter(function (team) {
-                    return team.id === Number(teamThree);
-                  })[0];
-                  questionNum = [];
-                  questionNum = teamThree.question.map(function (question) {
-                    if (!_this3.alreadyInArray(question.id)) {
-                      return question.id;
-                    }
-                  });
-                  this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
-                } else {
-                  teamThree = '';
+                teamTwoObj = this.props.state.teams.filter(function (team) {
+                  return team.id === Number(teamTwo);
+                })[0];
+                _context2.next = 20;
+                return axios__WEBPACK_IMPORTED_MODULE_12___default.a.get('/api/questions/' + teamTwo).then(function (res) {
+                  console.log('get request to /api/questions/{teamid} 2');
+                  console.log(res.data);
+                  _this3.state.teamTwoQuestions = res.data; // this.setState({ teamOneQuestions: res.data });
+                })["catch"](function (err) {
+                  return console.log(err);
+                });
+
+              case 20:
+                console.log('Team Two');
+                console.log(this.state.teamTwoQuestions);
+                questionNum = [];
+                questionNum = this.state.teamTwoQuestions.map(function (question) {
+                  if (!_this3.alreadyInArray(question.id)) {
+                    return question.id;
+                  }
+                });
+                console.log('team two question nums');
+                console.log(questionNum);
+                this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
+                _context2.next = 30;
+                break;
+
+              case 29:
+                teamTwo = '';
+
+              case 30:
+                if (!teamThree) {
+                  _context2.next = 43;
+                  break;
                 }
 
+                teamThreeObj = this.props.state.teams.filter(function (team) {
+                  return team.id === Number(teamThree);
+                })[0];
+                _context2.next = 34;
+                return axios__WEBPACK_IMPORTED_MODULE_12___default.a.get('/api/questions/' + teamThree).then(function (res) {
+                  console.log('get request to /api/questions/{teamid} 3');
+                  console.log(res.data);
+                  _this3.state.teamThreeQuestions = res.data; // this.setState({ teamOneQuestions: res.data });
+                })["catch"](function (err) {
+                  return console.log(err);
+                });
+
+              case 34:
+                console.log('Team Three');
+                console.log(this.state.teamThreeQuestions);
+                questionNum = [];
+                questionNum = this.state.teamThreeQuestions.map(function (question) {
+                  if (!_this3.alreadyInArray(question.id)) {
+                    return question.id;
+                  }
+                });
+                console.log('team three question nums');
+                console.log(questionNum);
+                this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
+                _context2.next = 44;
+                break;
+
+              case 43:
+                teamThree = '';
+
+              case 44:
                 return _context2.abrupt("return", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
                   id: "short-response-title"
                 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, " Part 3: Short Response ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(TeamQuestions, {
@@ -57626,22 +57670,22 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                   onChange: this.updateState,
                   v: this.state
                 }), teamTwo ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(TeamQuestions, {
-                  team: teamTwo.name,
+                  team: teamTwoObj.name,
                   num: "Two",
-                  questions: teamTwo.question,
+                  questions: this.state.teamTwoQuestions,
                   onChange: this.updateState,
                   v: this.state
                 }) : '', teamThree ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(TeamQuestions, {
-                  team: teamThree.name,
+                  team: teamThreeObj.name,
                   num: "Three",
-                  questions: teamThree.question,
+                  questions: this.state.teamThreeQuestions,
                   onChange: this.updateState,
                   v: this.state
                 }) : '', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(SubmitButton, {
                   onClick: this.handleSubmitClick
                 })));
 
-              case 18:
+              case 45:
               case "end":
                 return _context2.stop();
             }

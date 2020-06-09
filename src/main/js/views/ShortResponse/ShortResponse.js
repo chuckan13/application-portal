@@ -88,6 +88,7 @@ class ShortResponse extends React.Component {
 			await axios
 				.get('/api/questions/' + teamOne)
 				.then(res => {
+					console.log('get request to /api/questions/{teamid} 1');
 					console.log(res.data);
 					this.state.teamOneQuestions = res.data;
 					// this.setState({ teamOneQuestions: res.data });
@@ -101,31 +102,58 @@ class ShortResponse extends React.Component {
 					return question.id;
 				}
 			});
+			console.log('team one question nums');
 			console.log(questionNum);
 			this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
 		} else {
 			teamOne = '';
 		}
 		if (teamTwo) {
-			teamTwo = this.props.state.teams.filter(team => team.id === Number(teamTwo))[0];
+			var teamTwoObj = this.props.state.teams.filter(team => team.id === Number(teamTwo))[0];
+			await axios
+				.get('/api/questions/' + teamTwo)
+				.then(res => {
+					console.log('get request to /api/questions/{teamid} 2');
+					console.log(res.data);
+					this.state.teamTwoQuestions = res.data;
+					// this.setState({ teamOneQuestions: res.data });
+				})
+				.catch(err => console.log(err));
+			console.log('Team Two');
+			console.log(this.state.teamTwoQuestions);
 			var questionNum = [];
-			questionNum = teamTwo.question.map(question => {
+			questionNum = this.state.teamTwoQuestions.map(question => {
 				if (!this.alreadyInArray(question.id)) {
 					return question.id;
 				}
 			});
+			console.log('team two question nums');
+			console.log(questionNum);
 			this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
 		} else {
 			teamTwo = '';
 		}
 		if (teamThree) {
-			teamThree = this.props.state.teams.filter(team => team.id === Number(teamThree))[0];
+			var teamThreeObj = this.props.state.teams.filter(team => team.id === Number(teamThree))[0];
+			await axios
+				.get('/api/questions/' + teamThree)
+				.then(res => {
+					console.log('get request to /api/questions/{teamid} 3');
+					console.log(res.data);
+					this.state.teamThreeQuestions = res.data;
+					// this.setState({ teamOneQuestions: res.data });
+				})
+				.catch(err => console.log(err));
+			console.log('Team Three');
+			console.log(this.state.teamThreeQuestions);
 			var questionNum = [];
-			questionNum = teamThree.question.map(question => {
+			questionNum = this.state.teamThreeQuestions.map(question => {
 				if (!this.alreadyInArray(question.id)) {
 					return question.id;
 				}
 			});
+			console.log('team three question nums');
+			console.log(questionNum);
 			this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
 		} else {
 			teamThree = '';
@@ -145,9 +173,9 @@ class ShortResponse extends React.Component {
 				/>
 				{teamTwo ? (
 					<TeamQuestions
-						team={teamTwo.name}
+						team={teamTwoObj.name}
 						num="Two"
-						questions={teamTwo.question}
+						questions={this.state.teamTwoQuestions}
 						onChange={this.updateState}
 						v={this.state}
 					/>
@@ -156,9 +184,9 @@ class ShortResponse extends React.Component {
 				)}
 				{teamThree ? (
 					<TeamQuestions
-						team={teamThree.name}
+						team={teamThreeObj.name}
 						num="Three"
-						questions={teamThree.question}
+						questions={this.state.teamThreeQuestions}
 						onChange={this.updateState}
 						v={this.state}
 					/>
