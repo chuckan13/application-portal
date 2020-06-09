@@ -83,7 +83,7 @@ class ShortResponse extends React.Component {
 		let { teamOne, teamTwo, teamThree, userId } = this.props.state;
 		this.state.userId = userId;
 		if (teamOne) {
-			teamOneObj = this.props.state.teams.filter(team => team.id === Number(teamOne))[0];
+			var teamOneObj = this.props.state.teams.filter(team => team.id === Number(teamOne))[0];
 
 			axios
 				.get('/api/questions/' + teamOne)

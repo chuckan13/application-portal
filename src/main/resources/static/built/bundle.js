@@ -57551,7 +57551,7 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
       this.state.userId = userId;
 
       if (teamOne) {
-        teamOneObj = this.props.state.teams.filter(function (team) {
+        var teamOneObj = this.props.state.teams.filter(function (team) {
           return team.id === Number(teamOne);
         })[0];
         axios__WEBPACK_IMPORTED_MODULE_12___default.a.get('/api/questions/' + teamOne).then(function (res) {
