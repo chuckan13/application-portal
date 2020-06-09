@@ -113,6 +113,7 @@ class Apply extends Component {
 				role: 'USER'
 			})
 			.then(function(response) {
+				console.log(tempId);
 				tempId = response.data.id;
 			})
 			.catch(function(error) {
@@ -156,6 +157,7 @@ class Apply extends Component {
 			partTwo: false,
 			partThree: true
 		});
+		console.log(this.state.userId);
 	}
 
 	handlePartThreeClick(qNums, allResp) {
