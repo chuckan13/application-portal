@@ -21,7 +21,7 @@ public class Users {
     public String lastName;
     @Column(name = "email")
     public String email;
-    @Column(name = "class")
+    @Column(name = "class_year")
     public String classYear;
     @Column(name = "concentration")
     public String concentration;
