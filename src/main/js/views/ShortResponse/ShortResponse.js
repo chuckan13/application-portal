@@ -46,7 +46,7 @@ class ShortResponse extends React.Component {
 		await Promise.all(
 			allResponseObjects.map(obj =>
 				axios
-					.post('/api/responses', {
+					.post('/api/responses/new', {
 						text: obj.text,
 						question_id: parseInt(obj.qId),
 						user_id: parseInt(this.state.userId)

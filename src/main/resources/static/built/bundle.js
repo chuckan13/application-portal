@@ -57528,7 +57528,7 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                 responses = [];
                 _context.next = 6;
                 return Promise.all(allResponseObjects.map(function (obj) {
-                  return axios__WEBPACK_IMPORTED_MODULE_12___default.a.post('/api/responses', {
+                  return axios__WEBPACK_IMPORTED_MODULE_12___default.a.post('/api/responses/new', {
                     text: obj.text,
                     question_id: parseInt(obj.qId),
                     user_id: parseInt(_this2.state.userId)
