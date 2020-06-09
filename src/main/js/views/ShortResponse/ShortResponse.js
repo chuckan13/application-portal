@@ -81,6 +81,8 @@ class ShortResponse extends React.Component {
 		this.state.userId = userId;
 		if (teamOne) {
 			teamOne = this.props.state.teams.filter(team => team.id === Number(teamOne))[0];
+			console.log('Team one');
+			console.log(teamOne);
 			var questionNum = [];
 			questionNum = teamOne.question.map(question => {
 				if (!this.alreadyInArray(question.id)) {

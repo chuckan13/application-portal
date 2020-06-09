@@ -56055,7 +56055,7 @@ var App = /*#__PURE__*/function (_Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(App, [{
     key: "render",
     value: function render() {
-      console.log('IN RENDER');
+      // console.log('IN RENDER');
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["Navbar"], {
         id: "nav"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["Navbar"].Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["Navbar"].Brand, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
@@ -56382,7 +56382,7 @@ var Apply = /*#__PURE__*/function (_Component) {
       firstName: '',
       lastName: '',
       email: '',
-      "class": '',
+      classYear: '',
       concentration: '',
       teamOne: 0,
       teamTwo: 0,
@@ -56443,11 +56443,15 @@ var Apply = /*#__PURE__*/function (_Component) {
   }, {
     key: "handlePartOneClick",
     value: function handlePartOneClick(fn, ln, e, cl, con) {
+      console.log('Handle part one click');
+      console.log(fn);
+      console.log(cl);
+      console.log(con);
       this.setState({
         firstName: fn,
         lastName: ln,
         email: e,
-        "class": cl,
+        classYear: cl,
         concentration: con,
         partOne: false,
         partTwo: true
@@ -56462,14 +56466,18 @@ var Apply = /*#__PURE__*/function (_Component) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
+                console.log('Handle part two click');
+                console.log(t1);
+                console.log(t2);
+                console.log(t3);
                 tempId = '';
-                _context.next = 3;
+                _context.next = 7;
                 return axios__WEBPACK_IMPORTED_MODULE_10___default.a.post('/api/users', {
                   token: this.state.user,
                   first_name: this.state.firstName,
                   last_name: this.state.lastName,
                   email: this.state.email,
-                  "class": this.state["class"],
+                  classYear: this.state.classYear,
                   concentration: this.state.concentration,
                   teamOne: t1,
                   teamTwo: t2,
@@ -56481,7 +56489,7 @@ var Apply = /*#__PURE__*/function (_Component) {
                   console.log(error);
                 });
 
-              case 3:
+              case 7:
                 this.setState({
                   userId: tempId,
                   teamOne: t1,
@@ -56491,7 +56499,7 @@ var Apply = /*#__PURE__*/function (_Component) {
                   partThree: true
                 });
 
-              case 4:
+              case 8:
               case "end":
                 return _context.stop();
             }
@@ -56508,6 +56516,9 @@ var Apply = /*#__PURE__*/function (_Component) {
   }, {
     key: "handlePartThreeClick",
     value: function handlePartThreeClick(qNums, allResp) {
+      console.log('Handle part three click');
+      console.log(qNums);
+      console.log(allResp);
       this.setState({
         questionNumbers: qNums,
         allResponses: allResp,
@@ -56667,7 +56678,7 @@ var BasicInformation = /*#__PURE__*/function (_React$Component) {
       firstName: '',
       lastName: '',
       email: '',
-      "class": '',
+      classYear: '',
       concentration: ''
     });
 
@@ -56688,7 +56699,7 @@ var BasicInformation = /*#__PURE__*/function (_React$Component) {
       var fn = this.state.firstName;
       var ln = this.state.lastName;
       var e = this.state.email;
-      var cl = this.state["class"];
+      var cl = this.state.classYear;
       var con = this.state.concentration;
       this.props.handlePartOneClick(fn, ln, e, cl, con);
     }
@@ -56718,8 +56729,8 @@ var BasicInformation = /*#__PURE__*/function (_React$Component) {
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
         label: "Class Year:",
         ph: "Class Year",
-        name: "class",
-        v: this.state["class"],
+        name: "classYear",
+        v: this.state.classYear,
         onChange: this.updateState
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
         label: "Concentration:",
@@ -57080,7 +57091,7 @@ var Home = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log('IN HOME RENDER');
+      // console.log('IN HOME RENDER');
       var button = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(ApplyButton, {
         onClick: this.handleApplyClick
       });
@@ -57542,6 +57553,8 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
         teamOne = this.props.state.teams.filter(function (team) {
           return team.id === Number(teamOne);
         })[0];
+        console.log('Team one');
+        console.log(teamOne);
         var questionNum = [];
         questionNum = teamOne.question.map(function (question) {
           if (!_this3.alreadyInArray(question.id)) {

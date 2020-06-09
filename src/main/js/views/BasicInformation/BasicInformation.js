@@ -12,7 +12,7 @@ class BasicInformation extends React.Component {
 		firstName: '',
 		lastName: '',
 		email: '',
-		class: '',
+		classYear: '',
 		concentration: ''
 	};
 
@@ -33,7 +33,7 @@ class BasicInformation extends React.Component {
 		var fn = this.state.firstName;
 		var ln = this.state.lastName;
 		var e = this.state.email;
-		var cl = this.state.class;
+		var cl = this.state.classYear;
 		var con = this.state.concentration;
 		this.props.handlePartOneClick(fn, ln, e, cl, con);
 	}
@@ -69,8 +69,8 @@ class BasicInformation extends React.Component {
 					<FormEntry
 						label="Class Year:"
 						ph="Class Year"
-						name="class"
-						v={this.state.class}
+						name="classYear"
+						v={this.state.classYear}
 						onChange={this.updateState}
 					/>
 					<FormEntry

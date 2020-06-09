@@ -18,7 +18,7 @@ class Apply extends Component {
 		firstName: '',
 		lastName: '',
 		email: '',
-		class: '',
+		classYear: '',
 		concentration: '',
 		teamOne: 0,
 		teamTwo: 0,
@@ -74,11 +74,15 @@ class Apply extends Component {
 	}
 
 	handlePartOneClick(fn, ln, e, cl, con) {
+		console.log('Handle part one click');
+		console.log(fn);
+		console.log(cl);
+		console.log(con);
 		this.setState({
 			firstName: fn,
 			lastName: ln,
 			email: e,
-			class: cl,
+			classYear: cl,
 			concentration: con,
 			partOne: false,
 			partTwo: true
@@ -86,6 +90,10 @@ class Apply extends Component {
 	}
 
 	async handlePartTwoClick(t1, t2, t3) {
+		console.log('Handle part two click');
+		console.log(t1);
+		console.log(t2);
+		console.log(t3);
 		var tempId = '';
 		await axios
 			.post('/api/users', {
@@ -93,7 +101,7 @@ class Apply extends Component {
 				first_name: this.state.firstName,
 				last_name: this.state.lastName,
 				email: this.state.email,
-				class: this.state.class,
+				classYear: this.state.classYear,
 				concentration: this.state.concentration,
 				teamOne: t1,
 				teamTwo: t2,
@@ -117,6 +125,9 @@ class Apply extends Component {
 	}
 
 	handlePartThreeClick(qNums, allResp) {
+		console.log('Handle part three click');
+		console.log(qNums);
+		console.log(allResp);
 		this.setState({
 			questionNumbers: qNums,
 			allResponses: allResp,

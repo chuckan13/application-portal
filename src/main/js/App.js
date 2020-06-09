@@ -16,7 +16,7 @@ class App extends Component {
 	}
 
 	render() {
-		console.log('IN RENDER');
+		// console.log('IN RENDER');
 		return (
 			<Router>
 				<div>
