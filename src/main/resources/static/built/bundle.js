@@ -57551,8 +57551,11 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
       this.state.userId = userId;
 
       if (teamOne) {
-        // teamOne = this.props.state.teams.filter(team => team.id === Number(teamOne))[0];
+        teamOneObj = this.props.state.teams.filter(function (team) {
+          return team.id === Number(teamOne);
+        })[0];
         axios__WEBPACK_IMPORTED_MODULE_12___default.a.get('/api/questions/' + teamOne).then(function (res) {
+          console.log(res.data);
           _this3.state.teamOneQuestions = res.data; // this.setState({ teamOneQuestions: res.data });
         })["catch"](function (err) {
           return console.log(err);
@@ -57604,9 +57607,9 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         id: "short-response-title"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, " Part 3: Short Response ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(TeamQuestions, {
-        team: teamOne.name,
+        team: teamOneObj.name,
         num: "One",
-        questions: teamOne.question,
+        questions: this.state.teamOneQuestions,
         onChange: this.updateState,
         v: this.state
       }), teamTwo ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(TeamQuestions, {
@@ -57643,7 +57646,7 @@ function Question(props) {
 }
 
 function TeamQuestions(props) {
-  var questions = props.questions.map(function (question) {
+  var questions = props.map(function (question) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Question, {
       name: 'question' + question.id,
       question: question.text,

@@ -83,11 +83,12 @@ class ShortResponse extends React.Component {
 		let { teamOne, teamTwo, teamThree, userId } = this.props.state;
 		this.state.userId = userId;
 		if (teamOne) {
-			// teamOne = this.props.state.teams.filter(team => team.id === Number(teamOne))[0];
+			teamOneObj = this.props.state.teams.filter(team => team.id === Number(teamOne))[0];
 
 			axios
 				.get('/api/questions/' + teamOne)
 				.then(res => {
+					console.log(res.data);
 					this.state.teamOneQuestions = res.data;
 					// this.setState({ teamOneQuestions: res.data });
 				})
@@ -136,9 +137,9 @@ class ShortResponse extends React.Component {
 					<p> Part 3: Short Response </p>
 				</div>
 				<TeamQuestions
-					team={teamOne.name}
+					team={teamOneObj.name}
 					num="One"
-					questions={teamOne.question}
+					questions={this.state.teamOneQuestions}
 					onChange={this.updateState}
 					v={this.state}
 				/>
@@ -186,7 +187,7 @@ function Question(props) {
 }
 
 function TeamQuestions(props) {
-	const questions = props.questions.map(question => (
+	const questions = props.map(question => (
 		<Question
 			name={'question' + question.id}
 			question={question.text}
