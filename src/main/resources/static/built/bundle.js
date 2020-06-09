@@ -57440,6 +57440,9 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
     _this = _super.call(this, props, context);
 
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), "state", {
+      teamOneQuestions: teamOneQuestions,
+      teamTwoQuestions: teamTwoQuestions,
+      teamThreeQuestions: teamThreeQuestions,
       questionNumbers: [],
       userId: 0
     });
@@ -57550,17 +57553,21 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
       this.state.userId = userId;
 
       if (teamOne) {
-        teamOne = this.props.state.teams.filter(function (team) {
-          return team.id === Number(teamOne);
-        })[0];
+        // teamOne = this.props.state.teams.filter(team => team.id === Number(teamOne))[0];
+        axios__WEBPACK_IMPORTED_MODULE_12___default.a.get('/api/questions/' + teamOne).then(function (res) {
+          _this3.state.teamOneQuestions = res.data; // this.setState({ teamOneQuestions: res.data });
+        })["catch"](function (err) {
+          return console.log(err);
+        });
         console.log('Team one');
-        console.log(teamOne);
+        console.log(teamOneQuestions);
         var questionNum = [];
-        questionNum = teamOne.question.map(function (question) {
+        questionNum = teamOneQuestions.map(function (question) {
           if (!_this3.alreadyInArray(question.id)) {
             return question.id;
           }
         });
+        console.log(questionNum);
         this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
       } else {
         teamOne = '';

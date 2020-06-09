@@ -10,6 +10,9 @@ import axios from 'axios';
 
 class ShortResponse extends React.Component {
 	state = {
+		teamOneQuestions,
+		teamTwoQuestions,
+		teamThreeQuestions,
 		questionNumbers: [],
 		userId: 0
 	};
@@ -80,15 +83,24 @@ class ShortResponse extends React.Component {
 		let { teamOne, teamTwo, teamThree, userId } = this.props.state;
 		this.state.userId = userId;
 		if (teamOne) {
-			teamOne = this.props.state.teams.filter(team => team.id === Number(teamOne))[0];
+			// teamOne = this.props.state.teams.filter(team => team.id === Number(teamOne))[0];
+
+			axios
+				.get('/api/questions/' + teamOne)
+				.then(res => {
+					this.state.teamOneQuestions = res.data;
+					// this.setState({ teamOneQuestions: res.data });
+				})
+				.catch(err => console.log(err));
 			console.log('Team one');
-			console.log(teamOne);
+			console.log(teamOneQuestions);
 			var questionNum = [];
-			questionNum = teamOne.question.map(question => {
+			questionNum = teamOneQuestions.map(question => {
 				if (!this.alreadyInArray(question.id)) {
 					return question.id;
 				}
 			});
+			console.log(questionNum);
 			this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
 		} else {
 			teamOne = '';

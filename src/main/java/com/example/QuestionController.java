@@ -16,6 +16,12 @@ public class QuestionController {
         this.repository = repository;
     }
 
+    @RequestMapping(value = "/{teamId}", method = RequestMethod.GET)
+    public List<Question> getByTeamId(@PathVariable("teamId") Long teamId) {
+        List<Question> allQuestions = repository.findByTeamId(teamId);
+        return allQuestions;
+    }
+
     // @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     // public ResponseEntity<LoanOption> get(@PathVariable("id") Long id) {
     // LoanOption loan = repository.findOne(id);
