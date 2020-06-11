@@ -56496,6 +56496,30 @@ var Apply = /*#__PURE__*/function (_Component) {
 
               case 10:
                 _context.next = 12;
+                return axios__WEBPACK_IMPORTED_MODULE_10___default.a.post('/api/userteams/new', {
+                  teamId: t1,
+                  userId: tempId,
+                  preference: 1
+                });
+
+              case 12:
+                _context.next = 14;
+                return axios__WEBPACK_IMPORTED_MODULE_10___default.a.post('/api/userteams/new', {
+                  teamId: t2,
+                  userId: tempId,
+                  preference: 2
+                });
+
+              case 14:
+                _context.next = 16;
+                return axios__WEBPACK_IMPORTED_MODULE_10___default.a.post('/api/userteams/new', {
+                  teamId: t3,
+                  userId: tempId,
+                  preference: 3
+                });
+
+              case 16:
+                _context.next = 18;
                 return axios__WEBPACK_IMPORTED_MODULE_10___default.a.get('/api/questions/' + t1).then(function (res) {
                   console.log('get request to /api/questions/{teamid} 1');
                   console.log(res.data);
@@ -56504,8 +56528,8 @@ var Apply = /*#__PURE__*/function (_Component) {
                   return console.log(err);
                 });
 
-              case 12:
-                _context.next = 14;
+              case 18:
+                _context.next = 20;
                 return axios__WEBPACK_IMPORTED_MODULE_10___default.a.get('/api/questions/' + t2).then(function (res) {
                   console.log('get request to /api/questions/{teamid} 2');
                   console.log(res.data);
@@ -56514,8 +56538,8 @@ var Apply = /*#__PURE__*/function (_Component) {
                   return console.log(err);
                 });
 
-              case 14:
-                _context.next = 16;
+              case 20:
+                _context.next = 22;
                 return axios__WEBPACK_IMPORTED_MODULE_10___default.a.get('/api/questions/' + t3).then(function (res) {
                   console.log('get request to /api/questions/{teamid} 3');
                   console.log(res.data);
@@ -56524,7 +56548,7 @@ var Apply = /*#__PURE__*/function (_Component) {
                   return console.log(err);
                 });
 
-              case 16:
+              case 22:
                 this.setState({
                   userId: tempId,
                   teamOne: t1,
@@ -56538,7 +56562,7 @@ var Apply = /*#__PURE__*/function (_Component) {
                 });
                 console.log(this.state.userId);
 
-              case 18:
+              case 24:
               case "end":
                 return _context.stop();
             }

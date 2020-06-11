@@ -119,6 +119,21 @@ class Apply extends Component {
 			.catch(function(error) {
 				console.log(error);
 			});
+		await axios.post('/api/userteams/new', {
+			teamId: t1,
+			userId: tempId,
+			preference: 1
+		});
+		await axios.post('/api/userteams/new', {
+			teamId: t2,
+			userId: tempId,
+			preference: 2
+		});
+		await axios.post('/api/userteams/new', {
+			teamId: t3,
+			userId: tempId,
+			preference: 3
+		});
 		await axios
 			.get('/api/questions/' + t1)
 			.then(res => {
