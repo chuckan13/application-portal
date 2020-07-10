@@ -15,6 +15,7 @@ class TeamSelection extends React.Component {
 			teamOne: 0,
 			teamTwo: 0,
 			teamThree: 0,
+			errorMessage: '',
 			teams: []
 		};
 
@@ -33,7 +34,18 @@ class TeamSelection extends React.Component {
 		var t1 = this.state.teamOne;
 		var t2 = this.state.teamTwo;
 		var t3 = this.state.teamThree;
-		this.props.handlePartTwoClick(t1, t2, t3);
+		if (t1 === 0 && t2 !== 0) {
+			this.setState({ errorMessage: 'Please select Team 1 first' });
+		} else if (t1 === 0 && t3 !== 0) {
+			this.setState({ errorMessage: 'Please select Team 1 first' });
+		} else if (t2 === 0 && t3 !== 0) {
+			this.setState({ errorMessage: 'Please select Team 2 before Team 3' });
+		} else if (t1 !== 0 && t2 !== 0 && t3 !== 0) {
+			this.props.handlePartTwoClick(t1, t2, t3);
+		} else {
+			this.setState({ errorMessage: 'Please select teams in order of preference' });
+		}
+
 		// event.preventDefault();
 	}
 	renderTeamOption(team) {
@@ -68,6 +80,7 @@ class TeamSelection extends React.Component {
 						{teams.map(this.renderTeamOption)}
 					</FormControl>
 				</FormGroup>
+				<div style={{ color: 'red' }}>{this.state.errorMessage}</div>
 				<Row className="center-block text-center">
 					<Col>
 						<Button bsStyle="next" bsSize="large" onClick={this.handleSubmit}>

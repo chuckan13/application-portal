@@ -57999,6 +57999,7 @@ var TeamSelection = /*#__PURE__*/function (_React$Component) {
       teamOne: 0,
       teamTwo: 0,
       teamThree: 0,
+      errorMessage: '',
       teams: []
     };
     _this.handleChange = _this.handleChange.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this));
@@ -58018,7 +58019,27 @@ var TeamSelection = /*#__PURE__*/function (_React$Component) {
       var t1 = this.state.teamOne;
       var t2 = this.state.teamTwo;
       var t3 = this.state.teamThree;
-      this.props.handlePartTwoClick(t1, t2, t3); // event.preventDefault();
+
+      if (t1 === 0 && t2 !== 0) {
+        this.setState({
+          errorMessage: 'Please select Team 1 first'
+        });
+      } else if (t1 === 0 && t3 !== 0) {
+        this.setState({
+          errorMessage: 'Please select Team 1 first'
+        });
+      } else if (t2 === 0 && t3 !== 0) {
+        this.setState({
+          errorMessage: 'Please select Team 2 before Team 3'
+        });
+      } else if (t1 !== 0 && t2 !== 0 && t3 !== 0) {
+        this.props.handlePartTwoClick(t1, t2, t3);
+      } else {
+        this.setState({
+          errorMessage: 'Please select teams in order of preference'
+        });
+      } // event.preventDefault();
+
     }
   }, {
     key: "renderTeamOption",
@@ -58058,7 +58079,11 @@ var TeamSelection = /*#__PURE__*/function (_React$Component) {
         name: "teamThree",
         componentClass: "select",
         onChange: this.handleChange
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null), teams.map(this.renderTeamOption))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["Row"], {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null), teams.map(this.renderTeamOption))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        style: {
+          color: 'red'
+        }
+      }, this.state.errorMessage), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["Row"], {
         className: "center-block text-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["Col"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["Button"], {
         bsStyle: "next",
