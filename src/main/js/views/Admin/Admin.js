@@ -55,7 +55,6 @@ class Admin extends Component {
 			});
 	}
 
-	// handles back button on all admin pages
 	backButton() {
 		this.setState({
 			homePage: true,

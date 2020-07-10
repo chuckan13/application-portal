@@ -56233,8 +56233,7 @@ var Admin = /*#__PURE__*/function (_Component) {
       })["catch"](function (error) {
         console.log(error);
       });
-    } // handles back button on all admin pages
-
+    }
   }, {
     key: "backButton",
     value: function backButton() {
