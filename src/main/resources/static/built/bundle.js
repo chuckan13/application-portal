@@ -58016,21 +58016,22 @@ var TeamSelection = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit() {
+      console.log('team selection handle submit');
       var t1 = this.state.teamOne;
       var t2 = this.state.teamTwo;
       var t3 = this.state.teamThree;
 
       if (t1 === 0 && t2 !== 0) {
         this.setState({
-          errorMessage: 'Please select Team 1 first'
+          errorMessage: 'Please select teams in order of preference'
         });
       } else if (t1 === 0 && t3 !== 0) {
         this.setState({
-          errorMessage: 'Please select Team 1 first'
+          errorMessage: 'Please select teams in order of preference'
         });
       } else if (t2 === 0 && t3 !== 0) {
         this.setState({
-          errorMessage: 'Please select Team 2 before Team 3'
+          errorMessage: 'Please select teams in order of preference'
         });
       } else if (t1 !== 0 && t2 !== 0 && t3 !== 0) {
         this.props.handlePartTwoClick(t1, t2, t3);
@@ -58081,7 +58082,9 @@ var TeamSelection = /*#__PURE__*/function (_React$Component) {
         onChange: this.handleChange
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null), teams.map(this.renderTeamOption))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         style: {
-          color: 'red'
+          color: 'red',
+          display: 'flex',
+          'justify-content': 'center'
         }
       }, this.state.errorMessage), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["Row"], {
         className: "center-block text-center"
