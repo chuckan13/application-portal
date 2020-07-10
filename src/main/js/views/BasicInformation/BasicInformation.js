@@ -13,7 +13,11 @@ class BasicInformation extends React.Component {
 		lastName: '',
 		email: '',
 		classYear: '',
-		concentration: ''
+		concentration: '',
+		building: '',
+		roomNumber: '',
+		phoneNumber: '',
+		linkedin: ''
 	};
 
 	constructor(props, context) {
@@ -35,7 +39,11 @@ class BasicInformation extends React.Component {
 		var e = this.state.email;
 		var cl = this.state.classYear;
 		var con = this.state.concentration;
-		this.props.handlePartOneClick(fn, ln, e, cl, con);
+		var bui = this.state.building;
+		var rn = this.state.roomNumber;
+		var pn = this.state.phoneNumber;
+		var li = this.state.linkedin;
+		this.props.handlePartOneClick(fn, ln, e, cl, con, bui, rn, pn, li);
 	}
 
 	render() {
@@ -78,6 +86,34 @@ class BasicInformation extends React.Component {
 						ph="Concentration"
 						name="concentration"
 						v={this.state.concentration}
+						onChange={this.updateState}
+					/>
+					<FormEntry
+						label="Building Name:"
+						ph="Building Name"
+						name="building"
+						v={this.state.building}
+						onChange={this.updateState}
+					/>
+					<FormEntry
+						label="Room Number:"
+						ph="Room Number"
+						name="roomNumber"
+						v={this.state.roomNumber}
+						onChange={this.updateState}
+					/>
+					<FormEntry
+						label="Phone Number:"
+						ph="Phone Number"
+						name="phoneNumber"
+						v={this.state.phoneNumber}
+						onChange={this.updateState}
+					/>
+					<FormEntry
+						label="LinkedIn Profile:"
+						ph="LinkedIn"
+						name="linkedin"
+						v={this.state.linkedin}
 						onChange={this.updateState}
 					/>
 				</form>

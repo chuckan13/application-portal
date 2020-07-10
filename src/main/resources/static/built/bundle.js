@@ -56233,7 +56233,7 @@ var Admin = /*#__PURE__*/function (_Component) {
       })["catch"](function (error) {
         console.log(error);
       });
-    } // handles back button on all admin pages 
+    } // handles back button on all admin pages
 
   }, {
     key: "backButton",
@@ -56384,6 +56384,10 @@ var Apply = /*#__PURE__*/function (_Component) {
       email: '',
       classYear: '',
       concentration: '',
+      building: '',
+      roomNumber: '',
+      phoneNumber: '',
+      linkedin: '',
       teamOne: 0,
       teamTwo: 0,
       teamThree: 0,
@@ -56445,7 +56449,7 @@ var Apply = /*#__PURE__*/function (_Component) {
     }
   }, {
     key: "handlePartOneClick",
-    value: function handlePartOneClick(fn, ln, e, cl, con) {
+    value: function handlePartOneClick(fn, ln, e, cl, con, bui, rn, pn, li) {
       console.log('Handle part one click');
       console.log(fn);
       console.log(cl);
@@ -56456,6 +56460,10 @@ var Apply = /*#__PURE__*/function (_Component) {
         email: e,
         classYear: cl,
         concentration: con,
+        building: bui,
+        roomNumber: rn,
+        phoneNumber: pn,
+        linkedin: li,
         partOne: false,
         partTwo: true
       });
@@ -56486,6 +56494,10 @@ var Apply = /*#__PURE__*/function (_Component) {
                   email: this.state.email,
                   classYear: this.state.classYear,
                   concentration: this.state.concentration,
+                  building: this.state.building,
+                  roomNumber: this.state.roomNumber,
+                  phoneNumber: this.state.phoneNumber,
+                  linkedin: this.state.linkedin,
                   role: 'USER'
                 }).then(function (response) {
                   console.log(tempId);
@@ -56742,7 +56754,11 @@ var BasicInformation = /*#__PURE__*/function (_React$Component) {
       lastName: '',
       email: '',
       classYear: '',
-      concentration: ''
+      concentration: '',
+      building: '',
+      roomNumber: '',
+      phoneNumber: '',
+      linkedin: ''
     });
 
     _this.handleSubmitClick = _this.handleSubmitClick.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this));
@@ -56764,7 +56780,11 @@ var BasicInformation = /*#__PURE__*/function (_React$Component) {
       var e = this.state.email;
       var cl = this.state.classYear;
       var con = this.state.concentration;
-      this.props.handlePartOneClick(fn, ln, e, cl, con);
+      var bui = this.state.building;
+      var rn = this.state.roomNumber;
+      var pn = this.state.phoneNumber;
+      var li = this.state.linkedin;
+      this.props.handlePartOneClick(fn, ln, e, cl, con, bui, rn, pn, li);
     }
   }, {
     key: "render",
@@ -56800,6 +56820,30 @@ var BasicInformation = /*#__PURE__*/function (_React$Component) {
         ph: "Concentration",
         name: "concentration",
         v: this.state.concentration,
+        onChange: this.updateState
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
+        label: "Building Name:",
+        ph: "Building Name",
+        name: "building",
+        v: this.state.building,
+        onChange: this.updateState
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
+        label: "Room Number:",
+        ph: "Room Number",
+        name: "roomNumber",
+        v: this.state.roomNumber,
+        onChange: this.updateState
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
+        label: "Phone Number:",
+        ph: "Phone Number",
+        name: "phoneNumber",
+        v: this.state.phoneNumber,
+        onChange: this.updateState
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
+        label: "LinkedIn Profile:",
+        ph: "LinkedIn",
+        name: "linkedin",
+        v: this.state.linkedin,
         onChange: this.updateState
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SubmitButton, {
         onClick: this.handleSubmitClick
@@ -57328,7 +57372,15 @@ var Review = /*#__PURE__*/function (_React$Component) {
         id: "information"
       }, " Class: ", this.props.state.classYear), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         id: "information"
-      }, " Concentration: ", this.props.state.concentration)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+      }, " Concentration: ", this.props.state.concentration), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        id: "information"
+      }, " Building: ", this.props.state.building), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        id: "information"
+      }, " Room Number: ", this.props.state.roomNumber), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        id: "information"
+      }, " Phone Number: ", this.props.state.phoneNumber), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        id: "information"
+      }, " LinkedIn Profile: ", this.props.state.linkedin)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         id: "header"
       }, " Short Response Questions: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(TeamResponses, {
         team: teamOneObj.name,
@@ -58104,7 +58156,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 
 
-Object(react_bootstrap_lib_utils_bootstrapUtils__WEBPACK_IMPORTED_MODULE_11__["addStyle"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["Button"], "view-more");
+Object(react_bootstrap_lib_utils_bootstrapUtils__WEBPACK_IMPORTED_MODULE_11__["addStyle"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["Button"], 'view-more');
 
 var viewApplicants = /*#__PURE__*/function (_Component) {
   _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(viewApplicants, _Component);
@@ -58182,7 +58234,7 @@ var viewApplicants = /*#__PURE__*/function (_Component) {
         // catch if user doesn't have 3 teams ranked
         var c1,
             c2,
-            c3 = "";
+            c3 = '';
 
         if (user.teams[0]) {
           c1 = user.teams[0].name;
@@ -58289,7 +58341,7 @@ function ShortResponseSection(props) {
     id: "choice-section"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
     id: "review-choice"
-  }, " Team ", props.num, ": ", props.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+  }, ' ', "Team ", props.num, ": ", props.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
     id: "question"
   }, props.q1), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("pre", {
     id: "response"

@@ -20,6 +20,10 @@ class Apply extends Component {
 		email: '',
 		classYear: '',
 		concentration: '',
+		building: '',
+		roomNumber: '',
+		phoneNumber: '',
+		linkedin: '',
 		teamOne: 0,
 		teamTwo: 0,
 		teamThree: 0,
@@ -76,7 +80,7 @@ class Apply extends Component {
 			.catch(err => console.log(err));
 	}
 
-	handlePartOneClick(fn, ln, e, cl, con) {
+	handlePartOneClick(fn, ln, e, cl, con, bui, rn, pn, li) {
 		console.log('Handle part one click');
 		console.log(fn);
 		console.log(cl);
@@ -87,6 +91,10 @@ class Apply extends Component {
 			email: e,
 			classYear: cl,
 			concentration: con,
+			building: bui,
+			roomNumber: rn,
+			phoneNumber: pn,
+			linkedin: li,
 			partOne: false,
 			partTwo: true
 		});
@@ -110,6 +118,10 @@ class Apply extends Component {
 				email: this.state.email,
 				classYear: this.state.classYear,
 				concentration: this.state.concentration,
+				building: this.state.building,
+				roomNumber: this.state.roomNumber,
+				phoneNumber: this.state.phoneNumber,
+				linkedin: this.state.linkedin,
 				role: 'USER'
 			})
 			.then(function(response) {
