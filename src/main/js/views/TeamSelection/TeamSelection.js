@@ -41,10 +41,8 @@ class TeamSelection extends React.Component {
 			this.setState({ errorMessage: 'Please select teams in order of preference' });
 		} else if (t2 === 0 && t3 !== 0) {
 			this.setState({ errorMessage: 'Please select teams in order of preference' });
-		} else if (t1 !== 0 && t2 !== 0 && t3 !== 0) {
-			this.props.handlePartTwoClick(t1, t2, t3);
 		} else {
-			this.setState({ errorMessage: 'Please select teams in order of preference' });
+			this.props.handlePartTwoClick(t1, t2, t3);
 		}
 
 		// event.preventDefault();

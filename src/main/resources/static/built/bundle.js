@@ -57763,15 +57763,23 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_9___default.a.Component);
 
 function Question(props) {
+  var charLimit = props.wordLimit;
+
+  if (props.wordLimit == 0) {
+    charLimit = 'None';
+  }
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["FormGroup"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["ControlLabel"], {
     id: "long-form-label"
-  }, props.question), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["FormControl"], {
+  }, props.question), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["ControlLabel"], {
+    id: "long-form-label"
+  }, "Character limit: ", this.charLimit), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["FormControl"], {
     id: "long-form-answer",
     name: props.name + 'response',
     componentClass: "textarea",
     value: props.v[props.name + 'response'],
     onChange: props.onChange,
-    maxLength: 10
+    maxLength: props.wordLimit
   }));
 }
 
@@ -57779,6 +57787,7 @@ function TeamQuestions(props) {
   var questions = props.questions.map(function (question) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Question, {
       name: 'question' + question.id,
+      wordLimit: question.wordLimit,
       question: question.text,
       onChange: props.onChange,
       questionId: question.id,
@@ -58034,12 +58043,8 @@ var TeamSelection = /*#__PURE__*/function (_React$Component) {
         this.setState({
           errorMessage: 'Please select teams in order of preference'
         });
-      } else if (t1 !== 0 && t2 !== 0 && t3 !== 0) {
-        this.props.handlePartTwoClick(t1, t2, t3);
       } else {
-        this.setState({
-          errorMessage: 'Please select teams in order of preference'
-        });
+        this.props.handlePartTwoClick(t1, t2, t3);
       } // event.preventDefault();
 
     }

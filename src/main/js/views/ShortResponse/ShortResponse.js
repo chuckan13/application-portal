@@ -184,16 +184,21 @@ class ShortResponse extends React.Component {
 }
 
 function Question(props) {
+	var charLimit = props.wordLimit;
+	if (props.wordLimit == 0) {
+		charLimit = 'None';
+	}
 	return (
 		<FormGroup>
 			<ControlLabel id="long-form-label">{props.question}</ControlLabel>
+			<ControlLabel id="long-form-label">Character limit: {this.charLimit}</ControlLabel>
 			<FormControl
 				id="long-form-answer"
 				name={props.name + 'response'}
 				componentClass="textarea"
 				value={props.v[props.name + 'response']}
 				onChange={props.onChange}
-				maxLength={10}
+				maxLength={props.wordLimit}
 			/>
 		</FormGroup>
 	);
@@ -203,6 +208,7 @@ function TeamQuestions(props) {
 	const questions = props.questions.map(question => (
 		<Question
 			name={'question' + question.id}
+			wordLimit={question.wordLimit}
 			question={question.text}
 			onChange={props.onChange}
 			questionId={question.id}
