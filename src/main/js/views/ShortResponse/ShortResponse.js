@@ -185,20 +185,22 @@ class ShortResponse extends React.Component {
 
 function Question(props) {
 	var charLimit = props.wordLimit;
+	var charLimit2 = props.wordLimit;
 	if (props.wordLimit == 0) {
 		charLimit = 'None';
+		charLimit2 = 999999999;
 	}
 	return (
 		<FormGroup>
 			<ControlLabel id="long-form-label">{props.question}</ControlLabel>
-			<ControlLabel id="long-form-label">Character limit: {this.charLimit}</ControlLabel>
+			<ControlLabel id="long-form-label">Character limit: {charLimit}</ControlLabel>
 			<FormControl
 				id="long-form-answer"
 				name={props.name + 'response'}
 				componentClass="textarea"
 				value={props.v[props.name + 'response']}
 				onChange={props.onChange}
-				maxLength={props.wordLimit}
+				maxLength={charLimit2}
 			/>
 		</FormGroup>
 	);

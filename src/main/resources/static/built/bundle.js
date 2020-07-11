@@ -57764,22 +57764,24 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
 
 function Question(props) {
   var charLimit = props.wordLimit;
+  var charLimit2 = props.wordLimit;
 
   if (props.wordLimit == 0) {
     charLimit = 'None';
+    charLimit2 = 999999999;
   }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["FormGroup"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["ControlLabel"], {
     id: "long-form-label"
   }, props.question), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["ControlLabel"], {
     id: "long-form-label"
-  }, "Character limit: ", this.charLimit), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["FormControl"], {
+  }, "Character limit: ", charLimit), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_11__["FormControl"], {
     id: "long-form-answer",
     name: props.name + 'response',
     componentClass: "textarea",
     value: props.v[props.name + 'response'],
     onChange: props.onChange,
-    maxLength: props.wordLimit
+    maxLength: charLimit2
   }));
 }
 
