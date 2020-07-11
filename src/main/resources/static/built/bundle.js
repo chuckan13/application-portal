@@ -57770,7 +57770,8 @@ function Question(props) {
     name: props.name + 'response',
     componentClass: "textarea",
     value: props.v[props.name + 'response'],
-    onChange: props.onChange
+    onChange: props.onChange,
+    maxLength: 10
   }));
 }
 

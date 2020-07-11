@@ -193,6 +193,7 @@ function Question(props) {
 				componentClass="textarea"
 				value={props.v[props.name + 'response']}
 				onChange={props.onChange}
+				maxLength={10}
 			/>
 		</FormGroup>
 	);
