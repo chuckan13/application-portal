@@ -28,7 +28,7 @@ function ApplyButton(props) {
 		<div id="welcome-content">
 			<Row className="center-block text-center">
 				<div id="welcome-text">
-					<p>Excited to join the e-club family? </p>
+					<p>Excited to join the E-Club family? </p>
 					<p>Apply today!</p>
 				</div>
 				<Col>
