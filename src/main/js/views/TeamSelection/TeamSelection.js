@@ -81,7 +81,7 @@ class TeamSelection extends React.Component {
 				</FormGroup>
 				<div
 					style={{
-						color: 'red',
+						color: 'black',
 						display: 'flex',
 						'justify-content': 'center'
 					}}

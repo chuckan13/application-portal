@@ -4147,7 +4147,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "\r\n#review-choice, #short-response-choice {\r\n  font-family: Avenir-Light;\r\n  color: black;\r\n  text-align: left;\r\n  display: block;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  margin-bottom: 0px;\r\n  min-width: 200px;\r\n  max-width: 500px;\r\n  height: 40px;\r\n  padding: 12px 0px 40px 20px;\r\n  font-size: 20px;\r\n}\r\n\r\n#short-response-choice {\r\n  background-color: #fef0e4;\r\n  border-radius: 10px 10px 0px 0px;\r\n}\r\n\r\n#review-choice {\r\n  background-color: #e0f5ff;\r\n  color: #272727;\r\n  font-size: 18px;\r\n  padding-bottom: 37px;\r\n}\r\n\r\n#questions {\r\n  padding-bottom: 30px;\r\n  background-color: white;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  margin-bottom: 0px;\r\n  min-width: 200px;\r\n  max-width: 500px;\r\n  border-radius: 0px 0px 10px 10px;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n#short-response-title {\r\n  padding-bottom: 20px;\r\n}\r\n\r\ntextarea.form-control {\r\n  height: 200px;\r\n  padding-top: 0px;\r\n  min-width: 200px;\r\n  max-width: 600px;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, "\r\n#review-choice, #short-response-choice {\r\n  font-family: Avenir-Light;\r\n  color: black;\r\n  text-align: left;\r\n  display: block;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  margin-bottom: 0px;\r\n  min-width: 200px;\r\n  max-width: 500px;\r\n  height: 40px;\r\n  padding: 12px 0px 40px 20px;\r\n  font-size: 20px;\r\n}\r\n\r\n#short-response-choice {\r\n  background-color: #f8dec6;\r\n  border-radius: 10px 10px 0px 0px;\r\n}\r\n\r\n#review-choice {\r\n  background-color: #fef0e4;\r\n  color: #272727;\r\n  font-size: 18px;\r\n  padding-bottom: 37px;\r\n}\r\n\r\n#questions {\r\n  padding-bottom: 30px;\r\n  background-color: white;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  margin-bottom: 0px;\r\n  min-width: 200px;\r\n  max-width: 500px;\r\n  border-radius: 0px 0px 10px 10px;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n#short-response-title {\r\n  padding-bottom: 20px;\r\n}\r\n\r\ntextarea.form-control {\r\n  height: 200px;\r\n  padding-top: 0px;\r\n  min-width: 200px;\r\n  max-width: 600px;\r\n}\r\n\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -58082,7 +58082,7 @@ var TeamSelection = /*#__PURE__*/function (_React$Component) {
         onChange: this.handleChange
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null), teams.map(this.renderTeamOption))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         style: {
-          color: 'red',
+          color: 'black',
           display: 'flex',
           'justify-content': 'center'
         }
