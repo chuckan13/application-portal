@@ -15,16 +15,16 @@ p {
 }
 
 .btn-apply {
-	color: #fff;
-	background-color: #3891b8;
+	color: black;
+	background-color: #f29c46;
 	border-radius: 15px;
 	padding: 20px 30px;
 	font-size: 20px;
 }
 
 .btn:hover {
-  background-color: #2686af;
-  color: #fff;
+  background-color: #fef0e4;
+  color: black;
  }
 
 .btn {

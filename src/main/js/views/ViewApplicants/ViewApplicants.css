@@ -1,7 +1,7 @@
 /* general table stuff*/
 th {
-	background-color: #3891b8;
-	color: white;
+	background-color: #fef0e4;
+	color: black;
 	width: 100px;
 	text-align: center;
 	font-family: Avenir;
@@ -51,7 +51,7 @@ tbody tr:last-child td:last-child {
 
 /* user profile */
 #header {
-	background-color: #3891b8;
+	background-color: #fef0e4;
 	border-radius: 10px 10px 0 0;
 	padding: 10px 0px 10px 20px;
 	font-size: 24px;
