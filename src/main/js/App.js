@@ -26,20 +26,20 @@ class App extends Component {
 								<Navbar.Brand>
 									<div id="logo"> </div>
 									<a href="/" id="application-portal">
-										application portal
+										Application Portal
 									</a>
 								</Navbar.Brand>
 								<Navbar.Toggle />
 							</Navbar.Header>
-							<Navbar.Collapse>
+							{/* <Navbar.Collapse>
 								<Nav pullRight>
 									<NavItem eventKey={1} href="#">
 										<a href="/" id="about">
-											about
+											About
 										</a>
 									</NavItem>
 								</Nav>
-							</Navbar.Collapse>
+							</Navbar.Collapse> */}
 						</Navbar>
 					</div>
 					<Switch>
