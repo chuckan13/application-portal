@@ -43,10 +43,10 @@ html, body {
 /* navbar components */
 #logo {
   background-image: url("../resources/static/img/biglogo.png");
-  background-size: 80px;
+  background-size: 160px;
   background-repeat: no-repeat;
-  height: 80px;
-  width: 80px;
+  height: 160px;
+  width: 160px;
   vertical-align: middle;
 }
 

@@ -16,14 +16,14 @@ p {
 
 .btn-apply {
 	color: black;
-	background-color: #f29c46;
+	background-color: #fef0e4;
 	border-radius: 15px;
 	padding: 20px 30px;
 	font-size: 20px;
 }
 
 .btn:hover {
-  background-color: #fef0e4;
+  background-color: #fcbc7c;
   color: black;
  }
 

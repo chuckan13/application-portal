@@ -9,6 +9,7 @@
   display: block;
   min-width: 200px;
   max-width: 60vw;
+  color:black;
 }
 
 #information, #information-last, 
