@@ -56087,7 +56087,7 @@ var App = /*#__PURE__*/function (_Component) {
         pullRight: true
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["NavItem"], {
         eventKey: 1,
-        href: "#"
+        href: "/promo"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
         href: "/promo",
         id: "promo"

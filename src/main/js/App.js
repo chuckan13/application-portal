@@ -34,7 +34,7 @@ class App extends Component {
 							</Navbar.Header>
 							<Navbar.Collapse>
 								<Nav pullRight>
-									<NavItem eventKey={1} href="#">
+									<NavItem eventKey={1} href="/promo">
 										<a href="/promo" id="promo">
 											Promo
 										</a>
