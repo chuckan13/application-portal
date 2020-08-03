@@ -8,6 +8,7 @@ import './app.css';
 import Apply from './views/Apply.js';
 import Admin from './views/Admin/Admin.js';
 import Home from './views/Home/Home.js';
+import Promo from './views/Promo/Promo.js';
 
 class App extends Component {
 	constructor(props) {
@@ -31,21 +32,22 @@ class App extends Component {
 								</Navbar.Brand>
 								<Navbar.Toggle />
 							</Navbar.Header>
-							{/* <Navbar.Collapse>
+							<Navbar.Collapse>
 								<Nav pullRight>
 									<NavItem eventKey={1} href="#">
-										<a href="/" id="about">
-											About
+										<a href="/promo" id="promo">
+											Promo
 										</a>
 									</NavItem>
 								</Nav>
-							</Navbar.Collapse> */}
+							</Navbar.Collapse>
 						</Navbar>
 					</div>
 					<Switch>
 						<Route exact path="/" component={Home} exact />
 						<Route path="/apply" component={Apply} />
 						<Route path="/admin" component={Admin} />
+						<Route path="/promo" component={Promo} />
 					</Switch>
 				</div>
 			</Router>

@@ -57,6 +57,13 @@ html, body {
 
 }
 
+#promo {
+  margin-right: 0;
+  font-size: 20px;
+  vertical-align: middle;
+
+}
+
 #application-portal {
   padding-left: 20px;
   font-size: 22px;
