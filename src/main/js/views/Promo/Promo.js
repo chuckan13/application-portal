@@ -12,7 +12,15 @@ class Promo extends React.Component {
 	render() {
 		return (
 			<div>
-				<Row>
+				<div class="iconcontainer first">
+					<img class="homeicons1" src="https://ibb.co/LZk0HgG" />
+					<p>I want this under first image</p>
+				</div>
+				<div class="iconcontainer second">
+					<img class="homeicons1" src="https://ibb.co/LZk0HgG" />
+					<p>I want this under second image</p>
+				</div>
+				{/* <Row>
 					<Col>
 						video1
 						<img src="src\main\resources\static\img\example.JPG" />
@@ -36,7 +44,7 @@ class Promo extends React.Component {
 					<Col>
 						video4<img src="src\main\resources\static\img\example.JPG" />
 					</Col>
-				</Row>
+				</Row> */}
 			</div>
 		);
 	}
