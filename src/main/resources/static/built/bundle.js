@@ -4129,7 +4129,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".iconcontainer.first, .iconcontainer.second{\r\n    display: inline-block;\r\n    width:50%;\r\n    height:50%;\r\n  }\r\n  \r\n  .iconcontainer img {\r\n    display: block;\r\n    margin: 0 auto;\r\n    text-align: center;\r\n    width: 40%;\r\n    /* height: 100%; */\r\n  }\r\n  \r\n  p {\r\n    text-align: center;\r\n    font-family: 'Lato', sans-serif;\r\n    font-weight: 400;\r\n  }\r\n  ", ""]);
+exports.push([module.i, ".iconcontainer.first, .iconcontainer.second{\r\n    display: inline-block;\r\n    width:50%;\r\n    height:50%;\r\n  }\r\n  \r\n  .iconcontainer .leftimage {\r\n    display: block;\r\n    margin-left: 5% auto;\r\n    margin-right: 5% auto;\r\n    text-align: right;\r\n    float: right;\r\n    width: 40%;\r\n    /* height: 100%; */\r\n  }\r\n\r\n  .iconcontainer .rightimage {\r\n    display: block;\r\n    margin-left: 5% auto;\r\n    margin-right: 5% auto;\r\n    text-align: left;\r\n    float: left;\r\n    width: 40%;\r\n    /* height: 100%; */\r\n  }\r\n  \r\n  p {\r\n    /* text-align: center; */\r\n    font-family: 'Lato', sans-serif;\r\n    font-weight: 400;\r\n  }\r\n  .left {\r\n    text-align: right;\r\n    font-family: 'Lato', sans-serif;\r\n    font-weight: 400;\r\n  }\r\n  .right {\r\n    text-align: left;\r\n    font-family: 'Lato', sans-serif;\r\n    font-weight: 400;\r\n  }\r\n  ", ""]);
 // Exports
 module.exports = exports;
 
@@ -57337,16 +57337,20 @@ var Promo = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        "class": "homeicons1",
+        "class": "leftimage",
         src: "https://i.ibb.co/fx1XLNc/CHUCKPC-WIN-20141026-205403.jpg"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "I want this under second image"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "right"
+      }, "I want this under second image"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, "I want this under first image")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "left"
+      }, "I want this under first image")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        "class": "homeicons1",
+        "class": "rightimage",
         src: "https://i.ibb.co/fx1XLNc/CHUCKPC-WIN-20141026-205403.jpg"
       }))));
     }

@@ -4,16 +4,38 @@
     height:50%;
   }
   
-  .iconcontainer img {
+  .iconcontainer .leftimage {
     display: block;
-    margin: 0 auto;
-    text-align: center;
+    margin-left: 5% auto;
+    margin-right: 5% auto;
+    text-align: right;
+    float: right;
+    width: 40%;
+    /* height: 100%; */
+  }
+
+  .iconcontainer .rightimage {
+    display: block;
+    margin-left: 5% auto;
+    margin-right: 5% auto;
+    text-align: left;
+    float: left;
     width: 40%;
     /* height: 100%; */
   }
   
   p {
-    text-align: center;
+    /* text-align: center; */
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+  }
+  .left {
+    text-align: right;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+  }
+  .right {
+    text-align: left;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
   }
