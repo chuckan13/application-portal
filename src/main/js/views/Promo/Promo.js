@@ -12,14 +12,27 @@ class Promo extends React.Component {
 	render() {
 		return (
 			<div>
-				<div class="iconcontainer first">
-					<img class="homeicons1" src="https://ibb.co/LZk0HgG" />
-					<p>I want this under first image</p>
+				<div>
+					<div class="iconcontainer first">
+						<img class="homeicons1" src="https://i.ibb.co/fx1XLNc/CHUCKPC-WIN-20141026-205403.jpg" />
+						{/* <p>I want this under first image</p> */}
+					</div>
+					<div class="iconcontainer second">
+						{/* <img class="homeicons1" src="https://ibb.co/LZk0HgG" /> */}
+						<p>I want this under second image</p>
+					</div>
 				</div>
-				<div class="iconcontainer second">
-					<img class="homeicons1" src="https://ibb.co/LZk0HgG" />
-					<p>I want this under second image</p>
+				<div>
+					<div class="iconcontainer first">
+						{/* <img class="homeicons1" src="https://ibb.co/LZk0HgG" /> */}
+						<p>I want this under first image</p>
+					</div>
+					<div class="iconcontainer second">
+						<img class="homeicons1" src="https://i.ibb.co/fx1XLNc/CHUCKPC-WIN-20141026-205403.jpg" />
+						{/* <p>I want this under second image</p> */}
+					</div>
 				</div>
+
 				{/* <Row>
 					<Col>
 						video1
