@@ -14,7 +14,15 @@ class Promo extends React.Component {
 			<div>
 				<div>
 					<div class="iconcontainer first">
-						<iframe class="leftimage" src="https://youtu.be/vup0K8x4iKQ" />
+						<iframe
+							class="leftimage"
+							width="1280"
+							height="721"
+							src="https://www.youtube.com/embed/vup0K8x4iKQ"
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						/>
 						{/* <img class="leftimage" src="https://i.ibb.co/fx1XLNc/CHUCKPC-WIN-20141026-205403.jpg" /> */}
 						{/* <p>I want this under first image</p> */}
 					</div>
@@ -29,7 +37,16 @@ class Promo extends React.Component {
 						<p class="left">Team text here</p>
 					</div>
 					<div class="iconcontainer second">
-						<iframe class="rightimage" src="https://youtu.be/vup0K8x4iKQ" />
+						<iframe
+							class="rightimage"
+							width="1280"
+							height="721"
+							src="https://www.youtube.com/embed/vup0K8x4iKQ"
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						/>
+
 						{/* <img class="rightimage" src="https://i.ibb.co/fx1XLNc/CHUCKPC-WIN-20141026-205403.jpg" /> */}
 						{/* <p>I want this under second image</p> */}
 					</div>
