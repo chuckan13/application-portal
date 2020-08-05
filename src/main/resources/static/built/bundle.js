@@ -57336,9 +57336,9 @@ var Promo = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
         "class": "leftimage",
-        src: "https://i.ibb.co/fx1XLNc/CHUCKPC-WIN-20141026-205403.jpg"
+        src: "https://youtu.be/vup0K8x4iKQ"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
@@ -57349,9 +57349,9 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "left"
       }, "Team text here")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
         "class": "rightimage",
-        src: "https://i.ibb.co/fx1XLNc/CHUCKPC-WIN-20141026-205403.jpg"
+        src: "https://youtu.be/vup0K8x4iKQ"
       }))));
     }
   }]);

@@ -14,7 +14,8 @@ class Promo extends React.Component {
 			<div>
 				<div>
 					<div class="iconcontainer first">
-						<img class="leftimage" src="https://i.ibb.co/fx1XLNc/CHUCKPC-WIN-20141026-205403.jpg" />
+						<iframe class="leftimage" src="https://youtu.be/vup0K8x4iKQ" />
+						{/* <img class="leftimage" src="https://i.ibb.co/fx1XLNc/CHUCKPC-WIN-20141026-205403.jpg" /> */}
 						{/* <p>I want this under first image</p> */}
 					</div>
 					<div class="iconcontainer second">
@@ -28,7 +29,8 @@ class Promo extends React.Component {
 						<p class="left">Team text here</p>
 					</div>
 					<div class="iconcontainer second">
-						<img class="rightimage" src="https://i.ibb.co/fx1XLNc/CHUCKPC-WIN-20141026-205403.jpg" />
+						<iframe class="rightimage" src="https://youtu.be/vup0K8x4iKQ" />
+						{/* <img class="rightimage" src="https://i.ibb.co/fx1XLNc/CHUCKPC-WIN-20141026-205403.jpg" /> */}
 						{/* <p>I want this under second image</p> */}
 					</div>
 				</div>
