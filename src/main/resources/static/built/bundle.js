@@ -57338,7 +57338,12 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "iconcontainer first"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
         "class": "leftimage",
-        src: "https://youtu.be/vup0K8x4iKQ"
+        width: "1280",
+        height: "721",
+        src: "https://www.youtube.com/embed/vup0K8x4iKQ",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
@@ -57351,8 +57356,27 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
         "class": "rightimage",
-        src: "https://youtu.be/vup0K8x4iKQ"
-      }))));
+        width: "1280",
+        height: "721",
+        src: "https://www.youtube.com/embed/vup0K8x4iKQ",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "leftimage",
+        width: "1280",
+        height: "721",
+        src: "https://www.youtube.com/embed/vup0K8x4iKQ",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "right"
+      }, "Team text here"))));
     }
   }]);
 

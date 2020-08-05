@@ -51,6 +51,25 @@ class Promo extends React.Component {
 						{/* <p>I want this under second image</p> */}
 					</div>
 				</div>
+				<div>
+					<div class="iconcontainer first">
+						<iframe
+							class="leftimage"
+							width="1280"
+							height="721"
+							src="https://www.youtube.com/embed/vup0K8x4iKQ"
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						/>
+						{/* <img class="leftimage" src="https://i.ibb.co/fx1XLNc/CHUCKPC-WIN-20141026-205403.jpg" /> */}
+						{/* <p>I want this under first image</p> */}
+					</div>
+					<div class="iconcontainer second">
+						{/* <img class="homeicons1" src="https://ibb.co/LZk0HgG" /> */}
+						<p class="right">Team text here</p>
+					</div>
+				</div>
 
 				{/* <Row>
 					<Col>
