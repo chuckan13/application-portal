@@ -4129,7 +4129,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".iconcontainer.first, .iconcontainer.second{\r\n    display: inline-block;\r\n    width:50%;\r\n    vertical-align:top;\r\n    /* height:50%; */\r\n  }\r\n  \r\n  .iconcontainer .leftimage {\r\n    display: block;\r\n    margin-left: 5%;\r\n    margin-right: 5%;\r\n    text-align: right;\r\n    float: right;\r\n    width: 40%;\r\n    /* height: 100%; */\r\n  }\r\n\r\n  .iconcontainer .rightimage {\r\n    display: block;\r\n    margin-left: 5%;\r\n    margin-right: 5%;\r\n    text-align: left;\r\n    float: left;\r\n    width: 40%;\r\n    /* height: 100%; */\r\n  }\r\n  \r\n  p {\r\n    /* text-align: center; */\r\n    font-family: 'Lato', sans-serif;\r\n    /* font-weight: 400; */\r\n  }\r\n  .left {\r\n    text-align: right;\r\n    font-family: 'Lato', sans-serif;\r\n    font-size: 2vw;\r\n    /* font-weight: 400; */\r\n  }\r\n  .right {\r\n    text-align: left;\r\n    font-family: 'Lato', sans-serif;\r\n    font-size: 2vw;\r\n    /* font-weight: 400; */\r\n  }\r\n  ", ""]);
+exports.push([module.i, ".iconcontainer.first, .iconcontainer.second{\r\n    display: inline-block;\r\n    width:50%;\r\n    vertical-align:top;\r\n    /* height:50%; */\r\n  }\r\n  \r\n  .iconcontainer .leftimage {\r\n    display: block;\r\n    margin-left: 5%;\r\n    margin-right: 5%;\r\n    text-align: right;\r\n    float: right;\r\n    /* width: 40%; */\r\n    /* height: 100%; */\r\n  }\r\n\r\n  .iconcontainer .rightimage {\r\n    display: block;\r\n    margin-left: 5%;\r\n    margin-right: 5%;\r\n    text-align: left;\r\n    float: left;\r\n    /* width: 40%; */\r\n    /* height: 100%; */\r\n  }\r\n  \r\n  p {\r\n    /* text-align: center; */\r\n    font-family: 'Lato', sans-serif;\r\n    /* font-weight: 400; */\r\n  }\r\n  .left {\r\n    text-align: right;\r\n    font-family: 'Lato', sans-serif;\r\n    font-size: 2vw;\r\n    /* font-weight: 400; */\r\n  }\r\n  .right {\r\n    text-align: left;\r\n    font-family: 'Lato', sans-serif;\r\n    font-size: 2vw;\r\n    /* font-weight: 400; */\r\n  }\r\n  ", ""]);
 // Exports
 module.exports = exports;
 
@@ -57337,9 +57337,9 @@ var Promo = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage",
-        width: "1280",
-        height: "721",
+        "class": "leftimage" // width="1280"
+        // height="721"
+        ,
         src: "https://www.youtube.com/embed/vup0K8x4iKQ",
         frameborder: "0",
         allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
@@ -57355,9 +57355,9 @@ var Promo = /*#__PURE__*/function (_React$Component) {
       }, "Team text here")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "rightimage",
-        width: "1280",
-        height: "721",
+        "class": "rightimage" // width="1280"
+        // height="721"
+        ,
         src: "https://www.youtube.com/embed/vup0K8x4iKQ",
         frameborder: "0",
         allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
@@ -57365,9 +57365,9 @@ var Promo = /*#__PURE__*/function (_React$Component) {
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage",
-        width: "1280",
-        height: "721",
+        "class": "leftimage" // width="1280"
+        // height="721"
+        ,
         src: "https://www.youtube.com/embed/vup0K8x4iKQ",
         frameborder: "0",
         allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",

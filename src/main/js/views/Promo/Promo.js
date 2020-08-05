@@ -16,8 +16,8 @@ class Promo extends React.Component {
 					<div class="iconcontainer first">
 						<iframe
 							class="leftimage"
-							width="1280"
-							height="721"
+							// width="1280"
+							// height="721"
 							src="https://www.youtube.com/embed/vup0K8x4iKQ"
 							frameborder="0"
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -39,8 +39,8 @@ class Promo extends React.Component {
 					<div class="iconcontainer second">
 						<iframe
 							class="rightimage"
-							width="1280"
-							height="721"
+							// width="1280"
+							// height="721"
 							src="https://www.youtube.com/embed/vup0K8x4iKQ"
 							frameborder="0"
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -55,8 +55,8 @@ class Promo extends React.Component {
 					<div class="iconcontainer first">
 						<iframe
 							class="leftimage"
-							width="1280"
-							height="721"
+							// width="1280"
+							// height="721"
 							src="https://www.youtube.com/embed/vup0K8x4iKQ"
 							frameborder="0"
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
