@@ -45,9 +45,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private HttpServlet httpServlet;
 
-    public WebSecurityConfig(MyUserDetailsService userDetailsService, BCryptPasswordEncoder bCryptPasswordEncoder,
+    public WebSecurityConfig( BCryptPasswordEncoder bCryptPasswordEncoder,
             HttpServlet httpServlet) {
-        this.userDetailsService = userDetailsService;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
         this.httpServlet = httpServlet;
     }
