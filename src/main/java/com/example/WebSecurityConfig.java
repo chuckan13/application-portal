@@ -41,13 +41,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private UserDetailsService userDetailsService;
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     private HttpServlet httpServlet;
 
-    public WebSecurityConfig( BCryptPasswordEncoder bCryptPasswordEncoder,
-            HttpServlet httpServlet) {
-        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+    public WebSecurityConfig(HttpServlet httpServlet) {
         this.httpServlet = httpServlet;
     }
 
