@@ -39,8 +39,8 @@ import org.springframework.http.HttpMethod;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    private UserDetailsService userDetailsService;
+    // @Autowired
+    // private UserDetailsService userDetailsService;
 
     private HttpServlet httpServlet;
 
