@@ -28,10 +28,7 @@ class Promo extends React.Component {
 						<p class="right">Alimtas</p>
 						<p class="description-right">
 							Alimtas is a subteam of E-Club focused on promoting life science entrepreneurship and the
-							biotechnology industry to Princeton University undergraduates through hands-on learning. In
-							partnership with the Office of Technology Licensing, we help the university spin out
-							promising life science technologies through rigorous due diligence, business
-							strategy/planning, and venture creation.
+							biotechnology industry to Princeton University undergraduates through hands-on learning.
 						</p>
 					</div>
 				</div>
@@ -41,12 +38,7 @@ class Promo extends React.Component {
 						<p class="description-left">
 							The goal of the E-Club Alumni Relations Team is to further the mission of the club by
 							developing and maintaining relations with Princeton University alumni interested in
-							entrepreneurship. By targeting this goal, the Alumni Relations team will bring Princeton
-							students in contact with alumni who are interested in entrepreneurship. This will have a
-							positive effect on the students, showing them that there are a lot of alumni who choose to
-							follow an entrepreneurial path. Additionally, the Alumni Relations team will help shift the
-							focus away from finance and consulting on campus and help realize the mission of the E-Club
-							of promoting entrepreneurship on campus in a meaningful way.
+							entrepreneurship.
 						</p>
 					</div>
 					<div class="iconcontainer second">
@@ -75,11 +67,23 @@ class Promo extends React.Component {
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Arts &amp; Entrepreneurship</p>
+						<p class="description-right">
+							Arts and Entrepreneurship at Princeton was founded in 2017 by Bill Wescott, with support
+							from Ryan Ozminkowski, Rachel Cooper, and Vignesh Rajendran. This year, this group has been
+							absorbed into the E-Club, as part of our mission to expand entrepreneurship and emphasize
+							diversity.
+						</p>
 					</div>
 				</div>
 				<div>
 					<div class="iconcontainer first">
 						<p class="left">COFF</p>
+						<p class="description-left">
+							COFF is a community of kick ass women bringing female entrepreneurs together. We connect
+							women engaged and interested in entrepreneurship and bring their stories into focus. Through
+							panels, discussions, and mentorship, we enable everyone to learn from the experience of
+							female founders.
+						</p>
 					</div>
 					<div class="iconcontainer second">
 						<iframe
@@ -107,15 +111,45 @@ class Promo extends React.Component {
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Design</p>
+						<p class="description-right">
+							The design team establishes branding guidelines and visual identity for E-Club and its
+							programs. They create all visual assets for E-Club as well as help subteams strengthen their
+							branding and design language.
+						</p>
 					</div>
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<p class="left">HackPrinceton</p>
+						<iframe
+							class="rightimage"
+							// width="2543"
+							// height="1161"
+							src="https://www.youtube.com/embed/3w-6dZQbOUY"
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						/>
+					</div>
+					<div class="iconcontainer second">
+						<p class="left">Development</p>
+						<p class="description-left">
+							The web development team is responsible for the creation and maintenance of E-Club subteam
+							websites and infrastructure.
+						</p>
+					</div>
+				</div>
+				<div>
+					<div class="iconcontainer first">
+						<p class="right">HackPrinceton</p>
+						<p class="description-right">
+							HackPrinceton is Princeton’s biannual hackathon, attracting students from all over the world
+							come together for 36 hours each fall and spring to create incredible software and hardware
+							projects, learn new skills, and meet other hackers and company resentatives.
+						</p>
 					</div>
 					<div class="iconcontainer second">
 						<iframe
-							class="rightimage"
+							class="leftimage"
 							// width="2543"
 							// height="1161"
 							src="https://www.youtube.com/embed/DOZS4YwqNMU"
@@ -128,7 +162,7 @@ class Promo extends React.Component {
 				<div>
 					<div class="iconcontainer first">
 						<iframe
-							class="leftimage"
+							class="rightimage"
 							// width="2543"
 							// height="1161"
 							src="https://www.youtube.com/embed/3w-6dZQbOUY"
@@ -138,16 +172,26 @@ class Promo extends React.Component {
 						/>
 					</div>
 					<div class="iconcontainer second">
-						<p class="right">ICE Network</p>
+						<p class="left">ICE Network</p>
+						<p class="description-left">
+							ICE Network is focused on connecting the Princeton E-Club with other networks and
+							communities outside of the club, while spreading and cultivating a culture of
+							entrepreneurship.
+						</p>
 					</div>
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<p class="left">ISTT</p>
+						<p class="right">ISTT</p>
+						<p class="description-right">
+							Israel TigerTrek introduces Princeton undergraduates to the Israeli high-tech ecosystem
+							through a one-week trip where they participate in conversations with Israeli entrepreneurs,
+							venture capitalists, and executives.
+						</p>
 					</div>
 					<div class="iconcontainer second">
 						<iframe
-							class="rightimage"
+							class="leftimage"
 							// width="2543"
 							// height="1161"
 							src="https://www.youtube.com/embed/DOZS4YwqNMU"
@@ -160,7 +204,7 @@ class Promo extends React.Component {
 				<div>
 					<div class="iconcontainer first">
 						<iframe
-							class="leftimage"
+							class="rightimage"
 							// width="2543"
 							// height="1161"
 							src="https://www.youtube.com/embed/3w-6dZQbOUY"
@@ -170,16 +214,23 @@ class Promo extends React.Component {
 						/>
 					</div>
 					<div class="iconcontainer second">
-						<p class="right">IgniteStem</p>
+						<p class="left">IgniteStem</p>
+						<p class="description-left">
+							IgniteSTEM is transforming K-12 STEM education by disrupting traditional learning techniques
+							and promoting project-based learning to foster students’ curiosity and creativity.
+						</p>
 					</div>
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<p class="left">MVP</p>
+						<p class="right">MVP</p>
+						<p class="description-right">
+							Make Ventures Princeton (MVP) is Princeton's premier startup incubator.
+						</p>
 					</div>
 					<div class="iconcontainer second">
 						<iframe
-							class="rightimage"
+							class="leftimage"
 							// width="2543"
 							// height="1161"
 							src="https://www.youtube.com/embed/DOZS4YwqNMU"
@@ -192,7 +243,7 @@ class Promo extends React.Component {
 				<div>
 					<div class="iconcontainer first">
 						<iframe
-							class="leftimage"
+							class="rightimage"
 							// width="2543"
 							// height="1161"
 							src="https://www.youtube.com/embed/3w-6dZQbOUY"
@@ -202,16 +253,24 @@ class Promo extends React.Component {
 						/>
 					</div>
 					<div class="iconcontainer second">
-						<p class="right">New York Tiger Trek</p>
+						<p class="left">New York Tiger Trek</p>
+						<p class="description-left">
+							New York TigerTrek is a weeklong trip in NYC to meet with some of the city’s leading CEOs,
+							VCs, founders, and more in closed-door, one-on-one sessions.
+						</p>
 					</div>
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<p class="left">Profiles in Entrepreneurship</p>
+						<p class="right">Profiles in Entrepreneurship</p>
+						<p class="description-right">
+							PIE is an online publication whose mission is to be the largest and best source of
+							actionable career advice for student entrepreneurs across the country.
+						</p>
 					</div>
 					<div class="iconcontainer second">
 						<iframe
-							class="rightimage"
+							class="leftimage"
 							// width="2543"
 							// height="1161"
 							src="https://www.youtube.com/embed/DOZS4YwqNMU"
@@ -224,7 +283,7 @@ class Promo extends React.Component {
 				<div>
 					<div class="iconcontainer first">
 						<iframe
-							class="leftimage"
+							class="rightimage"
 							// width="2543"
 							// height="1161"
 							src="https://www.youtube.com/embed/3w-6dZQbOUY"
@@ -234,16 +293,26 @@ class Promo extends React.Component {
 						/>
 					</div>
 					<div class="iconcontainer second">
-						<p class="right">Rehack</p>
+						<p class="left">Rehack</p>
+						<p class="description-left">
+							Rehack will be organizing a tech + design + ethics “reverse hackathon” on campus to
+							encourage dialogue in and support the development of creative solutions that allow for
+							greater and healthier relationships between people and their technology.
+						</p>
 					</div>
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<p class="left">Silicon Valley Tiger Trek</p>
+						<p class="right">Silicon Valley Tiger Trek</p>
+						<p class="description-right">
+							Silicon Valley TigerTrek is a fall break trip that brings together 20 of Princeton’s most
+							curious engineers, designers, creators, and student entrepreneurs for a one week trip to
+							meet with Silicon Valley’s legends.
+						</p>
 					</div>
 					<div class="iconcontainer second">
 						<iframe
-							class="rightimage"
+							class="leftimage"
 							// width="2543"
 							// height="1161"
 							src="https://www.youtube.com/embed/DOZS4YwqNMU"
@@ -256,7 +325,7 @@ class Promo extends React.Component {
 				<div>
 					<div class="iconcontainer first">
 						<iframe
-							class="leftimage"
+							class="rightimage"
 							// width="2543"
 							// height="1161"
 							src="https://www.youtube.com/embed/3w-6dZQbOUY"
@@ -266,16 +335,26 @@ class Promo extends React.Component {
 						/>
 					</div>
 					<div class="iconcontainer second">
-						<p class="right">TigerLaunch</p>
+						<p class="left">TigerLaunch</p>
+						<p class="description-left">
+							TigerLaunch is the nation’s largest student-run entrepreneurship competition of its kind
+							dedicated to building a network of student founders at the university, regional, and
+							national levels.
+						</p>
 					</div>
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<p class="left">TigerTables</p>
+						<p class="right">TigerTables</p>
+						<p class="description-right">
+							TigerTables provides the opportunity for Princeton students to have small-setting
+							unscripted, off-the-record discussions with CEOs, entrepreneurs, VC’s and other industry
+							leaders in the startup community that focus on engaging the audience in various settings.
+						</p>
 					</div>
 					<div class="iconcontainer second">
 						<iframe
-							class="rightimage"
+							class="leftimage"
 							// width="2543"
 							// height="1161"
 							src="https://www.youtube.com/embed/DOZS4YwqNMU"
@@ -283,22 +362,6 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
-					</div>
-				</div>
-				<div>
-					<div class="iconcontainer first">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/3w-6dZQbOUY"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
-					</div>
-					<div class="iconcontainer second">
-						<p class="right">Development</p>
 					</div>
 				</div>
 
