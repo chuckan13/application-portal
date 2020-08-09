@@ -120,6 +120,13 @@ class Promo extends React.Component {
 				</div>
 				<div>
 					<div class="iconcontainer first">
+						<p class="left">Development</p>
+						<p class="description-left">
+							The web development team is responsible for the creation and maintenance of E-Club subteam
+							websites and infrastructure.
+						</p>
+					</div>
+					<div class="iconcontainer second">
 						<iframe
 							class="rightimage"
 							// width="2543"
@@ -130,16 +137,20 @@ class Promo extends React.Component {
 							allowfullscreen
 						/>
 					</div>
-					<div class="iconcontainer second">
-						<p class="left">Development</p>
-						<p class="description-left">
-							The web development team is responsible for the creation and maintenance of E-Club subteam
-							websites and infrastructure.
-						</p>
-					</div>
 				</div>
 				<div>
 					<div class="iconcontainer first">
+						<iframe
+							class="leftimage"
+							// width="2543"
+							// height="1161"
+							src="https://www.youtube.com/embed/DOZS4YwqNMU"
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						/>
+					</div>
+					<div class="iconcontainer second">
 						<p class="right">HackPrinceton</p>
 						<p class="description-right">
 							HackPrinceton is Princeton’s biannual hackathon, attracting students from all over the world
@@ -147,31 +158,9 @@ class Promo extends React.Component {
 							projects, learn new skills, and meet other hackers and company resentatives.
 						</p>
 					</div>
-					<div class="iconcontainer second">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/DOZS4YwqNMU"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
-					</div>
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<iframe
-							class="rightimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/3w-6dZQbOUY"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
-					</div>
-					<div class="iconcontainer second">
 						<p class="left">ICE Network</p>
 						<p class="description-left">
 							ICE Network is focused on connecting the Princeton E-Club with other networks and
@@ -179,9 +168,31 @@ class Promo extends React.Component {
 							entrepreneurship.
 						</p>
 					</div>
+					<div class="iconcontainer second">
+						<iframe
+							class="rightimage"
+							// width="2543"
+							// height="1161"
+							src="https://www.youtube.com/embed/3w-6dZQbOUY"
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						/>
+					</div>
 				</div>
 				<div>
 					<div class="iconcontainer first">
+						<iframe
+							class="leftimage"
+							// width="2543"
+							// height="1161"
+							src="https://www.youtube.com/embed/DOZS4YwqNMU"
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						/>
+					</div>
+					<div class="iconcontainer second">
 						<p class="right">ISTT</p>
 						<p class="description-right">
 							Israel TigerTrek introduces Princeton undergraduates to the Israeli high-tech ecosystem
@@ -189,59 +200,16 @@ class Promo extends React.Component {
 							venture capitalists, and executives.
 						</p>
 					</div>
-					<div class="iconcontainer second">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/DOZS4YwqNMU"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
-					</div>
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<iframe
-							class="rightimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/3w-6dZQbOUY"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
-					</div>
-					<div class="iconcontainer second">
 						<p class="left">IgniteStem</p>
 						<p class="description-left">
 							IgniteSTEM is transforming K-12 STEM education by disrupting traditional learning techniques
 							and promoting project-based learning to foster students’ curiosity and creativity.
 						</p>
 					</div>
-				</div>
-				<div>
-					<div class="iconcontainer first">
-						<p class="right">MVP</p>
-						<p class="description-right">
-							Make Ventures Princeton (MVP) is Princeton's premier startup incubator.
-						</p>
-					</div>
 					<div class="iconcontainer second">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/DOZS4YwqNMU"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
-					</div>
-				</div>
-				<div>
-					<div class="iconcontainer first">
 						<iframe
 							class="rightimage"
 							// width="2543"
@@ -252,36 +220,35 @@ class Promo extends React.Component {
 							allowfullscreen
 						/>
 					</div>
+				</div>
+				<div>
+					<div class="iconcontainer first">
+						<iframe
+							class="leftimage"
+							// width="2543"
+							// height="1161"
+							src="https://www.youtube.com/embed/DOZS4YwqNMU"
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						/>
+					</div>
 					<div class="iconcontainer second">
+						<p class="right">MVP</p>
+						<p class="description-right">
+							Make Ventures Princeton (MVP) is Princeton's premier startup incubator.
+						</p>
+					</div>
+				</div>
+				<div>
+					<div class="iconcontainer first">
 						<p class="left">New York Tiger Trek</p>
 						<p class="description-left">
 							New York TigerTrek is a weeklong trip in NYC to meet with some of the city’s leading CEOs,
 							VCs, founders, and more in closed-door, one-on-one sessions.
 						</p>
 					</div>
-				</div>
-				<div>
-					<div class="iconcontainer first">
-						<p class="right">Profiles in Entrepreneurship</p>
-						<p class="description-right">
-							PIE is an online publication whose mission is to be the largest and best source of
-							actionable career advice for student entrepreneurs across the country.
-						</p>
-					</div>
 					<div class="iconcontainer second">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/DOZS4YwqNMU"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
-					</div>
-				</div>
-				<div>
-					<div class="iconcontainer first">
 						<iframe
 							class="rightimage"
 							// width="2543"
@@ -292,7 +259,29 @@ class Promo extends React.Component {
 							allowfullscreen
 						/>
 					</div>
+				</div>
+				<div>
+					<div class="iconcontainer first">
+						<iframe
+							class="leftimage"
+							// width="2543"
+							// height="1161"
+							src="https://www.youtube.com/embed/DOZS4YwqNMU"
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						/>
+					</div>
 					<div class="iconcontainer second">
+						<p class="right">Profiles in Entrepreneurship</p>
+						<p class="description-right">
+							PIE is an online publication whose mission is to be the largest and best source of
+							actionable career advice for student entrepreneurs across the country.
+						</p>
+					</div>
+				</div>
+				<div>
+					<div class="iconcontainer first">
 						<p class="left">Rehack</p>
 						<p class="description-left">
 							Rehack will be organizing a tech + design + ethics “reverse hackathon” on campus to
@@ -300,30 +289,7 @@ class Promo extends React.Component {
 							greater and healthier relationships between people and their technology.
 						</p>
 					</div>
-				</div>
-				<div>
-					<div class="iconcontainer first">
-						<p class="right">Silicon Valley Tiger Trek</p>
-						<p class="description-right">
-							Silicon Valley TigerTrek is a fall break trip that brings together 20 of Princeton’s most
-							curious engineers, designers, creators, and student entrepreneurs for a one week trip to
-							meet with Silicon Valley’s legends.
-						</p>
-					</div>
 					<div class="iconcontainer second">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/DOZS4YwqNMU"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
-					</div>
-				</div>
-				<div>
-					<div class="iconcontainer first">
 						<iframe
 							class="rightimage"
 							// width="2543"
@@ -334,25 +300,9 @@ class Promo extends React.Component {
 							allowfullscreen
 						/>
 					</div>
-					<div class="iconcontainer second">
-						<p class="left">TigerLaunch</p>
-						<p class="description-left">
-							TigerLaunch is the nation’s largest student-run entrepreneurship competition of its kind
-							dedicated to building a network of student founders at the university, regional, and
-							national levels.
-						</p>
-					</div>
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<p class="right">TigerTables</p>
-						<p class="description-right">
-							TigerTables provides the opportunity for Princeton students to have small-setting
-							unscripted, off-the-record discussions with CEOs, entrepreneurs, VC’s and other industry
-							leaders in the startup community that focus on engaging the audience in various settings.
-						</p>
-					</div>
-					<div class="iconcontainer second">
 						<iframe
 							class="leftimage"
 							// width="2543"
@@ -362,6 +312,56 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
+					</div>
+					<div class="iconcontainer second">
+						<p class="right">Silicon Valley Tiger Trek</p>
+						<p class="description-right">
+							Silicon Valley TigerTrek is a fall break trip that brings together 20 of Princeton’s most
+							curious engineers, designers, creators, and student entrepreneurs for a one week trip to
+							meet with Silicon Valley’s legends.
+						</p>
+					</div>
+				</div>
+				<div>
+					<div class="iconcontainer first">
+						<p class="left">TigerLaunch</p>
+						<p class="description-left">
+							TigerLaunch is the nation’s largest student-run entrepreneurship competition of its kind
+							dedicated to building a network of student founders at the university, regional, and
+							national levels.
+						</p>
+					</div>
+					<div class="iconcontainer second">
+						<iframe
+							class="rightimage"
+							// width="2543"
+							// height="1161"
+							src="https://www.youtube.com/embed/3w-6dZQbOUY"
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						/>
+					</div>
+				</div>
+				<div>
+					<div class="iconcontainer first">
+						<iframe
+							class="leftimage"
+							// width="2543"
+							// height="1161"
+							src="https://www.youtube.com/embed/DOZS4YwqNMU"
+							frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						/>
+					</div>
+					<div class="iconcontainer second">
+						<p class="right">TigerTables</p>
+						<p class="description-right">
+							TigerTables provides the opportunity for Princeton students to have small-setting
+							unscripted, off-the-record discussions with CEOs, entrepreneurs, VC’s and other industry
+							leaders in the startup community that focus on engaging the audience in various settings.
+						</p>
 					</div>
 				</div>
 

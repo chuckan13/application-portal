@@ -57416,166 +57416,140 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "description-right"
       }, "The design team establishes branding guidelines and visual identity for E-Club and its programs. They create all visual assets for E-Club as well as help subteams strengthen their branding and design language."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "rightimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "left"
       }, "Development"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "description-left"
-      }, "The web development team is responsible for the creation and maintenance of E-Club subteam websites and infrastructure."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "The web development team is responsible for the creation and maintenance of E-Club subteam websites and infrastructure.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "rightimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "leftimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "right"
       }, "HackPrinceton"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "description-right"
-      }, "HackPrinceton is Princeton\u2019s biannual hackathon, attracting students from all over the world come together for 36 hours each fall and spring to create incredible software and hardware projects, learn new skills, and meet other hackers and company resentatives.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        "class": "iconcontainer second"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "HackPrinceton is Princeton\u2019s biannual hackathon, attracting students from all over the world come together for 36 hours each fall and spring to create incredible software and hardware projects, learn new skills, and meet other hackers and company resentatives."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "rightimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "left"
       }, "ICE Network"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "description-left"
-      }, "ICE Network is focused on connecting the Princeton E-Club with other networks and communities outside of the club, while spreading and cultivating a culture of entrepreneurship."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "ICE Network is focused on connecting the Princeton E-Club with other networks and communities outside of the club, while spreading and cultivating a culture of entrepreneurship.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "rightimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "leftimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "right"
       }, "ISTT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "description-right"
-      }, "Israel TigerTrek introduces Princeton undergraduates to the Israeli high-tech ecosystem through a one-week trip where they participate in conversations with Israeli entrepreneurs, venture capitalists, and executives.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        "class": "iconcontainer second"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Israel TigerTrek introduces Princeton undergraduates to the Israeli high-tech ecosystem through a one-week trip where they participate in conversations with Israeli entrepreneurs, venture capitalists, and executives."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "rightimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "left"
       }, "IgniteStem"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "description-left"
-      }, "IgniteSTEM is transforming K-12 STEM education by disrupting traditional learning techniques and promoting project-based learning to foster students\u2019 curiosity and creativity."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "IgniteSTEM is transforming K-12 STEM education by disrupting traditional learning techniques and promoting project-based learning to foster students\u2019 curiosity and creativity.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "rightimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "leftimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "right"
       }, "MVP"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "description-right"
-      }, "Make Ventures Princeton (MVP) is Princeton's premier startup incubator.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        "class": "iconcontainer second"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Make Ventures Princeton (MVP) is Princeton's premier startup incubator."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "rightimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "left"
       }, "New York Tiger Trek"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "description-left"
-      }, "New York TigerTrek is a weeklong trip in NYC to meet with some of the city\u2019s leading CEOs, VCs, founders, and more in closed-door, one-on-one sessions."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "New York TigerTrek is a weeklong trip in NYC to meet with some of the city\u2019s leading CEOs, VCs, founders, and more in closed-door, one-on-one sessions.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "rightimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "leftimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "right"
       }, "Profiles in Entrepreneurship"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "description-right"
-      }, "PIE is an online publication whose mission is to be the largest and best source of actionable career advice for student entrepreneurs across the country.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        "class": "iconcontainer second"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "PIE is an online publication whose mission is to be the largest and best source of actionable career advice for student entrepreneurs across the country."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "rightimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "left"
       }, "Rehack"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "description-left"
-      }, "Rehack will be organizing a tech + design + ethics \u201Creverse hackathon\u201D on campus to encourage dialogue in and support the development of creative solutions that allow for greater and healthier relationships between people and their technology."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        "class": "right"
-      }, "Silicon Valley Tiger Trek"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        "class": "description-right"
-      }, "Silicon Valley TigerTrek is a fall break trip that brings together 20 of Princeton\u2019s most curious engineers, designers, creators, and student entrepreneurs for a one week trip to meet with Silicon Valley\u2019s legends.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Rehack will be organizing a tech + design + ethics \u201Creverse hackathon\u201D on campus to encourage dialogue in and support the development of creative solutions that allow for greater and healthier relationships between people and their technology.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        "class": "iconcontainer first"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
         "class": "rightimage" // width="2543"
         // height="1161"
@@ -57584,20 +57558,8 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         frameborder: "0",
         allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
         allowfullscreen: true
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        "class": "iconcontainer second"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        "class": "left"
-      }, "TigerLaunch"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        "class": "description-left"
-      }, "TigerLaunch is the nation\u2019s largest student-run entrepreneurship competition of its kind dedicated to building a network of student founders at the university, regional, and national levels."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        "class": "right"
-      }, "TigerTables"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        "class": "description-right"
-      }, "TigerTables provides the opportunity for Princeton students to have small-setting unscripted, off-the-record discussions with CEOs, entrepreneurs, VC\u2019s and other industry leaders in the startup community that focus on engaging the audience in various settings.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
         "class": "leftimage" // width="2543"
         // height="1161"
@@ -57606,7 +57568,45 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         frameborder: "0",
         allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
         allowfullscreen: true
-      }))));
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "right"
+      }, "Silicon Valley Tiger Trek"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "description-right"
+      }, "Silicon Valley TigerTrek is a fall break trip that brings together 20 of Princeton\u2019s most curious engineers, designers, creators, and student entrepreneurs for a one week trip to meet with Silicon Valley\u2019s legends."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "left"
+      }, "TigerLaunch"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "description-left"
+      }, "TigerLaunch is the nation\u2019s largest student-run entrepreneurship competition of its kind dedicated to building a network of student founders at the university, regional, and national levels.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "rightimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "leftimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "right"
+      }, "TigerTables"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "description-right"
+      }, "TigerTables provides the opportunity for Princeton students to have small-setting unscripted, off-the-record discussions with CEOs, entrepreneurs, VC\u2019s and other industry leaders in the startup community that focus on engaging the audience in various settings."))));
     }
   }]);
 
