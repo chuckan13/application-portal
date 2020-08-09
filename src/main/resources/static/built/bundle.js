@@ -4129,7 +4129,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".iconcontainer.first, .iconcontainer.second{\r\n    display: inline-block;\r\n    width:50%;\r\n    vertical-align:top;\r\n    /* height:50%; */\r\n  }\r\n  \r\n  .iconcontainer .leftimage {\r\n    display: block;\r\n    margin-left: 5%;\r\n    margin-right: 5%;\r\n    text-align: right;\r\n    float: right;\r\n    /* width: 40%; */\r\n    /* height: 100%; */\r\n  }\r\n\r\n  .iconcontainer .rightimage {\r\n    display: block;\r\n    margin-left: 5%;\r\n    margin-right: 5%;\r\n    text-align: left;\r\n    float: left;\r\n    /* width: 40%; */\r\n    /* height: 100%; */\r\n  }\r\n  \r\n  p {\r\n    /* text-align: center; */\r\n    font-family: 'Lato', sans-serif;\r\n    /* font-weight: 400; */\r\n  }\r\n  .left {\r\n    text-align: right;\r\n    font-family: 'Lato', sans-serif;\r\n    font-size: 25px;\r\n    /* font-weight: 400; */\r\n  }\r\n  .right {\r\n    text-align: left;\r\n    font-family: 'Lato', sans-serif;\r\n    font-size: 25px;\r\n    /* font-weight: 400; */\r\n  }\r\n  ", ""]);
+exports.push([module.i, ".iconcontainer.first, .iconcontainer.second{\r\n    display: inline-block;\r\n    width:50%;\r\n    vertical-align:top;\r\n    /* height:50%; */\r\n  }\r\n  \r\n  .iconcontainer .leftimage {\r\n    display: block;\r\n    margin-left: 5%;\r\n    margin-right: 5%;\r\n    text-align: right;\r\n    float: right;\r\n    /* width: 40%; */\r\n    /* height: 100%; */\r\n  }\r\n\r\n  .iconcontainer .rightimage {\r\n    display: block;\r\n    margin-left: 5%;\r\n    margin-right: 5%;\r\n    text-align: left;\r\n    float: left;\r\n    /* width: 40%; */\r\n    /* height: 100%; */\r\n  }\r\n  \r\n  p {\r\n    /* text-align: center; */\r\n    font-family: 'Lato', sans-serif;\r\n    /* font-weight: 400; */\r\n  }\r\n  .description-right {\r\n    text-align: left;\r\n    font-family: 'Lato', sans-serif;\r\n    font-size: 18px;\r\n  }\r\n  .description-left {\r\n    text-align: right;\r\n    font-family: 'Lato', sans-serif;\r\n    font-size: 18px;\r\n  }\r\n  .left {\r\n    text-align: right;\r\n    font-family: 'Lato', sans-serif;\r\n    font-size: 25px;\r\n    /* font-weight: 400; */\r\n  }\r\n  .right {\r\n    text-align: left;\r\n    font-family: 'Lato', sans-serif;\r\n    font-size: 25px;\r\n    /* font-weight: 400; */\r\n  }\r\n  ", ""]);
 // Exports
 module.exports = exports;
 
@@ -57348,11 +57348,15 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "right"
-      }, "Team text here"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Alimtas"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "description-right"
+      }, "Alimtas is a subteam of E-Club focused on promoting life science entrepreneurship and the biotechnology industry to Princeton University undergraduates through hands-on learning. In partnership with the Office of Technology Licensing, we help the university spin out promising life science technologies through rigorous due diligence, business strategy/planning, and venture creation."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "left"
-      }, "Team text here")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Alumni Outreach"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "description-left"
+      }, "The goal of the E-Club Alumni Relations Team is to further the mission of the club by developing and maintaining relations with Princeton University alumni interested in entrepreneurship. By targeting this goal, the Alumni Relations team will bring Princeton students in contact with alumni who are interested in entrepreneurship. This will have a positive effect on the students, showing them that there are a lot of alumni who choose to follow an entrepreneurial path. Additionally, the Alumni Relations team will help shift the focus away from finance and consulting on campus and help realize the mission of the E-Club of promoting entrepreneurship on campus in a meaningful way.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
         "class": "rightimage" // width="2543"
@@ -57376,7 +57380,203 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "right"
-      }, "Team text here"))));
+      }, "Arts & Entrepreneurship"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "left"
+      }, "COFF")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "rightimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "leftimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "right"
+      }, "Design"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "left"
+      }, "HackPrinceton")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "rightimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "leftimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "right"
+      }, "ICE Network"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "left"
+      }, "ISTT")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "rightimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "leftimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "right"
+      }, "IgniteStem"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "left"
+      }, "MVP")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "rightimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "leftimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "right"
+      }, "New York Tiger Trek"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "left"
+      }, "Profiles in Entrepreneurship")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "rightimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "leftimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "right"
+      }, "Rehack"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "left"
+      }, "Silicon Valley Tiger Trek")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "rightimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "leftimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "right"
+      }, "TigerLaunch"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "left"
+      }, "TigerTables")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "rightimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
+        "class": "leftimage" // width="2543"
+        // height="1161"
+        ,
+        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        "class": "iconcontainer second"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "right"
+      }, "Development"))));
     }
   }]);
 
