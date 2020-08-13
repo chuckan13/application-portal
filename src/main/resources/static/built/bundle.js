@@ -58268,6 +58268,15 @@ var Submitted = /*#__PURE__*/function (_Component) {
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Submitted, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      axios.get('/api/sendemail/' + this.props.state.email).then(function (res) {
+        console.log('sending confirmation email');
+      })["catch"](function (err) {
+        return console.log(err);
+      });
+    }
+  }, {
     key: "handleLoginClick",
     value: function handleLoginClick() {
       this.setState({

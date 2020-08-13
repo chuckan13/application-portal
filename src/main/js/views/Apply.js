@@ -124,11 +124,11 @@ class Apply extends Component {
 				linkedin: this.state.linkedin,
 				role: 'USER'
 			})
-			.then(function(response) {
+			.then(function (response) {
 				console.log(tempId);
 				tempId = response.data.id;
 			})
-			.catch(function(error) {
+			.catch(function (error) {
 				console.log(error);
 			});
 		await axios.post('/api/userteams/new', {

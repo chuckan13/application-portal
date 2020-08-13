@@ -67,8 +67,8 @@ class Review extends React.Component {
 							resp={allResponses}
 						/>
 					) : (
-						''
-					)}
+							''
+						)}
 					{teamThree ? (
 						<TeamResponses
 							team={teamThreeObj.name}
@@ -77,8 +77,8 @@ class Review extends React.Component {
 							resp={allResponses}
 						/>
 					) : (
-						''
-					)}
+							''
+						)}
 				</div>
 				<SubmitButton onClick={this.handleSubmitClick} />
 			</div>

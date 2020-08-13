@@ -11,6 +11,15 @@ class Submitted extends Component {
 		this.handleApplyClick = this.handleApplyClick.bind(this);
 	}
 
+	componentDidMount() {
+		axios
+			.get('/api/sendemail/' + this.props.state.email)
+			.then(res => {
+				console.log('sending confirmation email');
+			})
+			.catch(err => console.log(err));
+	}
+
 	handleLoginClick() {
 		this.setState({ isLoggedIn: true });
 	}

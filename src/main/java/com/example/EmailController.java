@@ -16,19 +16,21 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class EmailController {
 
-    @RequestMapping(value = "/api/sendemail")
-    public String sendEmail() throws AddressException, MessagingException, IOException {
-        sendmail();
+    @RequestMapping(value = "/api/sendemail/{email}")
+    public String sendEmail(@PathVariable("email") String emailAddress)
+            throws AddressException, MessagingException, IOException {
+        sendmail(emailAddress);
         return "Email sent successfully";
     }
 
-    private void sendmail() throws AddressException, MessagingException, IOException {
+    private void sendmail(String emailAddress) throws AddressException, MessagingException, IOException {
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
@@ -38,19 +40,24 @@ public class EmailController {
         Session session = Session.getInstance(props, new javax.mail.Authenticator() {
 
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("eclubwebdevteam@gmail.com", "rnmpztthqtqbtdwo");
+                String emailPassword = System.getenv("GMAIL_PASSWORD");
+                return new PasswordAuthentication("eclubwebdevteam@gmail.com", emailPassword);
             }
         });
         Message msg = new MimeMessage(session);
         msg.setFrom(new InternetAddress("eclubwebdevteam@gmail.com", false));
 
-        msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse("an.charlie@gmail.com"));
-        msg.setSubject("Tutorials point email");
-        msg.setContent("Tutorials point email", "text/html");
+        msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(emailAddress));
+        msg.setSubject("E-Club Application Confirmation");
+        msg.setContent(
+                "Thank you for applying to Princeton's Entrepreneurship Club. We have received your application and will reach out with next steps.",
+                "text/html");
         msg.setSentDate(new Date());
 
         MimeBodyPart messageBodyPart = new MimeBodyPart();
-        messageBodyPart.setContent("Tutorials point email", "text/html");
+        messageBodyPart.setContent(
+                "Thank you for applying to Princeton's Entrepreneurship Club. We have received your application and will reach out with next steps.",
+                "text/html");
 
         Multipart multipart = new MimeMultipart();
         multipart.addBodyPart(messageBodyPart);
