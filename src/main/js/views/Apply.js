@@ -78,7 +78,7 @@ class Apply extends Component {
 				console.log("RES DATA");
 				console.log(res.data);
 				var newTeams = [];
-				for (index = 0; index < res.data.length; index++) {
+				for (var index = 0; index < res.data.length; index++) {
 					if (res.data[index].name != "No team" || res.data[index].name != "Presidents") {
 						console.log(res.data[index]);
 						newTeams.push(res.data[index]);
