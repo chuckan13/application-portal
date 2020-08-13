@@ -58279,9 +58279,9 @@ var Submitted = /*#__PURE__*/function (_Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       console.log("IN submitted component did mount");
-      console.log(this.props.email);
+      console.log(this.props.emailAddy);
       console.log(this.props.state);
-      axios__WEBPACK_IMPORTED_MODULE_7___default.a.get('/api/sendemail/' + this.props.email).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_7___default.a.get('/api/sendemail/' + this.props.emailAddy).then(function (res) {
         console.log('sending confirmation email');
       })["catch"](function (err) {
         return console.log(err);
