@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class EmailController {
 
-    @RequestMapping(value = "/api/sendemail/{email}")
+    @RequestMapping(value = "/api/sendemail/{email:.+}")
     public String sendEmail(@PathVariable("email") String emailAddress)
             throws AddressException, MessagingException, IOException {
         sendmail(emailAddress);
