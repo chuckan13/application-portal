@@ -17,7 +17,6 @@ class Home extends Component {
 	}
 
 	render() {
-		// console.log('IN HOME RENDER');
 		let button = <ApplyButton onClick={this.handleApplyClick} />;
 		return <div> {button} </div>;
 	}

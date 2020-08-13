@@ -75,27 +75,18 @@ class Apply extends Component {
 		axios
 			.get('/api/teams')
 			.then(res => {
-				// console.log("RES DATA");
-				// console.log(res.data);
 				var newTeams = [];
 				for (var index = 0; index < res.data.length; index++) {
 					if (res.data[index].id != 0 && res.data[index].id != 18) { //0 is no teams and 18 is presidents
-						// console.log(res.data[index].id);
 						newTeams.push(res.data[index]);
 					}
 				}
-				// console.log("NEW TEAMS");
-				// console.log(newTeams);
 				this.setState({ teams: newTeams });
 			})
 			.catch(err => console.log(err));
 	}
 
 	handlePartOneClick(fn, ln, e, cl, con, bui, rn, pn, li) {
-		console.log('Handle part one click');
-		console.log(fn);
-		console.log(cl);
-		console.log(con);
 		this.setState({
 			firstName: fn,
 			lastName: ln,
@@ -112,10 +103,6 @@ class Apply extends Component {
 	}
 
 	async handlePartTwoClick(t1, t2, t3) {
-		console.log('Handle part two click');
-		console.log(t1);
-		console.log(t2);
-		console.log(t3);
 		var tempId = '';
 		var teamOneQ = [];
 		var teamTwoQ = [];
@@ -136,7 +123,6 @@ class Apply extends Component {
 				role: 'USER'
 			})
 			.then(function (response) {
-				console.log(tempId);
 				tempId = response.data.id;
 			})
 			.catch(function (error) {
@@ -160,8 +146,6 @@ class Apply extends Component {
 		await axios
 			.get('/api/questions/' + t1)
 			.then(res => {
-				console.log('get request to /api/questions/{teamid} 1');
-				console.log(res.data);
 				teamOneQ = res.data;
 				// this.setState({ teamOneQuestions: res.data });
 			})
@@ -169,8 +153,6 @@ class Apply extends Component {
 		await axios
 			.get('/api/questions/' + t2)
 			.then(res => {
-				console.log('get request to /api/questions/{teamid} 2');
-				console.log(res.data);
 				teamTwoQ = res.data;
 				// this.setState({ teamOneQuestions: res.data });
 			})
@@ -178,8 +160,6 @@ class Apply extends Component {
 		await axios
 			.get('/api/questions/' + t3)
 			.then(res => {
-				console.log('get request to /api/questions/{teamid} 3');
-				console.log(res.data);
 				teamThreeQ = res.data;
 				// this.setState({ teamOneQuestions: res.data });
 			})
@@ -195,13 +175,9 @@ class Apply extends Component {
 			partTwo: false,
 			partThree: true
 		});
-		console.log(this.state.userId);
 	}
 
 	handlePartThreeClick(qNums, allResp) {
-		console.log('Handle part three click');
-		console.log(qNums);
-		console.log(allResp);
 		this.setState({
 			questionNumbers: qNums,
 			allResponses: allResp,
@@ -231,7 +207,6 @@ class Apply extends Component {
 		} else if (partFour) {
 			display = <Review handlePartFourClick={this.handlePartFourClick} state={this.state} />;
 		} else if (submitted) {
-			console.log(this.state.email);
 			display = <Submitted handlePartFourClick={this.handlePartFourClick} state={this.state} emailAddy={this.state.email} />;
 		}
 

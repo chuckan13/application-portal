@@ -56075,7 +56075,6 @@ var App = /*#__PURE__*/function (_Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(App, [{
     key: "render",
     value: function render() {
-      // console.log('IN RENDER');
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["Navbar"], {
         id: "nav"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["Navbar"].Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["Navbar"].Brand, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
@@ -56462,19 +56461,14 @@ var Apply = /*#__PURE__*/function (_Component) {
       // 	.catch(err => console.error(err));
       // request the list of teams
       axios__WEBPACK_IMPORTED_MODULE_10___default.a.get('/api/teams').then(function (res) {
-        // console.log("RES DATA");
-        // console.log(res.data);
         var newTeams = [];
 
         for (var index = 0; index < res.data.length; index++) {
           if (res.data[index].id != 0 && res.data[index].id != 18) {
             //0 is no teams and 18 is presidents
-            // console.log(res.data[index].id);
             newTeams.push(res.data[index]);
           }
-        } // console.log("NEW TEAMS");
-        // console.log(newTeams);
-
+        }
 
         _this2.setState({
           teams: newTeams
@@ -56486,10 +56480,6 @@ var Apply = /*#__PURE__*/function (_Component) {
   }, {
     key: "handlePartOneClick",
     value: function handlePartOneClick(fn, ln, e, cl, con, bui, rn, pn, li) {
-      console.log('Handle part one click');
-      console.log(fn);
-      console.log(cl);
-      console.log(con);
       this.setState({
         firstName: fn,
         lastName: ln,
@@ -56513,15 +56503,11 @@ var Apply = /*#__PURE__*/function (_Component) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                console.log('Handle part two click');
-                console.log(t1);
-                console.log(t2);
-                console.log(t3);
                 tempId = '';
                 teamOneQ = [];
                 teamTwoQ = [];
                 teamThreeQ = [];
-                _context.next = 10;
+                _context.next = 6;
                 return axios__WEBPACK_IMPORTED_MODULE_10___default.a.post('/api/users/new', {
                   //json stringify?
                   token: this.state.user,
@@ -56536,67 +56522,60 @@ var Apply = /*#__PURE__*/function (_Component) {
                   linkedin: this.state.linkedin,
                   role: 'USER'
                 }).then(function (response) {
-                  console.log(tempId);
                   tempId = response.data.id;
                 })["catch"](function (error) {
                   console.log(error);
                 });
 
-              case 10:
-                _context.next = 12;
+              case 6:
+                _context.next = 8;
                 return axios__WEBPACK_IMPORTED_MODULE_10___default.a.post('/api/userteams/new', {
                   teamId: t1,
                   userId: tempId,
                   preference: 1
                 });
 
-              case 12:
-                _context.next = 14;
+              case 8:
+                _context.next = 10;
                 return axios__WEBPACK_IMPORTED_MODULE_10___default.a.post('/api/userteams/new', {
                   teamId: t2,
                   userId: tempId,
                   preference: 2
                 });
 
-              case 14:
-                _context.next = 16;
+              case 10:
+                _context.next = 12;
                 return axios__WEBPACK_IMPORTED_MODULE_10___default.a.post('/api/userteams/new', {
                   teamId: t3,
                   userId: tempId,
                   preference: 3
                 });
 
-              case 16:
-                _context.next = 18;
+              case 12:
+                _context.next = 14;
                 return axios__WEBPACK_IMPORTED_MODULE_10___default.a.get('/api/questions/' + t1).then(function (res) {
-                  console.log('get request to /api/questions/{teamid} 1');
-                  console.log(res.data);
                   teamOneQ = res.data; // this.setState({ teamOneQuestions: res.data });
                 })["catch"](function (err) {
                   return console.log(err);
                 });
 
-              case 18:
-                _context.next = 20;
+              case 14:
+                _context.next = 16;
                 return axios__WEBPACK_IMPORTED_MODULE_10___default.a.get('/api/questions/' + t2).then(function (res) {
-                  console.log('get request to /api/questions/{teamid} 2');
-                  console.log(res.data);
                   teamTwoQ = res.data; // this.setState({ teamOneQuestions: res.data });
                 })["catch"](function (err) {
                   return console.log(err);
                 });
 
-              case 20:
-                _context.next = 22;
+              case 16:
+                _context.next = 18;
                 return axios__WEBPACK_IMPORTED_MODULE_10___default.a.get('/api/questions/' + t3).then(function (res) {
-                  console.log('get request to /api/questions/{teamid} 3');
-                  console.log(res.data);
                   teamThreeQ = res.data; // this.setState({ teamOneQuestions: res.data });
                 })["catch"](function (err) {
                   return console.log(err);
                 });
 
-              case 22:
+              case 18:
                 this.setState({
                   userId: tempId,
                   teamOne: t1,
@@ -56608,9 +56587,8 @@ var Apply = /*#__PURE__*/function (_Component) {
                   partTwo: false,
                   partThree: true
                 });
-                console.log(this.state.userId);
 
-              case 24:
+              case 19:
               case "end":
                 return _context.stop();
             }
@@ -56627,9 +56605,6 @@ var Apply = /*#__PURE__*/function (_Component) {
   }, {
     key: "handlePartThreeClick",
     value: function handlePartThreeClick(qNums, allResp) {
-      console.log('Handle part three click');
-      console.log(qNums);
-      console.log(allResp);
       this.setState({
         questionNumbers: qNums,
         allResponses: allResp,
@@ -56678,7 +56653,6 @@ var Apply = /*#__PURE__*/function (_Component) {
           state: this.state
         });
       } else if (submitted) {
-        console.log(this.state.email);
         display = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_Submitted_js__WEBPACK_IMPORTED_MODULE_16__["default"], {
           handlePartFourClick: this.handlePartFourClick,
           state: this.state,
@@ -57243,7 +57217,6 @@ var Home = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      // console.log('IN HOME RENDER');
       var button = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(ApplyButton, {
         onClick: this.handleApplyClick
       });
@@ -58017,9 +57990,8 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                   allResponseObjects.push(currResponseObject);
                 }
 
-                console.log('all response objects: ', allResponseObjects);
                 responses = [];
-                _context.next = 6;
+                _context.next = 5;
                 return Promise.all(allResponseObjects.map(function (obj) {
                   return axios__WEBPACK_IMPORTED_MODULE_12___default.a.post('/api/responses/new', {
                     text: obj.text,
@@ -58030,14 +58002,13 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
                   });
                 }));
 
-              case 6:
-                console.log('responses: ', responses);
+              case 5:
                 this.setState({
                   allResp: allResponseObjects
                 });
                 this.props.handlePartThreeClick(this.state.questionNumbers, this.state.allResp);
 
-              case 9:
+              case 7:
               case "end":
                 return _context.stop();
             }
@@ -58093,18 +58064,13 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
       if (teamOne) {
         var teamOneObj = this.props.state.teams.filter(function (team) {
           return team.id === Number(teamOne);
-        })[0]; // console.log('teamonobj', teamOneObj);
-        // console.log('Team one');
-        // console.log(teamOneQuestions);
-
+        })[0];
         var questionNum = [];
         questionNum = teamOneQuestions.map(function (question) {
           if (!_this3.alreadyInArray(question.id)) {
             return question.id;
           }
-        }); // console.log('team one question nums');
-        // console.log(questionNum);
-
+        });
         this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
       } else {
         teamOne = '';
@@ -58113,17 +58079,13 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
       if (teamTwo) {
         var teamTwoObj = this.props.state.teams.filter(function (team) {
           return team.id === Number(teamTwo);
-        })[0]; // console.log('Team Two');
-        // console.log(teamTwoQuestions);
-
+        })[0];
         var questionNum = [];
         questionNum = teamTwoQuestions.map(function (question) {
           if (!_this3.alreadyInArray(question.id)) {
             return question.id;
           }
-        }); // console.log('team two question nums');
-        // console.log(questionNum);
-
+        });
         this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
       } else {
         teamTwo = '';
@@ -58132,23 +58094,18 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
       if (teamThree) {
         var teamThreeObj = this.props.state.teams.filter(function (team) {
           return team.id === Number(teamThree);
-        })[0]; // console.log('Team Three');
-        // console.log(teamThreeQuestions);
-
+        })[0];
         var questionNum = [];
         questionNum = teamThreeQuestions.map(function (question) {
           if (!_this3.alreadyInArray(question.id)) {
             return question.id;
           }
-        }); // console.log('team three question nums');
-        // console.log(questionNum);
-
+        });
         this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
       } else {
         teamThree = '';
       }
 
-      console.log(this.state);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         id: "short-response-title"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, " Part 3: Short Response ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(TeamQuestions, {
@@ -58458,20 +58415,16 @@ var TeamSelection = /*#__PURE__*/function (_React$Component) {
     value: function handleChange(event) {
       var name = event.target.name;
       var newValue = 0;
-      console.log(parseInt(event.target.value));
 
       if (Number.isInteger(parseInt(event.target.value))) {
         newValue = event.target.value;
       }
 
-      console.log("NEW VALUE");
-      console.log(newValue);
       this.setState(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({}, name, newValue));
     }
   }, {
     key: "handleSubmit",
     value: function handleSubmit() {
-      console.log('team selection handle submit');
       var t1 = this.state.teamOne;
       var t2 = this.state.teamTwo;
       var t3 = this.state.teamThree;

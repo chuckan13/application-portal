@@ -42,7 +42,6 @@ class ShortResponse extends React.Component {
 			};
 			allResponseObjects.push(currResponseObject);
 		}
-		console.log('all response objects: ', allResponseObjects);
 		let responses = [];
 		await Promise.all(
 			allResponseObjects.map(obj =>
@@ -57,7 +56,6 @@ class ShortResponse extends React.Component {
 					})
 			)
 		);
-		console.log('responses: ', responses);
 		this.setState({
 			allResp: allResponseObjects
 		});
@@ -96,54 +94,40 @@ class ShortResponse extends React.Component {
 		this.state.userId = userId;
 		if (teamOne) {
 			var teamOneObj = this.props.state.teams.filter(team => team.id === Number(teamOne))[0];
-			// console.log('teamonobj', teamOneObj);
-			// console.log('Team one');
-			// console.log(teamOneQuestions);
 			var questionNum = [];
 			questionNum = teamOneQuestions.map(question => {
 				if (!this.alreadyInArray(question.id)) {
 					return question.id;
 				}
 			});
-			// console.log('team one question nums');
-			// console.log(questionNum);
 			this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
 		} else {
 			teamOne = '';
 		}
 		if (teamTwo) {
 			var teamTwoObj = this.props.state.teams.filter(team => team.id === Number(teamTwo))[0];
-			// console.log('Team Two');
-			// console.log(teamTwoQuestions);
 			var questionNum = [];
 			questionNum = teamTwoQuestions.map(question => {
 				if (!this.alreadyInArray(question.id)) {
 					return question.id;
 				}
 			});
-			// console.log('team two question nums');
-			// console.log(questionNum);
 			this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
 		} else {
 			teamTwo = '';
 		}
 		if (teamThree) {
 			var teamThreeObj = this.props.state.teams.filter(team => team.id === Number(teamThree))[0];
-			// console.log('Team Three');
-			// console.log(teamThreeQuestions);
 			var questionNum = [];
 			questionNum = teamThreeQuestions.map(question => {
 				if (!this.alreadyInArray(question.id)) {
 					return question.id;
 				}
 			});
-			// console.log('team three question nums');
-			// console.log(questionNum);
 			this.state.questionNumbers = this.state.questionNumbers.concat(this.clearArrayOfUndefined(questionNum));
 		} else {
 			teamThree = '';
 		}
-		console.log(this.state);
 		return (
 			<div>
 				<div id="short-response-title">

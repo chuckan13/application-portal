@@ -26,19 +26,15 @@ class TeamSelection extends React.Component {
 	handleChange(event) {
 		const name = event.target.name;
 		var newValue = 0;
-		console.log(parseInt(event.target.value));
 		if (Number.isInteger(parseInt(event.target.value))) {
 			newValue = event.target.value;
 		}
-		console.log("NEW VALUE");
-		console.log(newValue);
 		this.setState({
 			[name]: newValue
 		});
 	}
 
 	handleSubmit() {
-		console.log('team selection handle submit');
 		var t1 = this.state.teamOne;
 		var t2 = this.state.teamTwo;
 		var t3 = this.state.teamThree;
