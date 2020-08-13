@@ -58458,7 +58458,15 @@ var TeamSelection = /*#__PURE__*/function (_React$Component) {
     key: "handleChange",
     value: function handleChange(event) {
       var name = event.target.name;
-      this.setState(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({}, name, event.target.value));
+      var newValue = 0;
+
+      if (Number.isInteger(event.target.value)) {
+        newValue = event.target.value;
+      }
+
+      console.log("NEW VALUE");
+      console.log(newValue);
+      this.setState(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({}, name, newValue));
     }
   }, {
     key: "handleSubmit",
@@ -58477,6 +58485,10 @@ var TeamSelection = /*#__PURE__*/function (_React$Component) {
           errorMessage: 'Please select teams in order of preference'
         });
       } else if (t2 === 0 && t3 !== 0) {
+        this.setState({
+          errorMessage: 'Please select teams in order of preference'
+        });
+      } else if (t1 === 0 && t2 === 0 && t3 === 0) {
         this.setState({
           errorMessage: 'Please select teams in order of preference'
         });

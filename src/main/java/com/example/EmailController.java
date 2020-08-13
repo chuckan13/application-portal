@@ -56,7 +56,7 @@ public class EmailController {
 
         MimeBodyPart messageBodyPart = new MimeBodyPart();
         messageBodyPart.setContent(
-                "Thank you for applying to Princeton's Entrepreneurship Club. We have received your application and will reach out with next steps.",
+                "Thank you for applying to Princeton's Entrepreneurship Club. We have received your application and will reach out with next steps.\nBest,\nE-Club Directors",
                 "text/html");
 
         Multipart multipart = new MimeMultipart();

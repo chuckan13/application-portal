@@ -25,8 +25,14 @@ class TeamSelection extends React.Component {
 
 	handleChange(event) {
 		const name = event.target.name;
+		var newValue = 0;
+		if (Number.isInteger(event.target.value)) {
+			newValue = event.target.value;
+		}
+		console.log("NEW VALUE");
+		console.log(newValue);
 		this.setState({
-			[name]: event.target.value
+			[name]: newValue
 		});
 	}
 
@@ -41,7 +47,10 @@ class TeamSelection extends React.Component {
 			this.setState({ errorMessage: 'Please select teams in order of preference' });
 		} else if (t2 === 0 && t3 !== 0) {
 			this.setState({ errorMessage: 'Please select teams in order of preference' });
-		} else {
+		} else if (t1 === 0 && t2 === 0 && t3 === 0) {
+			this.setState({ errorMessage: 'Please select teams in order of preference' });
+		}
+		else {
 			this.props.handlePartTwoClick(t1, t2, t3);
 		}
 
