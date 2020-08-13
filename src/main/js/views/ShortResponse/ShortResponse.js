@@ -11,7 +11,8 @@ import axios from 'axios';
 class ShortResponse extends React.Component {
 	state = {
 		questionNumbers: [],
-		userId: 0
+		userId: 0,
+		errorMessage: "Please review the above information carefully, you will not be able to return to edit."
 	};
 
 	constructor(props, context) {
@@ -164,8 +165,8 @@ class ShortResponse extends React.Component {
 						v={this.state}
 					/>
 				) : (
-					''
-				)}
+						''
+					)}
 				{teamThree ? (
 					<TeamQuestions
 						team={teamThreeObj.name}
@@ -175,8 +176,17 @@ class ShortResponse extends React.Component {
 						v={this.state}
 					/>
 				) : (
-					''
-				)}
+						''
+					)}
+				<div
+					style={{
+						color: 'black',
+						display: 'flex',
+						'justify-content': 'center'
+					}}
+				>
+					{this.state.errorMessage}
+				</div>
 				<SubmitButton onClick={this.handleSubmitClick} />
 			</div>
 		);

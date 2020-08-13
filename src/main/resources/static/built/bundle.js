@@ -56464,7 +56464,7 @@ var Apply = /*#__PURE__*/function (_Component) {
       axios__WEBPACK_IMPORTED_MODULE_10___default.a.get('/api/teams').then(function (res) {
         console.log("RES DATA");
         console.log(res.data);
-        newTeams = [];
+        var newTeams = [];
 
         for (index = 0; index < res.data.length; index++) {
           if (res.data[index].name != "No team" || res.data[index].name != "Presidents") {
@@ -57973,7 +57973,8 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
 
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), "state", {
       questionNumbers: [],
-      userId: 0
+      userId: 0,
+      errorMessage: "Please review the above information carefully, you will not be able to return to edit."
     });
 
     _this.handleSubmitClick = _this.handleSubmitClick.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
@@ -58168,7 +58169,13 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
         questions: teamThreeQuestions,
         onChange: this.updateState,
         v: this.state
-      }) : '', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(SubmitButton, {
+      }) : '', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        style: {
+          color: 'black',
+          display: 'flex',
+          'justify-content': 'center'
+        }
+      }, this.state.errorMessage), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(SubmitButton, {
         onClick: this.handleSubmitClick
       }));
     }
