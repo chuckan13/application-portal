@@ -56664,9 +56664,11 @@ var Apply = /*#__PURE__*/function (_Component) {
           state: this.state
         });
       } else if (submitted) {
+        console.log(this.state.email);
         display = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_Submitted_js__WEBPACK_IMPORTED_MODULE_16__["default"], {
           handlePartFourClick: this.handlePartFourClick,
-          state: this.state
+          state: this.state,
+          emailAddy: this.state.email
         });
       }
 
@@ -58277,9 +58279,9 @@ var Submitted = /*#__PURE__*/function (_Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       console.log("IN submitted component did mount");
-      console.log(this.props.state.email);
+      console.log(this.props.email);
       console.log(this.props.state);
-      axios__WEBPACK_IMPORTED_MODULE_7___default.a.get('/api/sendemail/' + this.props.state.email).then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_7___default.a.get('/api/sendemail/' + this.props.email).then(function (res) {
         console.log('sending confirmation email');
       })["catch"](function (err) {
         return console.log(err);

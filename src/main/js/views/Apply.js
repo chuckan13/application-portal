@@ -220,7 +220,8 @@ class Apply extends Component {
 		} else if (partFour) {
 			display = <Review handlePartFourClick={this.handlePartFourClick} state={this.state} />;
 		} else if (submitted) {
-			display = <Submitted handlePartFourClick={this.handlePartFourClick} state={this.state} />;
+			console.log(this.state.email);
+			display = <Submitted handlePartFourClick={this.handlePartFourClick} state={this.state} emailAddy={this.state.email} />;
 		}
 
 		return <div>{display}</div>;
