@@ -56462,20 +56462,19 @@ var Apply = /*#__PURE__*/function (_Component) {
       // 	.catch(err => console.error(err));
       // request the list of teams
       axios__WEBPACK_IMPORTED_MODULE_10___default.a.get('/api/teams').then(function (res) {
-        console.log("RES DATA");
-        console.log(res.data);
+        // console.log("RES DATA");
+        // console.log(res.data);
         var newTeams = [];
 
         for (var index = 0; index < res.data.length; index++) {
           if (res.data[index].id != 0 && res.data[index].id != 18) {
             //0 is no teams and 18 is presidents
-            console.log(res.data[index].id);
+            // console.log(res.data[index].id);
             newTeams.push(res.data[index]);
           }
-        }
+        } // console.log("NEW TEAMS");
+        // console.log(newTeams);
 
-        console.log("NEW TEAMS");
-        console.log(newTeams);
 
         _this2.setState({
           teams: newTeams
@@ -58459,6 +58458,7 @@ var TeamSelection = /*#__PURE__*/function (_React$Component) {
     value: function handleChange(event) {
       var name = event.target.name;
       var newValue = 0;
+      console.log(event.target.value);
 
       if (Number.isInteger(event.target.value)) {
         newValue = event.target.value;

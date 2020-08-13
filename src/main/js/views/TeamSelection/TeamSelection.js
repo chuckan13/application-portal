@@ -26,6 +26,7 @@ class TeamSelection extends React.Component {
 	handleChange(event) {
 		const name = event.target.name;
 		var newValue = 0;
+		console.log(event.target.value);
 		if (Number.isInteger(event.target.value)) {
 			newValue = event.target.value;
 		}
