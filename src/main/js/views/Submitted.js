@@ -13,9 +13,6 @@ class Submitted extends Component {
 	}
 
 	componentDidMount() {
-		console.log("IN submitted component did mount");
-		console.log(this.props.emailAddy);
-		console.log(this.props.state);
 		axios
 			.get('/api/sendemail/' + this.props.emailAddy)
 			.then(res => {

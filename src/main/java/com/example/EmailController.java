@@ -50,7 +50,7 @@ public class EmailController {
         msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(emailAddress));
         msg.setSubject("E-Club Application Confirmation");
         msg.setContent(
-                "Thank you for applying to Princeton's Entrepreneurship Club. We have received your application and will reach out with next steps.",
+                "Thank you for applying to Princeton's Entrepreneurship Club. We have received your application and will reach out with next steps.\nBest,\nE-Club Directors",
                 "text/html");
         msg.setSentDate(new Date());
 

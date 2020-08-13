@@ -75,7 +75,18 @@ class Apply extends Component {
 		axios
 			.get('/api/teams')
 			.then(res => {
-				this.setState({ teams: res.data });
+				console.log("RES DATA");
+				console.log(res.data);
+				newTeams = [];
+				for (index = 0; index < res.data.length; index++) {
+					if (res.data[index].name != "No team" || res.data[index].name != "Presidents") {
+						console.log(res.data[index]);
+						newTeams.push(res.data[index]);
+					}
+				}
+				console.log("NEW TEAMS");
+				console.log(newTeams);
+				this.setState({ teams: newTeams });
 			})
 			.catch(err => console.log(err));
 	}

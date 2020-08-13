@@ -17,7 +17,8 @@ class BasicInformation extends React.Component {
 		building: '',
 		roomNumber: '',
 		phoneNumber: '',
-		linkedin: ''
+		linkedin: '',
+		errorMessage: 'Please review the above information carefully, you will not be able to return to edit.'
 	};
 
 	constructor(props, context) {
@@ -117,6 +118,15 @@ class BasicInformation extends React.Component {
 						onChange={this.updateState}
 					/>
 				</form>
+				<div
+					style={{
+						color: 'black',
+						display: 'flex',
+						'justify-content': 'center'
+					}}
+				>
+					{this.state.errorMessage}
+				</div>
 				<SubmitButton onClick={this.handleSubmitClick} />
 			</div>
 		);

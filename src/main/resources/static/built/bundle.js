@@ -56462,8 +56462,22 @@ var Apply = /*#__PURE__*/function (_Component) {
       // 	.catch(err => console.error(err));
       // request the list of teams
       axios__WEBPACK_IMPORTED_MODULE_10___default.a.get('/api/teams').then(function (res) {
+        console.log("RES DATA");
+        console.log(res.data);
+        newTeams = [];
+
+        for (index = 0; index < res.data.length; index++) {
+          if (res.data[index].name != "No team" || res.data[index].name != "Presidents") {
+            console.log(res.data[index]);
+            newTeams.push(res.data[index]);
+          }
+        }
+
+        console.log("NEW TEAMS");
+        console.log(newTeams);
+
         _this2.setState({
-          teams: res.data
+          teams: newTeams
         });
       })["catch"](function (err) {
         return console.log(err);
@@ -56782,7 +56796,8 @@ var BasicInformation = /*#__PURE__*/function (_React$Component) {
       building: '',
       roomNumber: '',
       phoneNumber: '',
-      linkedin: ''
+      linkedin: '',
+      errorMessage: 'Please review the above information carefully, you will not be able to return to edit.'
     });
 
     _this.handleSubmitClick = _this.handleSubmitClick.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this));
@@ -56869,7 +56884,13 @@ var BasicInformation = /*#__PURE__*/function (_React$Component) {
         name: "linkedin",
         v: this.state.linkedin,
         onChange: this.updateState
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SubmitButton, {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        style: {
+          color: 'black',
+          display: 'flex',
+          'justify-content': 'center'
+        }
+      }, this.state.errorMessage), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SubmitButton, {
         onClick: this.handleSubmitClick
       }));
     }
@@ -58278,9 +58299,6 @@ var Submitted = /*#__PURE__*/function (_Component) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Submitted, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      console.log("IN submitted component did mount");
-      console.log(this.props.emailAddy);
-      console.log(this.props.state);
       axios__WEBPACK_IMPORTED_MODULE_7___default.a.get('/api/sendemail/' + this.props.emailAddy).then(function (res) {
         console.log('sending confirmation email');
       })["catch"](function (err) {
