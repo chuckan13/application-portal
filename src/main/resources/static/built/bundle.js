@@ -58458,9 +58458,9 @@ var TeamSelection = /*#__PURE__*/function (_React$Component) {
     value: function handleChange(event) {
       var name = event.target.name;
       var newValue = 0;
-      console.log(event.target.value);
+      console.log(parseInt(event.target.value));
 
-      if (Number.isInteger(event.target.value)) {
+      if (Number.isInteger(parseInt(event.target.value))) {
         newValue = event.target.value;
       }
 
