@@ -56467,7 +56467,8 @@ var Apply = /*#__PURE__*/function (_Component) {
         var newTeams = [];
 
         for (var index = 0; index < res.data.length; index++) {
-          if (res.data[index].name != "No team" || res.data[index].name != "Presidents") {
+          if (res.data[index].id != 0 || res.data[index].id != 18) {
+            //0 is no teams and 18 is presidents
             console.log(res.data[index]);
             newTeams.push(res.data[index]);
           }
