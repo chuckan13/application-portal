@@ -1,6 +1,6 @@
 p {
   font-family: Avenir;
-  color: white;
+  color: black;
   font-size: 30px;
   text-align: center;
 }
@@ -11,25 +11,25 @@ p {
 }
 
 #welcome-text {
-	margin-top: 100px;
+  margin-top: 100px;
 }
 
 .btn-apply {
-	color: black;
-	background-color: #fef0e4;
-	border-radius: 15px;
-	padding: 20px 30px;
-	font-size: 20px;
+  color: black;
+  background-color: #fcbc7c;
+  border-radius: 15px;
+  padding: 20px 30px;
+  font-size: 20px;
 }
 
 .btn:hover {
   background-color: #fcbc7c;
-  color: black;
- }
+  color: white;
+}
 
 .btn {
-   font-family: Avenir;
- }
+  font-family: Avenir;
+}
 
 .btn:focus,
 .btn:active:focus,
@@ -38,7 +38,7 @@ p {
 .btn:active.focus,
 .btn.active.focus {
   outline: none;
-  color:#fff;
+  color: #fff;
 }
 
 .btn:active,
@@ -46,11 +46,9 @@ p {
   outline: none;
   background-image: none;
   box-shadow: none;
-  color:#fff;
+  color: #fff;
 }
 
 #begin-button {
-	margin-top: 50px;
+  margin-top: 50px;
 }
-
-
