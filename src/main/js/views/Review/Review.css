@@ -1,4 +1,5 @@
-#header, #header2 {
+#header,
+#header2 {
   font-family: Avenir-Book;
   margin-left: auto;
   margin-right: auto;
@@ -9,13 +10,15 @@
   display: block;
   min-width: 200px;
   max-width: 60vw;
-  color:black;
+  color: black;
 }
 
-#information, #information-last, 
-#response, #response-last,
+#information,
+#information-last,
+#response,
+#response-last,
 #question {
-  font-family: Avenir-Light;
+  font-family: 'Lato', sans-serif;
   color: #fff;
   text-align: left;
   display: block;
@@ -31,11 +34,13 @@
   line-height: 1.42857143;
   font-weight: lighter;
 }
+
 #review-choice {
   max-width: 60vw;
 }
 
-#information, #information-last {
+#information,
+#information-last {
   background-color: white;
   color: #272727;
   padding: 10px 10px 10px 20px;
@@ -52,7 +57,8 @@
   font-weight: normal;
 }
 
-#response, #response-last {
+#response,
+#response-last {
   font-size: 14px;
   padding-bottom: 25px;
   background-color: white;
@@ -72,4 +78,3 @@ pre {
   border: none;
   border-radius: 0px;
 }
-

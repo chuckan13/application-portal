@@ -4,7 +4,7 @@ th {
 	color: black;
 	width: 100px;
 	text-align: center;
-	font-family: Avenir;
+	font-family: 'Lato', sans-serif;
 	font-size: 15px;
 	height: 50px;
 	vertical-align: middle !important;
@@ -28,9 +28,9 @@ tr:hover {
 
 .table {
 	display: block !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 800px;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	width: 800px;
 }
 
 /* rounding corners */
@@ -43,10 +43,11 @@ thead th:last-child {
 }
 
 tbody tr:last-child td:first-child {
-    border-radius: 0 0 0 10px !important;
+	border-radius: 0 0 0 10px !important;
 }
+
 tbody tr:last-child td:last-child {
-    border-radius: 0 0 10px 0;
+	border-radius: 0 0 10px 0;
 }
 
 /* user profile */
@@ -55,7 +56,7 @@ tbody tr:last-child td:last-child {
 	border-radius: 10px 10px 0 0;
 	padding: 10px 0px 10px 20px;
 	font-size: 24px;
-	color:black
+	color: black
 }
 
 #question {

@@ -2,15 +2,16 @@
   margin: 10px;
 }
 
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-@font-face{
+/* @font-face{
   font-family: "Avenir";
   src: url('../resources/static/fonts/Avenir-Book.ttf'),
-} 
+}  */
 
 /* navbar properties */
 #nav {
@@ -73,17 +74,9 @@ html, body {
 /* general text */
 a {
   color: white !important;
-  font-family: Avenir;
+  font-family: 'Lato', sans-serif;
 }
 
 a:hover {
   text-decoration: none !important;
 }
-
-
-
-
-
-
-
-

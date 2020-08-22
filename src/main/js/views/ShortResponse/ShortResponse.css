@@ -1,6 +1,6 @@
-
-#review-choice, #short-response-choice {
-  font-family: Avenir-Light;
+#review-choice,
+#short-response-choice {
+  font-family: 'Lato', sans-serif;
   color: black;
   text-align: left;
   display: block;
@@ -48,4 +48,3 @@ textarea.form-control {
   min-width: 200px;
   max-width: 600px;
 }
-

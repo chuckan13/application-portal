@@ -1,12 +1,12 @@
 p {
-  font-family: Avenir;
+  font-family: 'Lato', sans-serif;
   color: black;
   font-size: 30px;
   text-align: center;
 }
 
 #welcome-content {
-  font-family: Avenir;
+  font-family: 'Lato', sans-serif;
   margin: auto;
 }
 
@@ -28,7 +28,7 @@ p {
 }
 
 .btn {
-  font-family: Avenir;
+  font-family: 'Lato', sans-serif;
 }
 
 .btn:focus,
