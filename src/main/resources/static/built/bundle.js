@@ -58146,7 +58146,7 @@ var ShortResponse = /*#__PURE__*/function (_React$Component) {
           display: 'flex',
           'justify-content': 'center'
         }
-      }, this.state.errorMessage), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(SubmitButton, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, "\u26A0"), this.state.errorMessage), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(SubmitButton, {
         onClick: this.handleSubmitClick
       }));
     }

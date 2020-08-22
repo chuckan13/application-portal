@@ -169,6 +169,7 @@ class ShortResponse extends React.Component {
 						'justify-content': 'center'
 					}}
 				>
+					<span>&#9888;</span>
 					{this.state.errorMessage}
 				</div>
 				<SubmitButton onClick={this.handleSubmitClick} />
