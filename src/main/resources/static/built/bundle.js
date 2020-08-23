@@ -4109,7 +4109,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "p {\r\n  font-family: 'Lato', sans-serif;\r\n  color: black;\r\n  font-size: 30px;\r\n  text-align: center;\r\n}\r\n\r\n#welcome-content {\r\n  font-family: 'Lato', sans-serif;\r\n  margin: auto;\r\n}\r\n\r\n#welcome-text {\r\n  margin-top: 100px;\r\n}\r\n\r\n.btn-apply {\r\n  color: black;\r\n  background-color: #fcbc7c;\r\n  border-radius: 15px;\r\n  padding: 20px 30px;\r\n  font-size: 20px;\r\n}\r\n\r\n.btn:hover {\r\n  background-color: #fcbc7c;\r\n  color: white;\r\n}\r\n\r\n.btn {\r\n  font-family: 'Lato', sans-serif;\r\n}\r\n\r\n.btn:focus,\r\n.btn:active:focus,\r\n.btn.active:focus,\r\n.btn.focus,\r\n.btn:active.focus,\r\n.btn.active.focus {\r\n  outline: none;\r\n  color: #fff;\r\n}\r\n\r\n.btn:active,\r\n.btn.active {\r\n  outline: none;\r\n  background-image: none;\r\n  box-shadow: none;\r\n  color: #fff;\r\n}\r\n\r\n#begin-button {\r\n  margin-top: 50px;\r\n}\r\n\r\n.customink {\r\n  margin-right: auto;\r\n  margin-left: auto;\r\n  float: none;\r\n  width: 20%\r\n}", ""]);
+exports.push([module.i, "p {\r\n  font-family: 'Lato', sans-serif;\r\n  color: black;\r\n  font-size: 30px;\r\n  text-align: center;\r\n}\r\n\r\n#welcome-content {\r\n  font-family: 'Lato', sans-serif;\r\n  margin: auto;\r\n}\r\n\r\n#welcome-text {\r\n  margin-top: 100px;\r\n}\r\n\r\n.btn-apply {\r\n  color: black;\r\n  background-color: #fcbc7c;\r\n  border-radius: 15px;\r\n  padding: 20px 30px;\r\n  font-size: 20px;\r\n}\r\n\r\n.btn:hover {\r\n  background-color: #fcbc7c;\r\n  color: white;\r\n}\r\n\r\n.btn {\r\n  font-family: 'Lato', sans-serif;\r\n}\r\n\r\n.btn:focus,\r\n.btn:active:focus,\r\n.btn.active:focus,\r\n.btn.focus,\r\n.btn:active.focus,\r\n.btn.active.focus {\r\n  outline: none;\r\n  color: #fff;\r\n}\r\n\r\n.btn:active,\r\n.btn.active {\r\n  outline: none;\r\n  background-image: none;\r\n  box-shadow: none;\r\n  color: #fff;\r\n}\r\n\r\n#begin-button {\r\n  margin-top: 50px;\r\n}\r\n\r\n.customink {\r\n  margin-right: auto;\r\n  margin-left: auto;\r\n  float: none;\r\n  width: 20%\r\n}\r\n\r\n.custominkhere {\r\n  color: blue !important;\r\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -58366,6 +58366,7 @@ function ApplyButton(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
     id: "welcome-text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "Thank you. Your application has been submitted."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "All E-Club applicant will receive a free T-shirt this year! Click the image below to get one or click ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+    "class": "custominkhere",
     href: "https://www.customink.com/g/kua0-00ca-s6c8",
     target: "_blank"
   }, "here"), "."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
