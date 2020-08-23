@@ -92,4 +92,11 @@ img {
   width: 30%;
 }
 
-.profileimage {}
+.profileimage {
+  display: block;
+}
+
+.profile-name {
+  font-size: 16px;
+  display: block;
+}
