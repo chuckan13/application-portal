@@ -14,6 +14,7 @@ class Promo extends React.Component {
 			<div>
 				<div>
 					<div class="iconcontainer first">
+						<img src="src\main\resources\static\img\Alimtas.png" />
 						<iframe
 							class="leftimage"
 							// width="1280"
