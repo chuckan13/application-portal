@@ -114,7 +114,7 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
-						<img class="invertimage" src="https://i.ibb.co/kG2sHSY/Design-Team-Logo.png" />
+						<img src="https://i.ibb.co/kG2sHSY/Design-Team-Logo.png" />
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Design</p>
@@ -285,7 +285,7 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
-						<img src="https://i.ibb.co/S3GC6r5/rsz-pie-logo.png" />
+						<img class="pie" src="https://i.ibb.co/C5Xb29B/finalpie.png" />
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Profiles in Entrepreneurship</p>
