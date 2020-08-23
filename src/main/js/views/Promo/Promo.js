@@ -31,6 +31,16 @@ class Promo extends React.Component {
 							Alimtas is a subteam of E-Club focused on promoting life science entrepreneurship and the
 							biotechnology industry to Princeton University undergraduates through hands-on learning.
 						</p>
+						<div>
+							<div class="iconcontainer first">
+								<img class="profileimage" src="https://i.ibb.co/fxWgLSZ/headshot1.png"></img>
+								<p>Charles An (ca9)</p>
+							</div>
+							<div class="iconcontainer second">
+								<img class="profileimage" src="https://i.ibb.co/fxWgLSZ/headshot1.png"></img>
+								<p>Charles An (ca9)</p>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="whitealternate">
@@ -383,32 +393,6 @@ class Promo extends React.Component {
 						</p>
 					</div>
 				</div>
-
-				{/* <Row>
-					<Col>
-						video1
-						<img src="src\main\resources\static\img\example.JPG" />
-					</Col>
-					<Col>text1</Col>
-				</Row>
-				<Row>
-					<Col>text2</Col>
-					<Col>
-						video2<img src="src\main\resources\static\img\example.JPG" />
-					</Col>
-				</Row>
-				<Row>
-					<Col>
-						video3<img src="src\main\resources\static\img\example.JPG" />
-					</Col>
-					<Col>text3</Col>
-				</Row>
-				<Row>
-					<Col>text4</Col>
-					<Col>
-						video4<img src="src\main\resources\static\img\example.JPG" />
-					</Col>
-				</Row> */}
 			</div>
 		);
 	}
