@@ -114,7 +114,7 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
-						<img src="https://i.ibb.co/kG2sHSY/Design-Team-Logo.png" />
+						<img class="pie" src="https://i.ibb.co/kG2sHSY/Design-Team-Logo.png" />
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Design</p>
