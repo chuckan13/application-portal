@@ -56,4 +56,6 @@ p {
 .customink {
   margin-right: auto;
   margin-left: auto;
+  float: none;
+  width: 20%
 }

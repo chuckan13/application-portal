@@ -41,7 +41,7 @@ function ApplyButton(props) {
 			<Row className="center-block text-center">
 				<div id="welcome-text">
 					<p>Thank you. Your application has been submitted.</p>
-					<p>All E-Club applicant will receive a free T-shirt this year! Click below to get one.</p>
+					<p>All E-Club applicant will receive a free T-shirt this year! Click the image below to get one or click <a href="https://www.customink.com/g/kua0-00ca-s6c8" target="_blank">here</a>.</p>
 					<a href="https://www.customink.com/g/kua0-00ca-s6c8" target="_blank">
 						<img class="customink" border="0" src="https://i.ibb.co/LCdSHpD/front-medium-extended.jpg" />
 					</a>
