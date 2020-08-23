@@ -44,7 +44,7 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
-
+						<img class="invertimage" src="https://i.ibb.co/tzvGHGh/Alum-Relations.png" />
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Alumni Outreach</p>
@@ -66,6 +66,8 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
+						<img class="invertimage" src="https://i.ibb.co/X2sFm0S/artsent.png" />
+
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Arts &amp; Entrepreneurship</p>
@@ -88,6 +90,7 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
+						<img class="invertimage" src="https://i.ibb.co/mFhY2q9/COFF.png" />
 
 					</div>
 					<div class="iconcontainer second">
@@ -111,6 +114,7 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
+						<img class="invertimage" src="https://i.ibb.co/kG2sHSY/Design-Team-Logo.png" />
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Design</p>
@@ -132,7 +136,7 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
-
+						<img class="invertimage" src="https://i.ibb.co/74dHspz/Development.png" />
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Development</p>
@@ -153,6 +157,7 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
+						<img class="invertimage" src="https://i.ibb.co/gMnL6Nb/Hack-Princeton.png" />
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">HackPrinceton</p>
@@ -174,7 +179,7 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
-
+						<img class="invertimage" src="https://i.ibb.co/94SLDkm/ICE-Network.png" />
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">ICE Network</p>
@@ -196,6 +201,7 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
+						<img class="invertimage" src="https://i.ibb.co/mtL9ncV/istt.png" />
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">ISTT</p>
@@ -217,6 +223,7 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
+						<img class="invertimage" src="https://i.ibb.co/SvqCxXw/Ignite-STEM.png" />
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">IgniteStem</p>
@@ -237,6 +244,7 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
+						<img class="invertimage" src="https://i.ibb.co/R06GCj6/MVP.png" />
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">MVP</p>
@@ -256,6 +264,7 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
+						<img class="invertimage" src="https://i.ibb.co/rGDmMt5/NYTT.png" />
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">New York Tiger Trek</p>
@@ -276,6 +285,7 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
+						<img src="https://i.ibb.co/S3GC6r5/rsz-pie-logo.png" />
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Profiles in Entrepreneurship</p>
@@ -296,7 +306,7 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
-
+						<img class="invertimage" src="https://i.ibb.co/kcCDFRB/Rehack.png" />
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Rehack</p>
@@ -318,6 +328,7 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
+						<img class="invertimage" src="https://i.ibb.co/51Vgxqd/SVTT.png" />
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Silicon Valley Tiger Trek</p>
@@ -339,6 +350,7 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
+						<img class="invertimage" src="https://i.ibb.co/gZVgHwg/Tiger-Launch.png" />
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">TigerLaunch</p>
@@ -360,6 +372,7 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
+						<img src="https://i.ibb.co/zHmvXkP/Tiger-Tables-Logo-Final.png" />
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">TigerTables</p>
