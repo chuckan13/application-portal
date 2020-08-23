@@ -75,7 +75,13 @@ p {
   background-color: white;
 }
 
-img {
+.invertimage {
   -webkit-filter: invert(100%);
   filter: invert(100%);
+}
+
+img {
+  float: right;
+  display: block;
+  width: 30%;
 }

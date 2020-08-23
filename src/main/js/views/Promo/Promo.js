@@ -14,7 +14,6 @@ class Promo extends React.Component {
 			<div>
 				<div>
 					<div class="iconcontainer first">
-						<img src="src\main\resources\static\img\Alimtas.png" />
 						<iframe
 							class="leftimage"
 							// width="1280"
@@ -24,6 +23,7 @@ class Promo extends React.Component {
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen
 						/>
+						<img class="invertimage" src="https://i.ibb.co/r402zTc/Alimtas.png" />
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Alimtas</p>
