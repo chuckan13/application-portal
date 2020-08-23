@@ -4127,7 +4127,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".iconcontainer.first,\r\n.iconcontainer.second {\r\n  display: inline-block;\r\n  width: 50%;\r\n  vertical-align: top;\r\n  /* height:50%; */\r\n}\r\n\r\n.iconcontainer .leftimage {\r\n  display: block;\r\n  margin-left: 5%;\r\n  margin-right: 5%;\r\n  margin-bottom: 5%;\r\n  margin-top: 5%;\r\n  text-align: right;\r\n  float: right;\r\n  width: 50%;\r\n  /* height: 100%; */\r\n}\r\n\r\n.iconcontainer .rightimage {\r\n  display: block;\r\n  margin-left: 5%;\r\n  margin-right: 5%;\r\n  margin-bottom: 5%;\r\n  margin-top: 5%;\r\n  text-align: left;\r\n  float: left;\r\n  width: 50%;\r\n  /* height: 100%; */\r\n}\r\n\r\np {\r\n  /* text-align: center; */\r\n  font-family: 'Lato', sans-serif;\r\n  /* font-weight: 400; */\r\n}\r\n\r\n.description-right {\r\n  text-align: left;\r\n  font-family: 'Lato', sans-serif;\r\n  font-size: 18px;\r\n  margin-right: 10%;\r\n  margin-bottom: 10%;\r\n}\r\n\r\n.description-left {\r\n  text-align: left;\r\n  font-family: 'Lato', sans-serif;\r\n  font-size: 18px;\r\n  margin-left: 10%;\r\n  margin-bottom: 10%;\r\n}\r\n\r\n.left {\r\n  text-decoration: underline;\r\n  text-align: left;\r\n  font-family: 'Lato', sans-serif;\r\n  font-size: 25px;\r\n  margin-top: 5%;\r\n  margin-left: 10%;\r\n  /* font-weight: 400; */\r\n}\r\n\r\n.right {\r\n  text-decoration: underline;\r\n  text-align: left;\r\n  font-family: 'Lato', sans-serif;\r\n  font-size: 25px;\r\n  margin-top: 5%;\r\n  /* font-weight: 400; */\r\n}\r\n\r\n.whitealternate {\r\n  background-color: white;\r\n}\r\n\r\n.invertimage {\r\n  -webkit-filter: invert(100%);\r\n  filter: invert(100%);\r\n}\r\n\r\nimg {\r\n  float: right;\r\n  display: block;\r\n  width: 40%;\r\n  margin-top: 5%;\r\n  margin-bottom: 5%;\r\n}\r\n\r\n.pie {\r\n  width: 30%;\r\n}\r\n\r\n.profileimage {\r\n  display: block;\r\n}\r\n\r\n.profile-name {\r\n  font-size: 16px;\r\n  display: block;\r\n}", ""]);
+exports.push([module.i, ".iconcontainer.first,\r\n.iconcontainer.second {\r\n  display: inline-block;\r\n  width: 50%;\r\n  vertical-align: top;\r\n  /* height:50%; */\r\n}\r\n\r\n.iconcontainer .leftimage {\r\n  display: block;\r\n  margin-left: 5%;\r\n  margin-right: 5%;\r\n  margin-bottom: 5%;\r\n  margin-top: 5%;\r\n  text-align: right;\r\n  float: right;\r\n  width: 50%;\r\n  /* height: 100%; */\r\n}\r\n\r\n.iconcontainer .rightimage {\r\n  display: block;\r\n  margin-left: 5%;\r\n  margin-right: 5%;\r\n  margin-bottom: 5%;\r\n  margin-top: 5%;\r\n  text-align: left;\r\n  float: left;\r\n  width: 50%;\r\n  /* height: 100%; */\r\n}\r\n\r\np {\r\n  /* text-align: center; */\r\n  font-family: 'Lato', sans-serif;\r\n  /* font-weight: 400; */\r\n}\r\n\r\n.description-right {\r\n  text-align: left;\r\n  font-family: 'Lato', sans-serif;\r\n  font-size: 18px;\r\n  margin-right: 10%;\r\n  margin-bottom: 10%;\r\n}\r\n\r\n.description-left {\r\n  text-align: left;\r\n  font-family: 'Lato', sans-serif;\r\n  font-size: 18px;\r\n  margin-left: 10%;\r\n  margin-bottom: 10%;\r\n}\r\n\r\n.left {\r\n  text-decoration: underline;\r\n  text-align: left;\r\n  font-family: 'Lato', sans-serif;\r\n  font-size: 25px;\r\n  margin-top: 5%;\r\n  margin-left: 10%;\r\n  /* font-weight: 400; */\r\n}\r\n\r\n.right {\r\n  text-decoration: underline;\r\n  text-align: left;\r\n  font-family: 'Lato', sans-serif;\r\n  font-size: 25px;\r\n  margin-top: 5%;\r\n  /* font-weight: 400; */\r\n}\r\n\r\n.whitealternate {\r\n  background-color: white;\r\n}\r\n\r\n.invertimage {\r\n  -webkit-filter: invert(100%);\r\n  filter: invert(100%);\r\n}\r\n\r\nimg {\r\n  float: right;\r\n  display: block;\r\n  width: 40%;\r\n  margin-top: 5%;\r\n  margin-bottom: 5%;\r\n}\r\n\r\n.pie {\r\n  width: 30%;\r\n}\r\n\r\n.profileimage {\r\n  display: block;\r\n  margin: auto;\r\n  float: none;\r\n}\r\n\r\n.profile-name {\r\n  font-size: 18px;\r\n  display: block;\r\n  text-align: center;\r\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -57349,19 +57349,19 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "description-right"
       }, "Alimtas is a subteam of E-Club focused on promoting life science entrepreneurship and the biotechnology industry to Princeton University undergraduates through hands-on learning."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        "class": "profile-name"
-      }, "Charles An (ca9)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "profileimage",
         src: "https://i.ibb.co/fxWgLSZ/headshot1.png"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "profile-name"
+      }, "Charles An (ca9)")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        "class": "profile-name"
-      }, "Charles An (ca9)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "profileimage",
         src: "https://i.ibb.co/fxWgLSZ/headshot1.png"
-      }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        "class": "profile-name"
+      }, "Charles An (ca9)"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "whitealternate"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"

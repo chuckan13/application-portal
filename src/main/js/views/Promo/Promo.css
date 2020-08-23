@@ -94,9 +94,12 @@ img {
 
 .profileimage {
   display: block;
+  margin: auto;
+  float: none;
 }
 
 .profile-name {
-  font-size: 16px;
+  font-size: 18px;
   display: block;
+  text-align: center;
 }

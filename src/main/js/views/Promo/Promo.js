@@ -33,12 +33,12 @@ class Promo extends React.Component {
 						</p>
 						<div>
 							<div class="iconcontainer first">
-								<p class="profile-name">Charles An (ca9)</p>
 								<img class="profileimage" src="https://i.ibb.co/fxWgLSZ/headshot1.png"></img>
+								<p class="profile-name">Charles An (ca9)</p>
 							</div>
 							<div class="iconcontainer second">
-								<p class="profile-name">Charles An (ca9)</p>
 								<img class="profileimage" src="https://i.ibb.co/fxWgLSZ/headshot1.png"></img>
+								<p class="profile-name">Charles An (ca9)</p>
 							</div>
 						</div>
 					</div>
