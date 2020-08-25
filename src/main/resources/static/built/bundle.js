@@ -56409,6 +56409,7 @@ var Apply = /*#__PURE__*/function (_Component) {
       roomNumber: '',
       phoneNumber: '',
       linkedin: '',
+      returningmember: '',
       teamOne: 0,
       teamTwo: 0,
       teamThree: 0,
@@ -56479,7 +56480,7 @@ var Apply = /*#__PURE__*/function (_Component) {
     }
   }, {
     key: "handlePartOneClick",
-    value: function handlePartOneClick(fn, ln, e, cl, con, bui, rn, pn, li) {
+    value: function handlePartOneClick(fn, ln, e, cl, con, bui, rn, pn, li, rm) {
       this.setState({
         firstName: fn,
         lastName: ln,
@@ -56490,6 +56491,7 @@ var Apply = /*#__PURE__*/function (_Component) {
         roomNumber: rn,
         phoneNumber: pn,
         linkedin: li,
+        returningmember: rm,
         partOne: false,
         partTwo: true
       });
@@ -56520,6 +56522,7 @@ var Apply = /*#__PURE__*/function (_Component) {
                   roomNumber: this.state.roomNumber,
                   phoneNumber: this.state.phoneNumber,
                   linkedin: this.state.linkedin,
+                  returningMember: this.state.returningmember,
                   role: 'USER'
                 }).then(function (response) {
                   tempId = response.data.id;
@@ -56771,6 +56774,7 @@ var BasicInformation = /*#__PURE__*/function (_React$Component) {
       roomNumber: '',
       phoneNumber: '',
       linkedin: '',
+      returningmember: '',
       errorMessage: 'Please review the above information carefully, you will not be able to return to edit.'
     });
 
@@ -56797,7 +56801,8 @@ var BasicInformation = /*#__PURE__*/function (_React$Component) {
       var rn = this.state.roomNumber;
       var pn = this.state.phoneNumber;
       var li = this.state.linkedin;
-      this.props.handlePartOneClick(fn, ln, e, cl, con, bui, rn, pn, li);
+      var rm = this.state.returningmember;
+      this.props.handlePartOneClick(fn, ln, e, cl, con, bui, rn, pn, li, rm);
     }
   }, {
     key: "render",
@@ -56857,6 +56862,12 @@ var BasicInformation = /*#__PURE__*/function (_React$Component) {
         ph: "LinkedIn",
         name: "linkedin",
         v: this.state.linkedin,
+        onChange: this.updateState
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
+        label: "Are you a returning E-Club member?",
+        ph: "Returningmember",
+        name: "returningmember",
+        v: this.state.returningmember,
         onChange: this.updateState
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         style: {
@@ -57731,7 +57742,9 @@ var Review = /*#__PURE__*/function (_React$Component) {
         id: "information"
       }, " Phone Number: ", this.props.state.phoneNumber), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         id: "information"
-      }, " LinkedIn Profile: ", this.props.state.linkedin)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+      }, " LinkedIn Profile: ", this.props.state.linkedin), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        id: "information"
+      }, " Returning Member? ", this.props.state.returningmember)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         id: "header"
       }, " Short Response Questions: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(TeamResponses, {
         team: teamOneObj.name,
@@ -58265,7 +58278,7 @@ function ApplyButton(props) {
     className: "center-block text-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
     id: "welcome-text"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "Thank you. Your application has been submitted."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "All E-Club applicant will receive a free T-shirt this year! Click the image below to get one or click ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "Thank you. Your application has been submitted."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "All E-Club applicants will receive a free T-shirt this year! Click the image below to get one or click ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
     "class": "custominkhere",
     href: "https://www.customink.com/g/kua0-00ca-s6c8",
     target: "_blank"

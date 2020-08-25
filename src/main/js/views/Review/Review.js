@@ -56,6 +56,7 @@ class Review extends React.Component {
 					<p id="information"> Room Number: {this.props.state.roomNumber}</p>
 					<p id="information"> Phone Number: {this.props.state.phoneNumber}</p>
 					<p id="information"> LinkedIn Profile: {this.props.state.linkedin}</p>
+					<p id="information"> Returning Member? {this.props.state.returningmember}</p>
 				</div>
 				<div>
 					<p id="header"> Short Response Questions: </p>

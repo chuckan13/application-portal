@@ -24,6 +24,7 @@ class Apply extends Component {
 		roomNumber: '',
 		phoneNumber: '',
 		linkedin: '',
+		returningmember: '',
 		teamOne: 0,
 		teamTwo: 0,
 		teamThree: 0,
@@ -86,7 +87,7 @@ class Apply extends Component {
 			.catch(err => console.log(err));
 	}
 
-	handlePartOneClick(fn, ln, e, cl, con, bui, rn, pn, li) {
+	handlePartOneClick(fn, ln, e, cl, con, bui, rn, pn, li, rm) {
 		this.setState({
 			firstName: fn,
 			lastName: ln,
@@ -97,6 +98,7 @@ class Apply extends Component {
 			roomNumber: rn,
 			phoneNumber: pn,
 			linkedin: li,
+			returningmember: rm,
 			partOne: false,
 			partTwo: true
 		});
@@ -120,6 +122,7 @@ class Apply extends Component {
 				roomNumber: this.state.roomNumber,
 				phoneNumber: this.state.phoneNumber,
 				linkedin: this.state.linkedin,
+				returningMember: this.state.returningmember,
 				role: 'USER'
 			})
 			.then(function (response) {

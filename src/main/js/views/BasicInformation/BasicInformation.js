@@ -18,6 +18,7 @@ class BasicInformation extends React.Component {
 		roomNumber: '',
 		phoneNumber: '',
 		linkedin: '',
+		returningmember: '',
 		errorMessage: 'Please review the above information carefully, you will not be able to return to edit.'
 	};
 
@@ -44,7 +45,8 @@ class BasicInformation extends React.Component {
 		var rn = this.state.roomNumber;
 		var pn = this.state.phoneNumber;
 		var li = this.state.linkedin;
-		this.props.handlePartOneClick(fn, ln, e, cl, con, bui, rn, pn, li);
+		var rm = this.state.returningmember;
+		this.props.handlePartOneClick(fn, ln, e, cl, con, bui, rn, pn, li, rm);
 	}
 
 	render() {
@@ -115,6 +117,13 @@ class BasicInformation extends React.Component {
 						ph="LinkedIn"
 						name="linkedin"
 						v={this.state.linkedin}
+						onChange={this.updateState}
+					/>
+					<FormEntry
+						label="Are you a returning E-Club member?"
+						ph="Returningmember"
+						name="returningmember"
+						v={this.state.returningmember}
 						onChange={this.updateState}
 					/>
 				</form>
