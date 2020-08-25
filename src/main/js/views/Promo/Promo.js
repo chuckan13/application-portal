@@ -139,8 +139,8 @@ class Promo extends React.Component {
 				</div>
 				<div class="whitealternate">
 					<div class="iconcontainer first">
-						<a href="output.princetoneclub.com" target="_blank">
-							<img src="https://i.ibb.co/QM9XhRx/hiclipart-com.png" />
+						<a href="" target="_blank">
+							<img src="https://i.ibb.co/xs2sW14/newoutput.png" />
 						</a>
 					</div>
 					<div class="iconcontainer second">
@@ -238,7 +238,7 @@ class Promo extends React.Component {
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<img src="https://i.ibb.co/k6nKzzH/FAVPNG-mobile-app-development-software-development-Cc2-Ls5ve.png" />
+						<img src="https://i.ibb.co/BPQS8Tt/newtip.png" />
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Tigers in Product</p>

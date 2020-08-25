@@ -57463,10 +57463,10 @@ var Promo = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "output.princetoneclub.com",
+        href: "",
         target: "_blank"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        src: "https://i.ibb.co/QM9XhRx/hiclipart-com.png"
+        src: "https://i.ibb.co/xs2sW14/newoutput.png"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
@@ -57559,7 +57559,7 @@ var Promo = /*#__PURE__*/function (_React$Component) {
       }, "TigerTables provides the opportunity for Princeton students to have small-setting unscripted, off-the-record discussions with CEOs, entrepreneurs, VC\u2019s and other industry leaders in the startup community that focus on engaging the audience in various settings."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        src: "https://i.ibb.co/k6nKzzH/FAVPNG-mobile-app-development-software-development-Cc2-Ls5ve.png"
+        src: "https://i.ibb.co/BPQS8Tt/newtip.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
