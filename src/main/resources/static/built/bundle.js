@@ -57269,13 +57269,13 @@ var GeneralQuestions = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         id: "title"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Part 2: General Questions")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
-        label: "Name 3 strongest traits/talents",
+        label: "Name your 3 strongest traits/talents",
         ph: "3 Traits",
         name: "traits",
         v: this.state.traits,
         onChange: this.updateState
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
-        label: "Why do you want to join Eclub?",
+        label: "Why do you want to join E-Club?",
         ph: "Why Join",
         name: "whyjoin",
         v: this.state.whyjoin,

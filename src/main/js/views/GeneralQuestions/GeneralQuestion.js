@@ -51,14 +51,14 @@ class GeneralQuestions extends React.Component {
                 </div>
                 <form>
                     <FormEntry
-                        label="Name 3 strongest traits/talents"
+                        label="Name your 3 strongest traits/talents"
                         ph="3 Traits"
                         name="traits"
                         v={this.state.traits}
                         onChange={this.updateState}
                     />
                     <FormEntry
-                        label="Why do you want to join Eclub?"
+                        label="Why do you want to join E-Club?"
                         ph="Why Join"
                         name="whyjoin"
                         v={this.state.whyjoin}
