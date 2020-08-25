@@ -1,12 +1,12 @@
 p {
-  font-family: 'Lato', sans-serif;
+  font-family: "Chalet";
   color: black;
   font-size: 30px;
   text-align: center;
 }
 
 #welcome-content {
-  font-family: 'Lato', sans-serif;
+  font-family: "Chalet";
   margin: auto;
 }
 
@@ -28,7 +28,7 @@ p {
 }
 
 .btn {
-  font-family: 'Lato', sans-serif;
+  font-family: "Chalet";
 }
 
 .btn:focus,

@@ -12,6 +12,10 @@ body {
   font-family: "Avenir";
   src: url('../resources/static/fonts/Avenir-Book.ttf'),
 }  */
+@font-face {
+  font-family: "Chalet";
+  src: url('../resources/static/fonts/ChaletLondonNineteenSixty.ttf')
+}
 
 /* navbar properties */
 #nav {
@@ -74,7 +78,7 @@ body {
 /* general text */
 a {
   color: white !important;
-  font-family: 'Lato', sans-serif;
+  font-family: "Chalet";
 }
 
 a:hover {

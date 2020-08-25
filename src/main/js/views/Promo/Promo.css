@@ -32,13 +32,13 @@
 
 p {
   /* text-align: center; */
-  font-family: 'Lato', sans-serif;
+  font-family: "Chalet";
   /* font-weight: 400; */
 }
 
 .description-right {
   text-align: left;
-  font-family: 'Lato', sans-serif;
+  font-family: "Chalet";
   font-size: 18px;
   margin-right: 10%;
   margin-bottom: 10%;
@@ -46,7 +46,7 @@ p {
 
 .description-left {
   text-align: left;
-  font-family: 'Lato', sans-serif;
+  font-family: "Chalet";
   font-size: 18px;
   margin-left: 10%;
   margin-bottom: 10%;
@@ -55,7 +55,7 @@ p {
 .left {
   text-decoration: underline;
   text-align: left;
-  font-family: 'Lato', sans-serif;
+  font-family: "Chalet";
   font-size: 25px;
   margin-top: 5%;
   margin-left: 10%;
@@ -65,7 +65,7 @@ p {
 .right {
   text-decoration: underline;
   text-align: left;
-  font-family: 'Lato', sans-serif;
+  font-family: "Chalet";
   font-size: 25px;
   margin-top: 5%;
   /* font-weight: 400; */
