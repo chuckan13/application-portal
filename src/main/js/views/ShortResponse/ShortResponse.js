@@ -131,7 +131,7 @@ class ShortResponse extends React.Component {
 		return (
 			<div>
 				<div id="short-response-title">
-					<p> Part 3: Short Response </p>
+					<p> Part 4: Short Response </p>
 				</div>
 				<TeamQuestions
 					team={teamOneObj.name}
