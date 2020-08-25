@@ -9,7 +9,13 @@ import { ControlLabel } from 'react-bootstrap';
 
 class GeneralQuestions extends React.Component {
     state = {
-
+        traits: '',
+        whyjoin: '',
+        extracurr: '',
+        idea: '',
+        resume: '',
+        portfolio: '',
+        tigertrek: '',
         errorMessage: 'Please review the above information carefully, you will not be able to return to edit.'
     };
 
@@ -27,88 +33,73 @@ class GeneralQuestions extends React.Component {
     }
 
     handleSubmitClick() {
-        var fn = this.state.firstName;
-        var ln = this.state.lastName;
-        var e = this.state.email;
-        var cl = this.state.classYear;
-        var con = this.state.concentration;
-        var bui = this.state.building;
-        var rn = this.state.roomNumber;
-        var pn = this.state.phoneNumber;
-        var li = this.state.linkedin;
-        this.props.handlePartOneClick(fn, ln, e, cl, con, bui, rn, pn, li);
+        var tr = this.state.traits;
+        var wj = this.state.whyjoin;
+        var ec = this.state.extracurr;
+        var idea = this.state.idea;
+        var res = this.state.resume;
+        var pf = this.state.portfolio;
+        var tt = this.state.tigertrek;
+        this.props.handlePartOneTwoClick(tr, wj, ec, idea, res, pf, tt);
     }
 
     render() {
         return (
             <div>
                 <div id="title">
-                    <p>Part 1: Basic Information</p>
+                    <p>Part 2: General Questions</p>
                 </div>
                 <form>
                     <FormEntry
-                        label="First Name:"
-                        ph="First Name"
-                        name="firstName"
-                        v={this.state.firstName}
+                        label="Name 3 strongest traits/talents"
+                        ph="3 Traits"
+                        name="traits"
+                        v={this.state.traits}
                         onChange={this.updateState}
                     />
                     <FormEntry
-                        label="Last Name:"
-                        ph="Last Name"
-                        name="lastName"
-                        v={this.state.lastName}
+                        label="Why do you want to join Eclub?"
+                        ph="Why Join"
+                        name="whyjoin"
+                        v={this.state.whyjoin}
                         onChange={this.updateState}
                     />
                     <FormEntry
-                        label="Email:"
-                        ph="Email"
-                        name="email"
-                        v={this.state.email}
+                        label="Please describe your current/past extracurricular interests"
+                        ph="Extracurriculars"
+                        name="extracurr"
+                        v={this.state.extracurr}
                         onChange={this.updateState}
                     />
                     <FormEntry
-                        label="Class Year:"
-                        ph="Class Year"
-                        name="classYear"
-                        v={this.state.classYear}
+                        label="What is a (crazy) idea that you’ve had that the world needs right now?"
+                        ph="Idea"
+                        name="idea"
+                        v={this.state.idea}
                         onChange={this.updateState}
                     />
                     <FormEntry
-                        label="Concentration:"
-                        ph="Concentration"
-                        name="concentration"
-                        v={this.state.concentration}
+                        label="Please provide a link to your resume"
+                        ph="Resume"
+                        name="resume"
+                        v={this.state.resume}
                         onChange={this.updateState}
                     />
                     <FormEntry
-                        label="Building Name:"
-                        ph="Building Name"
-                        name="building"
-                        v={this.state.building}
+                        label="If you have a portfolio, or there is something you built that you are especially proud of, please include a link here"
+                        ph="Portfolio"
+                        name="portfolio"
+                        v={this.state.portfolio}
                         onChange={this.updateState}
                     />
                     <FormEntry
-                        label="Room Number:"
-                        ph="Room Number"
-                        name="roomNumber"
-                        v={this.state.roomNumber}
+                        label="Are you interested in participating in the TigerTreks, scheduled December 2020 - January 2021 (Wintercession)?"
+                        ph="Tigertrek Interest"
+                        name="tigertrek"
+                        v={this.state.tigertrek}
                         onChange={this.updateState}
                     />
-                    <FormEntry
-                        label="Phone Number:"
-                        ph="Phone Number"
-                        name="phoneNumber"
-                        v={this.state.phoneNumber}
-                        onChange={this.updateState}
-                    />
-                    <FormEntry
-                        label="LinkedIn Profile:"
-                        ph="LinkedIn"
-                        name="linkedin"
-                        v={this.state.linkedin}
-                        onChange={this.updateState}
-                    />
+
                 </form>
                 <div
                     style={{

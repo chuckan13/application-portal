@@ -121,7 +121,7 @@ class BasicInformation extends React.Component {
 					/>
 					<FormEntry
 						label="Are you a returning E-Club member?"
-						ph="Returningmember"
+						ph="Returning member"
 						name="returningmember"
 						v={this.state.returningmember}
 						onChange={this.updateState}

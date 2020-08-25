@@ -56351,13 +56351,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../app.css */ "./src/main/js/app.css");
 /* harmony import */ var _app_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_app_css__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _BasicInformation_BasicInformation_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./BasicInformation/BasicInformation.js */ "./src/main/js/views/BasicInformation/BasicInformation.js");
-/* harmony import */ var _TeamSelection_TeamSelection_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./TeamSelection/TeamSelection.js */ "./src/main/js/views/TeamSelection/TeamSelection.js");
-/* harmony import */ var _ShortResponse_ShortResponse_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./ShortResponse/ShortResponse.js */ "./src/main/js/views/ShortResponse/ShortResponse.js");
-/* harmony import */ var _Review_Review_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./Review/Review.js */ "./src/main/js/views/Review/Review.js");
-/* harmony import */ var _Submitted_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./Submitted.js */ "./src/main/js/views/Submitted.js");
-/* harmony import */ var react_bootstrap_lib_utils_bootstrapUtils__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react-bootstrap/lib/utils/bootstrapUtils */ "./node_modules/react-bootstrap/lib/utils/bootstrapUtils.js");
-/* harmony import */ var react_bootstrap_lib_utils_bootstrapUtils__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_lib_utils_bootstrapUtils__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/es/index.js");
+/* harmony import */ var _GeneralQuestions_GeneralQuestion_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./GeneralQuestions/GeneralQuestion.js */ "./src/main/js/views/GeneralQuestions/GeneralQuestion.js");
+/* harmony import */ var _TeamSelection_TeamSelection_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./TeamSelection/TeamSelection.js */ "./src/main/js/views/TeamSelection/TeamSelection.js");
+/* harmony import */ var _ShortResponse_ShortResponse_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./ShortResponse/ShortResponse.js */ "./src/main/js/views/ShortResponse/ShortResponse.js");
+/* harmony import */ var _Review_Review_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./Review/Review.js */ "./src/main/js/views/Review/Review.js");
+/* harmony import */ var _Submitted_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./Submitted.js */ "./src/main/js/views/Submitted.js");
+/* harmony import */ var react_bootstrap_lib_utils_bootstrapUtils__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! react-bootstrap/lib/utils/bootstrapUtils */ "./node_modules/react-bootstrap/lib/utils/bootstrapUtils.js");
+/* harmony import */ var react_bootstrap_lib_utils_bootstrapUtils__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap_lib_utils_bootstrapUtils__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/es/index.js");
 
 
 
@@ -56382,7 +56383,8 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 
 
-Object(react_bootstrap_lib_utils_bootstrapUtils__WEBPACK_IMPORTED_MODULE_17__["addStyle"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_18__["Button"], 'next');
+
+Object(react_bootstrap_lib_utils_bootstrapUtils__WEBPACK_IMPORTED_MODULE_18__["addStyle"])(react_bootstrap__WEBPACK_IMPORTED_MODULE_19__["Button"], 'next');
 
 var Apply = /*#__PURE__*/function (_Component) {
   _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Apply, _Component);
@@ -56410,6 +56412,13 @@ var Apply = /*#__PURE__*/function (_Component) {
       phoneNumber: '',
       linkedin: '',
       returningmember: '',
+      traits: '',
+      whyjoin: '',
+      extracurr: '',
+      idea: '',
+      resume: '',
+      portfolio: '',
+      tigertrek: '',
       teamOne: 0,
       teamTwo: 0,
       teamThree: 0,
@@ -56425,6 +56434,7 @@ var Apply = /*#__PURE__*/function (_Component) {
 
       /* display booleans */
       partOne: true,
+      partOneTwo: false,
       partTwo: false,
       partThree: false,
       partFour: false,
@@ -56434,6 +56444,7 @@ var Apply = /*#__PURE__*/function (_Component) {
     });
 
     _this.handlePartOneClick = _this.handlePartOneClick.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
+    _this.handlePartOneTwoClick = _this.handlePartOneTwoClick.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this.handlePartTwoClick = _this.handlePartTwoClick.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this.handlePartThreeClick = _this.handlePartThreeClick.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this.handlePartFourClick = _this.handlePartFourClick.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
@@ -56493,6 +56504,21 @@ var Apply = /*#__PURE__*/function (_Component) {
         linkedin: li,
         returningmember: rm,
         partOne: false,
+        partOneTwo: true
+      });
+    }
+  }, {
+    key: "handlePartOneTwoClick",
+    value: function handlePartOneTwoClick(tr, wj, ec, idea, res, pf, tt) {
+      this.setState({
+        traits: tr,
+        whyjoin: wj,
+        extracurr: ec,
+        idea: idea,
+        resume: res,
+        portfolio: pf,
+        tigertrek: tt,
+        partOneTwo: false,
         partTwo: true
       });
     }
@@ -56523,6 +56549,13 @@ var Apply = /*#__PURE__*/function (_Component) {
                   phoneNumber: this.state.phoneNumber,
                   linkedin: this.state.linkedin,
                   returningMember: this.state.returningmember,
+                  traits: this.state.traits,
+                  whyJoin: this.state.whyjoin,
+                  extracurr: this.state.extracurr,
+                  idea: this.state.idea,
+                  resume: this.state.resume,
+                  portfolio: this.state.portfolio,
+                  tigertrek: this.state.tigertrek,
                   role: 'USER'
                 }).then(function (response) {
                   tempId = response.data.id;
@@ -56629,6 +56662,7 @@ var Apply = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this$state = this.state,
           partOne = _this$state.partOne,
+          partOneTwo = _this$state.partOneTwo,
           partTwo = _this$state.partTwo,
           partThree = _this$state.partThree,
           partFour = _this$state.partFour,
@@ -56640,23 +56674,28 @@ var Apply = /*#__PURE__*/function (_Component) {
           handlePartOneClick: this.handlePartOneClick,
           state: this.state
         });
+      } else if (partOneTwo) {
+        display = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_GeneralQuestions_GeneralQuestion_js__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          handlePartOneTwoClick: this.handlePartOneTwoClick,
+          state: this.state
+        });
       } else if (partTwo) {
-        display = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_TeamSelection_TeamSelection_js__WEBPACK_IMPORTED_MODULE_13__["default"], {
+        display = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_TeamSelection_TeamSelection_js__WEBPACK_IMPORTED_MODULE_14__["default"], {
           handlePartTwoClick: this.handlePartTwoClick,
           state: this.state
         });
       } else if (partThree) {
-        display = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_ShortResponse_ShortResponse_js__WEBPACK_IMPORTED_MODULE_14__["default"], {
+        display = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_ShortResponse_ShortResponse_js__WEBPACK_IMPORTED_MODULE_15__["default"], {
           handlePartThreeClick: this.handlePartThreeClick,
           state: this.state
         });
       } else if (partFour) {
-        display = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_Review_Review_js__WEBPACK_IMPORTED_MODULE_15__["default"], {
+        display = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_Review_Review_js__WEBPACK_IMPORTED_MODULE_16__["default"], {
           handlePartFourClick: this.handlePartFourClick,
           state: this.state
         });
       } else if (submitted) {
-        display = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_Submitted_js__WEBPACK_IMPORTED_MODULE_16__["default"], {
+        display = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_Submitted_js__WEBPACK_IMPORTED_MODULE_17__["default"], {
           handlePartFourClick: this.handlePartFourClick,
           state: this.state,
           emailAddy: this.state.email
@@ -56865,7 +56904,7 @@ var BasicInformation = /*#__PURE__*/function (_React$Component) {
         onChange: this.updateState
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
         label: "Are you a returning E-Club member?",
-        ph: "Returningmember",
+        ph: "Returning member",
         name: "returningmember",
         v: this.state.returningmember,
         onChange: this.updateState
@@ -57126,6 +57165,190 @@ function BackButton(props) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (editApplication);
+
+/***/ }),
+
+/***/ "./src/main/js/views/GeneralQuestions/GeneralQuestion.js":
+/*!***************************************************************!*\
+  !*** ./src/main/js/views/GeneralQuestions/GeneralQuestion.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _BasicInformation_BasicInformation_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../BasicInformation/BasicInformation.css */ "./src/main/js/views/BasicInformation/BasicInformation.css");
+/* harmony import */ var _BasicInformation_BasicInformation_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_BasicInformation_BasicInformation_css__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/es/index.js");
+
+
+
+
+
+
+
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+
+
+
+
+
+
+
+
+
+var GeneralQuestions = /*#__PURE__*/function (_React$Component) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(GeneralQuestions, _React$Component);
+
+  var _super = _createSuper(GeneralQuestions);
+
+  function GeneralQuestions(props, context) {
+    var _this;
+
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, GeneralQuestions);
+
+    _this = _super.call(this, props, context);
+
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this), "state", {
+      traits: '',
+      whyjoin: '',
+      extracurr: '',
+      idea: '',
+      resume: '',
+      portfolio: '',
+      tigertrek: '',
+      errorMessage: 'Please review the above information carefully, you will not be able to return to edit.'
+    });
+
+    _this.handleSubmitClick = _this.handleSubmitClick.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this));
+    _this.updateState = _this.updateState.bind(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this));
+    return _this;
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(GeneralQuestions, [{
+    key: "updateState",
+    value: function updateState(e) {
+      var name = e.target.name;
+      this.setState(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()({}, name, e.target.value));
+    }
+  }, {
+    key: "handleSubmitClick",
+    value: function handleSubmitClick() {
+      var tr = this.state.traits;
+      var wj = this.state.whyjoin;
+      var ec = this.state.extracurr;
+      var idea = this.state.idea;
+      var res = this.state.resume;
+      var pf = this.state.portfolio;
+      var tt = this.state.tigertrek;
+      this.props.handlePartOneTwoClick(tr, wj, ec, idea, res, pf, tt);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        id: "title"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Part 2: General Questions")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
+        label: "Name 3 strongest traits/talents",
+        ph: "3 Traits",
+        name: "traits",
+        v: this.state.traits,
+        onChange: this.updateState
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
+        label: "Why do you want to join Eclub?",
+        ph: "Why Join",
+        name: "whyjoin",
+        v: this.state.whyjoin,
+        onChange: this.updateState
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
+        label: "Please describe your current/past extracurricular interests",
+        ph: "Extracurriculars",
+        name: "extracurr",
+        v: this.state.extracurr,
+        onChange: this.updateState
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
+        label: "What is a (crazy) idea that you\u2019ve had that the world needs right now?",
+        ph: "Idea",
+        name: "idea",
+        v: this.state.idea,
+        onChange: this.updateState
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
+        label: "Please provide a link to your resume",
+        ph: "Resume",
+        name: "resume",
+        v: this.state.resume,
+        onChange: this.updateState
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
+        label: "If you have a portfolio, or there is something you built that you are especially proud of, please include a link here",
+        ph: "Portfolio",
+        name: "portfolio",
+        v: this.state.portfolio,
+        onChange: this.updateState
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
+        label: "Are you interested in participating in the TigerTreks, scheduled December 2020 - January 2021 (Wintercession)?",
+        ph: "Tigertrek Interest",
+        name: "tigertrek",
+        v: this.state.tigertrek,
+        onChange: this.updateState
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        style: {
+          color: 'black',
+          display: 'flex',
+          'justify-content': 'center'
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, "\u26A0"), this.state.errorMessage), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SubmitButton, {
+        onClick: this.handleSubmitClick
+      }));
+    }
+  }]);
+
+  return GeneralQuestions;
+}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component);
+
+function FormEntry(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["FormGroup"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["ControlLabel"], {
+    id: "short-form-label"
+  }, props.label), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["FormControl"], {
+    id: "short-form-answer",
+    name: props.name,
+    type: "text",
+    placeholder: props.ph,
+    value: props.v,
+    onChange: props.onChange
+  }));
+}
+
+function SubmitButton(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["Row"], {
+    className: "center-block text-center"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["Col"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["Button"], {
+    bsStyle: "next",
+    bsSize: "large",
+    onClick: props.onClick
+  }, "next")));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (GeneralQuestions);
 
 /***/ }),
 
@@ -57744,7 +57967,21 @@ var Review = /*#__PURE__*/function (_React$Component) {
         id: "information"
       }, " LinkedIn Profile: ", this.props.state.linkedin), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         id: "information"
-      }, " Returning Member? ", this.props.state.returningmember)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+      }, " Returning Member? ", this.props.state.returningmember), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        id: "information"
+      }, " 3 Strong Traits:  ", this.props.state.traits), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        id: "information"
+      }, " Why join E-Club?  ", this.props.state.whyjoin), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        id: "information"
+      }, " Extracurriculars:  ", this.props.state.extracurr), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        id: "information"
+      }, " Crazy idea:  ", this.props.state.idea), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        id: "information"
+      }, " Resume link:  ", this.props.state.resume), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        id: "information"
+      }, " Portfolio link: ", this.props.state.portfolio), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        id: "information"
+      }, " Tigertrek interest: ", this.props.state.tigertrek)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         id: "header"
       }, " Short Response Questions: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(TeamResponses, {
         team: teamOneObj.name,

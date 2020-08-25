@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import '../app.css';
 import BasicInformation from './BasicInformation/BasicInformation.js';
+import GeneralQuestions from './GeneralQuestions/GeneralQuestion.js'
 import TeamSelection from './TeamSelection/TeamSelection.js';
 import ShortResponse from './ShortResponse/ShortResponse.js';
 import Review from './Review/Review.js';
@@ -25,6 +26,13 @@ class Apply extends Component {
 		phoneNumber: '',
 		linkedin: '',
 		returningmember: '',
+		traits: '',
+		whyjoin: '',
+		extracurr: '',
+		idea: '',
+		resume: '',
+		portfolio: '',
+		tigertrek: '',
 		teamOne: 0,
 		teamTwo: 0,
 		teamThree: 0,
@@ -39,6 +47,7 @@ class Apply extends Component {
 		responseSix: '',
 		/* display booleans */
 		partOne: true,
+		partOneTwo: false,
 		partTwo: false,
 		partThree: false,
 		partFour: false,
@@ -50,6 +59,7 @@ class Apply extends Component {
 	constructor(props) {
 		super(props);
 		this.handlePartOneClick = this.handlePartOneClick.bind(this);
+		this.handlePartOneTwoClick = this.handlePartOneTwoClick.bind(this);
 		this.handlePartTwoClick = this.handlePartTwoClick.bind(this);
 		this.handlePartThreeClick = this.handlePartThreeClick.bind(this);
 		this.handlePartFourClick = this.handlePartFourClick.bind(this);
@@ -100,8 +110,22 @@ class Apply extends Component {
 			linkedin: li,
 			returningmember: rm,
 			partOne: false,
-			partTwo: true
+			partOneTwo: true
 		});
+	}
+
+	handlePartOneTwoClick(tr, wj, ec, idea, res, pf, tt) {
+		this.setState({
+			traits: tr,
+			whyjoin: wj,
+			extracurr: ec,
+			idea: idea,
+			resume: res,
+			portfolio: pf,
+			tigertrek: tt,
+			partOneTwo: false,
+			partTwo: true
+		})
 	}
 
 	async handlePartTwoClick(t1, t2, t3) {
@@ -123,6 +147,13 @@ class Apply extends Component {
 				phoneNumber: this.state.phoneNumber,
 				linkedin: this.state.linkedin,
 				returningMember: this.state.returningmember,
+				traits: this.state.traits,
+				whyJoin: this.state.whyjoin,
+				extracurr: this.state.extracurr,
+				idea: this.state.idea,
+				resume: this.state.resume,
+				portfolio: this.state.portfolio,
+				tigertrek: this.state.tigertrek,
 				role: 'USER'
 			})
 			.then(function (response) {
@@ -198,11 +229,13 @@ class Apply extends Component {
 	}
 
 	render() {
-		const { partOne, partTwo, partThree, partFour, submitted } = this.state;
+		const { partOne, partOneTwo, partTwo, partThree, partFour, submitted } = this.state;
 		let display;
 
 		if (!submitted && partOne) {
 			display = <BasicInformation handlePartOneClick={this.handlePartOneClick} state={this.state} />;
+		} else if (partOneTwo) {
+			display = <GeneralQuestions handlePartOneTwoClick={this.handlePartOneTwoClick} state={this.state} />;
 		} else if (partTwo) {
 			display = <TeamSelection handlePartTwoClick={this.handlePartTwoClick} state={this.state} />;
 		} else if (partThree) {
