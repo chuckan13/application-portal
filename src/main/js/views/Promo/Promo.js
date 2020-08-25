@@ -14,7 +14,9 @@ class Promo extends React.Component {
 			<div>
 				<div>
 					<div class="iconcontainer first">
-						<img class="invertimage" src="https://i.ibb.co/r402zTc/Alimtas.png" />
+						<a href="https://alimtas.herokuapp.com/" target="_blank">
+							<img class="invertimage" src="https://i.ibb.co/r402zTc/Alimtas.png" />
+						</a>
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Alimtas</p>
@@ -26,7 +28,9 @@ class Promo extends React.Component {
 				</div>
 				<div class="whitealternate">
 					<div class="iconcontainer first">
-						<img class="invertimage" src="https://i.ibb.co/tzvGHGh/Alum-Relations.png" />
+						<a href="https://www.princetoneclub.com/alumni" target="_blank">
+							<img class="invertimage" src="https://i.ibb.co/tzvGHGh/Alum-Relations.png" />
+						</a>
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Alumni Outreach</p>
@@ -39,7 +43,9 @@ class Promo extends React.Component {
 				</div>
 				<div>
 					<div class="iconcontainer first">
+						{/* <a href="" target="_blank"> */}
 						<img class="invertimage" src="https://i.ibb.co/X2sFm0S/artsent.png" />
+						{/* </a> */}
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Arts &amp; Entrepreneurship</p>
@@ -67,7 +73,9 @@ class Promo extends React.Component {
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<img class="pie" src="https://i.ibb.co/kG2sHSY/Design-Team-Logo.png" />
+						<a href="https://www.eclubdesign.com/" target="_blank">
+							<img class="pie" src="https://i.ibb.co/kG2sHSY/Design-Team-Logo.png" />
+						</a>
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Design</p>
@@ -92,7 +100,9 @@ class Promo extends React.Component {
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<img class="invertimage" src="https://i.ibb.co/gMnL6Nb/Hack-Princeton.png" />
+						<a href="https://www.hackprinceton.com/" target="_blank">
+							<img class="invertimage" src="https://i.ibb.co/gMnL6Nb/Hack-Princeton.png" />
+						</a>
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">HackPrinceton</p>
@@ -131,7 +141,9 @@ class Promo extends React.Component {
 				</div>
 				<div class="whitealternate">
 					<div class="iconcontainer first">
-						<img class="invertimage" src="https://i.ibb.co/SvqCxXw/Ignite-STEM.png" />
+						<a href="https://www.ignitestem.org/" target="_blank">
+							<img class="invertimage" src="https://i.ibb.co/SvqCxXw/Ignite-STEM.png" />
+						</a>
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">IgniteStem</p>
@@ -143,7 +155,9 @@ class Promo extends React.Component {
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<img class="invertimage" src="https://i.ibb.co/R06GCj6/MVP.png" />
+						<a href="https://www.makeventures.io/" target="_blank">
+							<img class="invertimage" src="https://i.ibb.co/R06GCj6/MVP.png" />
+						</a>
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">MVP</p>
@@ -154,7 +168,9 @@ class Promo extends React.Component {
 				</div>
 				<div class="whitealternate">
 					<div class="iconcontainer first">
-						<img class="invertimage" src="https://i.ibb.co/rGDmMt5/NYTT.png" />
+						<a href="http://nytigertrek.com/" target="_blank">
+							<img class="invertimage" src="https://i.ibb.co/rGDmMt5/NYTT.png" />
+						</a>
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">New York Tiger Trek</p>
@@ -166,7 +182,9 @@ class Promo extends React.Component {
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<img class="pie" src="https://i.ibb.co/C5Xb29B/finalpie.png" />
+						<a href="https://medium.com/profiles-in-entrepreneurship" target="_blank">
+							<img class="pie" src="https://i.ibb.co/C5Xb29B/finalpie.png" />
+						</a>
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Profiles in Entrepreneurship</p>
@@ -178,7 +196,9 @@ class Promo extends React.Component {
 				</div>
 				<div class="whitealternate">
 					<div class="iconcontainer first">
-						<img class="invertimage" src="https://i.ibb.co/kcCDFRB/Rehack.png" />
+						<a href="https://rehack.co/" target="_blank">
+							<img class="invertimage" src="https://i.ibb.co/kcCDFRB/Rehack.png" />
+						</a>
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Rehack</p>
@@ -191,7 +211,9 @@ class Promo extends React.Component {
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<img class="invertimage" src="https://i.ibb.co/51Vgxqd/SVTT.png" />
+						<a href="http://svtigertrek.com/" target="_blank">
+							<img class="invertimage" src="https://i.ibb.co/51Vgxqd/SVTT.png" />
+						</a>
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Silicon Valley Tiger Trek</p>
@@ -204,7 +226,9 @@ class Promo extends React.Component {
 				</div>
 				<div class="whitealternate">
 					<div class="iconcontainer first">
-						<img class="invertimage" src="https://i.ibb.co/gZVgHwg/Tiger-Launch.png" />
+						<a href="https://www.tigerlaunch.com/" target="_blank">
+							<img class="invertimage" src="https://i.ibb.co/gZVgHwg/Tiger-Launch.png" />
+						</a>
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">TigerLaunch</p>

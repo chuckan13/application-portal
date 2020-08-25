@@ -4075,7 +4075,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "#title,\r\n#short-response-title {\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  margin-top: 50px;\r\n  margin-bottom: 0px;\r\n}\r\n\r\n/* form styles */\r\n#short-form-answer,\r\n#long-form-answer {\r\n  display: block;\r\n  margin: auto;\r\n  min-width: 200px;\r\n  height: 40px;\r\n  padding: 20px 12px 20px 15px;\r\n  font-size: 14px;\r\n  line-height: 1.42857143;\r\n  color: #555;\r\n  background-color: #fff;\r\n  background-image: none;\r\n  border: 1px solid #ccc;\r\n  border-radius: 8px;\r\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);\r\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);\r\n  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;\r\n  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\r\n  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\r\n}\r\n\r\n#short-form-answer {\r\n  max-width: 400px;\r\n}\r\n\r\n#long-form-answer {\r\n  max-width: 470px;\r\n  height: 160px;\r\n  padding-top: 12px;\r\n}\r\n\r\n#short-form-label,\r\n#long-form-label {\r\n  color: black;\r\n  text-align: left;\r\n  display: block;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  margin-bottom: 0px;\r\n  min-width: 200px;\r\n  /* height: 40px; */\r\n  padding: 20px 12px 30px 5px;\r\n  font-family: 'Lato', sans-serif;\r\n  font-size: 16px;\r\n  line-height: 1.42857143;\r\n  font-weight: lighter;\r\n}\r\n\r\n#short-form-label {\r\n  max-width: 400px;\r\n}\r\n\r\n#long-form-label {\r\n  max-width: 470px;\r\n  color: #272727;\r\n  padding-left: 10px;\r\n}\r\n\r\n.btn-next {\r\n  color: black;\r\n  background-color: #fcbc7c;\r\n  border-radius: 25px;\r\n  padding: 10px 35px 10px 33px;\r\n  font-size: 20px;\r\n  text-align: center;\r\n  margin-top: 40px;\r\n  margin-bottom: 60px;\r\n}", ""]);
+exports.push([module.i, "#title,\r\n#short-response-title {\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  margin-top: 50px;\r\n  margin-bottom: 0px;\r\n}\r\n\r\n/* form styles */\r\n#short-form-answer,\r\n#long-form-answer {\r\n  display: block;\r\n  margin: auto;\r\n  min-width: 200px;\r\n  height: 40px;\r\n  padding: 20px 12px 20px 15px;\r\n  font-size: 14px;\r\n  line-height: 1.42857143;\r\n  color: #555;\r\n  background-color: #fff;\r\n  background-image: none;\r\n  border: 1px solid #ccc;\r\n  border-radius: 8px;\r\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);\r\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);\r\n  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;\r\n  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\r\n  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\r\n}\r\n\r\n#short-form-answer {\r\n  max-width: 400px;\r\n}\r\n\r\n#long-form-answer {\r\n  max-width: 470px;\r\n  height: 160px;\r\n  padding-top: 12px;\r\n}\r\n\r\n#short-form-label,\r\n#long-form-label {\r\n  color: black;\r\n  text-align: left;\r\n  display: block;\r\n  margin-left: auto;\r\n  margin-right: auto;\r\n  margin-bottom: 0px;\r\n  min-width: 200px;\r\n  /* height: 40px; */\r\n  padding: 20px 12px 30px 5px;\r\n  font-family: \"Chalet\";\r\n  font-size: 16px;\r\n  line-height: 1.42857143;\r\n  font-weight: lighter;\r\n}\r\n\r\n#short-form-label {\r\n  max-width: 400px;\r\n}\r\n\r\n#long-form-label {\r\n  max-width: 470px;\r\n  color: #272727;\r\n  padding-left: 10px;\r\n}\r\n\r\n.btn-next {\r\n  color: black;\r\n  background-color: #fcbc7c;\r\n  border-radius: 25px;\r\n  padding: 10px 35px 10px 33px;\r\n  font-size: 20px;\r\n  text-align: center;\r\n  margin-top: 40px;\r\n  margin-bottom: 60px;\r\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -57332,10 +57332,13 @@ var Promo = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "https://alimtas.herokuapp.com/",
+        target: "_blank"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/r402zTc/Alimtas.png"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "right"
@@ -57345,10 +57348,13 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "whitealternate"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "https://www.princetoneclub.com/alumni",
+        target: "_blank"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/tzvGHGh/Alum-Relations.png"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "right"
@@ -57380,10 +57386,13 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "description-right"
       }, "COFF is a community of kick ass women bringing female entrepreneurs together. We connect women engaged and interested in entrepreneurship and bring their stories into focus. Through panels, discussions, and mentorship, we enable everyone to learn from the experience of female founders."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "https://www.eclubdesign.com/",
+        target: "_blank"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "pie",
         src: "https://i.ibb.co/kG2sHSY/Design-Team-Logo.png"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "right"
@@ -57404,10 +57413,13 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "description-right"
       }, "The web development team is responsible for the creation and maintenance of E-Club subteam websites and infrastructure."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "https://www.hackprinceton.com/",
+        target: "_blank"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/gMnL6Nb/Hack-Princeton.png"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "right"
@@ -57441,10 +57453,13 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "whitealternate"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "https://www.ignitestem.org/",
+        target: "_blank"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/SvqCxXw/Ignite-STEM.png"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "right"
@@ -57452,10 +57467,13 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "description-right"
       }, "IgniteSTEM is transforming K-12 STEM education by disrupting traditional learning techniques and promoting project-based learning to foster students\u2019 curiosity and creativity."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "https://www.makeventures.io/",
+        target: "_blank"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/R06GCj6/MVP.png"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "right"
@@ -57465,10 +57483,13 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "whitealternate"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "http://nytigertrek.com/",
+        target: "_blank"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/rGDmMt5/NYTT.png"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "right"
@@ -57476,10 +57497,13 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "description-right"
       }, "New York TigerTrek is a weeklong trip in NYC to meet with some of the city\u2019s leading CEOs, VCs, founders, and more in closed-door, one-on-one sessions."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "https://medium.com/profiles-in-entrepreneurship",
+        target: "_blank"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "pie",
         src: "https://i.ibb.co/C5Xb29B/finalpie.png"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "right"
@@ -57489,10 +57513,13 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "whitealternate"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "https://rehack.co/",
+        target: "_blank"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/kcCDFRB/Rehack.png"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "right"
@@ -57500,10 +57527,13 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "description-right"
       }, "Rehack will be organizing a tech + design + ethics \u201Creverse hackathon\u201D on campus to encourage dialogue in and support the development of creative solutions that allow for greater and healthier relationships between people and their technology."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "http://svtigertrek.com/",
+        target: "_blank"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/51Vgxqd/SVTT.png"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "right"
@@ -57513,10 +57543,13 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "whitealternate"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        href: "https://www.tigerlaunch.com/",
+        target: "_blank"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/gZVgHwg/Tiger-Launch.png"
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "right"
