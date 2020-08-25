@@ -58687,7 +58687,15 @@ var TeamSelection = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var teams = this.props.state.teams;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        id: "title"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Part 3: Team Selection")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        style: {
+          color: 'black',
+          display: 'flex',
+          'justify-content': 'center'
+        }
+      }, "If you don't want to apply for a specific subteam, please select the \"No-Team\" option below."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
         onSubmit: this.handleSubmit
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["FormGroup"], {
         id: "short-form-slect"
@@ -58725,7 +58733,7 @@ var TeamSelection = /*#__PURE__*/function (_React$Component) {
         bsStyle: "next",
         bsSize: "large",
         onClick: this.handleSubmit
-      }, "next"))));
+      }, "next")))));
     }
   }]);
 

@@ -63,28 +63,10 @@ class TeamSelection extends React.Component {
 	render() {
 		const { teams } = this.props.state;
 		return (
-			<form onSubmit={this.handleSubmit}>
-				<FormGroup id="short-form-slect">
-					<ControlLabel id="short-form-label">Team 1:</ControlLabel>
-					<FormControl name="teamOne" componentClass="select" onChange={this.handleChange}>
-						<option />
-						{teams.map(this.renderTeamOption)}
-					</FormControl>
-				</FormGroup>
-				<FormGroup id="short-form-slect">
-					<ControlLabel id="short-form-label">Team 2:</ControlLabel>
-					<FormControl name="teamTwo" componentClass="select" onChange={this.handleChange}>
-						<option />
-						{teams.map(this.renderTeamOption)}
-					</FormControl>
-				</FormGroup>
-				<FormGroup id="short-form-slect">
-					<ControlLabel id="short-form-label">Team 3:</ControlLabel>
-					<FormControl name="teamThree" componentClass="select" onChange={this.handleChange}>
-						<option />
-						{teams.map(this.renderTeamOption)}
-					</FormControl>
-				</FormGroup>
+			<div>
+				<div id="title">
+					<p>Part 3: Team Selection</p>
+				</div>
 				<div
 					style={{
 						color: 'black',
@@ -92,16 +74,48 @@ class TeamSelection extends React.Component {
 						'justify-content': 'center'
 					}}
 				>
-					{this.state.errorMessage}
+					If you don't want to apply for a specific subteam, please select the "No-Team" option below.
 				</div>
-				<Row className="center-block text-center">
-					<Col>
-						<Button bsStyle="next" bsSize="large" onClick={this.handleSubmit}>
-							next
+				<form onSubmit={this.handleSubmit}>
+					<FormGroup id="short-form-slect">
+						<ControlLabel id="short-form-label">Team 1:</ControlLabel>
+						<FormControl name="teamOne" componentClass="select" onChange={this.handleChange}>
+							<option />
+							{teams.map(this.renderTeamOption)}
+						</FormControl>
+					</FormGroup>
+					<FormGroup id="short-form-slect">
+						<ControlLabel id="short-form-label">Team 2:</ControlLabel>
+						<FormControl name="teamTwo" componentClass="select" onChange={this.handleChange}>
+							<option />
+							{teams.map(this.renderTeamOption)}
+						</FormControl>
+					</FormGroup>
+					<FormGroup id="short-form-slect">
+						<ControlLabel id="short-form-label">Team 3:</ControlLabel>
+						<FormControl name="teamThree" componentClass="select" onChange={this.handleChange}>
+							<option />
+							{teams.map(this.renderTeamOption)}
+						</FormControl>
+					</FormGroup>
+					<div
+						style={{
+							color: 'black',
+							display: 'flex',
+							'justify-content': 'center'
+						}}
+					>
+						{this.state.errorMessage}
+					</div>
+					<Row className="center-block text-center">
+						<Col>
+							<Button bsStyle="next" bsSize="large" onClick={this.handleSubmit}>
+								next
 						</Button>
-					</Col>
-				</Row>
-			</form>
+						</Col>
+					</Row>
+				</form>
+			</div>
 		);
 	}
 }
