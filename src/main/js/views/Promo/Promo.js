@@ -43,36 +43,6 @@ class Promo extends React.Component {
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						{/* <a href="" target="_blank"> */}
-						<img class="invertimage" src="https://i.ibb.co/X2sFm0S/artsent.png" />
-						{/* </a> */}
-					</div>
-					<div class="iconcontainer second">
-						<p class="right">Arts &amp; Entrepreneurship</p>
-						<p class="description-right">
-							Arts and Entrepreneurship at Princeton was founded in 2017 by Bill Wescott, with support
-							from Ryan Ozminkowski, Rachel Cooper, and Vignesh Rajendran. This year, this group has been
-							absorbed into the E-Club, as part of our mission to expand entrepreneurship and emphasize
-							diversity.
-						</p>
-					</div>
-				</div>
-				<div class="whitealternate">
-					<div class="iconcontainer first">
-						<img class="invertimage" src="https://i.ibb.co/mFhY2q9/COFF.png" />
-					</div>
-					<div class="iconcontainer second">
-						<p class="right">COFF</p>
-						<p class="description-right">
-							COFF is a community of kick ass women bringing female entrepreneurs together. We connect
-							women engaged and interested in entrepreneurship and bring their stories into focus. Through
-							panels, discussions, and mentorship, we enable everyone to learn from the experience of
-							female founders.
-						</p>
-					</div>
-				</div>
-				<div>
-					<div class="iconcontainer first">
 						<a href="https://www.eclubdesign.com/" target="_blank">
 							<img class="pie" src="https://i.ibb.co/kG2sHSY/Design-Team-Logo.png" />
 						</a>
@@ -115,19 +85,6 @@ class Promo extends React.Component {
 				</div>
 				<div class="whitealternate">
 					<div class="iconcontainer first">
-						<img class="invertimage" src="https://i.ibb.co/94SLDkm/ICE-Network.png" />
-					</div>
-					<div class="iconcontainer second">
-						<p class="right">ICE Network</p>
-						<p class="description-right">
-							ICE Network is focused on connecting the Princeton E-Club with other networks and
-							communities outside of the club, while spreading and cultivating a culture of
-							entrepreneurship.
-						</p>
-					</div>
-				</div>
-				<div>
-					<div class="iconcontainer first">
 						<img class="invertimage" src="https://i.ibb.co/mtL9ncV/istt.png" />
 					</div>
 					<div class="iconcontainer second">
@@ -139,7 +96,7 @@ class Promo extends React.Component {
 						</p>
 					</div>
 				</div>
-				<div class="whitealternate">
+				<div>
 					<div class="iconcontainer first">
 						<a href="https://www.ignitestem.org/" target="_blank">
 							<img class="invertimage" src="https://i.ibb.co/SvqCxXw/Ignite-STEM.png" />
@@ -153,7 +110,7 @@ class Promo extends React.Component {
 						</p>
 					</div>
 				</div>
-				<div>
+				<div class="whitealternate">
 					<div class="iconcontainer first">
 						<a href="https://www.makeventures.io/" target="_blank">
 							<img class="invertimage" src="https://i.ibb.co/R06GCj6/MVP.png" />
@@ -166,7 +123,7 @@ class Promo extends React.Component {
 						</p>
 					</div>
 				</div>
-				<div class="whitealternate">
+				<div>
 					<div class="iconcontainer first">
 						<a href="http://nytigertrek.com/" target="_blank">
 							<img class="invertimage" src="https://i.ibb.co/rGDmMt5/NYTT.png" />
@@ -180,7 +137,34 @@ class Promo extends React.Component {
 						</p>
 					</div>
 				</div>
+				<div class="whitealternate">
+					<div class="iconcontainer first">
+						<a href="output.princetoneclub.com" target="_blank">
+							<img src="https://i.ibb.co/QM9XhRx/hiclipart-com.png" />
+						</a>
+					</div>
+					<div class="iconcontainer second">
+						<p class="right">Output</p>
+						<p class="description-right">
+							Founded in the spring of 2020, Output has a mission to bring social entrepreneurship to the forefront of problem solving on Princeton’s campus, specifically focusing on non-traditionally engaged academic communities.
+						</p>
+					</div>
+				</div>
 				<div>
+					<div class="iconcontainer first">
+						<img class="invertimage" src="https://i.ibb.co/mFhY2q9/COFF.png" />
+					</div>
+					<div class="iconcontainer second">
+						<p class="right">Princeton Women in Entrepreneurship</p>
+						<p class="description-right">
+							PWE is a community of kick ass women bringing female entrepreneurs together. We connect
+							women engaged and interested in entrepreneurship and bring their stories into focus. Through
+							panels, discussions, and mentorship, we enable everyone to learn from the experience of
+							female founders.
+						</p>
+					</div>
+				</div>
+				<div class="whitealternate">
 					<div class="iconcontainer first">
 						<a href="https://medium.com/profiles-in-entrepreneurship" target="_blank">
 							<img class="pie" src="https://i.ibb.co/C5Xb29B/finalpie.png" />
@@ -194,7 +178,7 @@ class Promo extends React.Component {
 						</p>
 					</div>
 				</div>
-				<div class="whitealternate">
+				<div>
 					<div class="iconcontainer first">
 						<a href="https://rehack.co/" target="_blank">
 							<img class="invertimage" src="https://i.ibb.co/kcCDFRB/Rehack.png" />
@@ -209,7 +193,7 @@ class Promo extends React.Component {
 						</p>
 					</div>
 				</div>
-				<div>
+				<div class="whitealternate">
 					<div class="iconcontainer first">
 						<a href="http://svtigertrek.com/" target="_blank">
 							<img class="invertimage" src="https://i.ibb.co/51Vgxqd/SVTT.png" />
@@ -224,7 +208,7 @@ class Promo extends React.Component {
 						</p>
 					</div>
 				</div>
-				<div class="whitealternate">
+				<div>
 					<div class="iconcontainer first">
 						<a href="https://www.tigerlaunch.com/" target="_blank">
 							<img class="invertimage" src="https://i.ibb.co/gZVgHwg/Tiger-Launch.png" />
@@ -239,7 +223,7 @@ class Promo extends React.Component {
 						</p>
 					</div>
 				</div>
-				<div>
+				<div class="whitealternate">
 					<div class="iconcontainer first">
 						<img src="https://i.ibb.co/zHmvXkP/Tiger-Tables-Logo-Final.png" />
 					</div>
@@ -249,6 +233,17 @@ class Promo extends React.Component {
 							TigerTables provides the opportunity for Princeton students to have small-setting
 							unscripted, off-the-record discussions with CEOs, entrepreneurs, VC’s and other industry
 							leaders in the startup community that focus on engaging the audience in various settings.
+						</p>
+					</div>
+				</div>
+				<div>
+					<div class="iconcontainer first">
+						<img src="https://i.ibb.co/k6nKzzH/FAVPNG-mobile-app-development-software-development-Cc2-Ls5ve.png" />
+					</div>
+					<div class="iconcontainer second">
+						<p class="right">Tigers in Product</p>
+						<p class="description-right">
+							Tigers In Product’s mission is to create product-minded thinkers/leaders on Princeton’s campus by strengthening student networks within industry, by providing access to recruiting information and mentorship, and by providing hands-on experience.
 						</p>
 					</div>
 				</div>
