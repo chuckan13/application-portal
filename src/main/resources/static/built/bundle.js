@@ -57330,15 +57330,7 @@ var Promo = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="1280"
-        // height="721"
-        ,
-        src: "https://www.youtube.com/embed/vup0K8x4iKQ",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/r402zTc/Alimtas.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -57347,33 +57339,11 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "right"
       }, "Alimtas"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         "class": "description-right"
-      }, "Alimtas is a subteam of E-Club focused on promoting life science entrepreneurship and the biotechnology industry to Princeton University undergraduates through hands-on learning."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        "class": "profileimage",
-        src: "https://i.ibb.co/fxWgLSZ/headshot1.png"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        "class": "profile-name"
-      }, "Charles An (ca9)")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        "class": "iconcontainer second"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        "class": "profileimage",
-        src: "https://i.ibb.co/fxWgLSZ/headshot1.png"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        "class": "profile-name"
-      }, "Charles An (ca9)"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Alimtas is a subteam of E-Club focused on promoting life science entrepreneurship and the biotechnology industry to Princeton University undergraduates through hands-on learning."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "whitealternate"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/tzvGHGh/Alum-Relations.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -57384,15 +57354,7 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "description-right"
       }, "The goal of the E-Club Alumni Relations Team is to further the mission of the club by developing and maintaining relations with Princeton University alumni interested in entrepreneurship."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/X2sFm0S/artsent.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -57405,15 +57367,7 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "whitealternate"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/mFhY2q9/COFF.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -57424,15 +57378,7 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "description-right"
       }, "COFF is a community of kick ass women bringing female entrepreneurs together. We connect women engaged and interested in entrepreneurship and bring their stories into focus. Through panels, discussions, and mentorship, we enable everyone to learn from the experience of female founders."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "pie",
         src: "https://i.ibb.co/kG2sHSY/Design-Team-Logo.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -57445,15 +57391,7 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "whitealternate"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/74dHspz/Development.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -57464,15 +57402,7 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "description-right"
       }, "The web development team is responsible for the creation and maintenance of E-Club subteam websites and infrastructure."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/gMnL6Nb/Hack-Princeton.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -57485,15 +57415,7 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "whitealternate"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/94SLDkm/ICE-Network.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -57504,15 +57426,7 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "description-right"
       }, "ICE Network is focused on connecting the Princeton E-Club with other networks and communities outside of the club, while spreading and cultivating a culture of entrepreneurship."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/mtL9ncV/istt.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -57525,15 +57439,7 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "whitealternate"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/SvqCxXw/Ignite-STEM.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -57544,15 +57450,7 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "description-right"
       }, "IgniteSTEM is transforming K-12 STEM education by disrupting traditional learning techniques and promoting project-based learning to foster students\u2019 curiosity and creativity."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/R06GCj6/MVP.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -57565,15 +57463,7 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "whitealternate"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/rGDmMt5/NYTT.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -57584,15 +57474,7 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "description-right"
       }, "New York TigerTrek is a weeklong trip in NYC to meet with some of the city\u2019s leading CEOs, VCs, founders, and more in closed-door, one-on-one sessions."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "pie",
         src: "https://i.ibb.co/C5Xb29B/finalpie.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -57605,15 +57487,7 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "whitealternate"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/kcCDFRB/Rehack.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -57624,15 +57498,7 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "description-right"
       }, "Rehack will be organizing a tech + design + ethics \u201Creverse hackathon\u201D on campus to encourage dialogue in and support the development of creative solutions that allow for greater and healthier relationships between people and their technology."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/51Vgxqd/SVTT.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -57645,15 +57511,7 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "whitealternate"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/3w-6dZQbOUY",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         "class": "invertimage",
         src: "https://i.ibb.co/gZVgHwg/Tiger-Launch.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -57664,15 +57522,7 @@ var Promo = /*#__PURE__*/function (_React$Component) {
         "class": "description-right"
       }, "TigerLaunch is the nation\u2019s largest student-run entrepreneurship competition of its kind dedicated to building a network of student founders at the university, regional, and national levels."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("iframe", {
-        "class": "leftimage" // width="2543"
-        // height="1161"
-        ,
-        src: "https://www.youtube.com/embed/DOZS4YwqNMU",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         src: "https://i.ibb.co/zHmvXkP/Tiger-Tables-Logo-Final.png"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         "class": "iconcontainer second"

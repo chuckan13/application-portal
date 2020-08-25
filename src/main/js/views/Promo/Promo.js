@@ -14,15 +14,6 @@ class Promo extends React.Component {
 			<div>
 				<div>
 					<div class="iconcontainer first">
-						<iframe
-							class="leftimage"
-							// width="1280"
-							// height="721"
-							src="https://www.youtube.com/embed/vup0K8x4iKQ"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
 						<img class="invertimage" src="https://i.ibb.co/r402zTc/Alimtas.png" />
 					</div>
 					<div class="iconcontainer second">
@@ -31,29 +22,10 @@ class Promo extends React.Component {
 							Alimtas is a subteam of E-Club focused on promoting life science entrepreneurship and the
 							biotechnology industry to Princeton University undergraduates through hands-on learning.
 						</p>
-						<div>
-							<div class="iconcontainer first">
-								<img class="profileimage" src="https://i.ibb.co/fxWgLSZ/headshot1.png"></img>
-								<p class="profile-name">Charles An (ca9)</p>
-							</div>
-							<div class="iconcontainer second">
-								<img class="profileimage" src="https://i.ibb.co/fxWgLSZ/headshot1.png"></img>
-								<p class="profile-name">Charles An (ca9)</p>
-							</div>
-						</div>
 					</div>
 				</div>
 				<div class="whitealternate">
 					<div class="iconcontainer first">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/DOZS4YwqNMU"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
 						<img class="invertimage" src="https://i.ibb.co/tzvGHGh/Alum-Relations.png" />
 					</div>
 					<div class="iconcontainer second">
@@ -67,17 +39,7 @@ class Promo extends React.Component {
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/3w-6dZQbOUY"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
 						<img class="invertimage" src="https://i.ibb.co/X2sFm0S/artsent.png" />
-
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">Arts &amp; Entrepreneurship</p>
@@ -91,17 +53,7 @@ class Promo extends React.Component {
 				</div>
 				<div class="whitealternate">
 					<div class="iconcontainer first">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/DOZS4YwqNMU"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
 						<img class="invertimage" src="https://i.ibb.co/mFhY2q9/COFF.png" />
-
 					</div>
 					<div class="iconcontainer second">
 						<p class="right">COFF</p>
@@ -115,15 +67,6 @@ class Promo extends React.Component {
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/3w-6dZQbOUY"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
 						<img class="pie" src="https://i.ibb.co/kG2sHSY/Design-Team-Logo.png" />
 					</div>
 					<div class="iconcontainer second">
@@ -137,15 +80,6 @@ class Promo extends React.Component {
 				</div>
 				<div class="whitealternate">
 					<div class="iconcontainer first">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/3w-6dZQbOUY"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
 						<img class="invertimage" src="https://i.ibb.co/74dHspz/Development.png" />
 					</div>
 					<div class="iconcontainer second">
@@ -158,15 +92,6 @@ class Promo extends React.Component {
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/DOZS4YwqNMU"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
 						<img class="invertimage" src="https://i.ibb.co/gMnL6Nb/Hack-Princeton.png" />
 					</div>
 					<div class="iconcontainer second">
@@ -180,15 +105,6 @@ class Promo extends React.Component {
 				</div>
 				<div class="whitealternate">
 					<div class="iconcontainer first">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/3w-6dZQbOUY"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
 						<img class="invertimage" src="https://i.ibb.co/94SLDkm/ICE-Network.png" />
 					</div>
 					<div class="iconcontainer second">
@@ -202,15 +118,6 @@ class Promo extends React.Component {
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/DOZS4YwqNMU"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
 						<img class="invertimage" src="https://i.ibb.co/mtL9ncV/istt.png" />
 					</div>
 					<div class="iconcontainer second">
@@ -224,15 +131,6 @@ class Promo extends React.Component {
 				</div>
 				<div class="whitealternate">
 					<div class="iconcontainer first">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/3w-6dZQbOUY"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
 						<img class="invertimage" src="https://i.ibb.co/SvqCxXw/Ignite-STEM.png" />
 					</div>
 					<div class="iconcontainer second">
@@ -245,15 +143,6 @@ class Promo extends React.Component {
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/DOZS4YwqNMU"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
 						<img class="invertimage" src="https://i.ibb.co/R06GCj6/MVP.png" />
 					</div>
 					<div class="iconcontainer second">
@@ -265,15 +154,6 @@ class Promo extends React.Component {
 				</div>
 				<div class="whitealternate">
 					<div class="iconcontainer first">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/3w-6dZQbOUY"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
 						<img class="invertimage" src="https://i.ibb.co/rGDmMt5/NYTT.png" />
 					</div>
 					<div class="iconcontainer second">
@@ -286,15 +166,6 @@ class Promo extends React.Component {
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/DOZS4YwqNMU"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
 						<img class="pie" src="https://i.ibb.co/C5Xb29B/finalpie.png" />
 					</div>
 					<div class="iconcontainer second">
@@ -307,15 +178,6 @@ class Promo extends React.Component {
 				</div>
 				<div class="whitealternate">
 					<div class="iconcontainer first">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/3w-6dZQbOUY"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
 						<img class="invertimage" src="https://i.ibb.co/kcCDFRB/Rehack.png" />
 					</div>
 					<div class="iconcontainer second">
@@ -329,15 +191,6 @@ class Promo extends React.Component {
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/DOZS4YwqNMU"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
 						<img class="invertimage" src="https://i.ibb.co/51Vgxqd/SVTT.png" />
 					</div>
 					<div class="iconcontainer second">
@@ -351,15 +204,6 @@ class Promo extends React.Component {
 				</div>
 				<div class="whitealternate">
 					<div class="iconcontainer first">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/3w-6dZQbOUY"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
 						<img class="invertimage" src="https://i.ibb.co/gZVgHwg/Tiger-Launch.png" />
 					</div>
 					<div class="iconcontainer second">
@@ -373,15 +217,6 @@ class Promo extends React.Component {
 				</div>
 				<div>
 					<div class="iconcontainer first">
-						<iframe
-							class="leftimage"
-							// width="2543"
-							// height="1161"
-							src="https://www.youtube.com/embed/DOZS4YwqNMU"
-							frameborder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						/>
 						<img src="https://i.ibb.co/zHmvXkP/Tiger-Tables-Logo-Final.png" />
 					</div>
 					<div class="iconcontainer second">
