@@ -57318,8 +57318,9 @@ function FormEntry(props) {
     id: "short-form-label"
   }, props.label), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["FormControl"], {
     id: "long-form-answer",
-    name: props.name,
-    type: "text",
+    name: props.name // type="text"
+    ,
+    componentClass: "textarea",
     placeholder: props.ph,
     value: props.v,
     onChange: props.onChange

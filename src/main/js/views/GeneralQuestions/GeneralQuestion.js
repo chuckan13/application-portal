@@ -124,7 +124,8 @@ function FormEntry(props) {
             <FormControl
                 id="long-form-answer"
                 name={props.name}
-                type="text"
+                // type="text"
+                componentClass="textarea"
                 placeholder={props.ph}
                 value={props.v}
                 onChange={props.onChange}
