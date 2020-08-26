@@ -122,7 +122,7 @@ function FormEntry(props) {
         <FormGroup>
             <ControlLabel id="short-form-label">{props.label}</ControlLabel>
             <FormControl
-                id="short-form-answer"
+                id="long-form-answer"
                 name={props.name}
                 type="text"
                 placeholder={props.ph}
