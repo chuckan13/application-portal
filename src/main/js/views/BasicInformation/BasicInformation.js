@@ -91,7 +91,7 @@ class BasicInformation extends React.Component {
 						v={this.state.concentration}
 						onChange={this.updateState}
 					/>
-					<FormEntry
+					{/* <FormEntry
 						label="Building Name:"
 						ph="Building Name"
 						name="building"
@@ -104,7 +104,7 @@ class BasicInformation extends React.Component {
 						name="roomNumber"
 						v={this.state.roomNumber}
 						onChange={this.updateState}
-					/>
+					/> */}
 					<FormEntry
 						label="Phone Number:"
 						ph="Phone Number"

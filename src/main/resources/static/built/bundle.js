@@ -56879,18 +56879,6 @@ var BasicInformation = /*#__PURE__*/function (_React$Component) {
         v: this.state.concentration,
         onChange: this.updateState
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
-        label: "Building Name:",
-        ph: "Building Name",
-        name: "building",
-        v: this.state.building,
-        onChange: this.updateState
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
-        label: "Room Number:",
-        ph: "Room Number",
-        name: "roomNumber",
-        v: this.state.roomNumber,
-        onChange: this.updateState
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(FormEntry, {
         label: "Phone Number:",
         ph: "Phone Number",
         name: "phoneNumber",
@@ -57958,10 +57946,6 @@ var Review = /*#__PURE__*/function (_React$Component) {
       }, " Class: ", this.props.state.classYear), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         id: "information"
       }, " Concentration: ", this.props.state.concentration), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        id: "information"
-      }, " Building: ", this.props.state.building), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        id: "information"
-      }, " Room Number: ", this.props.state.roomNumber), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         id: "information"
       }, " Phone Number: ", this.props.state.phoneNumber), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         id: "information"
